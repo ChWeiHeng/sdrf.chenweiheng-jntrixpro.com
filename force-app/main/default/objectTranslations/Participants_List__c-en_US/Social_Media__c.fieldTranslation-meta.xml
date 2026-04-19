@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Social Media --></label>
+    <name>Social_Media__c</name>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instagram</masterLabel>
+        <translation><!-- Instagram --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Linkedin</masterLabel>
+        <translation><!-- Linkedin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sitio web</masterLabel>
+        <translation><!-- Sitio web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tik Tok</masterLabel>
+        <translation><!-- Tik Tok --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Whatsapp</masterLabel>
+        <translation><!-- Whatsapp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YouTube</masterLabel>
+        <translation><!-- YouTube --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,262 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 09-15-2025
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   07-15-2025   Gerry   Initial Version
+-->
+<apex:page controller="SendEmailContract" renderAs="PDF"  contentType="application/vnd.ms-excel#AllContacts.xls" showHeader="false" applyHtmlTag="false"  cache="true">
+    <head>
+        <style>
+            .@page{
+                margin-top: 0cm;
+                margin-left: 0cm;
+                margin-right: 0cm;
+                margin-bottom: 0cm;
+                size:a4;
+            }
+            .headBack{
+                /*width:100%;*/
+                height:90px;
+                /*opacity=50;*/
+                background-color:#008888
+            }
+            .typeface{
+                font-family:Arial Unicode MS;
+                font-size:pt;
+            }
+            .headTypeFace{
+                color:rgb(255,255,255);
+            }
+            .styleface-color{
+                color: rgb(255,255,255)
+            }
+            .headText{
+                text-align: center;
+                font-size: 18pt
+            }
+            .headback{
+                display:inline;
+                font-size:9pt
+            }
+            .back{
+                display:inline;
+            }
+            .center{
+                text-align:center  
+            }
+            .tablefixed{
+                table-layout:fixed;
+                font-size: 10pt;
+            }
+            .p-headBack-style{
+                display: inline;
+                font-size: 9pt
+            }
+            span{
+                font-size: 8pt;
+            }
+            .bgc1{
+                background-color:DarkGray
+            }
+            table {
+                border-collapse:collapse;
+                font-family:Arial Unicode MS;
+                border-left: 1px solid #000000;
+                border-right: 1px solid #000000;
+                
+            }
+            table td {
+                border: 0.5px solid #000000;
+            }
+            p{margin:0 auto}
+           <!-- .pagenumber:before 
+            {
+                content: counter(page); 
+            }
+            .pagecount:before 
+            {
+                content: counter(pages);
+            }-->
+           
+        </style>
+    </head>
+    <body>
+    <table class="typeface tablefixed" style="border-top: 1px solid #000000;" width="100%" >
+       <tr>
+           <td align="left" ><br/>
+            <div style="font-size: 40px;color:rgb(0,110,99);font-family:Arial Unicode MS;margin-left:-50px;font-weight:bold;" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contrato de <apex:outputPanel rendered="{!IsSales=true}" style="font-size: 40px;"> Venta</apex:outputPanel><apex:outputPanel rendered="{!IsSales=false}" style="font-size: 40px;"> Servicio</apex:outputPanel></div><div style="margin-left:480px;margin-top:-55px;" width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:image id="theImage" value="{!imageUrl}" height="60" width="158"/></div>  
+        <p style="font-size: 20px;color:rgb(92,179,71);font-family:Arial Unicode MS;">&nbsp;&nbsp;&nbsp;{!companyName}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!companyAddress}</p> 
+               <apex:outputPanel rendered="{!IsAR=true}" ><p >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!tel} </p></apex:outputPanel>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!tax}</p>
+            <br/>
+        </td>
+      </tr>
+    </table>
+    <table  Class="typeface tablefixed"  width="100%" >
+            
+        <tr>
+        <td  align="left" width="50%">&nbsp;C/V No.: <br/>
+            <span>&nbsp;
+                <apex:outputPanel style="font-size: 10pt;">{!order.SAP_Order_Code__c}</apex:outputPanel>
+            </span>
+        </td>
+        <td  align="left" width="50%">&nbsp;Fecha Documento: <br/><span >&nbsp;{!FileDate}</span></td>
+        </tr>
+    </table>
+    <table  Class="typeface tablefixed"  width="100%" style="border-top: 1px solid #000000;">
+        <tr style="height:30px;">
+        <td align="center" width="100%" style="background:#DCDCDC;">INFORMACION PARTE COMPRADORA </td>
+        </tr>
+        <tr >
+        <td align="left" >&nbsp;Razón Social: <br/><span >&nbsp;{!order.Customer__r.Name}</span></td><td></td>
+        </tr>
+        <tr>
+        <td align="left">&nbsp;Dirección: <br/><span >&nbsp;{!order.Customer_Address__c}</span></td><td></td>
+        </tr>
+    </table>
+    <table  Class="typeface tablefixed"  width="100%" >
+        <tr>
+        <td width="25%" align="left" >&nbsp;
+            <apex:outputPanel rendered="{!IsAR=true}" style="font-size: 10pt;">CUIT:</apex:outputPanel>
+            <apex:outputPanel rendered="{!IsAR=false}" style="font-size: 10pt;">RFC:</apex:outputPanel><br/>
+            <span >&nbsp;{!order.Customer__r.Tax_Number__c}</span></td>
+        <td width="20%" align="left">&nbsp;Referencia: <br/><span >&nbsp;{!order.Cust_Reference__c}</span></td>
+        <td width="20%" align="left">&nbsp;Moneda:<br/> <span >&nbsp;{!order.Currency__c}</span></td>
+        <td width="35%" align="left">&nbsp;Condiciones De Pago:<br/> <span >&nbsp;{!TermsOfPayment}</span></td>
+        </tr>
+    </table>
+    <table  Class="typeface tablefixed"  width="100%" >
+        <tr >
+        <td align="left" width="100%">&nbsp;Lugar De Entrega: <br/><span >&nbsp;{!order.Shipping_Address_Text__c}</span></td><td></td>
+        </tr>
+    </table>
+    <table  Class="typeface tablefixed"  width="100%" style="border-top: 1px solid #000000;">
+        <tr style="height:30px;">
+        <td align="center"  style="background:#DCDCDC;">&nbsp;INFORMACION DEL PRODUCTO </td>
+        </tr>
+    </table>
+    <table  Class="typeface tablefixed" width="100%" style="border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+        <apex:repeat value="{!orderItem}" var="qItem">
+        <table  Class="typeface tablefixed" width="100%">
+        <!--<tr style="font-size:16px;font-weight:200;" align="center">
+            <td width="30%" >Cod.:</td>
+            <td width="30%" >Producto:</td>
+            <td width="40%" >Descripción:</td>
+            
+        </tr>-->
+        
+            <tr style="font-size:14px;" align="left">
+                <td   width="30%"><bigger>Cod.:</bigger><br/><apex:outputText value="{!qItem.Material_Number__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td   width="35%">
+                    <bigger>Producto:</bigger><br/>
+                    <apex:outputText rendered="{!IsModelC=false}" value="{!qItem.Quote_Detail__r.Quote_Product_Name__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                    <apex:outputText rendered="{!IsModelC=true}" value="{!qItem.Commodity__r.Product_Sales_Info__r.Product__r.Spanish_Description__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                </td>
+                    
+                <td   width="35%"><bigger>Descripción:</bigger><br/><apex:outputText value="{!qItem.Commodity__r.Name}"   style="font-family:Arial Unicode MS; overflow:auto;text-align:center;"  escape="false"/></td>
+               
+            </tr>
+            </table>
+            <table  Class="typeface tablefixed" width="100%" >
+         <tr style="font-size:14px;" align="center">
+           
+             <td width="10%" ><bigger>Empaque</bigger> </td>
+             <td width="10%" ><bigger>Cantidad</bigger></td>
+            <td width="10%" ><bigger>Unidad</bigger></td>
+            <td width="10%" ><bigger>Precio Unitario</bigger></td>
+            <td width="10%" ><bigger>Total</bigger></td>
+            <td width="15%" ><bigger>Fecha de Entrega</bigger></td>
+            <td width="15%" ><bigger>IEPS</bigger></td>
+            
+             <td width="10%"  ><apex:outputPanel rendered="{!IsAR=false}" style="font-size: 14px;" ><bigger>IVA</bigger></apex:outputPanel></td>
+             <td width="10%"  ><apex:outputPanel rendered="{!IsAR=false}" style="font-size: 14px;" ><bigger>Uso Agrícola</bigger></apex:outputPanel></td>
+            
+            
+            
+        </tr>
+        
+            <tr >
+                <td align="center"  >
+                    <apex:outputText rendered="{!IsModelC=false}" value="{!qItem.Quote_Detail__r.Packing_Size__r.Name}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                    <apex:outputText rendered="{!IsModelC=true}" value="{!qItem.Sales_Unit_Text__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                </td>
+                <td align="center"  ><apex:outputText value="{0, number, ###,###,##0.00}" style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"><apex:param value="{!qItem.Quantity__c}" /></apex:outputText></td>
+                <td align="center" ><apex:outputText value="{!qItem.Sales_Unit_Text__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center" ><apex:outputText value="{!qItem.Price__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"  ><apex:outputText value="{0, number, ###,###,##0.00}" style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"><apex:param value="{!qItem.Amount_per_item__c}" /></apex:outputText></td>
+                <td align="center"  >
+                    <apex:outputText rendered="{!IsAR=true}" value="{!qItem.Delivery_Date_Text__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                    <apex:outputText rendered="{!IsAR=false && IsModelC=true}" value="{!qItem.Delivery_Date_Text__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                    <apex:outputText value="{!qItem.ETA__c}"  rendered="{!IsAR=false && IsModelC=false}" style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+                </td>
+                <td align="center"  ><apex:outputText value="{0, number, ###,###,##0.00}"    style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"><apex:param value="{!qItem.IEPS__c}" /></apex:outputText></td>
+                <td align="center"  ><apex:outputPanel rendered="{!IsAR=false}"><apex:outputText value="{0, number, ###,###,##0.00}" style="font-family:Arial Unicode MS; overflow:auto;"  escape="false" ><apex:param value="{!qItem.OPTAX__c}" /></apex:outputText></apex:outputPanel></td>
+                <td align="center"  ><apex:outputPanel rendered="{!IsAR=false}"><apex:outputText value="{!qItem.Product_Usage__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false" /></apex:outputPanel></td>
+ 
+            </tr>
+            </table>
+        </apex:repeat>
+    </table>
+   
+    
+     <table  Class="typeface tablefixed" width="100%" >
+            
+        <tr>
+            <td width="30%">&nbsp;Precio Total Sin Impuestos:<br/> <apex:outputText value="{0, number, ###,###,##0.00}" style="font-size: 8pt;">
+        <apex:param value="{!order.Total_Amount__c}" />
+    </apex:outputText><!--<span>&nbsp;{!order.Total_Amount__c}</span>--></td>
+            <td width="35%">&nbsp;Impuesto Total: <br/><apex:outputText value="{0, number, ###,###,##0.00}"  style="font-size: 8pt;">
+        <apex:param value="{!order.Total_Tax__c}" />
+    </apex:outputText><!--<span>&nbsp;{!order.Total_Tax__c}</span>--></td>
+            <td width="35%">&nbsp;Precio Total Con Impuestos: <br/><apex:outputText value="{0, number, ###,###,##0.00}"  style="font-size: 8pt;">
+        <apex:param value="{!order.Total_Amount_Tax__c}" />
+    </apex:outputText><!--<span>&nbsp;{!order.Total_Amount_Tax__c}</span>--></td>
+         </tr>
+    </table>
+    <table class="typeface tablefixed"  width="100%" style="border-top: 1px solid #000000;border-bottom: 1px solid #000000;">
+        <tr><td >&nbsp;&nbsp;Observaciones:
+        <br/><br/>
+       <apex:repeat value="{!specialClause}" var="qItem">
+           <div style="margin-top:10px;font-size:8pt;">&nbsp;&nbsp;{!qItem}</div>
+        </apex:repeat>
+            <br/><br/><br/><br/><br/>
+            &nbsp;&nbsp;Parte Vendedora:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:image id="theImage1" value="{!imageSignature}" height="50" width="138"/> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parte Compradora:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="text-decoration: underfine;"></span>
+        </td></tr>
+        
+        </table>
+                 <!--<div style="text-align: center;">Page <span class="pagenumber"/> of <span class="pagecount"/></div>-->
+        </body>
+    
+    <!--<div align="center" style="display: inline-block;vertical-align: top;width: 100%;">
+             CONTRATO DE VENTA
+    </div>
+    <br/>
+    <br/>
+    <div align="center" class="hr-line" style="border-top: 1px solid black;background-color:rgb(112, 173, 71);"></div>
+    <div  style="border-top:solid;border-width:1px;" >
+        <div>&nbsp;C/V .: <span style="text-decoration: inline;">{!order.Customer__r.Name}</span></div><br/>
+        <div>&nbsp;Fecha: <span style="text-decoration: inline;">{!order.Customer__r.MDG_Customer_Code__c}</span></div><br/>
+        <div>&nbsp;Lugar: <span style="text-decoration: inline;">{!order.Customer__r.Tax_Number__c}</span></div><br/>
+        <div>&nbsp;Día de entrega: <span style="text-decoration: inline;">{!order.Customer_Shipping_Address__r.Direction__c}</span></div><br/>
+        <div>&nbsp;Condicion de venta: <span style="text-decoration: inline;">{!order.Name}</span></div><br/>
+        <div>&nbsp;Fecha Documento: <span style="text-decoration: inline;">{!order.CreatedDate_Text__c}</span></div><br/>
+    </div>
+    <div align="center" class="hr-line" style="border-top: 1px solid black;background-color:rgb(112, 173, 71);"></div>
+    <div  style="border-top:solid;border-width:1px;" >
+        <div>&nbsp;Información parte vendedora</div><br/>
+        <div>&nbsp;Razón social: <span style="text-decoration: inline;">{!order.Customer__r.MDG_Customer_Code__c}</span></div><br/>
+        <div>&nbsp;Direccion: <span style="text-decoration: inline;">{!order.Customer__r.Tax_Number__c}</span></div><br/>
+        <div>&nbsp;CUIT: <span style="text-decoration: inline;">{!order.Customer_Shipping_Address__r.Direction__c}</span></div><br/>
+        <div>&nbsp;Información parte compradora</div><br/>
+        <div>&nbsp;Company name: <span style="text-decoration: inline;">{!order.Customer__r.MDG_Customer_Code__c}</span></div><br/>
+        <div>&nbsp;Address: <span style="text-decoration: inline;">{!order.Customer__r.Tax_Number__c}</span></div><br/>        
+    </div>
+    <div align="center" class="hr-line" style="border-top: 1px solid black;background-color:rgb(112, 173, 71);"></div>
+    <div align="center" class="hr-line" style="border-top: 1px solid black;background-color:rgb(112, 173, 71);"></div>-->
+</apex:page>

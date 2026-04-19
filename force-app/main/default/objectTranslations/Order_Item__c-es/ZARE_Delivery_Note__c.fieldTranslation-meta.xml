@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ZARE Delivery Note --></label>
+    <name>ZARE_Delivery_Note__c</name>
+    <relationshipLabel><!-- ZARF Order Item --></relationshipLabel>
+</CustomFieldTranslation>

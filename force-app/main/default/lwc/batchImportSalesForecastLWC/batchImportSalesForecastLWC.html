@@ -1,0 +1,94 @@
+<template>
+    <div class="slds-is-relative" style="height: 800px;">
+        <template if:true={isShowSpinner}>
+            <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        
+        <br/>
+        <template if:false={isShowSpinner}>
+            <div class="slds-modal__content">
+                <template if:true={hasError}>
+                    <div class="slds-modal__content">
+                        <div
+                            class="slds-text-heading_small slds-text-color_error slds-text-align_left slds-m-top_medium slds-m-left_medium">
+                            <template for:each={errorMsgArray} for:item='str'>
+                                <p key={str}>{str}</p>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+                 <div class="slds-col slds-size_12-of-12 slds-p-horizontal_small">
+
+                    <div class="slds-modal__header">
+                        <h2 class="slds-text-heading_medium">{label.Sales_Forcast_Imp_Title} {salesType}</h2>
+                    </div>
+                    <br/>
+                    <lightning-button label={label.Sales_Forcast_Imp_Tem} onclick={handleDownload}></lightning-button>
+                    <a style="display: none;" href={salesDownloadLink} id="downloadLink"></a>
+                    <br/><br/>
+
+                    <div class="slds-var-p-around_xxx-small slds-grid slds-wrap">    
+                        <div class="slds-col slds-size_4-of-12">
+                            <lightning-input type="file"
+                                    label={label.Sales_Forcast_Imp_Enclosure} 
+                                    accept=".xlsx, .xls" 
+                                    onchange={handleFilesChange} >
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <br/>
+                            <lightning-badge label={fileName} class="whitebackground-badge"  if:true={fileName}></lightning-badge>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12">
+
+                        </div>
+                        <div class="slds-col slds-size_4-of-12">
+                            <template if:true={userFlag}>
+                                <lightning-button variant="brand-outline" label={label.Sales_Forcast_Imp_Save} title={label.Sales_Forcast_Imp_Save} onclick={importFileChange} class="slds-m-left_x-small"></lightning-button>
+                            </template>
+                            <lightning-button variant="brand-outline" label={label.Sales_Forcast_Imp_Del} title={label.Sales_Forcast_Imp_Del} onclick={deleteFileChange} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="slds-var-p-around_xx-small slds-grid slds-wrap">    
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning-badge label={label.Sales_Forcast_Imp_Result} class="slds-col slds-size_12-of-12 whitebackground-badge" style = "text-align: center"></lightning-badge>
+                        </div>
+                    </div>
+                    <br/>
+                    <div if:false={isSuccessInsert}>    
+                        <p><lightning-formatted-text value={verifiSuccessString} style="color: brown;"></lightning-formatted-text></p>
+                        <br/>
+                        <p><lightning-formatted-text value={verifiFailedString} style="color: brown;"></lightning-formatted-text></p>
+                        <br/>
+                        <p><lightning-formatted-text value={importSuccessString} style="color: brown;"></lightning-formatted-text></p>
+                    </div>
+                    <div if:true={isSuccessInsert}>    
+                        <p><lightning-formatted-text value={verifiSuccessString} style="color: green;"></lightning-formatted-text></p>
+                        <br/>
+                        <p><lightning-formatted-text value={verifiFailedString} style="color: green;"></lightning-formatted-text></p>
+                        <br/>
+                        <p><lightning-formatted-text value={importSuccessString} style="color: green;"></lightning-formatted-text></p>
+                    </div>
+
+                    <br/>
+
+                    <lightning-badge label={label.Sales_Forcast_Imp_List} class="whitebackground-badge" if:true={varifiFailedDetails}></lightning-badge>
+                    <div class="slds-var-p-around_xx-small slds-grid slds-wrap" if:true={varifiFailedDetails} style="height:200px;">    
+                        <div class="slds-col slds-size_12-of-12 " style="height:300px;">
+                            <br/>
+                            <lightning-datatable 
+                                class="slds-max-medium-table_stacked" 
+                                data={varifiFailedDetails} 
+                                columns={varifiFailedTableColumns}
+                                key-field="id"
+                                hide-checkbox-column="true" 
+                               >
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cancelled Invoice Item --></label>
+    <name>Reverse_Billing__c</name>
+    <relationshipLabel><!-- Cancel Invoice Item --></relationshipLabel>
+</CustomFieldTranslation>

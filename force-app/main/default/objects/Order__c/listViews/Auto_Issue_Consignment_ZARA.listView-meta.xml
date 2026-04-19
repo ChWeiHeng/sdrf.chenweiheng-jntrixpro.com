@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Issue_Consignment_ZARA</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Order_type__c</columns>
+    <columns>Cust_Reference__c</columns>
+    <columns>Total_Amount__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Order_Amount_USD__c</columns>
+    <columns>Req_Deliv_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>SAP_Order_Code__c</columns>
+    <columns>Terms_Of_Payment__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Invoice_Amount_USD__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Order_type__c</field>
+        <operation>equals</operation>
+        <value>ZARA</value>
+    </filters>
+    <filters>
+        <field>Auto_Issue_Consignment__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Auto Issue Consignment ZARA</label>
+    <sharedTo>
+        <group>X5030</group>
+        <group>X5070</group>
+    </sharedTo>
+</ListView>

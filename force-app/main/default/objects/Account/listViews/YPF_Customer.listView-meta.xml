@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YPF_Customer</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Business_Model__c</columns>
+    <columns>Customer_Short_Name__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>MDG_Customer_Code__c</columns>
+    <columns>Country__c</columns>
+    <columns>Province_State__c</columns>
+    <columns>Customer_Approval_Status__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Tax_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Is_YPF__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Account.ShipTo_Account</value>
+    </filters>
+    <label>YPF Customer</label>
+    <sharedTo>
+        <group>YPF_Users</group>
+    </sharedTo>
+</ListView>

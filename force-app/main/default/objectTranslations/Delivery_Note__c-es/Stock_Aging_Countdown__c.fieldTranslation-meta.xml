@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Límite de antigüedad del stock del pedido - (HOY() - (Fecha de entrega + 2))</help>
+    <label>Cuenta regresiva de antigüedad de stock</label>
+    <name>Stock_Aging_Countdown__c</name>
+</CustomFieldTranslation>

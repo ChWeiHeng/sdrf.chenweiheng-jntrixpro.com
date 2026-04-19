@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- informacion de los competidores
+portfolio/products you use the most -->
+    </help>
+    <label><!-- Market Dynamics (Competitor, Industry) --></label>
+    <name>Market_Dynamics_Competitor_Industry__c</name>
+</CustomFieldTranslation>

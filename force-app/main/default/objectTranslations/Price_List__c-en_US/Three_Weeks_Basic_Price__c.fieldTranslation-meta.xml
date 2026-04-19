@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Three Weeks Basic Price --></label>
+    <name>Three_Weeks_Basic_Price__c</name>
+</CustomFieldTranslation>

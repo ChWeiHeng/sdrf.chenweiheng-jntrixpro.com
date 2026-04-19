@@ -1,0 +1,405 @@
+<!--
+  @description       : Add Campaign Product LWC HTML - Following addOrderItemLWC pattern
+  @author            : Agentforce
+  @group             : 
+  @last modified on  : 04-16-2026
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author        Modification
+  1.0   04-15-2026   Agentforce    Initial Version - Complete rewrite
+-->
+<template>
+    <div class="slds-is-relative">
+        <template if:true={isShowSpinner}>
+            <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+
+        <!-- Mobile Header -->
+        <template if:false={isPC}>
+            <div class="slds-grid" style="position: fixed;
+            z-index: 98;
+            left: -1.75px;
+            right: 0px;
+            border-radius: 0px;
+            transform: translate3d(0px, -18px, 0px);
+            background-color:#f3f3f3;
+            border-radius:5px;">
+                <div class="slds-col" style="text-align: left;line-height:35px;">
+                    <lightning-button label={customLabel.CancelLable} onclick={close}></lightning-button>
+                </div>
+                <h2 class="slds-col" style="text-align:center;line-height:35px;">
+                    Campaign Products
+                </h2>
+                <div class="slds-col" style="text-align: right;line-height:35px;">
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData}>
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- PC Header -->
+        <template if:true={isPC}>
+            <div class="slds-grid slds-modal__header">
+                <lightning-card class="slds-color__background_gray-4 pageHeader" 
+                    style="position: fixed;
+                    z-index: 98;
+                    height: 4px;
+                    left: -1.75px;
+                    right: 0px;
+                    border-radius: 0px;
+                    transform: translate3d(0px, -30px, 0px);
+                    background: #e40707;" title="Campaign Products" icon-name="standard:article">
+                </lightning-card>
+            </div>
+        </template>
+
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isPC}>
+                <div style="position: fixed;
+                z-index: 98;
+                left: -1.75px;
+                right: 0px;
+                border-radius: 0px;
+                transform: translate(80%, 801%);">
+                    <lightning-icon icon-name='action:add_relationship' alternative-text='add_relationship' size='small' title='add_relationship' onclick={showSearch}></lightning-icon>
+                </div>
+            </template>
+
+            <!-- PC Content -->
+            <template if:true={isPC}>
+                <div>
+                    <div style="margin-right:10px;display:inline-block;width:400px;margin-top:10px;">
+                        <lightning-input placeholder={customLabel.Search} type="text" variant="label-hidden" value={queryText} onchange={textChange}></lightning-input>
+                    </div>
+                    <div style="margin-left:5px;display:inline-block;">
+                        <lightning-button variant="brand" label={customLabel.searchText} onclick={queryData}></lightning-button>
+                    </div>
+                    <div class="condition_head_title" style="font-weight: inherit;font-size: 13px;">
+                        <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                        {customLabel.Search_Result}
+                    </div>
+                    <lightning-card>
+                        <lightning-record-edit-form object-api-name="Campaign_Product__c" density="compact">
+                            <div class="slds-scrollable_x slds-scrollable_y" style="height: 450px;">
+                                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.small} title="#">{customLabel.Action}</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Material_Code}>{customLabel.Material_Code}</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.ProductNameOrderItem}>{customLabel.ProductNameOrderItem}</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.productDescription}>{customLabel.productDescription}</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Sales_Unit}>{customLabel.Sales_Unit}</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <template if:true={productItemList}>
+                                            <template for:each={productItemList} for:item=info for:index="index">
+                                                <tr key={info.indexNum} class="slds-hint-parent">
+                                                    <td>
+                                                        <div class="slds-truncate">
+                                                            <lightning-button-icon icon-name="utility:add" data-record={index} onclick={selectChange}></lightning-button-icon>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="slds-truncate slds-cell-wrap">
+                                                            {info.materialCode}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="slds-truncate slds-cell-wrap">
+                                                            {info.productName}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="slds-truncate slds-cell-wrap">
+                                                            {info.productDescription}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="slds-truncate">
+                                                            <lightning-input type="text" value={info.salesUnitName} variant="label-hidden" disabled=true></lightning-input>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </lightning-record-edit-form>
+                    </lightning-card>
+
+                    <div class="condition_head_title" style="display: inline-block;font-weight: inherit;font-size: 13px;">
+                        <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                        Campaign Products
+                    </div>
+                    <lightning-card>
+                        <lightning-record-edit-form object-api-name="Campaign_Product__c" density="compact">
+                            <div class="slds-scrollable_x slds-scrollable_y" style="height: 450px;">
+                                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.small} title="#">#</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.ProductNameOrderItem}>{customLabel.ProductNameOrderItem}</div>
+                                            </th>
+                                            <template if:true={isFreeOrder}>
+                                                <th scope="col">
+                                                    <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Quantity}>
+                                                        <span class="tableTitle" title="Quantity"><span style="color:red">*</span>{customLabel.Quantity}</span>
+                                                    </div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Sales_Unit}>
+                                                        <span class="tableTitle" title="Unit"><span style="color:red">*</span>{customLabel.Sales_Unit}</span>
+                                                    </div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Delivery_Date}>
+                                                        <span class="tableTitle" title="DeliveryDate"><span style="color:red">*</span>{customLabel.Delivery_Date}</span>
+                                                    </div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Observation}>
+                                                        <span class="tableTitle" title="DeliveryDate"><span style="color:red">*</span>{customLabel.Observation}</span>
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            <th scope="col">
+                                                <div class="slds-truncate" style={lengthData.small} title={customLabel.Action}>
+                                                    <span class="tableTitle" title="Action">{customLabel.Action}</span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <template if:true={campaignProductList}>
+                                        <tbody>
+                                            <template for:each={campaignProductList} for:item=info for:index="index">
+                                                <template if:true={info.campaignProductData}>
+                                                    <tr key={info.indexNum} class="slds-hint-parent">
+                                                        <td>
+                                                            <div class="slds-truncate">
+                                                                {info.indexNum}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="slds-truncate slds-cell-wrap">
+                                                                {info.campaignProductData.productName}
+                                                            </div>
+                                                        </td>
+                                                        <template if:true={isFreeOrder}>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <lightning-input data-record={index} type="number" name="Quantity__c" value={info.campaignProductData.Quantity__c} onchange={productChange} variant="label-hidden" required step="0.01">
+                                                                    </lightning-input>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <lightning-combobox
+                                                                        value={info.campaignProductData.Unit__c}
+                                                                        options={info.opList}
+                                                                        variant="label-hidden"
+                                                                        required
+                                                                        onchange={productChange}
+                                                                        data-record={index}
+                                                                        name="Unit__c">
+                                                                    </lightning-combobox>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <input type="date" data-record={index} name="Delivery_Date__c" value={info.campaignProductData.Delivery_Date__c} required onchange={productChange}></input>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <lightning-input-field data-record={index}
+                                                                    variant="label-hidden" field-name="Observation__c"
+                                                                    name="Observation__c"
+                                                                    value={info.campaignProductData.Observation__c}
+                                                                    onchange={productChange} required>
+                                                                    
+                                                                    </lightning-input-field>
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <td>
+                                                            <div class="slds-truncate">
+                                                                <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:delete" size='large' onclick={deleteDetailData} data-record={index} name={indexDetail}></lightning-button-icon>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </template>
+                                            </template>
+                                        </tbody>
+                                    </template>
+                                </table>
+                            </div>
+                        </lightning-record-edit-form>
+                    </lightning-card>
+                </div>
+            </template>
+
+            <!-- Mobile Content -->
+            <template if:false={isPC}>
+                <div style="padding-left: 10px;padding-right: 10px;background-color:#ddd">
+                    <template for:each={campaignProductList} for:item=info for:index="index">
+                        <div key={info.indexNum} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                            <lightning-card icon-name="standard:article">
+                                <div slot="actions">
+                                    <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:delete" size='large' onclick={deleteDetailData} data-record={index} name={indexDetail}></lightning-button-icon>
+                                </div>
+                                
+                                <template if:true={info.campaignProductData}>
+                                    <lightning-record-edit-form object-api-name="Campaign_Product__c" density="compact">
+                                        <div class="slds-p-around_medium slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <label>#</label>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    {info.indexNum}
+                                                </div>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.ProductNameOrderItem}</label>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    {info.campaignProductData.productName}
+                                                </div>
+                                            </div>
+                                            <template if:true={isFreeOrder}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input data-record={index} type="number" label={customLabel.Quantity} name="Quantity__c" value={info.campaignProductData.Quantity__c} onchange={productChange} required step="0.01">
+                                                    </lightning-input>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <lightning-combobox
+                                                        value={info.campaignProductData.Unit__c}
+                                                        options={info.opList}
+                                                        label={customLabel.Sales_Unit}
+                                                        required
+                                                        onchange={productChange}
+                                                        data-record={index}
+                                                        name="Unit__c">
+                                                    </lightning-combobox>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <span style="color:red">*</span>{customLabel.Delivery_Date}
+                                                    <div>
+                                                        <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c" value={info.campaignProductData.Delivery_Date__c} required onchange={productChange}></input>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Observation__c"
+                                                        name="Observation__c" value={info.conDetailData.Observation__c}
+                                                        onchange={productChange} required>
+                                                    </lightning-input-field>
+                                                </div>
+                                            </template>
+                                            
+                                        </div>
+                                    </lightning-record-edit-form>
+                                </template>
+                            </lightning-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <template if:true={isPC}>
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="">
+                    <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Mobile Search Page -->
+    <template if:true={showSearchPage}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" style="max-width:100%;width:87% !important">
+                <template if:true={isShowSpinner}>
+                    <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+                </template>
+                <div class="slds-modal__header">
+                    <div class="slds-col" style="font-weight: 900;font-size: large;display: inline-block;float: left;">
+                        Search Data
+                    </div>
+                    <div class="slds-col" style="display: inline-block;float: right;">
+                        <div class="slds-col" style="display: inline-block;margin-right: 5px;">
+                            <lightning-button variant="neutral" style="font-size: 16px;margin-right: 5pox;" label={customLabel.CancelLable} onclick={cancelAddPage}></lightning-button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-modal__content modalBody menu" style="background-color: rgb(243, 242, 242) !important;">
+                    <div style="background-color: rgb(255, 255, 255);padding:16px;margin-bottom:20px;">
+                        <div style="padding-left: 10px;padding-right: 10px;">
+                            <div style="margin-right:10px;display:inline-block;width:250px;margin-top:10px;">
+                                <lightning-input placeholder={customLabel.Search} type="text" variant="label-hidden" value={queryText} onchange={textChange}></lightning-input>
+                            </div>
+                            <div style="display:inline-block;margin-top:10px;">
+                                <lightning-button variant="brand" label={customLabel.searchText} onclick={queryData}></lightning-button>
+                            </div>
+                            <div class="condition_head_title" style="font-weight: inherit;font-size: 13px;">
+                                <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                                {customLabel.Search_Result}
+                            </div>
+                            <lightning-card>
+                                <lightning-record-edit-form object-api-name="Campaign_Product__c" density="compact">
+                                    <template if:true={productItemList}>
+                                        <template for:each={productItemList} for:item=info for:index="index">
+                                            <div key={info.indexNum} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                                                <lightning-card>
+                                                    <div class="slds-grid slds-wrap">
+                                                        <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small">
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <lightning-input type="text" value={info.materialCode} label={customLabel.Material_Code} disabled=true></lightning-input>
+                                                            </div>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.ProductNameOrderItem}</label>
+                                                                <div class="slds-cell-wrap">{info.productName}</div>
+                                                            </div>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.productDescription}</label>
+                                                                <div class="slds-cell-wrap">{info.productDescription}</div>
+                                                            </div>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <lightning-input type="text" value={info.salesUnitName} label={customLabel.Sales_Unit} disabled=true></lightning-input>
+                                                            </div>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <div style="text-align:center;background-color:#0176d3;border-radius:5px;" onclick={selectChange} data-record={index}>
+                                                                    <lightning-button-icon variant="brand" icon-name="utility:add" size="x-small" value={index}></lightning-button-icon>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </lightning-card>
+                                            </div>
+                                        </template>
+                                    </template>
+                                </lightning-record-edit-form>
+                            </lightning-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZAR1</fullName>
+        <default>false</default>
+        <label>ZAR1 Pedido Venta Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARB</fullName>
+        <default>false</default>
+        <label>ZARB Fill Up Consig. Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARA</fullName>
+        <default>false</default>
+        <label>ZARA Retiro art.consig.AR</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARE</fullName>
+        <default>false</default>
+        <label>ZARE Issue Consig. Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARF</fullName>
+        <default>false</default>
+        <label>ZARF Issue Fact.Cons.Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR2</fullName>
+        <default>false</default>
+        <label>ZAR2 Ped. Devolución Arg.</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR4</fullName>
+        <default>false</default>
+        <label>ZAR4 Sol.Nota Débito Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR3</fullName>
+        <default>false</default>
+        <label>ZAR3 Sol.Nota Crédito Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX1</fullName>
+        <default>false</default>
+        <label>ZMX1 Standard order MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX6</fullName>
+        <default>false</default>
+        <label>ZMX6 Down Payment MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX3</fullName>
+        <default>false</default>
+        <label>ZMX3 Credit Memo Req MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX2</fullName>
+        <default>false</default>
+        <label>ZMX2 Returns MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX8</fullName>
+        <default>false</default>
+        <label>ZMX8 Service sales or MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX7</fullName>
+        <default>false</default>
+        <label>ZMX7 Fixed Asset order MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARM</fullName>
+        <default>false</default>
+        <label>ZARM</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR7</fullName>
+        <default>false</default>
+        <label>ZAR7</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR5</fullName>
+        <default>false</default>
+        <label>ZAR5</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR6</fullName>
+        <default>false</default>
+        <label>ZAR6</label>
+    </customValue>
+    <customValue>
+        <fullName>ZCR</fullName>
+        <default>false</default>
+        <label>ZCR_贷项销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZDR</fullName>
+        <default>false</default>
+        <label>ZDR_借项销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZFD</fullName>
+        <default>false</default>
+        <label>ZFD_Free Order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZIRE</fullName>
+        <default>false</default>
+        <label>ZIRE_无参照一般退货订单1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZIRT</fullName>
+        <default>false</default>
+        <label>ZIRT_无参照一般退货订单1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR1</fullName>
+        <default>false</default>
+        <label>ZOR1_润丰标准销售订单(POD)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR2</fullName>
+        <default>false</default>
+        <label>ZOR2_HQ Sales Order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR3</fullName>
+        <default>false</default>
+        <label>ZOR3_内销标准销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR5</fullName>
+        <default>false</default>
+        <label>ZOR5_境内外购销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR7</fullName>
+        <default>false</default>
+        <label>ZOR7_境内外采销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR8</fullName>
+        <default>false</default>
+        <label>ZOR8_采购三部销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZRE</fullName>
+        <default>false</default>
+        <label>ZRE_有参照无质检退货(总部)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZRE1</fullName>
+        <default>false</default>
+        <label>ZRE1_无参照无质检退货(总部)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZREQ</fullName>
+        <default>false</default>
+        <label>ZREQ_有参照需质检退货(总部)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZSER</fullName>
+        <default>false</default>
+        <label>ZSER_服务销售订单</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR6</fullName>
+        <default>false</default>
+        <label>ZOR6</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR8</fullName>
+        <default>false</default>
+        <label>ZAR8</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR9</fullName>
+        <default>false</default>
+        <label>ZAR9 (do not use)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR4</fullName>
+        <default>false</default>
+        <label>ZOR4</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO10</fullName>
+        <default>false</default>
+        <label>ZO10</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX4</fullName>
+        <default>false</default>
+        <label>ZMX4</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARD</fullName>
+        <default>false</default>
+        <label>ZARD (Only for YPF)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARX</fullName>
+        <default>false</default>
+        <label>ZARX (do not use)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARY</fullName>
+        <default>false</default>
+        <label>ZARY (do not use)</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARG</fullName>
+        <default>false</default>
+        <label>ZARG Debit Memo Request</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARH</fullName>
+        <default>false</default>
+        <label>ZARH Credit Memo Request</label>
+    </customValue>
+    <masterLabel>Order Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

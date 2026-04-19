@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>User Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Campaigns_User_Manager</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

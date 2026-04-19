@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckPriceBook</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK(Price_Book__c)) &amp;&amp; TEXT( Sales_Org__c )= &apos;5070&apos; &amp;&amp; RecordType_Name__c = &apos;Model_C&apos; &amp;&amp; (TEXT( Price_Book__r.Sales_Org__c ) &lt;&gt; TEXT( Sales_Org__c ))</errorConditionFormula>
+    <errorDisplayField>Price_Book__c</errorDisplayField>
+    <errorMessage>You can only choose the price book of corresponding sales org!</errorMessage>
+</ValidationRule>

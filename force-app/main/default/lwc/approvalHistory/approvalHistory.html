@@ -1,0 +1,72 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 06-05-2025
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   06-05-2025   Gerry   Initial Version
+-->
+<template>
+    <lightning-card title="Approve History" icon-name="standard:approval">
+        <div class="slds-m-around_medium">
+            <template if:true={approvalHistories}>
+                <ul class="slds-timeline">
+                    <template for:each={approvalHistories} for:item="history">
+                        <li key={history.id} class="slds-timeline__item">
+                            <span class="slds-assistive-text">Approval process</span>
+                            <div class="slds-media">
+                                <!-- <div class="slds-media__figure">
+                                    <lightning-icon
+                                        icon-name={history.icon}
+                                        alternative-text={history.status}
+                                        size="small"
+                                        class={history.statusClass}>
+                                    </lightning-icon>
+                                </div> -->
+                                <div class="slds-media__body">
+                                    <template if:true={history.stepName}>
+                                        <p class="slds-item_label" style="font: size 18px;color:#1966b0;margin-top:8px;">{history.stepName}</p>
+                                    </template>
+                                    <template if:false={history.stepName}>
+                                        <p class="slds-item_label" style="font: size 18px;color:#1966b0;margin-top:8px;">{history.status}</p>
+                                    </template>
+                                    <div class="slds-timeline__actions">
+                                        
+                                        <dl class="slds-list_horizontal slds-wrap">
+                                            
+                                            <dt class="slds-item_label">Step:</dt>
+                                            <dd class="slds-item_detail">{history.stepName}</dd>
+                                            <dt class="slds-item_label">status:</dt>
+                                            <dd class="slds-item_detail">
+                                                <!-- <span class={history.statusClass}> -->
+                                                    {history.status}
+                                                <!-- </span> -->
+                                            </dd>
+                                            <dt class="slds-item_label">Approver:</dt>
+                                            <dd class="slds-item_detail">{history.actor}</dd>
+                                            <dt class="slds-item_label">Approve Time:</dt>
+                                            <dd class="slds-item_detail">
+                                                <lightning-formatted-date-time 
+                                                    value={history.createdDate}>
+                                                </lightning-formatted-date-time>
+                                            </dd>
+                                            <dt class="slds-item_label">Comments:</dt>
+                                            <dd class="slds-item_detail">{history.comments}</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error">
+                    {error}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,48 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+                <!-- Change Is Customer Confirmed -->
+                {customLabel.ChangeIsCustomerConfirmHead}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isPC}>
+                <lightning-layout>
+                     <lightning-layout-item padding="around-small" size="2">
+                    </lightning-layout-item>
+                	<lightning-layout-item padding="around-small" size="8">
+                		
+                        <lightning-input type="checkbox" checked={changeStatus}
+                        value={changeStatus}
+                          onchange={productChange} label={customLabel.IsCustomerConfirmed}></lightning-input>
+                        
+                	</lightning-layout-item>
+                </lightning-layout>
+            </template>
+            <template if:true={isPC}>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="4">
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        
+                        <lightning-input type="checkbox" checked={changeStatus}
+                        value={changeStatus}
+                          onchange={productChange} label={customLabel.IsCustomerConfirmed}></lightning-input>
+                        
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer  Visit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer  Visit</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Manufacturers/Distributors --></label>
+        <name>Manufacturers_Distributors</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Normal --></label>
+        <name>Normal</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage>
+            <!-- The Customer Search is Required when customer type is trading.
+The Customer is Required when customer type is no trading. -->
+        </errorMessage>
+        <name>CustomerReq</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please input Other Purpose Specifications. --></errorMessage>
+        <name>Esc_Purpose_Vertify</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please input the cancel reason. --></errorMessage>
+        <name>Esc_Reason_Vertify</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Task_Test --></label>
+        <name>New_Task_Test</name>
+    </webLinks>
+</CustomObjectTranslation>

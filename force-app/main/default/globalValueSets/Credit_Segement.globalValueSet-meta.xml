@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Z000</fullName>
+        <default>true</default>
+        <label>Z000 Overseas General Credit segment</label>
+    </customValue>
+    <description>信用段</description>
+    <masterLabel>Credit Segement</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

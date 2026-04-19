@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ar_Agroterrum_C</fullName>
+    <columns>NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Product_Description__c</columns>
+    <columns>Product_Group__c</columns>
+    <columns>Cost_USD__c</columns>
+    <columns>Distr_Channel__c</columns>
+    <columns>Factory__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Organization__c</field>
+        <operation>equals</operation>
+        <value>5130</value>
+    </filters>
+    <label>AR Agroterrum C</label>
+    <sharedTo>
+        <group>X5030</group>
+        <role>Argentina_Agroterrum_Marketing_Manager</role>
+        <role>Argentina_Agroterrum_Operation_Planner_Manager</role>
+        <role>Argentina_Area_Head</role>
+    </sharedTo>
+</ListView>

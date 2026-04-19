@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Weight Of Goods Per Packing Unit --></label>
+    <name>Weight_Of_Goods_Per_Packing_Unit__c</name>
+</CustomFieldTranslation>

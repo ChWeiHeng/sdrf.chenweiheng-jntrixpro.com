@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audience__c</fullName>
+    <label>Audience</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Distributor/Dealer</fullName>
+                <default>false</default>
+                <label>Distributor/Dealer</label>
+            </value>
+            <value>
+                <fullName>Large Farmer</fullName>
+                <default>false</default>
+                <label>Large Farmer</label>
+            </value>
+            <value>
+                <fullName>Medium Farmer</fullName>
+                <default>false</default>
+                <label>Medium Farmer</label>
+            </value>
+            <value>
+                <fullName>Small Farmer</fullName>
+                <default>false</default>
+                <label>Small Farmer</label>
+            </value>
+            <value>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+                <label>Advisor</label>
+            </value>
+            <value>
+                <fullName>Cooperatives</fullName>
+                <default>false</default>
+                <label>Cooperatives</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

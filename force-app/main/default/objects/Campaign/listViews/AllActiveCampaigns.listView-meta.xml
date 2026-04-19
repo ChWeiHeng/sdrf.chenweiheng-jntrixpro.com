@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllActiveCampaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>Date__c</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Applicant__c</columns>
+    <columns>Budget__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Actual_Costs__c</columns>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>MKT_Approval__c</columns>
+    <columns>CAMPAIGN.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Campaigns</label>
+</ListView>

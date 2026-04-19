@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MX_C_Plus</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Date__c</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.BUDGETED_COST</columns>
+    <columns>CAMPAIGN.ACTUAL_COST</columns>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Delivery_Plant__c</field>
+        <operation>equals</operation>
+        <value>3011</value>
+    </filters>
+    <label>MX Rainbow C Plus</label>
+    <sharedTo>
+        <group>X3011</group>
+        <role>Mexico_Area_Head</role>
+        <role>Mexico_BackOffice_Finance</role>
+        <role>Mexico_Country_Manager</role>
+        <role>Mexico_Rainbow_Agro_Logistics</role>
+    </sharedTo>
+</ListView>

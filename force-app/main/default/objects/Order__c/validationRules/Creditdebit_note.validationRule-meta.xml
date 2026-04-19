@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Creditdebit_note</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+				AND(
+								OR(TEXT(Order_type__c)=&apos;ZMX3&apos;,TEXT(Order_type__c)=&apos;ZMX4&apos;),
+								TEXT(Order_Reason__c) != &apos;101&apos;,
+								TEXT(Order_Reason__c) != &apos;MX1&apos;,
+								TEXT(Order_Reason__c) != &apos;Z11&apos;,
+								TEXT(Order_Reason__c) != &apos;Z99&apos;,
+								SAP_Order__c
+				),
+				true,
+				false
+)</errorConditionFormula>
+    <errorDisplayField>Order_Reason__c</errorDisplayField>
+    <errorMessage>Only can choose [101][MX1][Z11][Z99] Reason in crm</errorMessage>
+</ValidationRule>

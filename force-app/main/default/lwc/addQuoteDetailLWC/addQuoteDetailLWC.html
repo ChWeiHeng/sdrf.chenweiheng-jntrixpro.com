@@ -1,0 +1,1094 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 04-07-2026
+  @last modified by  : Gerry 
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   04-07-2026   Gerry   Initial Version
+-->
+<template>
+    <div class="slds-is-relative">
+        <template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+
+        <!-- 手机头 -->
+        <template if:false={isPC}>
+            <div class="slds-grid" style="position: fixed;
+            z-index: 98;
+            
+            left: -1.75px;
+            right: 0px;
+            border-radius: 0px;
+            transform: translate3d(0px, -18px, 0px);
+            background-color:#f3f3f3;
+            border-radius:5px;
+           ">
+                <div class="slds-col" style="text-align: left;line-height:35px;">
+                    <lightning-button label={customLabel.CancelLable} onclick={close}></lightning-button>
+                </div>
+                <h2 class="slds-col" style="text-align:center;line-height:35px;">
+                    <!-- Manage Order Item -->
+                    {customLabel.QuoteDetailHeader}
+                </h2>
+                <div class="slds-col" style="text-align: right;line-height:35px;">
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData}>
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- PC头 -->
+        <template if:true={isPC}>
+            <div class="slds-grid slds-modal__header">
+                <lightning-card class="slds-color__background_gray-4 pageHeader" 
+                        style="position: fixed;
+                        z-index: 98;
+                        height: 4px;
+                        left: -1.75px;
+                        right: 0px;
+                        border-radius: 0px;
+                        transform: translate3d(0px, -30px, 0px);
+                        background: #e40707;" title={customLabel.QuoteDetailHeader} icon-name="standard:article">
+                    </lightning-card>
+                </div>
+        </template>
+
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isPC}>
+                <div style="position: fixed;
+                z-index: 98;
+                
+                left: -1.75px;
+                right: 0px;
+                border-radius: 0px;
+                transform: translate(80%, 801%);
+               ">
+                <lightning-icon icon-name='action:add_relationship' alternative-text='add_relationship' size='small' title='add_relationship' onclick={showSearch}></lightning-icon>
+                </div>
+            </template>
+
+            <!-- PC内容 -->
+            <template if:true={isPC}>
+                <div style="padding-left: 10px;padding-right: 10px;">
+                    <div style="margin-right:10px;display:inline-block;width:400px;margin-top:10px;">
+                        <lightning-input placeholder={customLabel.Search_Product} type="text" variant="label-hidden" value={queryText} onchange={textChange}></lightning-input>
+                    </div>
+                    <div style="margin-left:5px;display:inline-block;">
+                        <lightning-button variant="brand" label={customLabel.searchText} onclick={queryData}></lightning-button>
+                    </div>
+                    <!--<div class="condition_head_title" style="font-weight: inherit;font-size: 13px;">
+                        <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                        {customLabel.Search_Result}
+                    </div>-->
+                    <lightning-card style="height:160px;">
+                        <!-- <lightning-button variant="brand" label='Add' onclick={addData} class="slds-p-around_x-small">
+                        </lightning-button> -->
+                        <div class="slds-scrollable" style="width: 100%;overflow-y: scroll;">
+                            <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-resizable" style="width: 100%;" cellpadding="0" cellspacing="0">
+                                <thead>
+                                    <tr style="background-color: rgb(243 243 243);">
+                                        <th width={lengthData.Action} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Action}</span>
+                                        </th>
+                                        <template if:true={isHQSubClient}>
+                                        <th width=20% height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Price_List_Name}</span>
+                                        </th>
+                                        <th width={lengthData.Price} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">{customLabel.FOB_Price}</span>
+                                        </th>
+                                        <th width={lengthData.Price} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">{customLabel.Currency}</span>
+                                        </th>
+                                        <th width={lengthData.Price} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">{customLabel.Unit}</span>
+                                        </th>
+                                        </template>
+                                        <template if:false={isHQSubClient}>
+                                            <th width={lengthData.Quantity} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Contract_Processing_Product_Name}</span>
+                                        </th>
+                                        </template>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <lightning-record-edit-form object-api-name="Price_List__c" density="compact">
+                            <div class="slds-scrollable" style="width: 100%;overflow-y: scroll; max-height:250px;height: 150px;">
+                                <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-resizable" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <template if:true={priceListList}>
+                                            <template for:each={priceListList} for:item=info for:index="index">
+                                                <tr key={info.index}>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Action}>
+                                                        <lightning-button-icon icon-name="utility:add" data-record={index} onclick={selectChange}></lightning-button-icon>
+                                                    </td>
+                                                    <template if:true={isHQSubClient}>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width=20%>
+                                                        {info.priceListData.Name}
+                                                    </td>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                        {info.priceListData.FOB_Price__c}
+                                                    </td>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                        {info.priceListData.Currency__c}
+                                                    </td>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                        {info.priceListData.Unit__c}
+                                                    </td>
+                                                    </template>
+                                                    <template if:false={isHQSubClient}>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                        {info.productData.Name}
+                                                    </td>
+                                                    </template>
+                                                </tr>
+                                            </template>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </lightning-record-edit-form>
+                        
+                    </lightning-card>
+
+                    <div class="condition_head_title" style="display: inline-block;font-weight: inherit;font-size: 13px;">
+                        <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                        {customLabel.QuoteDetail} &nbsp;&nbsp;&nbsp;&nbsp;
+                        <template if:true={isHQSubClient}><lightning-button variant="brand" label="AddProduct" title="Search action" onclick={addProduct}></lightning-button></template>
+                    </div><br><br>
+                    <!--<lightning-card>
+                        <div class="slds-scrollable" style="width: 100%;overflow-y: scroll">
+                            <table class="tableCss" style="width: 100%;" cellpadding="0" cellspacing="0">
+                                <thead>
+                                    <tr style="background-color: rgb(243 243 243);">
+                                        <th width={lengthData.Action} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Action}</span>
+                                        </th>
+                                        <template if:true={isHQSubClient}>
+                                        <th width={lengthData.Commodity} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Product}</span>
+                                        </th>
+                                        <th width={lengthData.Commodity} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">Quote Product Name</span>
+                                        </th>
+                                        <th width={lengthData.Commodity} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Packing_Size}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name"><span style="color:red">*</span>{customLabel.Order_Qnty}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">{customLabel.FOB_Bulking_Price}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Packing_Cost}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">Inland Cost Including Insurance</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">Clearance Cost Percentage</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Pallet}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Freight_Cost}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Payment_Terms}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Commission}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Commission_Percent}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">CIF Price Include Commission</span>
+                                        </th>
+                                        
+                                        
+                                        </template>
+                                        <template if:false={isHQSubClient}>
+                                            <th width={lengthData.Commodity} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">Contract Processing Product</span>
+                                            </th>
+                                            <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name"><span style="color:red">*</span>{customLabel.Order_Qnty}</span>
+                                            </th>
+                                            <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name"><span style="color:red">*</span>Cost</span>
+                                            </th>
+                                            <th width={lengthData.Commodity} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Packing_Size}</span>
+                                            </th>
+                                            <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Packing_Cost}</span>
+                                            </th>
+                                            <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">Processing Cost</span>
+                                            </th>
+                                            <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Payment_Terms}</span>
+                                            </th>
+                                        </template>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.CIF_Price_Without_Margin}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.CIF_Price}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.BU_Margin_Rate}</span>
+                                        </th>
+                                        <th width={lengthData.num} height="30px;"
+                                            class="slds-text-align_left slds-is-sortable slds-is-sorted slds-is-sorted_desc"
+                                            scope="col" aria-sort="descending">
+                                            <span class="tableTitle" title="Name">{customLabel.Unit}</span>
+                                        </th>
+                                        
+                                        
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <template if:true={quoteDetailList}>
+                            <lightning-record-edit-form object-api-name="Quote_Detail__c" density="compact">
+                                <div class="slds-scrollable" style="width: 100%;overflow-y: scroll; max-height:250px;height: 250px;">
+                                    <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-resizable" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <template for:each={quoteDetailList} for:item=info for:index="index">
+                                                <template if:true={info.quoteDetailData}>
+                                                    <tr key={info.index}>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Action}>
+                                                            <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:delete" size='large' onclick={deleteDetailData} data-record={index} name={indexDetail}></lightning-button-icon>
+                                                        </td>
+                                                        <template if:true={isHQSubClient}>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                            <lightning-input-field data-record={index} field-name="Price_List__c" name="Price_List__c"  value={info.quoteDetailData.Price_List__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                            <lightning-input-field data-record={index} field-name="Quote_Product_Name__c" name="Quote_Product_Name__c"  value={info.quoteDetailData.Quote_Product_Name__c} onchange={productChange} variant="label-hidden" disabled={info.isNotEdit} required> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Packing_Size__c" name="Packing_Size__c"  value={info.quoteDetailData.Packing_Size__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Order_Qnty__c" name="Order_Qnty__c"  value={info.quoteDetailData.Order_Qnty__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="FOB_Price__c" name="FOB_Price__c"  value={info.quoteDetailData.FOB_Price__c} onchange={productChange} variant="label-hidden" disabled={info.isNotEdit}> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Packing_Cost__c" name="Packing_Cost__c"  value={info.quoteDetailData.Packing_Cost__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Inland_Cost_Including_Insurance__c" name="Inland_Cost_Including_Insurance__c"  value={info.quoteDetailData.Inland_Cost_Including_Insurance__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={info.quoteDetailData.Clearance_Cost_Percentage__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Pallet__c" name="Pallet__c"  value={info.quoteDetailData.Pallet__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Freight_Cost__c" name="Freight_Cost__c"  value={info.quoteDetailData.Freight_Cost__c} onchange={productChange} variant="label-hidden" required={isRetrograde}> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Payment_Terms__c" name="Payment_Terms__c"  value={info.quoteDetailData.Payment_Terms__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                            <lightning-input-field data-record={index} field-name="Commission__c" name="Commission__c"  value={info.quoteDetailData.Commission__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                            <lightning-input-field data-record={index} field-name="Commission_Percent__c" name="Commission_Percent__c"  value={info.quoteDetailData.Commission_Percent__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                            <lightning-input-field data-record={index} field-name="CIF_Price_Include_Commission__c" name="CIF_Price_Include_Commission__c"  value={info.quoteDetailData.CIF_Price_Include_Commission__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        
+                                                      
+                                                        </template>
+                                                        <template if:false={isHQSubClient}>
+                                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                            <lightning-input-field data-record={index} field-name="Contract_Processing_Product__c" name="Contract_Processing_Product__c"  value={info.quoteDetailData.Contract_Processing_Product__c} onchange={productChange} variant="label-hidden" disabled > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Order_Qnty__c" name="Order_Qnty__c"  value={info.quoteDetailData.Order_Qnty__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Cost__c" name="Cost__c"  value={info.quoteDetailData.Cost__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Packing_Size__c" name="Packing_Size__c"  value={info.quoteDetailData.Packing_Size__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Packing_Cost__c" name="Packing_Cost__c"  value={info.quoteDetailData.Packing_Cost__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Process_Cost__c" name="Process_Cost__c"  value={info.quoteDetailData.Process_Cost__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                            
+                                                            <lightning-input-field data-record={index} field-name="Payment_Terms__c" name="Payment_Terms__c"  value={info.quoteDetailData.Payment_Terms__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+
+                                                        </template>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                            <lightning-input-field data-record={index} field-name="CIF_90_Days_Without_Margin__c" name="CIF_90_Days_Without_Margin__c"  value={info.quoteDetailData.CIF_90_Days_Without_Margin__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                            <lightning-input-field data-record={index} field-name="CIF_90_Days__c" name="CIF_90_Days__c"  value={info.quoteDetailData.CIF_90_Days__c} required onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                            <lightning-input-field data-record={index} field-name="BU_Profit_Rate__c" name="BU_Profit_Rate__c"  value={info.quoteDetailData.BU_Profit_Rate__c} onchange={productChange} variant="label-hidden" disabled > 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                        
+                                                           
+                                                            <lightning-combobox
+                                                                value={info.quoteDetailData.Unit__c}
+                                                                options={unitOption} variant="label-hidden" required onchange={productChange} data-record={index} name="Unit__c"></lightning-combobox>
+                                                        </td>
+                                                        
+                                                        
+                                                    </tr>
+                                                </template>
+                                            </template>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </lightning-record-edit-form>
+                        </template>
+                    </lightning-card>-->
+                    <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="12" style="padding: 0em;">
+                                
+                                    <div class="slds-table--header-fixed_container slds-border_right slds-border_left" style="height:300px;width: 100%;;overflow-x: auto;" onscroll={tableOuterDivScrolled}>
+                                    <div class="slds-scrollable_y tableViewInnerDiv" style="height:300px;">
+                                        <lightning-record-edit-form object-api-name="Quote_Detail__c" >
+                                        <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table--header-fixed slds-resizable slds-table_resizable-cols " style="width: 100%;" cellpadding="0" cellspacing="0">
+                                            <thead>
+                                                    <tr style="background-color: rgb(243 243 243);" >
+                                                    <!-- 删除 -->
+                                                    <th style="width: 5rem;" class=textWrap scope="col" >
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">{customLabel.Action}
+                                                        </div>
+                                                    </th>
+                                                    <template if:true={isHQSubClient}>
+                                                    
+                    
+                                                    
+                                                    <th style="width: 15rem;" class=textWrap scope="col">
+                                                    <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                    {customLabel.Product}
+                                                    </div>
+                                                    </th>
+                                                    
+                                                   
+                                                    <th style="width: 15rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;"><span style="color:red">*</span>{customLabel.Quote_Product_Name}
+                                                        </div>
+                                                    </th>
+
+                                                     <th style="width: 5rem;" class=textWrap scope="col" >
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;"><span style="color:red">*</span>{customLabel.Order_Qnty}
+                                                        </div>
+                                                        </th>
+                                                    <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            <span style="color:red">*</span>{customLabel.Unit}
+                                                        </div>
+                                                        </th>
+                                                    <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                           <span style="color:red">*</span>{customLabel.FOB_Bulking_Price}
+                                                        </div>
+                                                        </th>
+                                                    
+                                                    <th style="width: 15rem;" class=textWrap scope="col">
+                                                    <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;"><span style="color:red">*</span>{customLabel.Packing_Size}
+                                                    </div>
+                                                    </th>
+                                                    
+                                                        
+                                                       
+                                                   
+                                                       
+                                                        
+                                                        
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            <template if:true={isRetrograde}><span style="color:red">*</span></template>{customLabel.Packing_Cost}
+                                                        </div>
+                                                        </th>
+
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            <template if:true={isRetrograde}><span style="color:red">*</span></template>{customLabel.Pallet}
+                                                        </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            <template if:true={isRetrograde}><span style="color:red">*</span></template>{customLabel.Freight_Cost}
+                                                        </div>
+                                                        </th>
+
+                                                        <th style="width: 12rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            {customLabel.Clearance_Cost_Percentage}
+                                                        </div>
+                                                        </th>
+
+                                                        <th style="width: 15rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            {customLabel.Inland_Cost_Including_Insurance}
+                                                        </div>
+                                                        </th>
+
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            {customLabel.Commission}
+                                                        </div>
+                                                        </th>
+                                                        
+                                                        
+                                                       
+                                                        
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            {customLabel.Payment_Terms}
+                                                        </div>
+                                                        </th>
+
+                                                         
+                                                        
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            {customLabel.Commission_Percent}
+                                                        </div>
+                                                        </th>
+                                                        <!--<th style="width: 12rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width">
+                                                            {customLabel.CIF_Price_Include_Commission}
+                                                        </div>
+                                                        </th>-->
+                                                        
+                                                    </template>
+                                                    <template if:false={isHQSubClient}>
+                                                        <th style="width: 12rem;" class=textWrap scope="col" >
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                {customLabel.Contract_Processing_Product}
+                                                            </div>
+                                                        </th>
+
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                {customLabel.Cost}
+                                                            </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                <span style="color:red">*</span>{customLabel.Order_Qnty}
+                                                            </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            <span style="color:red">*</span>{customLabel.Unit}
+                                                        </div>
+                                                        </th>
+                                                        
+                                                        
+                                                        <th style="width: 15rem;" class=textWrap scope="col">
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                <span style="color:red">*</span>{customLabel.Packing_Size}
+                                                            </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                {customLabel.Packing_Cost}
+                                                            </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                <span style="color:red">*</span>{customLabel.Processing_Cost}
+                                                            </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                            <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                                {customLabel.Payment_Terms}
+                                                            </div>
+                                                        </th>
+                                                        </template>
+
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                           <span style="color:red">*</span>{customLabel.CIF_Price}
+                                                        </div>
+                                                        </th>
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">
+                                                            {customLabel.CIF_Price_Without_Margin}
+                                                        </div>
+                                                        </th>
+                                                        
+                                                        <th style="width: 10rem;" class=textWrap scope="col">
+                                                        <div class="slds-cell-fixed slds-truncate dv-dynamic-width" style="margin-left:10px;">{customLabel.BU_Margin_Rate}
+                                                        </div>
+                                                        </th>
+                                                         
+                                                        
+                                                    
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody >
+                                                <template for:each={quoteDetailList} for:item=info for:index="index">
+                                                   
+                                                        <tr key={info.index} >
+                                                        
+                                                        <!-- 删除 -->
+                                                        <td>
+                                                                <lightning-button-icon   icon-name="utility:delete"  onclick={deleteDetailData} data-record={index} ></lightning-button-icon>
+                                                        </td>
+                                                         
+                                                        <template if:true={isHQSubClient}>
+                                                        <td class="slds-cell-wrap">
+                                                            <lightning-input-field data-record={index} field-name="Price_List__c" name="Price_List__c"  value={info.quoteDetailData.Price_List__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+
+
+                                                        
+                                                        <td class="slds-cell-wrap">
+                                                            <lightning-input-field data-record={index} field-name="Quote_Product_Name__c" name="Quote_Product_Name__c"  value={info.quoteDetailData.Quote_Product_Name__c} onchange={productChange} variant="label-hidden"  required> 
+                                                            </lightning-input-field> 
+                                                        </td>
+
+                                                        <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Order_Qnty__c" name="Order_Qnty__c"  value={info.quoteDetailData.Order_Qnty__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                        <template if:true={info.isNotEdit}>
+                                                            <td class="slds-cell-wrap">
+                                                            <lightning-select
+                                                                value={info.quoteDetailData.Unit__c}
+                                                                options={unitOption} variant="label-hidden" required onchange={productChange} data-record={index} name="Unit__c" disabled></lightning-select>
+                                                            </td>
+                                                            </template>
+                                                            <template if:false={info.isNotEdit}>
+                                                            <td class="slds-cell-wrap">
+                                                            <lightning-select
+                                                                value={info.quoteDetailData.Unit__c}
+                                                                options={unitOption} variant="label-hidden" required onchange={productChange} data-record={index} name="Unit__c"></lightning-select>
+                                                            </td>
+                                                            </template>
+                                                            
+
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="FOB_Price__c" name="FOB_Price__c"  value={info.quoteDetailData.FOB_Price__c} onchange={productChange} variant="label-hidden" disabled={info.isNotEdit} required> 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                        
+                                                       
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Packing_Size__c" name="Packing_Size__c"  value={info.quoteDetailData.Packing_Size__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field>
+                                                            </td>
+                                                            
+                                                            
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Packing_Cost__c" name="Packing_Cost__c"  value={info.quoteDetailData.Packing_Cost__c} onchange={productChange} variant="label-hidden" required={isRetrograde}> 
+                                                            </lightning-input-field>
+                                                            </td>
+
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Pallet__c" name="Pallet__c"  value={info.quoteDetailData.Pallet__c} onchange={productChange} required={isRetrograde} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Freight_Cost__c" name="Freight_Cost__c"  value={info.quoteDetailData.Freight_Cost__c} onchange={productChange} variant="label-hidden" required={isRetrograde}>
+                                                            </lightning-input-field> 
+                                                            </td>
+
+                                                            <template if:true={isMXDAPORDDP}>
+                                                                <td class="slds-cell-wrap">
+                                                                    <lightning-input-field data-record={index} field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={info.quoteDetailData.Clearance_Cost_Percentage__c} onchange={productChange}  variant="label-hidden" disabled> 
+                                                                    </lightning-input-field> 
+                                                                </td>
+                                                            </template>
+                                                            <template if:false={isMXDAPORDDP}>
+                                                                <td class="slds-cell-wrap">
+                                                                    <lightning-input-field data-record={index} field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={info.quoteDetailData.Clearance_Cost_Percentage__c} onchange={productChange}  variant="label-hidden" > 
+                                                                    </lightning-input-field> 
+                                                                </td>
+                                                            </template>
+                                                            
+                                                            
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Inland_Cost_Including_Insurance__c" name="Inland_Cost_Including_Insurance__c"  value={info.quoteDetailData.Inland_Cost_Including_Insurance__c} onchange={productChange}  variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                            </td>
+
+                                                             <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Commission__c" name="Commission__c"  value={info.quoteDetailData.Commission__c} onchange={productChange}  variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                            
+                                                            
+                                                            
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Payment_Terms__c" name="Payment_Terms__c"  value={info.quoteDetailData.Payment_Terms__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field>
+                                                            </td>
+
+                                                           
+                                                           
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Commission_Percent__c" name="Commission_Percent__c"  value={info.quoteDetailData.Commission_Percent__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                            <!--<td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="CIF_Price_Include_Commission__c" name="CIF_Price_Include_Commission__c"  value={info.quoteDetailData.CIF_Price_Include_Commission__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                            </td>-->
+                                                            
+                                                        </template>
+                                                        <template if:false={isHQSubClient}>
+                                                            <td class="slds-cell-wrap">
+                                                               <lightning-input-field data-record={index} field-name="Contract_Processing_Product__c" name="Contract_Processing_Product__c"  value={info.quoteDetailData.Contract_Processing_Product__c} onchange={productChange} variant="label-hidden" disabled > 
+                                                            </lightning-input-field>
+                                                            </td>
+                                                            
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Cost__c" name="Cost__c"  value={info.quoteDetailData.Cost__c} onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Order_Qnty__c" name="Order_Qnty__c"  value={info.quoteDetailData.Order_Qnty__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                            <td class="slds-cell-wrap">
+                                                            <lightning-select
+                                                                value={info.quoteDetailData.Unit__c}
+                                                                options={unitOption} variant="label-hidden" required onchange={productChange} data-record={index} name="Unit__c"></lightning-select>
+                                                        </td>
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Packing_Size__c" name="Packing_Size__c"  value={info.quoteDetailData.Packing_Size__c} onchange={productChange} variant="label-hidden" required> 
+                                                            </lightning-input-field> 
+                                                                
+                                                            </td>
+                                                             <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Packing_Cost__c" name="Packing_Cost__c"  value={info.quoteDetailData.Packing_Cost__c} onchange={productChange}   variant="label-hidden" > 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Process_Cost__c" name="Process_Cost__c"  value={info.quoteDetailData.Process_Cost__c} onchange={productChange} required variant="label-hidden" > 
+                                                            </lightning-input-field>
+                                                            </td>
+                                                            <td class="slds-cell-wrap">
+                                                                <lightning-input-field data-record={index} field-name="Payment_Terms__c" name="Payment_Terms__c"  value={info.quoteDetailData.Payment_Terms__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                            </td>
+                                                        </template>
+                                                        <td class="slds-cell-wrap">
+                                                            <lightning-input-field data-record={index} field-name="CIF_90_Days__c" name="CIF_90_Days__c"  value={info.quoteDetailData.CIF_90_Days__c} required onchange={productChange} variant="label-hidden" > 
+                                                            </lightning-input-field>
+                                                        </td>
+                                                        <td class="slds-cell-wrap">
+                                                            <lightning-input-field data-record={index} field-name="CIF_90_Days_Without_Margin__c" name="CIF_90_Days_Without_Margin__c"  value={info.quoteDetailData.CIF_90_Days_Without_Margin__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </td>
+                                                        
+                                                        <td class="slds-cell-wrap">
+                                                            <lightning-input-field data-record={index} field-name="BU_Profit_Rate__c" name="BU_Profit_Rate__c"  value={info.quoteDetailData.BU_Profit_Rate__c} onchange={productChange} variant="label-hidden" disabled > 
+                                                            </lightning-input-field>
+                                                        </td>
+                                                        
+                                                        
+                                                      </tr>
+                                                  </template>
+                                              </tbody>
+                                            </table>
+                                    </lightning-record-edit-form>
+                                    </div></div>
+                            </lightning-layout-item>
+                </lightning-layout>
+                </div>
+            </template>
+
+            <!-- 手机内容详细页面 -->
+            <template if:false={isPC}>
+                <div style="padding-left: 10px;padding-right: 10px;background-color:#ddd">
+                    <br>
+                        <template if:true={isHQSubClient}><lightning-button variant="brand" label="AddProduct" title="Search action" onclick={addProduct}></lightning-button></template>
+                    <template for:each={quoteDetailList} for:item=info for:index="index">
+                        <div key={info.index} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                            <lightning-card icon-name="standard:article">
+                                <div slot="actions">
+                                    <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:delete" size='large' onclick={deleteDetailData} data-record={index} name={indexDetail}></lightning-button-icon>
+                                </div>
+                                <template if:true={info.quoteDetailData}>
+                                    <lightning-record-edit-form object-api-name="Quote_Detail__c" density="compact">
+                                        <div class="slds-p-around_medium slds-grid slds-wrap" >        
+                                            <template if:true={isHQSubClient}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Price_List__c" name="Price_List__c"  value={info.quoteDetailData.Price_List__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Quote_Product_Name__c" name="Quote_Product_Name__c"  value={info.quoteDetailData.Quote_Product_Name__c} onchange={productChange}   required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Order_Qnty__c" name="Order_Qnty__c"  value={info.quoteDetailData.Order_Qnty__c} onchange={productChange}  required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                 <template if:true={info.isNotEdit}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-combobox
+                                                                value={info.quoteDetailData.Unit__c} style="width: 100%;"
+                                                                options={unitOption} label="Unit" disabled onchange={productChange} required data-record={index} name="Unit__c"></lightning-combobox> 
+                                                    </div>
+                                                    </template>
+                                                    <template if:false={info.isNotEdit}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-combobox
+                                                                value={info.quoteDetailData.Unit__c} style="width: 100%;"
+                                                                options={unitOption} label="Unit" required onchange={productChange} data-record={index} name="Unit__c" re></lightning-combobox> 
+                                                    </div>
+                                                    </template>
+                                                 <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="FOB_Price__c" name="FOB_Price__c"  value={info.quoteDetailData.FOB_Price__c} onchange={productChange}  disabled={info.isNotEdit} required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Packing_Size__c" name="Packing_Size__c"  value={info.quoteDetailData.Packing_Size__c} onchange={productChange}  required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                
+                                               
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Packing_Cost__c" name="Packing_Cost__c"  value={info.quoteDetailData.Packing_Cost__c} onchange={productChange} required={isRetrograde}> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                 <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Pallet__c" name="Pallet__c"  value={info.quoteDetailData.Pallet__c} onchange={productChange}  required={isRetrograde}> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Freight_Cost__c" name="Freight_Cost__c"  value={info.quoteDetailData.Freight_Cost__c} onchange={productChange}  required={isRetrograde}> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <template if:true={isMXDAPORDDP}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                        <lightning-input-field data-record={index} field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={info.quoteDetailData.Clearance_Cost_Percentage__c} onchange={productChange}  disabled> 
+                                                        </lightning-input-field> 
+                                                    </div>
+                                                </template>
+                                                <template if:false={isMXDAPORDDP}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                        <lightning-input-field data-record={index} field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={info.quoteDetailData.Clearance_Cost_Percentage__c} onchange={productChange} > 
+                                                        </lightning-input-field> 
+                                                    </div>
+                                                </template>
+                                                
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Inland_Cost_Including_Insurance__c" name="Inland_Cost_Including_Insurance__c"  value={info.quoteDetailData.Inland_Cost_Including_Insurance__c} onchange={productChange}  > 
+                                                </lightning-input-field> 
+                                                </div>
+                                                
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Commission__c" name="Commission__c"  value={info.quoteDetailData.Commission__c} onchange={productChange}  > 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Payment_Terms__c" name="Payment_Terms__c"  value={info.quoteDetailData.Payment_Terms__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>
+                                               
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Commission_Percent__c" name="Commission_Percent__c"  value={info.quoteDetailData.Commission_Percent__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                
+                                            </template>
+                                            <template if:false={isHQSubClient}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Contract_Processing_Product__c" name="Contract_Processing_Product__c"  value={info.quoteDetailData.Contract_Processing_Product__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Cost__c" name="Cost__c"  value={info.quoteDetailData.Cost__c} onchange={productChange}  > 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Order_Qnty__c" name="Order_Qnty__c"  value={info.quoteDetailData.Order_Qnty__c} onchange={productChange}  required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                 <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-combobox
+                                                                value={info.quoteDetailData.Unit__c} style="width: 100%;"
+                                                                options={unitOption} label="Unit" required onchange={productChange} data-record={index} name="Unit__c"></lightning-combobox> 
+                                                    </div>
+                                                
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Packing_Size__c" name="Packing_Size__c"  value={info.quoteDetailData.Packing_Size__c} onchange={productChange} required > 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Packing_Cost__c" name="Packing_Cost__c"  value={info.quoteDetailData.Packing_Cost__c} onchange={productChange}  > 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Process_Cost__c" name="Process_Cost__c"  value={info.quoteDetailData.Process_Cost__c} onchange={productChange}  required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Payment_Terms__c" name="Payment_Terms__c"  value={info.quoteDetailData.Payment_Terms__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>                            
+                                            </template>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="CIF_90_Days__c" name="CIF_90_Days__c"  value={info.quoteDetailData.CIF_90_Days__c} onchange={productChange}  required> 
+                                                </lightning-input-field> 
+                                                </div> 
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="CIF_90_Days_Without_Margin__c" name="CIF_90_Days_Without_Margin__c"  value={info.quoteDetailData.CIF_90_Days_Without_Margin__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>  
+                                                 
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="BU_Profit_Rate__c" name="BU_Profit_Rate__c"  value={info.quoteDetailData.BU_Profit_Rate__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                
+                                               
+                                            <!--<template if:true = {info.quoteDetailData.Show_More__c}>
+                                                
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.quoteDetailData.Gross_Weight__c} onchange={productChange}> 
+                                                    </lightning-input-field> 
+                                                </div>
+
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.quoteDetailData.Net_Weight__c} onchange={productChange}> 
+                                                    </lightning-input-field>
+                                                </div>
+                                            </template>-->
+                                        </div>
+                                    </lightning-record-edit-form>
+                                    <!--<div slot="footer">
+                                        <template if:false={info.quoteDetailData.Show_More__c}>
+                                            <lightning-badge label={customLabel.Show_More} name={index} onclick={shooMoreMe}></lightning-badge>
+                                        </template>
+                                        <template if:true={info.quoteDetailData.Show_More__c}>
+                                            <lightning-badge label={customLabel.Show_Less} name={index} onclick={shooLessMe}></lightning-badge>
+                                        </template>
+                                    </div>-->
+                                </template>
+                            </lightning-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+        <template if:true={isPC}>
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="">
+                    <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- 手机添加产品页面 -->
+    <template if:true={showSearchPage}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container " style="max-width:100%;width:87% !important">
+                <template if:true={isShowSpinner} >
+                    <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+                </template>
+                <div class="slds-modal__header">
+                    <div class="slds-col" style="font-weight: 900;font-size: large;display: inline-block;float: left;">
+                        Search Data
+                    </div>
+                    
+                    <div class="slds-col" style="display: inline-block;float: right;">
+                        <div class="slds-col" style="display: inline-block;margin-right: 5px;">
+                            <lightning-button variant="neutral" style="font-size: 16px;margin-right: 5pox;" label={customLabel.CancelLable}  onclick={cancelAddPage}></lightning-button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-modal__content modalBody menu" style="background-color: rgb(243, 242, 242) !important;">
+                    <div style="background-color: rgb(255, 255, 255);padding:16px;margin-bottom:20px;">
+                        <div style="padding-left: 10px;padding-right: 10px;">
+                            <div style="margin-right:10px;display:inline-block;width:250px;margin-top:10px;">
+                                <lightning-input placeholder={customLabel.Search_Product} type="text" variant="label-hidden" value={queryText} onchange={textChange}></lightning-input>
+                            </div>
+                            <div style="display:inline-block;margin-top:10px;">
+                                <lightning-button variant="brand" label={customLabel.searchText} onclick={queryData}></lightning-button>
+                            </div>
+                            <div class="condition_head_title" style="font-weight: inherit;font-size: 13px;">
+                                <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                                {customLabel.Search_Result}
+                            </div>
+                            <lightning-card>
+                                <lightning-record-edit-form object-api-name="Price_List__c" density="compact">
+                                    <template if:true={priceListList}>
+                                        <template for:each={priceListList} for:item=info for:index="index">
+                                            <div key={info.index} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                                                <lightning-card>
+                                                    <div class="slds-grid slds-wrap" >
+                                                        <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small">
+                                                            <template if:true={isHQSubClient}>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.Price_List_Name}</label>
+                                                                <div class="slds-cell-wrap">{info.priceListData.Name}</div>
+                                                            </div> 
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.FOB_Price}</label>
+                                                                <div class="slds-cell-wrap">{info.priceListData.FOB_Price__c}</div>
+                                                            </div> 
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.Currency}</label>
+                                                                <div class="slds-cell-wrap">{info.priceListData.Currency__c}</div>
+                                                            </div> 
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.Unit}</label>
+                                                                <div class="slds-cell-wrap">{info.priceListData.Unit__c}</div>
+                                                            </div>
+                                                            </template>
+                                                            <template if:false={isHQSubClient}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>Contract Processing Product Name</label>
+                                                                <div class="slds-cell-wrap">{info.productData.Name}</div>
+                                                            </div>
+                                                            </template>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <div style="text-align:center;background-color:#0176d3;border-radius:5px;" onclick={selectChange} data-record={index}>
+                                                                    <lightning-button-icon variant="brand" icon-name="utility:add" size="x-small" value={index}></lightning-button-icon>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </lightning-card>
+                                            </div>
+                                            
+                                        </template>
+                                    </template>
+                                </lightning-record-edit-form>
+                            </lightning-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

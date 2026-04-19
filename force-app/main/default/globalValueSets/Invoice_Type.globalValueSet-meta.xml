@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZMXA</fullName>
+        <default>false</default>
+        <label>ZMXA Invoice Down Pay MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMXB</fullName>
+        <default>false</default>
+        <label>ZMXB Invoice MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMXC</fullName>
+        <default>false</default>
+        <label>ZMXC Credit Memo MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMXD</fullName>
+        <default>false</default>
+        <label>ZMXD Debit Memo MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMXF</fullName>
+        <default>false</default>
+        <label>ZMXF Invoice Fixed Asset MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMXR</fullName>
+        <default>false</default>
+        <label>ZMXR Return Credit Memo MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR6</fullName>
+        <default>false</default>
+        <label>ZAR6 Factura sin reporte Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR7</fullName>
+        <default>false</default>
+        <label>ZAR7 Fac.Líq./Product. Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARA</fullName>
+        <default>false</default>
+        <label>ZARA Factura Elect. Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARC</fullName>
+        <default>false</default>
+        <label>ZARC Nota de Crédito Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARD</fullName>
+        <default>false</default>
+        <label>ZARD Nota de Débito Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARI</fullName>
+        <default>false</default>
+        <label>ZARI Factura MiPyme Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARJ</fullName>
+        <default>false</default>
+        <label>ZARJ Nota de Crédito MiPyme Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARK</fullName>
+        <default>false</default>
+        <label>ZARK Nota de Débito MiPyme Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARM</fullName>
+        <default>false</default>
+        <label>ZARM Factura migración. Bejerman</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARN</fullName>
+        <default>false</default>
+        <label>ZARN FCE migración. Bejerman</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARX</fullName>
+        <default>false</default>
+        <label>ZARX Factura Expo Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARY</fullName>
+        <default>false</default>
+        <label>ZARY Nota de Crédito Expo Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARZ</fullName>
+        <default>false</default>
+        <label>ZARZ Nota de Débito Expo Arg</label>
+    </customValue>
+    <customValue>
+        <fullName>S1</fullName>
+        <default>false</default>
+        <label>S1 Cancel Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>S2</fullName>
+        <default>false</default>
+        <label>S2 Cancel Cred. Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>S3</fullName>
+        <default>false</default>
+        <label>S3 Cancel Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>ZF1</fullName>
+        <default>false</default>
+        <label>ZF1_发票</label>
+    </customValue>
+    <customValue>
+        <fullName>ZF2</fullName>
+        <default>false</default>
+        <label>ZF2_发票</label>
+    </customValue>
+    <customValue>
+        <fullName>ZF2B</fullName>
+        <default>false</default>
+        <label>ZF2B</label>
+    </customValue>
+    <customValue>
+        <fullName>ZF3</fullName>
+        <default>false</default>
+        <label>ZF3_发票</label>
+    </customValue>
+    <customValue>
+        <fullName>ZG2</fullName>
+        <default>false</default>
+        <label>ZG2_贷项凭证</label>
+    </customValue>
+    <customValue>
+        <fullName>ZINF</fullName>
+        <default>false</default>
+        <label>ZINF_发票</label>
+    </customValue>
+    <customValue>
+        <fullName>ZING</fullName>
+        <default>false</default>
+        <label>ZING_贷项凭证</label>
+    </customValue>
+    <customValue>
+        <fullName>ZINL</fullName>
+        <default>false</default>
+        <label>ZINL_借项凭证</label>
+    </customValue>
+    <customValue>
+        <fullName>ZL2</fullName>
+        <default>false</default>
+        <label>ZL2_借项凭证</label>
+    </customValue>
+    <customValue>
+        <fullName>ZRE</fullName>
+        <default>false</default>
+        <label>ZRE_退货货记</label>
+    </customValue>
+    <customValue>
+        <fullName>RE</fullName>
+        <default>false</default>
+        <label>RE_HQ Return</label>
+    </customValue>
+    <customValue>
+        <fullName>L2</fullName>
+        <default>false</default>
+        <label>L2_HQ借贷项订单</label>
+    </customValue>
+    <customValue>
+        <fullName>G2</fullName>
+        <default>false</default>
+        <label>G2_HQ借贷项订单</label>
+    </customValue>
+    <masterLabel>Invoice Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

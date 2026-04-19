@@ -1,0 +1,37 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+                <!-- Order Close -->
+                {customLabel.OrderCloneHeader}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isShow}>
+                <div class="slds-align_absolute-center slds-text-heading_medium" style="height:100px;">
+                    <!--Confirm Resync Data -->
+                    {customLabel.OrderCloneBody}
+                </div>
+            </template>
+
+            <template if:true={isShow}>
+                <div class="" style="height:100px;margin-right:10px;margin-left:10px;align-content:center;">
+                    <!-- Confirm Order Close -->
+                    <lightning-combobox
+                        value={type}
+                        options={option} variant="label-hidden" required onchange={productChange} label="Order Type"></lightning-combobox>
+                </div>
+            </template>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

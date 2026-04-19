@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Delete</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW() ,Product_Name__r.Is_Delete__c )</errorConditionFormula>
+    <errorDisplayField>Product_Name__c</errorDisplayField>
+    <errorMessage>Product Name Deteled</errorMessage>
+</ValidationRule>

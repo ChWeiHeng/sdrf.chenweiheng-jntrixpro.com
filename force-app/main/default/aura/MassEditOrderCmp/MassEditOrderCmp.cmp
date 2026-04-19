@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,force:appHostable">
+    <aura:attribute name="isLoad" type="Boolean" default="false"/>   
+    <aura:handler event="aura:locationChange" action="{!c.handleDestroy}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.isLoad}">
+        <c:massEditOrder/> 
+    </aura:if>
+</aura:component>

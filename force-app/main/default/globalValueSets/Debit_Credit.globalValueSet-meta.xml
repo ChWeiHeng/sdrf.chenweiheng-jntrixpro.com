@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>H</fullName>
+        <default>false</default>
+        <label>H：Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>S</fullName>
+        <default>false</default>
+        <label>S：Debit</label>
+    </customValue>
+    <masterLabel>Debit Credit</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

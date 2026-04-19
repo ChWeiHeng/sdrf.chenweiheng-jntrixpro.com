@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vertify_Actual_Cost__c</fullName>
+    <formula>AND(ISBLANK(Actual_Costs__c))</formula>
+    <label>Vertify Actual Cost</label>
+    <type>Checkbox</type>
+</CustomField>

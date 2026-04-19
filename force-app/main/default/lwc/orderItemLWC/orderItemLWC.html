@@ -1,0 +1,577 @@
+<!--
+    @description       : 
+    @author            : Gerry
+    @group             : 
+    @last modified on  : 09-05-2025
+    @last modified by  : Gerry
+    Modifications Log
+    Ver   Date         Author   Modification
+    1.0   07-18-2025   Gerry   Initial Version
+  -->
+  <template>
+    <template if:true={show}>
+        <!-- 手机端 -->
+        <template if:false={isPC}>
+            <div style="padding-left: 10px;padding-right: 10px;background-color:#ddd">
+                <template for:each={orderItemList} for:item=info for:index="index">
+                    <div key={info.indexNum} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                        <lightning-card icon-name="standard:article">
+                            <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                                <div class="slds-p-around_medium slds-grid slds-wrap" >
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                        <label>#</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <input type="text" disabled value={info.SAP_Item_Num__c}>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.ProductNameOrderItem}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            {info.Commodity_Name__c}
+                                        </div>
+                                    </div>
+                                    
+                                    <template if:true={modelB}>
+                                        <template if:true={isShowMargin}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.cost}</label>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    <input type="text" disabled value={info.Product_Cost__c}>
+                                                </div>   
+                                            </div>
+                                        </template>
+                                    </template>
+                                    <template if:false={modelB}>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <label>{customLabel.GuidePrice}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                <input type="text" disabled value={info.Guide_Price__c}>
+                                            </div>   
+                                        </div>
+                                    </template>
+
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.Price}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <input type="text" disabled value={info.Price__c}>
+                                        </div> 
+                                    </div>
+                                    <template if:true={showCashPrice}>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <label>{customLabel.CashPrice}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                <input type="text" disabled value={info.Cash_Price__c}>
+                                            </div> 
+                                        </div>
+                                    </template>
+
+                                    <template if:false={modelB}>
+                                        <!-- 最低价格显示 start -->
+                                        <template if:true={isARC}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.MinPrice}</label>
+                                                <template if:true={info.Min_Sales_Price__c}>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        <input type="text" disabled value={info.Min_Sales_Price__c}>
+                                                    </div>   
+                                                </template>
+                                                <template if:false={info.Min_Sales_Price__c}>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        <input type="text" disabled value="">
+                                                    </div>   
+                                                </template>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.LatestMinSalesPrice}</label>
+                                                <template if:true={info.Latest_Min_Sales_Price__c}>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        <input type="text" disabled value={info.Latest_Min_Sales_Price__c}>
+                                                    </div>   
+                                                </template>
+                                                <template if:false={info.Latest_Min_Sales_Price__c}>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        <input type="text" disabled value="">
+                                                    </div>   
+                                                </template>
+                                            </div>
+                                            
+                                        </template>
+                                        <!-- 最低价格显示 end -->
+                                    </template>
+                                    <template if:false={modelB}>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <div class="slds-form-element">
+                                                <label class="slds-form-element__label">
+                                                    {customLabel.PriceRate}
+                                                    <lightning-helptext content={customLabel.PriceRateHelpText}></lightning-helptext>
+                                                </label>
+                                            </div>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                {info.Price_Rate_User__c}<template if:true={info.Price_Rate_User__c}>%</template>
+                                            </div> 
+                                        </div>
+                                    </template>
+                                    <template if:false={modelB}>
+                                        <template if:true={isShowMargin}>
+                                            <template if:true={isARC}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <label>{customLabel.EstimateCost}</label>
+                                                    <template if:true={info.Unit_Estimate_Cost__c}>
+                                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                            <input type="text" disabled value={info.Unit_Estimate_Cost__c}>
+                                                        </div> 
+                                                    </template>
+                                                    <template if:false={info.Unit_Estimate_Cost__c}>
+                                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                            <input type="text" disabled value="">
+                                                        </div> 
+                                                    </template>
+                                                      
+                                                </div> 
+                                            </template>
+                                            
+                                        </template>
+                                    </template>
+                                    
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.MarginLevel}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <lightning-formatted-rich-text value={info.Margin_Level__c}></lightning-formatted-rich-text>
+                                        </div> 
+                                    </div>
+
+                                    <template if:true={isShowMargin}>
+
+                                        <template if:true={isARC}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.EstimateGM}</label>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    <input type="text" disabled value={info.Unit_Estimate_Margin_Rate__c}>
+                                                </div> 
+                                            </div>
+                                        </template>
+                                        
+                                    </template>
+                                    
+                                    
+                                    <template if:false={modelB}>
+                                        <template if:true={isShowMargin}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.cost}</label>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    <input type="text" disabled value={info.Product_Cost__c}>
+                                                </div>   
+                                            </div> 
+                                        </template>
+                                    </template>
+                                    
+                                    
+                                    
+                                    <template if:true={isShowMargin}>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <label>{customLabel.marginRate}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                <input type="text" disabled value={info.Margin_Rate_Text__c}>
+                                            </div> 
+                                        </div>
+                                    </template>
+                                    
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.Quantity}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <input type="text" disabled value={info.Quantity__c}>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.Sales_Unit}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <input type="text" disabled value={info.Sales_Unit_Text__c}>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.Amount_per_item}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <input type="text" disabled value={info.Amount_per_item__c}>
+                                        </div> 
+                                    </div>
+                                    <!-- <template if:true={isShowUsage}> -->
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <label>{customLabel.Delivery_Date}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                <input type="text" disabled value={info.Delivery_Date__c}>
+                                            </div> 
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <label>{customLabel.SAP_Remain_Stock}</label>
+                                            <template if:true={info.SAP_Remain_Stock__c}>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    <input type="text" disabled value={info.SAP_Remain_Stock__c}>
+                                                </div> 
+                                            </template>
+
+                                            <template if:false={info.SAP_Remain_Stock__c}>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    <input type="text" disabled value="">
+                                                </div> 
+                                            </template>
+                                            
+                                        </div>
+                                    <!-- </template> -->
+                                    <!-- <template if:true={iscornReq}>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <label>{customLabel.Corn}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                <input type="text" disabled value={info.Crop__c}>
+                                            </div> 
+                                        </div>
+                                    </template>
+                                    <template if:false={iscornReq}>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                            <label>{customLabel.Corn}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                <input type="text" disabled value={info.Crop__c}>
+                                            </div> 
+                                        </div>
+                                    </template> -->
+                                    <!-- <template if:true = {info.Show_More__c}>
+                                        
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input-field data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.Gross_Weight__c} disabled> 
+                                            </lightning-input-field> 
+                                        </div>
+
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input-field data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.Net_Weight__c} disabled> 
+                                            </lightning-input-field>
+                                        </div>
+                                    </template> -->
+                                </div>
+                            </lightning-record-edit-form>
+                            <!-- <div slot="footer">
+                                <template if:false={info.Show_More__c}>
+                                    <lightning-badge label={customLabel.Show_More} name={index} onclick={shooMoreMe}></lightning-badge>
+                                </template>
+                                <template if:true={info.Show_More__c}>
+                                    <lightning-badge label={customLabel.Show_Less} name={index} onclick={shooLessMe}></lightning-badge>
+                                </template>
+                            </div> -->
+                        </lightning-card>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- PC端 -->
+        <template if:true={isPC}>
+            <template if:true={lengthData}>
+                <lightning-card>
+                    <!-- <lightning-button variant="brand" label='Add' onclick={addData} class="slds-p-around_x-small">
+                    </lightning-button> -->
+                    <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                        <div class="slds-scrollable_x slds-scrollable_y" style="height: 300px;">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                <thead>
+                                    <tr class="slds-line-height_reset" style="background-color: rgb(243 243 243);">
+                                        <th width={lengthData.num}  height="30px;" class="slds-is-fixed" scope="col" >
+                                            <span class="tableTitle" title="ItemNm__c">#</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="tableTitle" title="Name">{customLabel.ProductNameOrderItem}</span>
+                                        </th>
+                                        <template if:true={modelB}>
+                                            <template if:true={isShowMargin}>
+                                                <th scope="col">
+                                                    <!-- <template if:true={cu}> -->
+                                                    <span class="tableTitle" title="SalesRep__c">{customLabel.cost}</span>
+                                                    <!-- </template> -->
+                                                </th>
+                                            </template>
+                                        </template>
+                                        <template if:false={modelB}>
+                                            <th scope="col">
+                                                <!-- <template if:true={cu}> -->
+                                                <span class="tableTitle" title="SalesRep__c">{customLabel.GuidePrice}</span>
+                                                <!-- </template> -->
+                                            </th>
+                                        </template>
+                                        <th scope="col">
+                                            <!-- <template if:true={cu}> -->
+                                            <span class="tableTitle" title="SalesRep__c">{customLabel.Price}</span>
+                                            <!-- </template> -->
+                                        </th>
+                                        <template if:true={showCashPrice}>
+                                            <th scope="col">
+                                                <!-- <template if:true={cu}> -->
+                                                <span class="tableTitle" title="SalesRep__c">{customLabel.CashPrice}</span>
+                                                <!-- </template> -->
+                                            </th>
+                                            
+                                        </template>
+                                        <template if:false={modelB}>
+                                            <template if:true={isARC}>
+                                                <th scope="col">
+                                                    <!-- <template if:true={cu}> -->
+                                                    <span class="tableTitle" title="SalesRep__c">{customLabel.MinPrice}</span>
+                                                    <!-- </template> -->
+                                                </th>
+                                                <th scope="col">
+                                                    <!-- <template if:true={cu}> -->
+                                                    <span class="tableTitle" title="SalesRep__c">{customLabel.LatestMinSalesPrice}</span>
+                                                    <!-- </template> -->
+                                                </th>
+                                            </template>
+                                        </template>
+                                        
+                                        <template if:false={modelB}>
+                                            
+                                            <th scope="col">
+                                                <!-- <template if:true={cu}> -->
+                                                <span class="tableTitle" title="SalesRep__c">
+                                                    {customLabel.PriceRate}
+                                                    <lightning-helptext content={customLabel.PriceRateHelpText}></lightning-helptext>
+                                                </span>
+                                                <!-- </template> -->
+                                            </th>
+                                        </template>
+
+                                        <template if:false={modelB}>
+                                            <template if:true={isShowMargin}>
+                                                <template if:true={isARC}>
+                                                    <th scope="col">
+                                                        <!-- <template if:true={cu}> -->
+                                                        <span class="tableTitle" title="SalesRep__c">{customLabel.EstimateCost}</span>
+                                                        <!-- </template> -->
+                                                    </th>
+                                                </template>
+                                            </template>
+                                        </template>
+
+                                        <!-- Margin_Level__c -->
+                                        <th scope="col">
+                                            <!-- <template if:true={cu}> -->
+                                            <span class="tableTitle" title="SalesRep__c">{customLabel.MarginLevel}</span>
+                                            <!-- </template> -->
+                                        </th>
+                                        <!-- Margin_Level__c -->
+                                        <template if:false={modelB}>
+                                            <template if:true={isShowMargin}>
+                                                <template if:true={isARC}>
+                                                    <th scope="col">
+                                                        <!-- <template if:true={cu}> -->
+                                                        <span class="tableTitle" title="SalesRep__c">{customLabel.EstimateGM}</span>
+                                                        <!-- </template> -->
+                                                    </th>
+                                                </template>
+                                                
+                                            </template>
+                                        </template>
+                                        
+                                        <template if:false={modelB}>
+                                            <template if:true={isShowMargin}>
+                                                <th scope="col">
+                                                    <!-- <template if:true={cu}> -->
+                                                    <span class="tableTitle" title="SalesRep__c">{customLabel.cost}</span>
+                                                    <!-- </template> -->
+                                                </th>
+                                            </template>
+                                        </template>
+                                            
+                                        <template if:true={isShowMargin}>
+                                        
+                                            <th scope="col">
+                                                <!-- <template if:true={cu}> -->
+                                                <span class="tableTitle" title="SalesRep__c">{customLabel.marginRate}</span>
+                                                <!-- </template> -->
+                                            </th>
+                                        </template>
+                                        
+                                        <th scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">{customLabel.Quantity}</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">{customLabel.Sales_Unit}</span>
+                                        </th>
+                                        <!-- <th width={lengthData.Quantity} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="ItemNm__c">Basic Quantity</span>
+                                        </th> -->
+                                        
+                                        
+                                        
+                                        <!-- <th width={lengthData.SalesUnit} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="SalesRep__c">{customLabel.Sales_Unit}</span>
+                                        </th> -->
+                                        <th scope="col">
+                                            <!-- <span style="color:red;">*</span> -->
+                                            <span class="tableTitle" title="BuildAddr__c">{customLabel.Amount_per_item}</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Delivery_Date}</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.SAP_Remain_Stock}</span>
+                                        </th>
+                                        <!-- <th width={lengthData.Corn} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Corn}</span>
+                                        </th>
+                                        <template if:true={isShowUsage}>
+                                            <th width={lengthData.Usage} height="30px;" class="slds-text-align_left" scope="col">
+                                                <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Product_Usage}</span>
+                                            </th>
+                                        </template> -->
+                                        <!-- <th width={lengthData.grossWeight} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Gross_Weight}</span>
+                                        </th>
+                                        <th width={lengthData.netWeight} height="30px;" class="slds-text-align_left" scope="col">
+                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Net_Weight}</span>
+                                        </th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={orderItemList} for:item=info for:index="index">
+                                        <tr key={info.Id}>
+                                            <td class="slds-is-fixed slds-text-align_left" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                {info.SAP_Item_Num__c}
+                                            </td>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                
+                                                {info.Commodity_Name__c}
+                                            </td>
+                                            <template if:true={modelB}>
+                                                <template if:true={isShowMargin}>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.cost}>
+                                                        {info.Product_Cost__c}
+                                                    </td>
+                                                </template>
+                                            </template>
+                                            <template if:false={modelB}>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.GuidePrice}>
+                                                    {info.Guide_Price__c}
+                                                </td>
+                                            </template>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                {info.Price__c}
+                                            </td>
+                                            <template if:true={showCashPrice}>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                    {info.Cash_Price__c}
+                                                </td>
+                                            </template>
+                                            <template if:false={modelB}>
+                                                <template if:true={isARC}>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.GuidePrice}>
+                                                        {info.Min_Sales_Price__c}
+                                                    </td>
+                                                    <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.GuidePrice}>
+                                                        {info.Latest_Min_Sales_Price__c}
+                                                    </td>
+                                                </template>
+                                            </template>
+                                            <template if:false={modelB}>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.PriceRate}>
+                                                    {info.Price_Rate_User__c}<template if:true={info.Price_Rate_User__c}>%</template>
+                                                </td>
+                                            </template>
+                                            <template if:false={modelB}>
+                                                <template if:true={isShowMargin}>
+                                                    <template if:true={isARC}>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.GuidePrice}>
+                                                            {info.Unit_Estimate_Cost__c	}
+                                                        </td>
+                                                    </template>
+                                                    
+                                                </template>
+                                            </template>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                <lightning-formatted-rich-text value={info.Margin_Level__c}></lightning-formatted-rich-text>
+                                            </td>
+                                            <template if:false={modelB}>
+                                                <template if:true={isShowMargin}>
+                                                    <template if:true={isARC}>
+                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.GuidePrice}>
+                                                            {info.Unit_Estimate_Margin_Rate__c}<template if:true={info.Unit_Estimate_Margin_Rate__c}>%</template>
+                                                        </td>
+                                                    </template>
+                                                    
+                                                </template>
+                                            </template>
+                                            
+                                            <template if:false={modelB}>
+                                                <template if:true={isShowMargin}>
+                                                    <!-- <template if:false={isARC}> -->
+                                                    <th width={lengthData.cost} height="30px;" class="slds-text-align_left" scope="col">
+                                                        <!-- <template if:true={cu}> -->
+                                                        <span class="tableTitle" title="SalesRep__c">{info.Product_Cost__c}</span>
+                                                        <!-- </template> -->
+                                                    </th>
+                                                    <!-- </template> -->
+                                                    
+                                                </template>
+                                            </template>
+                                            <template if:true={isShowMargin}>
+
+                                                <!-- <template if:false={isARC}> -->
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.marginRate}>
+                                                    {info.Margin_Rate__c}<template if:true={info.Margin_Rate__c}>%</template>
+                                                </td>
+                                                <!-- </template> -->
+                                                
+                                            </template>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Quantity}>
+                                                {info.Quantity__c}
+                                            </td>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.unit}>
+                                                {info.Sales_Unit_Text__c}
+                                            </td>
+                                            
+                                            
+                                            
+                                            <!-- <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.SalesUnit}>
+                                                
+                                                {info.Sales_Unit__c}
+                                                    
+                                            </td> -->
+        
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Amountperitem}>
+                                                {info.Amount_per_item__c}
+                                            </td>
+        
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.DeliveryDate}>
+                                                {info.Delivery_Date__c}
+                                            </td>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.SAPRemainStock}>
+                                                {info.SAP_Remain_Stock__c}
+                                            </td>
+                                            <!-- <template if:false={iscornReq}>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Corn}>
+                                                    {info.Crop__c}
+                                                </td>
+                                            </template> -->
+                                            <!-- <template if:true={iscornReq}>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Corn}>
+                                                    {info.Crop__c}
+                                                </td>
+                                            </template>
+                                            <template if:true={isShowUsage}>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Usage}>
+                                                    {info.Product_Usage__c}
+                                                </td>
+                                            </template> -->
+        
+                                            <!-- <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.grossWeight}>
+                                                {info.Gross_Weight__c}
+                                            </td>
+        
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.netWeight}>
+                                                {info.Net_Weight__c}
+                                            </td> -->
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </lightning-record-edit-form>
+                </lightning-card>
+            </template>
+        </template>
+    </template>
+</template>

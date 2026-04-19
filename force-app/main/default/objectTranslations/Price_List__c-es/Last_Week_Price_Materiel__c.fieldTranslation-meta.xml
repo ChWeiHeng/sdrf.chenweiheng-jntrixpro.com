@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Precio de materiales semana pasada</label>
+    <name>Last_Week_Price_Materiel__c</name>
+</CustomFieldTranslation>

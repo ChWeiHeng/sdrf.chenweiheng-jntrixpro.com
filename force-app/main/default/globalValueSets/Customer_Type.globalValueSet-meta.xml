@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Trading</fullName>
+        <default>true</default>
+        <label>Trading</label>
+    </customValue>
+    <customValue>
+        <fullName>No Trading</fullName>
+        <default>false</default>
+        <label>No Trading</label>
+    </customValue>
+    <masterLabel>Customer Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

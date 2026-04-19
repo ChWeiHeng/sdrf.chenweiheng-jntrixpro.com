@@ -1,0 +1,32 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+               
+                
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+        	<div class="" style="height:100px;margin-right:10px;margin-left:10px;align-content:center;">
+            <template if:true={isCancel}>
+                <h2 class="slds-text-heading--medium">
+                     {customLabel.Cancel_Contract_Header}
+                </h2>
+            </template>
+               
+            </div>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <template if:true={isCancel}>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

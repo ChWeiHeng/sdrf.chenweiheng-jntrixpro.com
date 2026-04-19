@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>00</fullName>
+        <default>true</default>
+        <label>00 General Channel</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>10 Distribution Channel 01</label>
+    </customValue>
+    <customValue>
+        <fullName>90</fullName>
+        <default>false</default>
+        <label>90_Intercompany</label>
+    </customValue>
+    <customValue>
+        <fullName>A0</fullName>
+        <default>false</default>
+        <label>A0_Export Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>A1</fullName>
+        <default>false</default>
+        <label>A1_Model A+</label>
+    </customValue>
+    <customValue>
+        <fullName>B0</fullName>
+        <default>false</default>
+        <label>B0_Commercial &amp; Service Domestic Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>B1</fullName>
+        <default>false</default>
+        <label>B1_Model B+</label>
+    </customValue>
+    <customValue>
+        <fullName>C0</fullName>
+        <default>false</default>
+        <label>C0_Model C</label>
+    </customValue>
+    <customValue>
+        <fullName>C1</fullName>
+        <default>false</default>
+        <label>C1_Model C+</label>
+    </customValue>
+    <description>分销渠道</description>
+    <masterLabel>Distribution Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CannotChangeUser</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Sales_Rep__c)</errorConditionFormula>
+    <errorMessage>Can not change the sales rep, please delete and create a new record</errorMessage>
+</ValidationRule>

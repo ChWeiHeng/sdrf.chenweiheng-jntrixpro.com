@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Invoice_Status_Tracking_ZARE</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Sales_Org__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Status__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Total_Amount__c</columns>
+    <columns>Delivery_Amount__c</columns>
+    <columns>Invoice_Amount__c</columns>
+    <columns>Amount_of_refund__c</columns>
+    <columns>Approve_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Remaining_Amount__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Sales_Org__c</field>
+        <operation>equals</operation>
+        <value>5130</value>
+    </filters>
+    <filters>
+        <field>Order_type__c</field>
+        <operation>equals</operation>
+        <value>ZARE</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2025 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>Delivery &amp; Invoice Status Tracking ZARE</label>
+    <sharedTo>
+        <group>X5030</group>
+    </sharedTo>
+</ListView>

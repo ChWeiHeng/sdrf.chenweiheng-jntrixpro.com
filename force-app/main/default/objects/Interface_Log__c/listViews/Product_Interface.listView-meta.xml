@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Interface</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Request_System__c</columns>
+    <columns>Destination_System__c</columns>
+    <columns>Interact_Content__c</columns>
+    <columns>Interact_Time__c</columns>
+    <columns>Is_Success__c</columns>
+    <columns>Exception_Message__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>recordID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Apex_Class_Name__c</field>
+        <operation>equals</operation>
+        <value>SAPProductWebService</value>
+    </filters>
+    <filters>
+        <field>Interact_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>7/31/2025</value>
+    </filters>
+    <label>SAP同步产品主数据至CRM</label>
+</ListView>

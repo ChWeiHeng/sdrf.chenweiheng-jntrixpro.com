@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Esquema de cliente</label>
+    <name>Cust_Pric_Procedure__c</name>
+    <picklistValues>
+        <masterLabel>MX Procedure</masterLabel>
+        <translation>Procedimiento 1</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation>Procedimiento 01</translation>
+    </picklistValues>
+</CustomFieldTranslation>

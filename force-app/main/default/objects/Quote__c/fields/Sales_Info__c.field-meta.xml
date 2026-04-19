@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Info__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Related Customer Sales Info</label>
+    <referenceTo>Customer_Sales_Info__c</referenceTo>
+    <relationshipLabel>Quotation</relationshipLabel>
+    <relationshipName>Quote_Sales_Info</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

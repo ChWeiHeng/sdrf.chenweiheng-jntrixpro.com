@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_Consignment_Inventory_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				TEXT(Deliver_Plant__c)=&apos;5130&apos;,
+    &apos;00OO4000009JhGzMAK&apos;,
+				&apos;00OPo00000VaWfRMAV&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>View Consignment Inventory URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Tipo de marca</label>
+    <name>Mark_Type__c</name>
+    <picklistValues>
+        <masterLabel>Metoo mark</masterLabel>
+        <translation><!-- Metoo mark --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>finalized plan</masterLabel>
+        <translation><!-- finalized plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>finalized plan - only label changes (product name remains unchanged)</masterLabel>
+        <translation><!-- finalized plan - only label changes (product name remains unchanged) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>new packaging</masterLabel>
+        <translation><!-- new packaging --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

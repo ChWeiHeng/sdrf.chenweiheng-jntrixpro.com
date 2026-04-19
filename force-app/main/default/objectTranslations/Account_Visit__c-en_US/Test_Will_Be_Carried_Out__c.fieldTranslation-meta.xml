@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- yes/no Which product --></help>
+    <label><!-- Test Will Be Carried Out --></label>
+    <name>Test_Will_Be_Carried_Out__c</name>
+</CustomFieldTranslation>

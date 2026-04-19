@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Customer__c</field>
+        <field>Sales_Org__c</field>
+        <field>Terms_Of_Payment__c</field>
+        <field>Overdue__c</field>
+        <field>Ultra_Credit__c</field>
+        <field>SAP_Credit_Limit__c</field>
+        <field>Owner</field>
+        <field>Order_type__c</field>
+        <field>Currency__c</field>
+        <field>Total_Amount__c</field>
+        <field>Order_Amount_Guide__c</field>
+        <field>Amount_Difference__c</field>
+        <field>Amount_Rate__c</field>
+        <field>Total_Cost__c</field>
+        <field>Margin_Rate__c</field>
+        <field>Total_Margin_Level__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>如果是经理提交跳过该步骤</description>
+        <entryCriteria>
+            <formula>CONTAINS($UserRole.Name, &apos;Sales Rep&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Sales Leader</label>
+        <name>Sales_Leader</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>juan.fernandez@agroterrum.com.ar</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1. There is discount
+2.Total gross margin rate &lt; 10%
+3.There is commission</description>
+        <entryCriteria>
+            <formula>OR(Aprove_Level__c!=0,Margin_Rate__c&lt;10,Commission_Amount_New__c!=0)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Marketing Manager-Juan</label>
+        <name>Marketing_Manager_Juan</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>bernardo.jacquelin@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1. AR Overdue
+2. Payment terms ≤ 180 &amp; Excess Amount≤50,0000 usd
+Payment terms &gt; 180 &amp; Order amount ≤50,0000 usd</description>
+        <entryCriteria>
+            <formula>OR(Overdue__c,AND(Days__c&lt;=180,Excess_Amount__c&lt;=500000),AND(Days__c&gt;180,Order_Amount_USD__c&lt;=500000))</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Fin Manager- Bernardo</label>
+        <name>Fin_Manager_David</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>pablo.torasso@agroterrum.com.ar</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1. Excess credit limit
+2. AR Overdue
+3. Total gross margin Rate &lt; 5%
+4. There is commission</description>
+        <entryCriteria>
+            <formula>OR(Ultra_Credit__c ,Overdue__c,Margin_Rate__c&lt;5,Commission_Amount_New__c!=0)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>General Manager Pablo</label>
+        <name>General_Manager_Pablo</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>fabio.defelippis@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1.Payment terms ≤ 180 &amp; Excess Amount≤50,0000 usd
+2.Payment terms &gt; 180 &amp; Order amount ≤50,0000 usd</description>
+        <entryCriteria>
+            <formula>OR(AND(Days__c&lt;=180,Excess_Amount__c&gt;500000),AND(Days__c&gt;180,Order_Amount_USD__c&gt;500000))</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Committee- Fabio</label>
+        <name>Committee_Fabio</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>doris_li@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>eric_wang@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1.Payment terms ≤ 180 &amp; Excess Amount&gt;50,0000 usd
+2.Payment terms &gt; 180 &amp; Order amount &gt;50,0000 usd</description>
+        <entryCriteria>
+            <formula>OR(AND(Days__c&lt;=180,Excess_Amount__c&gt;500000),AND(Days__c&gt;180,Order_Amount_USD__c&gt;500000))</formula>
+        </entryCriteria>
+        <label>HQ Manage</label>
+        <name>Eric</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>阿根廷5130新审批流（Fabio&amp;Robin）最新</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6 OR 8) AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Order__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Draft,Rejected</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Order_type__c</field>
+            <operation>equals</operation>
+            <value>ZAR1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Ultra_Credit__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Overdue__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Aprove_Level__c</field>
+            <operation>notEqual</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Model C</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Payment_Term_Longer__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>OrderApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>OrderApproveFailed</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>OrderApproving</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Update Standard Order 5130</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>OrderDraft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

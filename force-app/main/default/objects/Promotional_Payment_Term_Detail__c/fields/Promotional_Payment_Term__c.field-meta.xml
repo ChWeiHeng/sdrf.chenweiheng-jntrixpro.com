@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promotional_Payment_Term__c</fullName>
+    <label>Promotional Payment Term</label>
+    <referenceTo>Promotional_Payment_Term__c</referenceTo>
+    <relationshipLabel>Promotional Payment Term Details</relationshipLabel>
+    <relationshipName>Promotional_Payment_Term_Details</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

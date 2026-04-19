@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Customer__c</field>
+        <field>Risk_Class__c</field>
+        <field>Check_Rule__c</field>
+        <field>Rules__c</field>
+        <field>Credit_Segment__c</field>
+        <field>Sales_Org__c</field>
+        <field>Approval_Status__c</field>
+        <field>Post_Application_Credit__c</field>
+        <field>Payment_Term__c</field>
+        <field>Payment_Term_Days__c</field>
+        <field>Sinosure_Credit_Limit__c</field>
+        <field>Sinosure_Payment_Term__c</field>
+        <field>Sinosure_Expiration_Date__c</field>
+        <field>Local_Credit_Line_USD__c</field>
+        <field>Credit_Analysis_Date__c</field>
+        <field>Guarantee_Credit_Line_USD__c</field>
+        <field>Guarantee_Expiration_Date__c</field>
+        <field>Type_of_Guarantee__c</field>
+        <field>Clean_Line_USD__c</field>
+        <field>Original_Credit_Limit__c</field>
+        <field>Customer_Credit_Line__c</field>
+        <field>Original_Credit_limit_Expiration_Date__c</field>
+        <field>Valid_After_Change_To__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>update_checkbox</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>bernardo.jacquelin@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Credit Control</label>
+        <name>Credit_Bernardo</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>eric_wang@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(
+		AND(Payment_Term_Days__c &lt;=180, Customer_Credit_Line__c &lt;=1000000,Clean_Line_USD__c&lt;=500000),
+		AND(Payment_Term_Days__c &lt;=180, OR(Customer_Credit_Line__c &gt;1000000,Clean_Line_USD__c&gt;500000))
+	,Payment_Term_Days__c	&gt;180)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Area Head</label>
+        <name>Eric</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>robin_han@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(
+AND(Payment_Term_Days__c &lt;=180, Customer_Credit_Line__c &lt;=1000000,Clean_Line_USD__c&lt;=500000),
+AND(Payment_Term_Days__c &lt;=180, OR(Customer_Credit_Line__c &gt;1000000,Clean_Line_USD__c&gt;500000))
+,Payment_Term_Days__c &gt;180)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>General Manager</label>
+        <name>General_Manager</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>doris_li@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(
+AND(Payment_Term_Days__c &lt;=180,OR(Customer_Credit_Line__c &gt;1000000,Clean_Line_USD__c&gt;500000)),
+Payment_Term_Days__c &gt; 180
+)</formula>
+        </entryCriteria>
+        <label>HQ Committee</label>
+        <name>HQ_Committee</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>最新</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Customer_Quota_Change__c.Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Customer_Quota_Change__c.Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Reject</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>5130</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CreditApprovedStatus</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>CreditRejectStatus</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>CreditApprovingStatus</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>CreditProcess New AR C2</label>
+    <processOrder>5</processOrder>
+    <recallActions>
+        <action>
+            <name>CreditDraftStatus</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

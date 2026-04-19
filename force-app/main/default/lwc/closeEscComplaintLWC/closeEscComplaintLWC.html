@@ -1,0 +1,103 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+                <!-- Close/Esc Complaint -->
+                {customLabel.CloseEscCaseHeader}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isPC}>
+                 <lightning-layout>
+                    
+                    <lightning-layout-item padding="around-small" size="12">
+                        <template if:true={opList}>
+                        <lightning-select
+                        value={caseStatus}
+                        options={opList}  required onchange={productChange} label={customLabel.CloseEscCaseStatus}></lightning-select>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <template if:true={isClose}>
+                    
+                    
+                    <lightning-layout-item padding="around-small" size="12">
+                        <template if:true={opList1}>
+                        <lightning-select
+                        value={isResolve}
+                        options={opList1}  required onchange={isResolveChange} label={customLabel.CloseEscCaseResolve}></lightning-select>
+                        </template>
+                        
+                    </lightning-layout-item>
+                    </template>
+                    <template if:true={isEsc}>
+                    
+                    
+                    <lightning-layout-item padding="around-small" size="12">
+                        
+                        <lightning-input
+                        value={callReason}
+                        required onchange={callReasonChange} label={customLabel.CloseEscCaseReason}></lightning-input>                        
+                    </lightning-layout-item>
+                    </template>
+
+                </lightning-layout>
+            </template>
+            <template if:true={isPC}>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                	<lightning-layout-item padding="around-small" size="6">
+                		<template if:true={opList}>
+                        <lightning-select
+                        value={caseStatus}
+                        options={opList}  required onchange={productChange} label={customLabel.CloseEscCaseStatus}></lightning-select>
+                        </template>
+                	</lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <template if:true={isClose}>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                	
+                	<lightning-layout-item padding="around-small" size="6">
+                		
+                        <template if:true={opList1}>
+                        <lightning-select
+                        value={isResolve}
+                        options={opList1}  required onchange={isResolveChange} label={customLabel.CloseEscCaseResolve}></lightning-select>
+                        </template>
+                        
+                	</lightning-layout-item>
+                	</template>
+                	 <template if:true={isEsc}>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                	
+                	<lightning-layout-item padding="around-small" size="6">
+                		
+
+                        <lightning-input
+                        value={callReason}
+                        required onchange={callReasonChange} label={customLabel.CloseEscCaseReason}></lightning-input>
+                                           
+                	</lightning-layout-item>
+                	</template>
+                </lightning-layout>
+            </template>
+                                        
+            
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

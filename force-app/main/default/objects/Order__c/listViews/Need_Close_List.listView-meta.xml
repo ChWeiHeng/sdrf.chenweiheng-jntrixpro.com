@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_Close_List</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Order_type__c</columns>
+    <columns>Cust_Reference__c</columns>
+    <columns>Total_Amount__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Order_Amount_USD__c</columns>
+    <columns>Req_Deliv_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>SAP_Order_Code__c</columns>
+    <columns>Terms_Of_Payment__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Approve_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NotificationClose__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Need Close List</label>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Z002</fullName>
+        <default>false</default>
+        <label>Z002 Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Z001</fullName>
+        <default>false</default>
+        <label>Z001 Raw/Semi-Finished Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Z003</fullName>
+        <default>false</default>
+        <label>Z003 Package</label>
+    </customValue>
+    <customValue>
+        <fullName>DIEN</fullName>
+        <default>false</default>
+        <label>DIEN Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Z005</fullName>
+        <default>false</default>
+        <label>Z005</label>
+    </customValue>
+    <masterLabel>Material Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

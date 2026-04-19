@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Currency_AR</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(Sales_Org__c==&apos;5130&apos;,Sales_Org__c==&apos;5070&apos;),TEXT(Currency__c) != &apos;ARS&apos;,TEXT(Currency__c) != &apos;USD&apos;)</errorConditionFormula>
+    <errorDisplayField>Currency__c</errorDisplayField>
+    <errorMessage>Please select ARS or USD</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        TEXT(Order_type__c)= &apos;ZARA&apos;,
+        TEXT(Order_type__c)= &apos;ZARF&apos;,
+        TEXT(Order_type__c)= &apos;ZAR2&apos;,
+        TEXT(Order_type__c)= &apos;ZMX2&apos;
+    ),
+    TEXT(Order_Reason__c)=null
+)</errorConditionFormula>
+    <errorDisplayField>Order_Reason__c</errorDisplayField>
+    <errorMessage>Order Reason Required</errorMessage>
+</ValidationRule>

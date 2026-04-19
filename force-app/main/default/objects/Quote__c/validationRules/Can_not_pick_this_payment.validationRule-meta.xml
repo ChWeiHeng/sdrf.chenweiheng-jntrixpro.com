@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_not_pick_this_payment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Customer__r.MDG_Customer_Code__c !=&apos;0000005130&apos;,TEXT(Payment_Term__c)=&apos;AR18&apos;)</errorConditionFormula>
+    <errorDisplayField>Payment_Term__c</errorDisplayField>
+    <errorMessage>Only AGROTERRUM S.A. (Argentina) can pick this payment term</errorMessage>
+</ValidationRule>

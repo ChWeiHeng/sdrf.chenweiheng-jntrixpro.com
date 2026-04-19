@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ar_Agroterrum_C</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Business_Model__c</field>
+        <operation>contains</operation>
+        <value>Model C</value>
+    </filters>
+    <filters>
+        <field>Account.Country__c</field>
+        <operation>equals</operation>
+        <value>Argentina</value>
+    </filters>
+    <label>AR Agroterrum C</label>
+    <sharedTo>
+        <group>X5030</group>
+        <role>Argentina_Agroterrum_General_Manager</role>
+        <role>Argentina_Area_Head</role>
+        <role>HQ_President</role>
+    </sharedTo>
+</ListView>

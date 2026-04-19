@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_All_HQ</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Sales_Org__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Order_type__c</columns>
+    <columns>Order_Amount_USD__c</columns>
+    <columns>Total_Margin_Level__c</columns>
+    <columns>Cust_Reference__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Req_Deliv_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>SAP_Order_Code__c</columns>
+    <columns>Terms_Of_Payment__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Approve_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Org__c</field>
+        <operation>equals</operation>
+        <value>1040,1080,2010,2210,2240</value>
+    </filters>
+    <label>All HQ Orders from BPM</label>
+    <sharedTo>
+        <group>X5070</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,43 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+        	<h2 class="slds-text-heading--medium">
+                <template if:true={IsFreeze}>
+                    {customLabel.AccFreezeSumbitApprovalHeader}
+                </template>
+                <template if:false={IsFreeze}>
+                    {customLabel.AccUnFreezeSumbitApprovalHeader}
+                </template>
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+            <div class="slds-align_absolute-center slds-text-heading_medium" style="height:100px;">
+                <template if:true={isMSG}>
+                    <div class="slds-p-around_medium slds-grid slds-wrap" >
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                            <!-- {customLabel.notifacation} -->
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                            <lightning-input type="text" value={commentString} label={customLabel.Comment} onchange={commentStringChange}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                            
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <template if:true={isMSG}>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

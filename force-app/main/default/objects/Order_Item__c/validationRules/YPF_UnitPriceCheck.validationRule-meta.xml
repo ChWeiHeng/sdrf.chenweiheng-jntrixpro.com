@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YPF_UnitPriceCheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>Order__r.Is_YPF__c  &amp;&amp; TEXT(Order__r.Order_type__c)=&apos;ZARE&apos; &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED( Price__c )</errorConditionFormula>
+    <errorDisplayField>Price__c</errorDisplayField>
+    <errorMessage>YPF order‘s unit price cannot be changed!</errorMessage>
+</ValidationRule>

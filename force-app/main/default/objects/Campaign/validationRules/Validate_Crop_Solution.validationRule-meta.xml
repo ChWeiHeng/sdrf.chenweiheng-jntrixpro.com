@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Crop_Solution</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(Related_Product_Level__c)==&apos;Crop Solution&apos; ,ISBLANK(TEXT(Crop_Solution__c)))</errorConditionFormula>
+    <errorDisplayField>Crop_Solution__c</errorDisplayField>
+    <errorMessage>Crop Solution Required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckCustomerPo</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Cust_Reference__c )  &amp;&amp;   ISPICKVAL( Sales_Org__c , &apos;5070&apos;) &amp;&amp;  RecordType_Name__c = &apos;Model_C&apos; &amp;&amp;  $Profile.Name &lt;&gt; &apos;System Administrator&apos;</errorConditionFormula>
+    <errorDisplayField>Cust_Reference__c</errorDisplayField>
+    <errorMessage>When sales org is 5070, the customer&apos;s po is required</errorMessage>
+</ValidationRule>

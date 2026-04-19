@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3010</fullName>
+        <default>false</default>
+        <label>3010 RAINBOW AGRO SCIENCES,S.A.DE C.V.</label>
+    </customValue>
+    <customValue>
+        <fullName>3020</fullName>
+        <default>false</default>
+        <label>3020 AGROTERRUM MEXICO, S.A. DE C.V.</label>
+    </customValue>
+    <customValue>
+        <fullName>5130</fullName>
+        <default>false</default>
+        <label>5130 AGROTERRUM S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>3011</fullName>
+        <default>false</default>
+        <label>3011 Rainbow Mexico Model C+</label>
+    </customValue>
+    <customValue>
+        <fullName>5070</fullName>
+        <default>false</default>
+        <label>5070 Rainbow Argentina Gualeguaychu</label>
+    </customValue>
+    <customValue>
+        <fullName>1040</fullName>
+        <default>false</default>
+        <label>1040 SHANDONG WEIFANG RAINBOW CHEMICAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>104Z</fullName>
+        <default>false</default>
+        <label>104Z_山东潍坊润丰化工零价值工厂</label>
+    </customValue>
+    <customValue>
+        <fullName>1050</fullName>
+        <default>false</default>
+        <label>1050 QINGDAO RAINBOW CHEMICAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>105Z</fullName>
+        <default>false</default>
+        <label>105Z_青岛润农化工零价值工厂</label>
+    </customValue>
+    <customValue>
+        <fullName>1060</fullName>
+        <default>false</default>
+        <label>1060_NINGXIA RAINBOW CHEMICAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>106Z</fullName>
+        <default>false</default>
+        <label>106Z_宁夏格瑞精细化工零价值工厂</label>
+    </customValue>
+    <customValue>
+        <fullName>1070</fullName>
+        <default>false</default>
+        <label>1070_Shandong Runbo Biotechnology Co., Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>1080</fullName>
+        <default>false</default>
+        <label>1080 SHANDONG RAINBOW INTERNATIONAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>1090</fullName>
+        <default>false</default>
+        <label>1090 Shandong Runbo Safety Technology Co., Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>1100</fullName>
+        <default>false</default>
+        <label>1100_Ningxia Hanrun Biotechnology Co., Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>110Z</fullName>
+        <default>false</default>
+        <label>110Z_宁夏汉润生物科技零价值工厂</label>
+    </customValue>
+    <customValue>
+        <fullName>2010</fullName>
+        <default>false</default>
+        <label>2010 SHANDONG RAINBOW AGROSCIENCES CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>2210</fullName>
+        <default>false</default>
+        <label>2210 RAINBOW AGROSCIENCES MX CO.,LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2220</fullName>
+        <default>false</default>
+        <label>2220_Agroiris Crop Protection(ID)</label>
+    </customValue>
+    <customValue>
+        <fullName>2230</fullName>
+        <default>false</default>
+        <label>2230 Rainbow Agrosciences (AGO) Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>2240</fullName>
+        <default>false</default>
+        <label>2240 AGROTECH INTERNATIONAL CO., LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2290</fullName>
+        <default>false</default>
+        <label>2290 AGROFARM CO., LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2380</fullName>
+        <default>false</default>
+        <label>2380 AGROFUTURE CO., LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2100</fullName>
+        <default>false</default>
+        <label>2100</label>
+    </customValue>
+    <description>工厂</description>
+    <masterLabel>Plant</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

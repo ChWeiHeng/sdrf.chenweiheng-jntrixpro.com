@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mx_Rainbow_B</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Company_Code__c</columns>
+    <columns>Profit_Center__c</columns>
+    <columns>Document_Type__c</columns>
+    <columns>Document_Number__c</columns>
+    <columns>Amount_in_Trans_Crcy__c</columns>
+    <columns>Document_Currency__c</columns>
+    <columns>Due_On__c</columns>
+    <columns>Overdue_Days_Formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Company_Code__c</field>
+        <operation>equals</operation>
+        <value>3010</value>
+    </filters>
+    <filters>
+        <field>Profit_Center__c</field>
+        <operation>equals</operation>
+        <value>3010010101</value>
+    </filters>
+    <label>MX Rainbow B</label>
+    <sharedTo>
+        <group>X3010</group>
+        <role>HQ_President</role>
+        <role>Mexico_Area_Head</role>
+        <role>Mexico_Country_Manager</role>
+        <role>Mexico_Rainbow_Agro_Logistics</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>0001</masterLabel>
+        <translation><!-- 0001 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>90% T/T SIGHT+10% T/T 180DAYS</masterLabel>
+        <translation><!-- 90% T/T SIGHT+10% T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>90% T/T SIGHT+10% T/T 90DAYS</masterLabel>
+        <translation><!-- 90% T/T SIGHT+10% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR01 Payable immediately Due net</masterLabel>
+        <translation>AR01 Pagadero inmediatamente sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR02 within 7 days Due net</masterLabel>
+        <translation>AR02 dentro de los 7 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR03 within 15 days Due net</masterLabel>
+        <translation>AR03 dentro de los 15 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR04 within 30 days Due net</masterLabel>
+        <translation>AR04 dentro de los 30 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR05 within 45 days Due net</masterLabel>
+        <translation>AR05 dentro de los 45 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR06 within 60 days Due net</masterLabel>
+        <translation>AR06 dentro de los 60 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR07 within 90 days Due net</masterLabel>
+        <translation>AR07 dentro de los 90 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR08 within 120 days Due net</masterLabel>
+        <translation>AR08 dentro de los 120 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR09 within 150 days Due net</masterLabel>
+        <translation>AR09 dentro de los 150 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR10 within 180 days Due net</masterLabel>
+        <translation>AR10 dentro de los 180 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR11 within 210 days Due net</masterLabel>
+        <translation>AR11 dentro de los 210 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR12 Payable immediately Due net</masterLabel>
+        <translation>AR12 Cuenta Corriente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR13 within 10 days Due net</masterLabel>
+        <translation>AR13 dentro de los 10 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR14 within 240 days Due net</masterLabel>
+        <translation>AR14 dentro de los 240 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR15 within 270 days Due net</masterLabel>
+        <translation>AR15 dentro de los 270 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR16 within 300 days Due net</masterLabel>
+        <translation>AR16 dentro de los 300 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR17 within 360 days Due net</masterLabel>
+        <translation>AR17 dentro de los 360 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR18 within 330 days Due net</masterLabel>
+        <translation>AR18 dentro de los 330 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR19 within 390 days Due net</masterLabel>
+        <translation>AR19 dentro de los 390 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR20 within 7 days Due net</masterLabel>
+        <translation>AR20 7 Dias F.F (moneda cláusula)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR21 within 160 days Due net</masterLabel>
+        <translation>AR21 dentro de los 160 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR22 within 170 days Due net</masterLabel>
+        <translation>AR22 dentro de los 170 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR23 within 190 days Due net</masterLabel>
+        <translation>AR23 dentro de los 190 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR24 within 200 days Due net</masterLabel>
+        <translation>AR24 dentro de los 200 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR25 within 174 days Due net</masterLabel>
+        <translation>AR25 dentro de los 174 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR26 within 178 days Due net</masterLabel>
+        <translation>AR26 dentro de los 178 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR27 within 177 days Due net</masterLabel>
+        <translation>AR27 dentro de los 177 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR28 within 131 days Due net</masterLabel>
+        <translation>AR28 dentro de los 131 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR29 within 164 days Due net</masterLabel>
+        <translation>AR29 dentro de los 164 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR30 within 106 days Due net</masterLabel>
+        <translation>AR30 dentro de los 106 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR31 within 137 days Due net</masterLabel>
+        <translation>AR31 dentro de los 137 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR32 within 142 days Due net</masterLabel>
+        <translation>AR32 dentro de los 142 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR33 within 172 days Due net</masterLabel>
+        <translation>AR33 dentro de los 172 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR34 within 173 days Due net</masterLabel>
+        <translation>AR34 dentro de los 173 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR35 within 175 days Due net</masterLabel>
+        <translation>AR35 dentro de los 175 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR36 within 205 days Due net</masterLabel>
+        <translation>AR36 dentro de los 205 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR37 within 129 days Due net</masterLabel>
+        <translation>AR37 dentro de los 129 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR38 within 114 days Due net</masterLabel>
+        <translation>AR38 dentro de los 114 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR39 within 144 days Due net</masterLabel>
+        <translation>AR39 dentro de los 144 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR40 within 198 days Due net</masterLabel>
+        <translation>AR40 dentro de los 198 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR41 within 207 days Due net</masterLabel>
+        <translation>AR41 dentro de los 207 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR42 within 112 days Due net</masterLabel>
+        <translation>AR42 dentro de los 112 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR43 within 168 days Due net</masterLabel>
+        <translation>AR43 dentro de los 168 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR44 within 168 days Due net</masterLabel>
+        <translation>AR44 Cuenta Corriente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR45 within 112 days Due net</masterLabel>
+        <translation>AR45 dentro de los 112 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR46 within 180 days Due net</masterLabel>
+        <translation>AR46 dentro de los 180 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>AR47 within 143 days Due net</masterLabel>
+        <translation>AR47 dentro de los 143 días sin DPP</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G001 100% Immediately(CONTADO)</masterLabel>
+        <translation><!-- G001 100% Immediately(CONTADO) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G002 7 days after invoice</masterLabel>
+        <translation><!-- G002 7 days after invoice --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G003 14 days after invoice</masterLabel>
+        <translation><!-- G003 14 days after invoice --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G004 15 days after invoice</masterLabel>
+        <translation><!-- G004 15 days after invoice --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G006 30 days after invoice(30 DIAS)</masterLabel>
+        <translation><!-- G006 30 days after invoice(30 DIAS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G007 60 days after invoice(60 DIAS)</masterLabel>
+        <translation><!-- G007 60 days after invoice(60 DIAS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G008 90 days after invoice(90 DIAS)</masterLabel>
+        <translation><!-- G008 90 days after invoice(90 DIAS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G009 180 days after invoice</masterLabel>
+        <translation><!-- G009 180 days after invoice --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G010</masterLabel>
+        <translation><!-- G010 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G019 120 days after invoice(120 DIAS)</masterLabel>
+        <translation><!-- G019 120 days after invoice(120 DIAS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G020 150 days after invoice(150 DIAS)</masterLabel>
+        <translation><!-- G020 150 days after invoice(150 DIAS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G021 T/T 60 días fecha B/L</masterLabel>
+        <translation>G021 T/T 60 días fecha  B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G022 T/T 90 días fecha B/L</masterLabel>
+        <translation>G022 T/T 90 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G023 T/T 120 días fecha B/L</masterLabel>
+        <translation>G023 T/T 120 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G024 T/T 150 días fecha B/L</masterLabel>
+        <translation>G024 T/T 150 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G025 T/T 180 días fecha B/L</masterLabel>
+        <translation>G025 T/T 180 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G031 T/T 30 días fecha B/L</masterLabel>
+        <translation>G031 T/T 30 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G032 T/T 210 días fecha B/L</masterLabel>
+        <translation>G032  T/T 210 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G033 100% Immediately PPD（Not for Regular Sales）</masterLabel>
+        <translation><!-- G033 100% Immediately PPD（Not for Regular Sales） --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G034 T/T 240 días fecha B/L</masterLabel>
+        <translation>G034 T/T 240 días fecha B/L</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G039 30% pago adelantado,70% contra entrega</masterLabel>
+        <translation>G039  30% pago adelantado,70% contra entrega</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>G040</masterLabel>
+        <translation><!-- G040 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S508</masterLabel>
+        <translation><!-- S508 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S509</masterLabel>
+        <translation><!-- S509 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S511</masterLabel>
+        <translation><!-- S511 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S512</masterLabel>
+        <translation><!-- S512 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S515</masterLabel>
+        <translation><!-- S515 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S516</masterLabel>
+        <translation><!-- S516 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S517</masterLabel>
+        <translation><!-- S517 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S518</masterLabel>
+        <translation><!-- S518 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S519</masterLabel>
+        <translation><!-- S519 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S520</masterLabel>
+        <translation><!-- S520 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S521</masterLabel>
+        <translation><!-- S521 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S524</masterLabel>
+        <translation><!-- S524 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S576</masterLabel>
+        <translation><!-- S576 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S954</masterLabel>
+        <translation><!-- S954 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S955</masterLabel>
+        <translation><!-- S955 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V501-T/T SIGHT</masterLabel>
+        <translation><!-- V501-T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V502-T/TCOPYOFDOC</masterLabel>
+        <translation><!-- V502-T/TCOPYOFDOC --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V503-T/T 3 DAYS</masterLabel>
+        <translation><!-- V503-T/T 3 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V504-T/T 5 DAYS</masterLabel>
+        <translation><!-- V504-T/T 5 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V505-T/T 7 DAYS</masterLabel>
+        <translation><!-- V505-T/T 7 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V506-T/T 10 DAYS</masterLabel>
+        <translation><!-- V506-T/T 10 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V507-T/T 14 DAYS</masterLabel>
+        <translation><!-- V507-T/T 14 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V508-T/T 15 DAYS</masterLabel>
+        <translation><!-- V508-T/T 15 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V509-T/T 20 DAYS</masterLabel>
+        <translation><!-- V509-T/T 20 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V510-T/T 25 DAYS</masterLabel>
+        <translation><!-- V510-T/T 25 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V511-T/T 30 DAYS</masterLabel>
+        <translation><!-- V511-T/T 30 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V512-T/T 45 DAYS</masterLabel>
+        <translation><!-- V512-T/T 45 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V513-T/T 60 DAYS</masterLabel>
+        <translation><!-- V513-T/T 60 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V514-T/T 70 DAYS</masterLabel>
+        <translation><!-- V514-T/T 70 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V515-T/T 90 DAYS</masterLabel>
+        <translation><!-- V515-T/T 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V516-T/T 120 DAYS</masterLabel>
+        <translation><!-- V516-T/T 120 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V517-T/T 140 DAYS</masterLabel>
+        <translation><!-- V517-T/T 140 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V518-T/T 150 DAYS</masterLabel>
+        <translation><!-- V518-T/T 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V519-T/T 180 DAYS</masterLabel>
+        <translation><!-- V519-T/T 180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V520-T/T 210 DAYS</masterLabel>
+        <translation><!-- V520-T/T 210 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V521-T/T 240 DAYS</masterLabel>
+        <translation><!-- V521-T/T 240 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V522-T/T 270 DAYS</masterLabel>
+        <translation><!-- V522-T/T 270 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V523-T/T 300 DAYS</masterLabel>
+        <translation><!-- V523-T/T 300 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V524-T/T 330 DAYS</masterLabel>
+        <translation><!-- V524-T/T 330 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V525-T/T 360 DAYS</masterLabel>
+        <translation><!-- V525-T/T 360 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V528-100% PP</masterLabel>
+        <translation><!-- V528-100% PP --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V529-10%PP+90% TT5DAYS</masterLabel>
+        <translation><!-- V529-10%PP+90% TT5DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V530-50% PP+50%TT180 DAYS</masterLabel>
+        <translation><!-- V530-50% PP+50%TT180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V531-30%PP+70%TT 30DAYS</masterLabel>
+        <translation><!-- V531-30%PP+70%TT 30DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V532-30%PP +70%TT180DAYS</masterLabel>
+        <translation><!-- V532-30%PP +70%TT180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V533-30%PP +70% TT30DAYS</masterLabel>
+        <translation><!-- V533-30%PP +70% TT30DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V534-50%PP + 50% T/T 5DAYS</masterLabel>
+        <translation><!-- V534-50%PP + 50% T/T 5DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V535-50%PP +50% T/T 20DAYS</masterLabel>
+        <translation><!-- V535-50%PP +50% T/T 20DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V536-30%PP+70% DA 90DAYS</masterLabel>
+        <translation><!-- V536-30%PP+70% DA 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V537-30%PP+70% DA60DAYS</masterLabel>
+        <translation><!-- V537-30%PP+70% DA60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V538-T/T 110 DAYS</masterLabel>
+        <translation><!-- V538-T/T 110 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V539-50%PP+50% T/T60DAYS</masterLabel>
+        <translation><!-- V539-50%PP+50% T/T60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V540-10%PP+90%T/T5D</masterLabel>
+        <translation><!-- V540-10%PP+90%T/T5D --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V541-30%PP+70%T/T 240DAYS</masterLabel>
+        <translation><!-- V541-30%PP+70%T/T 240DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V542-10%PP+90%T/T240DAY</masterLabel>
+        <translation><!-- V542-10%PP+90%T/T240DAY --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V543-20%PP+80%T/T 20DAYS</masterLabel>
+        <translation><!-- V543-20%PP+80%T/T 20DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V544-50%PP+50%T/T7DAYS</masterLabel>
+        <translation><!-- V544-50%PP+50%T/T7DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V545-25% PP+75% T/T 5 DAYS</masterLabel>
+        <translation><!-- V545-25% PP+75% T/T 5 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V546-50% PP+50% T/T 30DAYS</masterLabel>
+        <translation><!-- V546-50% PP+50% T/T 30DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V547-20%PP+80%T/T180DAYS</masterLabel>
+        <translation><!-- V547-20%PP+80%T/T180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V548-15%PP+85%T/T 300DAYS</masterLabel>
+        <translation><!-- V548-15%PP+85%T/T 300DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V549-40%PP+60%T/T 60DAYS</masterLabel>
+        <translation><!-- V549-40%PP+60%T/T 60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V550-T/T 35 DAYS</masterLabel>
+        <translation><!-- V550-T/T 35 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V551-30%PP+70%T/T 90DAYS</masterLabel>
+        <translation><!-- V551-30%PP+70%T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V552-40%T/T PP+ 60%T/T 240DAYS</masterLabel>
+        <translation><!-- V552-40%T/T PP+ 60%T/T 240DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V553-10%PP T/T+90%T/T 180DAYS</masterLabel>
+        <translation><!-- V553-10%PP T/T+90%T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V554-30%PP+70%T/T 10DAYS</masterLabel>
+        <translation><!-- V554-30%PP+70%T/T 10DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V555-30%PP+70% TT 5Days</masterLabel>
+        <translation><!-- V555-30%PP+70% TT 5Days --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V556-20%PP + 80% T/T SIGHT</masterLabel>
+        <translation><!-- V556-20%PP + 80% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V557-T/T 105 DAYS</masterLabel>
+        <translation><!-- V557-T/T 105 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V558-5%PP+95%TT 180DAYS</masterLabel>
+        <translation><!-- V558-5%PP+95%TT 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V559-20%PP+80%T/T 5DAYS</masterLabel>
+        <translation><!-- V559-20%PP+80%T/T 5DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V560-30%PP+70%TT 180DAYS</masterLabel>
+        <translation><!-- V560-30%PP+70%TT 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V561-30% PP+70% LC Sight</masterLabel>
+        <translation><!-- V561-30% PP+70% LC Sight --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V562-30% PP+70% T/T 7 DAYS</masterLabel>
+        <translation><!-- V562-30% PP+70% T/T 7 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V563-17.5%PP + 82.5%T/T90DAYS</masterLabel>
+        <translation><!-- V563-17.5%PP + 82.5%T/T90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V564-30% PP+ 70%T/T 210DAYS</masterLabel>
+        <translation><!-- V564-30% PP+ 70%T/T 210DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V565-10% PP + 90% LC Sight</masterLabel>
+        <translation><!-- V565-10% PP + 90% LC Sight --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V566-17.5% PP +82.5% T/T180 DAYS</masterLabel>
+        <translation><!-- V566-17.5% PP +82.5% T/T180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V567-15%PP +85%TT 180DAYS</masterLabel>
+        <translation><!-- V567-15%PP +85%TT 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V568-30%PP+70%T/T 270DAYS</masterLabel>
+        <translation><!-- V568-30%PP+70%T/T 270DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V569-40%T/T 5DAYS+60%T/T 90DAYS</masterLabel>
+        <translation><!-- V569-40%T/T 5DAYS+60%T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V570-20%PP+80%T/T 270DAYS</masterLabel>
+        <translation><!-- V570-20%PP+80%T/T 270DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V571-T/T 75 DAYS</masterLabel>
+        <translation><!-- V571-T/T 75 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V572-30%PP+70%T/T 60DAYS</masterLabel>
+        <translation><!-- V572-30%PP+70%T/T 60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V573-50%PP+50%CAD</masterLabel>
+        <translation><!-- V573-50%PP+50%CAD --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V574-5%预付+95%见票5日内电汇</masterLabel>
+        <translation><!-- V574-5%预付+95%见票5日内电汇 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V575-30%PP+70% T/T SIGHT</masterLabel>
+        <translation><!-- V575-30%PP+70% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V576-T/T 180DAYS SINCE ARRIVAL DATE</masterLabel>
+        <translation><!-- V576-T/T 180DAYS SINCE ARRIVAL DATE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V577-D/A 180DAYS SINCE ARRIVAL DATE</masterLabel>
+        <translation><!-- V577-D/A 180DAYS SINCE ARRIVAL DATE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V578-20%PP+80%T/T 30DAYS</masterLabel>
+        <translation><!-- V578-20%PP+80%T/T 30DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V579-50% PP +50% T/T 15 DAYS</masterLabel>
+        <translation><!-- V579-50% PP +50% T/T 15 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V580-45%PP+55%TT 180DAYS</masterLabel>
+        <translation><!-- V580-45%PP+55%TT 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V581-50%PP+50% LC 90DAYS</masterLabel>
+        <translation><!-- V581-50%PP+50% LC 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V582-15%PP+85% LC 90DAYS</masterLabel>
+        <translation><!-- V582-15%PP+85% LC 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V583-15% PP + 85% T/T sight</masterLabel>
+        <translation><!-- V583-15% PP + 85% T/T sight --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V584-20%PP+80%T/T 40DAYS</masterLabel>
+        <translation><!-- V584-20%PP+80%T/T 40DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V585-20%PP+80%T/T 7DAYS</masterLabel>
+        <translation><!-- V585-20%PP+80%T/T 7DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V586-30%PP+70%TT 35DAYS</masterLabel>
+        <translation><!-- V586-30%PP+70%TT 35DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V587-20%PP+80%TT 150DAYS</masterLabel>
+        <translation><!-- V587-20%PP+80%TT 150DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V588-30%PP+70%T/T150DAYS</masterLabel>
+        <translation><!-- V588-30%PP+70%T/T150DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V589-10%PP+90% DP SIGHT</masterLabel>
+        <translation><!-- V589-10%PP+90% DP SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V590-24%PP+76%T/T 180DAYS</masterLabel>
+        <translation><!-- V590-24%PP+76%T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V591-T/T 50%PP+ T/T 50% 7 days before shipment.</masterLabel>
+        <translation><!-- V591-T/T 50%PP+ T/T 50% 7 days before shipment. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V592-D/P 20 DAYS</masterLabel>
+        <translation><!-- V592-D/P 20 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V593-40%PP+60%T/T 180DAYS</masterLabel>
+        <translation><!-- V593-40%PP+60%T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V594-30%PP+70%T/T 7DAYS BEFORE SHIPMENT</masterLabel>
+        <translation><!-- V594-30%PP+70%T/T 7DAYS BEFORE SHIPMENT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V595-10%PP+90%T/T 90DAYS</masterLabel>
+        <translation><!-- V595-10%PP+90%T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V596-50% PP +50% T/T 45DAYS</masterLabel>
+        <translation><!-- V596-50% PP +50% T/T 45DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V597-15%PP+15% BEFORE SHIPMENT+70% T/T 180 DAYS</masterLabel>
+        <translation><!-- V597-15%PP+15% BEFORE SHIPMENT+70% T/T 180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V598-T/T 150 DAYS SINCE ARRIVEL DATE</masterLabel>
+        <translation><!-- V598-T/T 150 DAYS SINCE ARRIVEL DATE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V599-20%PP+80%TT 90DAYS</masterLabel>
+        <translation><!-- V599-20%PP+80%TT 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V601-L/C SIGHT</masterLabel>
+        <translation><!-- V601-L/C SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V602-L/C 20 DAYS</masterLabel>
+        <translation><!-- V602-L/C 20 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V603-L/C 30 DAYS</masterLabel>
+        <translation><!-- V603-L/C 30 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V604-L/C 45 DAYS</masterLabel>
+        <translation><!-- V604-L/C 45 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V605-L/C 60 DAYS</masterLabel>
+        <translation><!-- V605-L/C 60 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V606-L/C 90 DAYS</masterLabel>
+        <translation><!-- V606-L/C 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V607-L/C 120 DAYS</masterLabel>
+        <translation><!-- V607-L/C 120 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V608-L/C 150 DAYS</masterLabel>
+        <translation><!-- V608-L/C 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V609-L/C 180 DAYS</masterLabel>
+        <translation><!-- V609-L/C 180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V610-L/C 270 DAYS</masterLabel>
+        <translation><!-- V610-L/C 270 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V611-L/C 360 DAYS</masterLabel>
+        <translation><!-- V611-L/C 360 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V612-L/C 420 DAY</masterLabel>
+        <translation><!-- V612-L/C 420 DAY --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V613-L/C 450 DAYS</masterLabel>
+        <translation><!-- V613-L/C 450 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V614-CAD PAYMENT</masterLabel>
+        <translation><!-- V614-CAD PAYMENT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V615-30%PP+70%TT 15DAYS</masterLabel>
+        <translation><!-- V615-30%PP+70%TT 15DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V616-DLC 60 DAYS</masterLabel>
+        <translation><!-- V616-DLC 60 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V617-T/T 40DAYS</masterLabel>
+        <translation><!-- V617-T/T 40DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V618-30%PP+70% L/C 180DAYS</masterLabel>
+        <translation><!-- V618-30%PP+70% L/C 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V619-10%PP+10% BASED ON B/L +80% T/T 180 DAYS</masterLabel>
+        <translation><!-- V619-10%PP+10% BASED ON B/L +80% T/T 180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V620-30%PP BEFORE SHIPMENT+70% T/T 300DAYS</masterLabel>
+        <translation><!-- V620-30%PP BEFORE SHIPMENT+70% T/T 300DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V621-10%PP+90% T/T 12DAYS BEFORE SHIPMENT</masterLabel>
+        <translation><!-- V621-10%PP+90% T/T 12DAYS BEFORE SHIPMENT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V622-25%PP+75% T/T 180DAYS</masterLabel>
+        <translation><!-- V622-25%PP+75% T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V623-30%T/T 5DAYS+70%T/T 180DAYS</masterLabel>
+        <translation><!-- V623-30%T/T 5DAYS+70%T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V624-10%T/T 20DAYS+90%T/T 90DAYS</masterLabel>
+        <translation><!-- V624-10%T/T 20DAYS+90%T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V625-40%PP+60% T/T120DAYS</masterLabel>
+        <translation><!-- V625-40%PP+60% T/T120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V626-10%PP+90% T/T 150 DAYS</masterLabel>
+        <translation><!-- V626-10%PP+90% T/T 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V627-10%PP+10% T/T SIGHT + 80% T/T 150 DAYS</masterLabel>
+        <translation><!-- V627-10%PP+10% T/T SIGHT + 80% T/T 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V628-10%PP+25% T/T SIGHT + 65% T/T 150 DAYS</masterLabel>
+        <translation><!-- V628-10%PP+25% T/T SIGHT + 65% T/T 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V629-20% PP+80% T/T 60days</masterLabel>
+        <translation><!-- V629-20% PP+80% T/T 60days --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V630-T/T 120 DAYS SINCE ARRIVAL DATE</masterLabel>
+        <translation><!-- V630-T/T 120 DAYS SINCE ARRIVAL DATE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V631-25%PP before production+25%PP before shipment+50% T/T 90 DAYS</masterLabel>
+        <translation><!-- V631-25%PP before production+25%PP before shipment+50% T/T 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V632-30%T/T 7DAYS+70%T/T 180DAYS</masterLabel>
+        <translation><!-- V632-30%T/T 7DAYS+70%T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V633-10%PP+60% T/T 15 DAYS +30% T/T 150 DAYS</masterLabel>
+        <translation><!-- V633-10%PP+60% T/T 15 DAYS +30% T/T 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V634-18% PP+ 82% L/C SIGHT</masterLabel>
+        <translation><!-- V634-18% PP+ 82% L/C SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V635-40% PP+60% T/T 15 DAYS</masterLabel>
+        <translation><!-- V635-40% PP+60% T/T 15 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V636-40% PP+60% T/T 7 DAYS</masterLabel>
+        <translation><!-- V636-40% PP+60% T/T 7 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V637-25% T/T 20 DAY+ 75% T/T 240 DAY</masterLabel>
+        <translation><!-- V637-25% T/T 20 DAY+ 75% T/T 240 DAY --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V638-40% PP+60% T/T SIGHT</masterLabel>
+        <translation><!-- V638-40% PP+60% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V639-20% PP + 80% T/T SIGHT BEFORE OR WHILE GOODS ARRIVAL DATE</masterLabel>
+        <translation><!-- V639-20% PP + 80% T/T SIGHT BEFORE OR WHILE GOODS ARRIVAL DATE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V640-10% PP +90% T/T 300DAYS</masterLabel>
+        <translation><!-- V640-10% PP +90% T/T 300DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V641-20% PP + 80% L/C 60DAYS</masterLabel>
+        <translation><!-- V641-20% PP + 80% L/C 60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V642-25% PP WITHIN 5DAYS +75% T/T 60DAYS</masterLabel>
+        <translation><!-- V642-25% PP WITHIN 5DAYS +75% T/T 60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V643-60% PP+40% T/T 120DAYS</masterLabel>
+        <translation><!-- V643-60% PP+40% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V644-10% PP+90% T/T 60DAYS</masterLabel>
+        <translation><!-- V644-10% PP+90% T/T 60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V645-20% T/T 5DAYS+80%T/T 180DAYS</masterLabel>
+        <translation><!-- V645-20% T/T 5DAYS+80%T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V646-30% PP+70% T/T 45DAYS</masterLabel>
+        <translation><!-- V646-30% PP+70% T/T 45DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V647-90% PP+10% T/T 5DAYS</masterLabel>
+        <translation><!-- V647-90% PP+10% T/T 5DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V648-90% PP+10% T/T 30DAYS</masterLabel>
+        <translation><!-- V648-90% PP+10% T/T 30DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V649-10% PP+90% T/T SIGHT</masterLabel>
+        <translation><!-- V649-10% PP+90% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V650-50% PP+50% L/C SIGHT</masterLabel>
+        <translation><!-- V650-50% PP+50% L/C SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V651-5% PP+ 95% T/T 90DAYS</masterLabel>
+        <translation><!-- V651-5% PP+ 95% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V652-20% PP BEFORE PRODUCTION + 80% L/C BEFORE DELIVERY</masterLabel>
+        <translation><!-- V652-20% PP BEFORE PRODUCTION + 80% L/C BEFORE DELIVERY --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V653-20% PP+80% TT 240DAYS</masterLabel>
+        <translation><!-- V653-20% PP+80% TT 240DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V654-50% PP +50% T/T 10DAYS</masterLabel>
+        <translation><!-- V654-50% PP +50% T/T 10DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V655-10% PP+20% TT SIGHT+70% T/T 120DAYS</masterLabel>
+        <translation><!-- V655-10% PP+20% TT SIGHT+70% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V656-30% PP BEFORE PRD+30% PP BEFORE SHIP+40% T/T SIGHT</masterLabel>
+        <translation><!-- V656-30% PP BEFORE PRD+30% PP BEFORE SHIP+40% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V657-30% PP BEFORE PRD+30% PP BEFORE SHIP+40% CAD</masterLabel>
+        <translation><!-- V657-30% PP BEFORE PRD+30% PP BEFORE SHIP+40% CAD --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V658-40% PP BEFORE PRD+30% PP BEFORE SHIP+30% T/T SIGHT</masterLabel>
+        <translation><!-- V658-40% PP BEFORE PRD+30% PP BEFORE SHIP+30% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V659-15% PP BEFORE PRD+15% PP BEFORE SHIP+70% T/T SIGHT</masterLabel>
+        <translation><!-- V659-15% PP BEFORE PRD+15% PP BEFORE SHIP+70% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V660-30% PP+20% T/T 7DAYS+50% T/T 90DAYS</masterLabel>
+        <translation><!-- V660-30% PP+20% T/T 7DAYS+50% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V661-20% PP+30% T/T 7DAYS+50% T/T 90DAYS</masterLabel>
+        <translation><!-- V661-20% PP+30% T/T 7DAYS+50% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V662-20% PP BEFORE PRD+50% PP BEFORE SHIP+30% T/T SIGHT</masterLabel>
+        <translation><!-- V662-20% PP BEFORE PRD+50% PP BEFORE SHIP+30% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V663-30% PP+70% T/T 360DAYS</masterLabel>
+        <translation><!-- V663-30% PP+70% T/T 360DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V664-50% PP+50% T/T 360DAYS</masterLabel>
+        <translation><!-- V664-50% PP+50% T/T 360DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V665-72% PP+28% T/T 180DAYS</masterLabel>
+        <translation><!-- V665-72% PP+28% T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V666-50% PP +50% T/T SIGHT</masterLabel>
+        <translation><!-- V666-50% PP +50% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V667-10% PP +30% T/T 30 DAYS+60% T/T 90 DAYS</masterLabel>
+        <translation><!-- V667-10% PP +30% T/T 30 DAYS+60% T/T 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V668-50% PP +50% T/T 240 DAYS</masterLabel>
+        <translation><!-- V668-50% PP +50% T/T 240 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V669-50% PP +50% T/T 90 DAYS</masterLabel>
+        <translation><!-- V669-50% PP +50% T/T 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V670-30% PP +70% T/T 3 DAYS</masterLabel>
+        <translation><!-- V670-30% PP +70% T/T 3 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V671-5% PP+ 25% DURING PRD + 70%TT 5 DAYS</masterLabel>
+        <translation><!-- V671-5% PP+ 25% DURING PRD + 70%TT 5 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V672-10% PP+40% T/T 30DAYS + 50% T/T 90 DAYS</masterLabel>
+        <translation><!-- V672-10% PP+40% T/T 30DAYS + 50% T/T 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V673-50% T/T 90 DAYS + 50% T/T 360 DAYS</masterLabel>
+        <translation><!-- V673-50% T/T 90 DAYS + 50% T/T 360 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V674-10% PP+10% T/T SIGHT+80% T/T 120DAYS</masterLabel>
+        <translation><!-- V674-10% PP+10% T/T SIGHT+80% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V676-20% PP+ 80% L/C SIGHT</masterLabel>
+        <translation><!-- V676-20% PP+ 80% L/C SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V677-50% T/T SIGHT+50% T/T 360DAYS</masterLabel>
+        <translation><!-- V677-50% T/T SIGHT+50% T/T 360DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V678-10% PP+20% T/T 20DAYS+70% T/T 90DAYS</masterLabel>
+        <translation><!-- V678-10% PP+20% T/T 20DAYS+70% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V679-10% PP+20% T/T 40DAYS+70% T/T 90DAYS</masterLabel>
+        <translation><!-- V679-10% PP+20% T/T 40DAYS+70% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V680-10% PP+90% T/T 45DAYS</masterLabel>
+        <translation><!-- V680-10% PP+90% T/T 45DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V681-25% PP+25% T/T 5DAYS+50% T/T 60DAYS</masterLabel>
+        <translation><!-- V681-25% PP+25% T/T 5DAYS+50% T/T 60DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V682-30% PP+50% BEFORE SHIPMENT+20% T/T 90DAYS</masterLabel>
+        <translation><!-- V682-30% PP+50% BEFORE SHIPMENT+20% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V683-10% PP+40% T/T 30DAYS+50% T/T 120DAYS</masterLabel>
+        <translation><!-- V683-10% PP+40% T/T 30DAYS+50% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V684-30% PP+60% BEFORE SHIPMENT+10% T/T 90DAYS</masterLabel>
+        <translation><!-- V684-30% PP+60% BEFORE SHIPMENT+10% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V685-30% PP BEFORE PRD+60% T/T 7DAYS+10% T/T 120DAYS</masterLabel>
+        <translation><!-- V685-30% PP BEFORE PRD+60% T/T 7DAYS+10% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V686-5% PP+95% L/C SIGHT</masterLabel>
+        <translation><!-- V686-5% PP+95% L/C SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V687-L/C 210DAYS</masterLabel>
+        <translation><!-- V687-L/C 210DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V688-50% PP BEFORE PRD+50% T/T 150DAYS</masterLabel>
+        <translation><!-- V688-50% PP BEFORE PRD+50% T/T 150DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V689-30% PP+70% L/C 90DAYS</masterLabel>
+        <translation><!-- V689-30% PP+70% L/C 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V690-30% PP+30% PP BEFORE SHIPMENT+40% T/T SIGHT</masterLabel>
+        <translation><!-- V690-30% PP+30% PP BEFORE SHIPMENT+40% T/T SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V700-20%PP+80% T/T 120DAYS</masterLabel>
+        <translation><!-- V700-20%PP+80% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V701-D/A 30 DAYS</masterLabel>
+        <translation><!-- V701-D/A 30 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V702-D/A 60 DAYS</masterLabel>
+        <translation><!-- V702-D/A 60 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V703-D/A 90 DAYS</masterLabel>
+        <translation><!-- V703-D/A 90 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V704-D/A 120 DAYS</masterLabel>
+        <translation><!-- V704-D/A 120 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V705-D/A 150 DAYS</masterLabel>
+        <translation><!-- V705-D/A 150 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V706-D/A 180 DAYS</masterLabel>
+        <translation><!-- V706-D/A 180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V707-D/A 210 DAYS</masterLabel>
+        <translation><!-- V707-D/A 210 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V708-D/A 240 DAYS</masterLabel>
+        <translation><!-- V708-D/A 240 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V709-D/A 270 DAYS</masterLabel>
+        <translation><!-- V709-D/A 270 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V710-D/A 300 DAYS</masterLabel>
+        <translation><!-- V710-D/A 300 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V711-D/A 360 DAYS</masterLabel>
+        <translation><!-- V711-D/A 360 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V713-20%PP+80%DA90DAYS</masterLabel>
+        <translation><!-- V713-20%PP+80%DA90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V714-20%PP+80% DA120DAYS</masterLabel>
+        <translation><!-- V714-20%PP+80% DA120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V715-10%PP +90% DA120DAYS</masterLabel>
+        <translation><!-- V715-10%PP +90% DA120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V716-10%PP+90% DA90DAYS</masterLabel>
+        <translation><!-- V716-10%PP+90% DA90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V717-30%PP+70% DA180DAYS</masterLabel>
+        <translation><!-- V717-30%PP+70% DA180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V718-30%PP+70% TT120DAYS</masterLabel>
+        <translation><!-- V718-30%PP+70% TT120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V719-50%PP+25% T/T 90 DAYS+25% T/T 120DAYS</masterLabel>
+        <translation><!-- V719-50%PP+25% T/T 90 DAYS+25% T/T 120DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V720-30% PP BEFORE PRODUCTION+40% PP BEFORE SHIPMENT+30% TT SIGHT</masterLabel>
+        <translation><!-- V720-30% PP BEFORE PRODUCTION+40% PP BEFORE SHIPMENT+30% TT SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V721-T/T 250 DAYS</masterLabel>
+        <translation><!-- V721-T/T 250 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V722-30% T/T SIGHT+ 70% T/T 90DAYS</masterLabel>
+        <translation><!-- V722-30% T/T SIGHT+ 70% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V801-D/P SIGHT</masterLabel>
+        <translation><!-- V801-D/P SIGHT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V922-30%T/T PREPAYMENT+70%T/T 5DAYS</masterLabel>
+        <translation><!-- V922-30%T/T PREPAYMENT+70%T/T 5DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V925-T/T 165DAYS SINCE ARRIVAL DATE</masterLabel>
+        <translation><!-- V925-T/T 165DAYS SINCE ARRIVAL DATE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V926-50%PP+50%T/T 210DAYS</masterLabel>
+        <translation><!-- V926-50%PP+50%T/T 210DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V930-50% T/T SIGHT+50% T/T 90DAYS</masterLabel>
+        <translation><!-- V930-50% T/T SIGHT+50% T/T 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V950-LC 120 DAYS</masterLabel>
+        <translation><!-- V950-LC 120 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V951-LC 180 DAYS</masterLabel>
+        <translation><!-- V951-LC 180 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V952-LC 270DAYS</masterLabel>
+        <translation><!-- V952-LC 270DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V953-LC 360DAYS</masterLabel>
+        <translation><!-- V953-LC 360DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V954-T/T 180DAYS</masterLabel>
+        <translation><!-- V954-T/T 180DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V955-T/T 270DAYS</masterLabel>
+        <translation><!-- V955-T/T 270DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V956-LC 330DAYS</masterLabel>
+        <translation><!-- V956-LC 330DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V957-TT 240 DAYS</masterLabel>
+        <translation><!-- V957-TT 240 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V958-T/T 330 DAYS</masterLabel>
+        <translation><!-- V958-T/T 330 DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V959-D/A 90DAYS</masterLabel>
+        <translation><!-- V959-D/A 90DAYS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V960-T/T 120DAYS</masterLabel>
+        <translation><!-- V960-T/T 120DAYS --></translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

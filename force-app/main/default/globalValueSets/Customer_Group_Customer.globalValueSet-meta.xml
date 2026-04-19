@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Z001</fullName>
+        <default>true</default>
+        <label>Z001 Company Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Z002</fullName>
+        <default>false</default>
+        <label>Z002 Person Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Z000</fullName>
+        <default>false</default>
+        <label>Z000 Rainbow GROUP</label>
+    </customValue>
+    <masterLabel>Customer Group(Customer)</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

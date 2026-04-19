@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Rainbow_B</fullName>
+    <columns>NAME</columns>
+    <columns>Agenda__c</columns>
+    <columns>Visit_Purpose__c</columns>
+    <columns>Type__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Finish_Date__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Org__c</field>
+        <operation>equals</operation>
+        <value>5070</value>
+    </filters>
+    <label>AR Rainbow B</label>
+    <sharedTo>
+        <group>X5070</group>
+        <role>Argentina_Area_Head</role>
+        <role>Argentina_Credit_Control_Manager</role>
+        <role>HQ_President</role>
+    </sharedTo>
+</ListView>

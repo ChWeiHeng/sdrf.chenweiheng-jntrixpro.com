@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_not_pick_this_group</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(AND(TEXT(Customer_Group__c)=&apos;Z000&apos;,$User.ProfileId!=&apos;00eHs00000329pjIAA&apos;,$User.ProfileId!=&apos;00eHs00000163XdIAI&apos;),true,false)</errorConditionFormula>
+    <errorDisplayField>Customer_Group__c</errorDisplayField>
+    <errorMessage>Can not select this group</errorMessage>
+</ValidationRule>

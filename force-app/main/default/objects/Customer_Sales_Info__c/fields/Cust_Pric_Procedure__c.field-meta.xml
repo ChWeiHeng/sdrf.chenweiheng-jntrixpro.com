@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cust_Pric_Procedure__c</fullName>
+    <label>Customer Price Procedure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sales_Org__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>MX Procedure</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>1100</controllingFieldValue>
+            <controllingFieldValue>1050</controllingFieldValue>
+            <controllingFieldValue>2010</controllingFieldValue>
+            <controllingFieldValue>2210</controllingFieldValue>
+            <controllingFieldValue>2240</controllingFieldValue>
+            <controllingFieldValue>1060</controllingFieldValue>
+            <controllingFieldValue>5130</controllingFieldValue>
+            <controllingFieldValue>5070</controllingFieldValue>
+            <controllingFieldValue>1040</controllingFieldValue>
+            <controllingFieldValue>1080</controllingFieldValue>
+            <valueName>01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3010</controllingFieldValue>
+            <controllingFieldValue>3020</controllingFieldValue>
+            <valueName>1</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

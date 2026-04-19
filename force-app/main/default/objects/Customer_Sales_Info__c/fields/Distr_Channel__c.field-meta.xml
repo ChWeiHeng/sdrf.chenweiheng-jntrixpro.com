@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distr_Channel__c</fullName>
+    <defaultValue>$User.Distr_Channel_Text__c</defaultValue>
+    <label>Distribution Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sales_Org__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Distribution_Channel</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>1100</controllingFieldValue>
+            <controllingFieldValue>1050</controllingFieldValue>
+            <controllingFieldValue>2010</controllingFieldValue>
+            <controllingFieldValue>2210</controllingFieldValue>
+            <controllingFieldValue>2240</controllingFieldValue>
+            <controllingFieldValue>1060</controllingFieldValue>
+            <controllingFieldValue>5130</controllingFieldValue>
+            <controllingFieldValue>5070</controllingFieldValue>
+            <controllingFieldValue>1040</controllingFieldValue>
+            <controllingFieldValue>1080</controllingFieldValue>
+            <valueName>00</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3010</controllingFieldValue>
+            <controllingFieldValue>3020</controllingFieldValue>
+            <valueName>10</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3010010101</fullName>
+        <default>false</default>
+        <label>3010010101 MODEL B</label>
+    </customValue>
+    <customValue>
+        <fullName>3010020101</fullName>
+        <default>false</default>
+        <label>3010020101 MODEL C+</label>
+    </customValue>
+    <customValue>
+        <fullName>DUMMY</fullName>
+        <default>false</default>
+        <label>DUMMY</label>
+    </customValue>
+    <masterLabel>Profit Center</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

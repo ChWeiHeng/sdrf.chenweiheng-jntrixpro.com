@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Order Item Delivered Quantity - ZARB Used Quantity --></help>
+    <label><!-- ZARB Remain Quantity --></label>
+    <name>Remain_Quantity__c</name>
+</CustomFieldTranslation>

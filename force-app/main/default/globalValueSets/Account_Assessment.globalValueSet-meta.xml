@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>01 Related</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>true</default>
+        <label>02 Non Related</label>
+    </customValue>
+    <customValue>
+        <fullName>A2</fullName>
+        <default>false</default>
+        <label>A2</label>
+    </customValue>
+    <masterLabel>Account Assessment</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

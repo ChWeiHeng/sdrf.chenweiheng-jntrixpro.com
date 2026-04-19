@@ -1,0 +1,51 @@
+<template>
+    <template if:true={isShowSpinner} >
+        <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+    </template>
+    <lightning-card>
+        <h2 slot="title">
+            <lightning-icon icon-name="custom:custom17"></lightning-icon>
+            <span style="margin-left:0.5rem">{customLabel.mass5}</span>
+        </h2>
+        <lightning-button label="Save" slot="actions" onclick={save} icon-name="utility:save" class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Return" slot="actions" onclick={back} icon-name="utility:back" class="slds-m-left_x-small"></lightning-button>
+        <div class="slds-modal__content slds-p-around--medium">
+            <div class="detailList">
+                <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered" style="width: 100%;table-layout:fixed;">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th scope="col" style="width:4%;padding-left:0.5rem"></th>
+                            <th scope="col" style="width:6%;">
+                                <lightning-input type="checkbox" onchange={changeAll}></lightning-input>
+                            </th>
+                            <th scope="col" style="width:30%;"><div class="slds-truncate">{customLabel.mass6}</div></th>
+                            <th scope="col" style="width:30%;"><div class="slds-truncate"><abbr class="slds-required">*</abbr>{customLabel.mass7}</div></th>
+                            <!--<th scope="col" style="width:24%;"><div class="slds-truncate"><abbr class="slds-required">*</abbr>Payment Method</div></th>-->
+                            <th scope="col" style="width:30%;"><div class="slds-truncate">{customLabel.mass8}</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={dataList} for:item="data" for:index="index">
+                            <tr key={data.order.Id}>
+                                <td scope="col" style="width:4%;padding-left:0.5rem;text-align:center">{data.index}</td>
+                                <td scope="col" style="width:6%;">
+                                    <lightning-input type="checkbox" checked={data.isSelect} onchange={changeData} data-name={index}></lightning-input>
+                                </td>
+                                <td scope="col" style="width:30%"><a href={data.orderUrl} target="_blank">{data.order.Name}</a></td>
+                                <td scope="col" style="width:30%">
+                                    <lightning-combobox name="term" value={data.order.Terms_Of_Payment__c} options={data.termList} variant="label-hidden" onchange={changeTerm} data-name={index}></lightning-combobox>
+                                </td>
+                                <!--<td scope="col" style="width:24%">
+                                    <lightning-combobox name="method" value={data.order.Payment_Method__c} options={data.methodList} variant="label-hidden" onchange={changeMethod} data-name={index}></lightning-combobox>
+                                </td>-->
+                                <td scope="col" style="width:30%">
+                                    <lightning-input type="checkbox" checked={data.isAutoCreate} onchange={changeCreate} data-name={index} variant="label-hidden"></lightning-input>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </lightning-card>
+</template>

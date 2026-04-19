@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AR01</fullName>
+        <default>false</default>
+        <label>AR01 Payable immediately Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR02</fullName>
+        <default>false</default>
+        <label>AR02 within 7 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR03</fullName>
+        <default>false</default>
+        <label>AR03 within 15 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR04</fullName>
+        <default>false</default>
+        <label>AR04 within 30 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR05</fullName>
+        <default>false</default>
+        <label>AR05 within 45 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR06</fullName>
+        <default>false</default>
+        <label>AR06 within 60 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR07</fullName>
+        <default>false</default>
+        <label>AR07 within 90 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR08</fullName>
+        <default>false</default>
+        <label>AR08 within 120 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR09</fullName>
+        <default>false</default>
+        <label>AR09 within 150 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR10</fullName>
+        <default>false</default>
+        <label>AR10 within 180 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR11</fullName>
+        <default>false</default>
+        <label>AR11 within 210 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR12</fullName>
+        <default>false</default>
+        <label>AR12 Payable immediately Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR13</fullName>
+        <default>false</default>
+        <label>AR13 within 10 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR14</fullName>
+        <default>false</default>
+        <label>AR14 within 240 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR15</fullName>
+        <default>false</default>
+        <label>AR15 within 270 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR16</fullName>
+        <default>false</default>
+        <label>AR16 within 300 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR17</fullName>
+        <default>false</default>
+        <label>AR17 within 360 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR18</fullName>
+        <default>false</default>
+        <label>AR18 within 330 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR19</fullName>
+        <default>false</default>
+        <label>AR19 within 390 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR20</fullName>
+        <default>false</default>
+        <label>AR20 within 7 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR21</fullName>
+        <default>false</default>
+        <label>AR21 within 160 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR22</fullName>
+        <default>false</default>
+        <label>AR22 within 170 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR23</fullName>
+        <default>false</default>
+        <label>AR23 within 190 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR24</fullName>
+        <default>false</default>
+        <label>AR24 within 200 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR25</fullName>
+        <default>false</default>
+        <label>AR25 within 174 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR26</fullName>
+        <default>false</default>
+        <label>AR26 within 178 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR27</fullName>
+        <default>false</default>
+        <label>AR27 within 177 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR28</fullName>
+        <default>false</default>
+        <label>AR28 within 131 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR29</fullName>
+        <default>false</default>
+        <label>AR29 within 164 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR30</fullName>
+        <default>false</default>
+        <label>AR30 within 106 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR31</fullName>
+        <default>false</default>
+        <label>AR31 within 137 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR32</fullName>
+        <default>false</default>
+        <label>AR32 within 142 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR33</fullName>
+        <default>false</default>
+        <label>AR33 within 172 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR34</fullName>
+        <default>false</default>
+        <label>AR34 within 173 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR35</fullName>
+        <default>false</default>
+        <label>AR35 within 175 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR36</fullName>
+        <default>false</default>
+        <label>AR36 within 205 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR37</fullName>
+        <default>false</default>
+        <label>AR37 within 129 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR38</fullName>
+        <default>false</default>
+        <label>AR38 within 114 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR39</fullName>
+        <default>false</default>
+        <label>AR39 within 144 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR40</fullName>
+        <default>false</default>
+        <label>AR40 within 198 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR41</fullName>
+        <default>false</default>
+        <label>AR41 within 207 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR42</fullName>
+        <default>false</default>
+        <label>AR42 within 112 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR43</fullName>
+        <default>false</default>
+        <label>AR43 within 168 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR44</fullName>
+        <default>false</default>
+        <label>AR44 within 168 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR45</fullName>
+        <default>false</default>
+        <label>AR45 within 112 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR46</fullName>
+        <default>false</default>
+        <label>AR46 within 180 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>AR47</fullName>
+        <default>false</default>
+        <label>AR47 within 143 days Due net</label>
+    </customValue>
+    <customValue>
+        <fullName>G001</fullName>
+        <default>false</default>
+        <label>G001 100% Immediately(CONTADO)</label>
+    </customValue>
+    <customValue>
+        <fullName>G039</fullName>
+        <default>false</default>
+        <label>G039 30% pago adelantado,70% contra entrega</label>
+    </customValue>
+    <customValue>
+        <fullName>G002</fullName>
+        <default>false</default>
+        <label>G002 7 days after invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>G031</fullName>
+        <default>false</default>
+        <label>G031 T/T 30 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G003</fullName>
+        <default>false</default>
+        <label>G003 14 days after invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>G004</fullName>
+        <default>false</default>
+        <label>G004 15 days after invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>G006</fullName>
+        <default>false</default>
+        <label>G006 30 days after invoice(30 DIAS)</label>
+    </customValue>
+    <customValue>
+        <fullName>G007</fullName>
+        <default>false</default>
+        <label>G007 60 days after invoice(60 DIAS)</label>
+    </customValue>
+    <customValue>
+        <fullName>G008</fullName>
+        <default>false</default>
+        <label>G008 90 days after invoice(90 DIAS)</label>
+    </customValue>
+    <customValue>
+        <fullName>G019</fullName>
+        <default>false</default>
+        <label>G019 120 days after invoice(120 DIAS)</label>
+    </customValue>
+    <customValue>
+        <fullName>G020</fullName>
+        <default>false</default>
+        <label>G020 150 days after invoice(150 DIAS)</label>
+    </customValue>
+    <customValue>
+        <fullName>G021</fullName>
+        <default>false</default>
+        <label>G021 T/T 60 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G022</fullName>
+        <default>false</default>
+        <label>G022 T/T 90 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G023</fullName>
+        <default>false</default>
+        <label>G023 T/T 120 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G024</fullName>
+        <default>false</default>
+        <label>G024 T/T 150 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G025</fullName>
+        <default>false</default>
+        <label>G025 T/T 180 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G009</fullName>
+        <default>false</default>
+        <label>G009 180 days after invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>G032</fullName>
+        <default>false</default>
+        <label>G032 T/T 210 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>G033</fullName>
+        <default>false</default>
+        <label>G033 100% Immediately PPD（Not for Regular Sales）</label>
+    </customValue>
+    <customValue>
+        <fullName>G034</fullName>
+        <default>false</default>
+        <label>G034 T/T 240 días fecha B/L</label>
+    </customValue>
+    <customValue>
+        <fullName>S517</fullName>
+        <default>false</default>
+        <label>S517</label>
+    </customValue>
+    <customValue>
+        <fullName>V501</fullName>
+        <default>false</default>
+        <label>V501-T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V502</fullName>
+        <default>false</default>
+        <label>V502-T/TCOPYOFDOC</label>
+    </customValue>
+    <customValue>
+        <fullName>V503</fullName>
+        <default>false</default>
+        <label>V503-T/T 3 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V504</fullName>
+        <default>false</default>
+        <label>V504-T/T 5 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V505</fullName>
+        <default>false</default>
+        <label>V505-T/T 7 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V506</fullName>
+        <default>false</default>
+        <label>V506-T/T 10 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V507</fullName>
+        <default>false</default>
+        <label>V507-T/T 14 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V508</fullName>
+        <default>false</default>
+        <label>V508-T/T 15 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V509</fullName>
+        <default>false</default>
+        <label>V509-T/T 20 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V510</fullName>
+        <default>false</default>
+        <label>V510-T/T 25 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V511</fullName>
+        <default>false</default>
+        <label>V511-T/T 30 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V512</fullName>
+        <default>false</default>
+        <label>V512-T/T 45 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V513</fullName>
+        <default>false</default>
+        <label>V513-T/T 60 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V514</fullName>
+        <default>false</default>
+        <label>V514-T/T 70 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V515</fullName>
+        <default>false</default>
+        <label>V515-T/T 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V516</fullName>
+        <default>false</default>
+        <label>V516-T/T 120 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V517</fullName>
+        <default>false</default>
+        <label>V517-T/T 140 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V518</fullName>
+        <default>false</default>
+        <label>V518-T/T 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V519</fullName>
+        <default>false</default>
+        <label>V519-T/T 180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V520</fullName>
+        <default>false</default>
+        <label>V520-T/T 210 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V521</fullName>
+        <default>false</default>
+        <label>V521-T/T 240 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V522</fullName>
+        <default>false</default>
+        <label>V522-T/T 270 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V523</fullName>
+        <default>false</default>
+        <label>V523-T/T 300 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V524</fullName>
+        <default>false</default>
+        <label>V524-T/T 330 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V525</fullName>
+        <default>false</default>
+        <label>V525-T/T 360 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V528</fullName>
+        <default>false</default>
+        <label>V528-100% PP</label>
+    </customValue>
+    <customValue>
+        <fullName>V529</fullName>
+        <default>false</default>
+        <label>V529-10%PP+90% TT5DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V530</fullName>
+        <default>false</default>
+        <label>V530-50% PP+50%TT180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V531</fullName>
+        <default>false</default>
+        <label>V531-30%PP+70%TT 30DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V532</fullName>
+        <default>false</default>
+        <label>V532-30%PP +70%TT180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V533</fullName>
+        <default>false</default>
+        <label>V533-30%PP +70% TT30DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V534</fullName>
+        <default>false</default>
+        <label>V534-50%PP + 50% T/T 5DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V535</fullName>
+        <default>false</default>
+        <label>V535-50%PP +50% T/T 20DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V536</fullName>
+        <default>false</default>
+        <label>V536-30%PP+70% DA 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V537</fullName>
+        <default>false</default>
+        <label>V537-30%PP+70% DA60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V538</fullName>
+        <default>false</default>
+        <label>V538-T/T 110 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V539</fullName>
+        <default>false</default>
+        <label>V539-50%PP+50% T/T60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V540</fullName>
+        <default>false</default>
+        <label>V540-10%PP+90%T/T5D</label>
+    </customValue>
+    <customValue>
+        <fullName>V541</fullName>
+        <default>false</default>
+        <label>V541-30%PP+70%T/T 240DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V542</fullName>
+        <default>false</default>
+        <label>V542-10%PP+90%T/T240DAY</label>
+    </customValue>
+    <customValue>
+        <fullName>V543</fullName>
+        <default>false</default>
+        <label>V543-20%PP+80%T/T 20DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V544</fullName>
+        <default>false</default>
+        <label>V544-50%PP+50%T/T7DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V545</fullName>
+        <default>false</default>
+        <label>V545-25% PP+75% T/T 5 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V546</fullName>
+        <default>false</default>
+        <label>V546-50% PP+50% T/T 30DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V547</fullName>
+        <default>false</default>
+        <label>V547-20%PP+80%T/T180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V548</fullName>
+        <default>false</default>
+        <label>V548-15%PP+85%T/T 300DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V549</fullName>
+        <default>false</default>
+        <label>V549-40%PP+60%T/T 60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V550</fullName>
+        <default>false</default>
+        <label>V550-T/T 35 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V551</fullName>
+        <default>false</default>
+        <label>V551-30%PP+70%T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V552</fullName>
+        <default>false</default>
+        <label>V552-40%T/T PP+ 60%T/T 240DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V553</fullName>
+        <default>false</default>
+        <label>V553-10%PP T/T+90%T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V554</fullName>
+        <default>false</default>
+        <label>V554-30%PP+70%T/T 10DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V555</fullName>
+        <default>false</default>
+        <label>V555-30%PP+70% TT 5Days</label>
+    </customValue>
+    <customValue>
+        <fullName>V556</fullName>
+        <default>false</default>
+        <label>V556-20%PP + 80% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V557</fullName>
+        <default>false</default>
+        <label>V557-T/T 105 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V558</fullName>
+        <default>false</default>
+        <label>V558-5%PP+95%TT 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V559</fullName>
+        <default>false</default>
+        <label>V559-20%PP+80%T/T 5DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V560</fullName>
+        <default>false</default>
+        <label>V560-30%PP+70%TT 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V561</fullName>
+        <default>false</default>
+        <label>V561-30% PP+70% LC Sight</label>
+    </customValue>
+    <customValue>
+        <fullName>V562</fullName>
+        <default>false</default>
+        <label>V562-30% PP+70% T/T 7 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V563</fullName>
+        <default>false</default>
+        <label>V563-17.5%PP + 82.5%T/T90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V564</fullName>
+        <default>false</default>
+        <label>V564-30% PP+ 70%T/T 210DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V565</fullName>
+        <default>false</default>
+        <label>V565-10% PP + 90% LC Sight</label>
+    </customValue>
+    <customValue>
+        <fullName>V566</fullName>
+        <default>false</default>
+        <label>V566-17.5% PP +82.5% T/T180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V567</fullName>
+        <default>false</default>
+        <label>V567-15%PP +85%TT 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V568</fullName>
+        <default>false</default>
+        <label>V568-30%PP+70%T/T 270DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V569</fullName>
+        <default>false</default>
+        <label>V569-40%T/T 5DAYS+60%T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V570</fullName>
+        <default>false</default>
+        <label>V570-20%PP+80%T/T 270DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V571</fullName>
+        <default>false</default>
+        <label>V571-T/T 75 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V572</fullName>
+        <default>false</default>
+        <label>V572-30%PP+70%T/T 60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V573</fullName>
+        <default>false</default>
+        <label>V573-50%PP+50%CAD</label>
+    </customValue>
+    <customValue>
+        <fullName>V574</fullName>
+        <default>false</default>
+        <label>V574-5%预付+95%见票5日内电汇</label>
+    </customValue>
+    <customValue>
+        <fullName>V575</fullName>
+        <default>false</default>
+        <label>V575-30%PP+70% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V576</fullName>
+        <default>false</default>
+        <label>V576-T/T 180DAYS SINCE ARRIVAL DATE</label>
+    </customValue>
+    <customValue>
+        <fullName>V577</fullName>
+        <default>false</default>
+        <label>V577-D/A 180DAYS SINCE ARRIVAL DATE</label>
+    </customValue>
+    <customValue>
+        <fullName>V578</fullName>
+        <default>false</default>
+        <label>V578-20%PP+80%T/T 30DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V579</fullName>
+        <default>false</default>
+        <label>V579-50% PP +50% T/T 15 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V580</fullName>
+        <default>false</default>
+        <label>V580-45%PP+55%TT 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V581</fullName>
+        <default>false</default>
+        <label>V581-50%PP+50% LC 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V582</fullName>
+        <default>false</default>
+        <label>V582-15%PP+85% LC 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V583</fullName>
+        <default>false</default>
+        <label>V583-15% PP + 85% T/T sight</label>
+    </customValue>
+    <customValue>
+        <fullName>V584</fullName>
+        <default>false</default>
+        <label>V584-20%PP+80%T/T 40DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V585</fullName>
+        <default>false</default>
+        <label>V585-20%PP+80%T/T 7DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V586</fullName>
+        <default>false</default>
+        <label>V586-30%PP+70%TT 35DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V587</fullName>
+        <default>false</default>
+        <label>V587-20%PP+80%TT 150DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V588</fullName>
+        <default>false</default>
+        <label>V588-30%PP+70%T/T150DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V589</fullName>
+        <default>false</default>
+        <label>V589-10%PP+90% DP SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V590</fullName>
+        <default>false</default>
+        <label>V590-24%PP+76%T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V591</fullName>
+        <default>false</default>
+        <label>V591-T/T 50%PP+ T/T 50% 7 days before shipment.</label>
+    </customValue>
+    <customValue>
+        <fullName>V592</fullName>
+        <default>false</default>
+        <label>V592-D/P 20 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V593</fullName>
+        <default>false</default>
+        <label>V593-40%PP+60%T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V594</fullName>
+        <default>false</default>
+        <label>V594-30%PP+70%T/T 7DAYS BEFORE SHIPMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>V595</fullName>
+        <default>false</default>
+        <label>V595-10%PP+90%T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V596</fullName>
+        <default>false</default>
+        <label>V596-50% PP +50% T/T 45DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V597</fullName>
+        <default>false</default>
+        <label>V597-15%PP+15% BEFORE SHIPMENT+70% T/T 180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V598</fullName>
+        <default>false</default>
+        <label>V598-T/T 150 DAYS SINCE ARRIVEL DATE</label>
+    </customValue>
+    <customValue>
+        <fullName>V599</fullName>
+        <default>false</default>
+        <label>V599-20%PP+80%TT 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V601</fullName>
+        <default>false</default>
+        <label>V601-L/C SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V602</fullName>
+        <default>false</default>
+        <label>V602-L/C 20 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V603</fullName>
+        <default>false</default>
+        <label>V603-L/C 30 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V604</fullName>
+        <default>false</default>
+        <label>V604-L/C 45 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V605</fullName>
+        <default>false</default>
+        <label>V605-L/C 60 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V606</fullName>
+        <default>false</default>
+        <label>V606-L/C 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V607</fullName>
+        <default>false</default>
+        <label>V607-L/C 120 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V608</fullName>
+        <default>false</default>
+        <label>V608-L/C 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V609</fullName>
+        <default>false</default>
+        <label>V609-L/C 180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V610</fullName>
+        <default>false</default>
+        <label>V610-L/C 270 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V611</fullName>
+        <default>false</default>
+        <label>V611-L/C 360 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V612</fullName>
+        <default>false</default>
+        <label>V612-L/C 420 DAY</label>
+    </customValue>
+    <customValue>
+        <fullName>V613</fullName>
+        <default>false</default>
+        <label>V613-L/C 450 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V614</fullName>
+        <default>false</default>
+        <label>V614-CAD PAYMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>V615</fullName>
+        <default>false</default>
+        <label>V615-30%PP+70%TT 15DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V616</fullName>
+        <default>false</default>
+        <label>V616-DLC 60 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V617</fullName>
+        <default>false</default>
+        <label>V617-T/T 40DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V618</fullName>
+        <default>false</default>
+        <label>V618-30%PP+70% L/C 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V619</fullName>
+        <default>false</default>
+        <label>V619-10%PP+10% BASED ON B/L +80% T/T 180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V620</fullName>
+        <default>false</default>
+        <label>V620-30%PP BEFORE SHIPMENT+70% T/T 300DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V621</fullName>
+        <default>false</default>
+        <label>V621-10%PP+90% T/T 12DAYS BEFORE SHIPMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>V622</fullName>
+        <default>false</default>
+        <label>V622-25%PP+75% T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V623</fullName>
+        <default>false</default>
+        <label>V623-30%T/T 5DAYS+70%T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V624</fullName>
+        <default>false</default>
+        <label>V624-10%T/T 20DAYS+90%T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V625</fullName>
+        <default>false</default>
+        <label>V625-40%PP+60% T/T120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V626</fullName>
+        <default>false</default>
+        <label>V626-10%PP+90% T/T 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V627</fullName>
+        <default>false</default>
+        <label>V627-10%PP+10% T/T SIGHT + 80% T/T 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V628</fullName>
+        <default>false</default>
+        <label>V628-10%PP+25% T/T SIGHT + 65% T/T 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V629</fullName>
+        <default>false</default>
+        <label>V629-20% PP+80% T/T 60days</label>
+    </customValue>
+    <customValue>
+        <fullName>V630</fullName>
+        <default>false</default>
+        <label>V630-T/T 120 DAYS SINCE ARRIVAL DATE</label>
+    </customValue>
+    <customValue>
+        <fullName>V631</fullName>
+        <default>false</default>
+        <label>V631-25%PP before production+25%PP before shipment+50% T/T 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V632</fullName>
+        <default>false</default>
+        <label>V632-30%T/T 7DAYS+70%T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V633</fullName>
+        <default>false</default>
+        <label>V633-10%PP+60% T/T 15 DAYS +30% T/T 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V634</fullName>
+        <default>false</default>
+        <label>V634-18% PP+ 82% L/C SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V635</fullName>
+        <default>false</default>
+        <label>V635-40% PP+60% T/T 15 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V636</fullName>
+        <default>false</default>
+        <label>V636-40% PP+60% T/T 7 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V637</fullName>
+        <default>false</default>
+        <label>V637-25% T/T 20 DAY+ 75% T/T 240 DAY</label>
+    </customValue>
+    <customValue>
+        <fullName>V638</fullName>
+        <default>false</default>
+        <label>V638-40% PP+60% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V639</fullName>
+        <default>false</default>
+        <label>V639-20% PP + 80% T/T SIGHT BEFORE OR WHILE GOODS ARRIVAL DATE</label>
+    </customValue>
+    <customValue>
+        <fullName>V640</fullName>
+        <default>false</default>
+        <label>V640-10% PP +90% T/T 300DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V641</fullName>
+        <default>false</default>
+        <label>V641-20% PP + 80% L/C 60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V642</fullName>
+        <default>false</default>
+        <label>V642-25% PP WITHIN 5DAYS +75% T/T 60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V643</fullName>
+        <default>false</default>
+        <label>V643-60% PP+40% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V644</fullName>
+        <default>false</default>
+        <label>V644-10% PP+90% T/T 60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V645</fullName>
+        <default>false</default>
+        <label>V645-20% T/T 5DAYS+80%T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V646</fullName>
+        <default>false</default>
+        <label>V646-30% PP+70% T/T 45DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V647</fullName>
+        <default>false</default>
+        <label>V647-90% PP+10% T/T 5DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V648</fullName>
+        <default>false</default>
+        <label>V648-90% PP+10% T/T 30DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V649</fullName>
+        <default>false</default>
+        <label>V649-10% PP+90% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V650</fullName>
+        <default>false</default>
+        <label>V650-50% PP+50% L/C SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V651</fullName>
+        <default>false</default>
+        <label>V651-5% PP+ 95% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V652</fullName>
+        <default>false</default>
+        <label>V652-20% PP BEFORE PRODUCTION + 80% L/C BEFORE DELIVERY</label>
+    </customValue>
+    <customValue>
+        <fullName>V653</fullName>
+        <default>false</default>
+        <label>V653-20% PP+80% TT 240DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V654</fullName>
+        <default>false</default>
+        <label>V654-50% PP +50% T/T 10DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V655</fullName>
+        <default>false</default>
+        <label>V655-10% PP+20% TT SIGHT+70% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V656</fullName>
+        <default>false</default>
+        <label>V656-30% PP BEFORE PRD+30% PP BEFORE SHIP+40% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V657</fullName>
+        <default>false</default>
+        <label>V657-30% PP BEFORE PRD+30% PP BEFORE SHIP+40% CAD</label>
+    </customValue>
+    <customValue>
+        <fullName>V658</fullName>
+        <default>false</default>
+        <label>V658-40% PP BEFORE PRD+30% PP BEFORE SHIP+30% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V659</fullName>
+        <default>false</default>
+        <label>V659-15% PP BEFORE PRD+15% PP BEFORE SHIP+70% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V660</fullName>
+        <default>false</default>
+        <label>V660-30% PP+20% T/T 7DAYS+50% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V661</fullName>
+        <default>false</default>
+        <label>V661-20% PP+30% T/T 7DAYS+50% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V662</fullName>
+        <default>false</default>
+        <label>V662-20% PP BEFORE PRD+50% PP BEFORE SHIP+30% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V663</fullName>
+        <default>false</default>
+        <label>V663-30% PP+70% T/T 360DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V664</fullName>
+        <default>false</default>
+        <label>V664-50% PP+50% T/T 360DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V665</fullName>
+        <default>false</default>
+        <label>V665-72% PP+28% T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V666</fullName>
+        <default>false</default>
+        <label>V666-50% PP +50% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V667</fullName>
+        <default>false</default>
+        <label>V667-10% PP +30% T/T 30 DAYS+60% T/T 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V668</fullName>
+        <default>false</default>
+        <label>V668-50% PP +50% T/T 240 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V669</fullName>
+        <default>false</default>
+        <label>V669-50% PP +50% T/T 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V670</fullName>
+        <default>false</default>
+        <label>V670-30% PP +70% T/T 3 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V671</fullName>
+        <default>false</default>
+        <label>V671-5% PP+ 25% DURING PRD + 70%TT 5 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V672</fullName>
+        <default>false</default>
+        <label>V672-10% PP+40% T/T 30DAYS + 50% T/T 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V673</fullName>
+        <default>false</default>
+        <label>V673-50% T/T 90 DAYS + 50% T/T 360 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V674</fullName>
+        <default>false</default>
+        <label>V674-10% PP+10% T/T SIGHT+80% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V676</fullName>
+        <default>false</default>
+        <label>V676-20% PP+ 80% L/C SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V677</fullName>
+        <default>false</default>
+        <label>V677-50% T/T SIGHT+50% T/T 360DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V678</fullName>
+        <default>false</default>
+        <label>V678-10% PP+20% T/T 20DAYS+70% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V679</fullName>
+        <default>false</default>
+        <label>V679-10% PP+20% T/T 40DAYS+70% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V680</fullName>
+        <default>false</default>
+        <label>V680-10% PP+90% T/T 45DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V681</fullName>
+        <default>false</default>
+        <label>V681-25% PP+25% T/T 5DAYS+50% T/T 60DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V682</fullName>
+        <default>false</default>
+        <label>V682-30% PP+50% BEFORE SHIPMENT+20% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V683</fullName>
+        <default>false</default>
+        <label>V683-10% PP+40% T/T 30DAYS+50% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V684</fullName>
+        <default>false</default>
+        <label>V684-30% PP+60% BEFORE SHIPMENT+10% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V685</fullName>
+        <default>false</default>
+        <label>V685-30% PP BEFORE PRD+60% T/T 7DAYS+10% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V686</fullName>
+        <default>false</default>
+        <label>V686-5% PP+95% L/C SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V687</fullName>
+        <default>false</default>
+        <label>V687-L/C 210DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V688</fullName>
+        <default>false</default>
+        <label>V688-50% PP BEFORE PRD+50% T/T 150DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V689</fullName>
+        <default>false</default>
+        <label>V689-30% PP+70% L/C 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V690</fullName>
+        <default>false</default>
+        <label>V690-30% PP+30% PP BEFORE SHIPMENT+40% T/T SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V700</fullName>
+        <default>false</default>
+        <label>V700-20%PP+80% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V701</fullName>
+        <default>false</default>
+        <label>V701-D/A 30 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V702</fullName>
+        <default>false</default>
+        <label>V702-D/A 60 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V703</fullName>
+        <default>false</default>
+        <label>V703-D/A 90 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V704</fullName>
+        <default>false</default>
+        <label>V704-D/A 120 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V705</fullName>
+        <default>false</default>
+        <label>V705-D/A 150 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V706</fullName>
+        <default>false</default>
+        <label>V706-D/A 180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V707</fullName>
+        <default>false</default>
+        <label>V707-D/A 210 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V708</fullName>
+        <default>false</default>
+        <label>V708-D/A 240 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V709</fullName>
+        <default>false</default>
+        <label>V709-D/A 270 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V710</fullName>
+        <default>false</default>
+        <label>V710-D/A 300 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V711</fullName>
+        <default>false</default>
+        <label>V711-D/A 360 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V713</fullName>
+        <default>false</default>
+        <label>V713-20%PP+80%DA90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V714</fullName>
+        <default>false</default>
+        <label>V714-20%PP+80% DA120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V715</fullName>
+        <default>false</default>
+        <label>V715-10%PP +90% DA120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V716</fullName>
+        <default>false</default>
+        <label>V716-10%PP+90% DA90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V717</fullName>
+        <default>false</default>
+        <label>V717-30%PP+70% DA180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V718</fullName>
+        <default>false</default>
+        <label>V718-30%PP+70% TT120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V719</fullName>
+        <default>false</default>
+        <label>V719-50%PP+25% T/T 90 DAYS+25% T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V720</fullName>
+        <default>false</default>
+        <label>V720-30% PP BEFORE PRODUCTION+40% PP BEFORE SHIPMENT+30% TT SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V721</fullName>
+        <default>false</default>
+        <label>V721-T/T 250 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V722</fullName>
+        <default>false</default>
+        <label>V722-30% T/T SIGHT+ 70% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V801</fullName>
+        <default>false</default>
+        <label>V801-D/P SIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>V922</fullName>
+        <default>false</default>
+        <label>V922-30%T/T PREPAYMENT+70%T/T 5DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V925</fullName>
+        <default>false</default>
+        <label>V925-T/T 165DAYS SINCE ARRIVAL DATE</label>
+    </customValue>
+    <customValue>
+        <fullName>V926</fullName>
+        <default>false</default>
+        <label>V926-50%PP+50%T/T 210DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V930</fullName>
+        <default>false</default>
+        <label>V930-50% T/T SIGHT+50% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V950</fullName>
+        <default>false</default>
+        <label>V950-LC 120 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V951</fullName>
+        <default>false</default>
+        <label>V951-LC 180 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V952</fullName>
+        <default>false</default>
+        <label>V952-LC 270DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V953</fullName>
+        <default>false</default>
+        <label>V953-LC 360DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V954</fullName>
+        <default>false</default>
+        <label>V954-T/T 180DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V955</fullName>
+        <default>false</default>
+        <label>V955-T/T 270DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V956</fullName>
+        <default>false</default>
+        <label>V956-LC 330DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V957</fullName>
+        <default>false</default>
+        <label>V957-TT 240 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V958</fullName>
+        <default>false</default>
+        <label>V958-T/T 330 DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V959</fullName>
+        <default>false</default>
+        <label>V959-D/A 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V960</fullName>
+        <default>false</default>
+        <label>V960-T/T 120DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001</fullName>
+        <default>false</default>
+        <label>0001</label>
+    </customValue>
+    <customValue>
+        <fullName>S576</fullName>
+        <default>false</default>
+        <label>S576</label>
+    </customValue>
+    <customValue>
+        <fullName>S521</fullName>
+        <default>false</default>
+        <label>S521</label>
+    </customValue>
+    <customValue>
+        <fullName>S519</fullName>
+        <default>false</default>
+        <label>S519</label>
+    </customValue>
+    <customValue>
+        <fullName>S509</fullName>
+        <default>false</default>
+        <label>S509</label>
+    </customValue>
+    <customValue>
+        <fullName>S954</fullName>
+        <default>false</default>
+        <label>S954</label>
+    </customValue>
+    <customValue>
+        <fullName>S508</fullName>
+        <default>false</default>
+        <label>S508</label>
+    </customValue>
+    <customValue>
+        <fullName>S516</fullName>
+        <default>false</default>
+        <label>S516</label>
+    </customValue>
+    <customValue>
+        <fullName>S518</fullName>
+        <default>false</default>
+        <label>S518</label>
+    </customValue>
+    <customValue>
+        <fullName>S515</fullName>
+        <default>false</default>
+        <label>S515</label>
+    </customValue>
+    <customValue>
+        <fullName>S955</fullName>
+        <default>false</default>
+        <label>S955</label>
+    </customValue>
+    <customValue>
+        <fullName>S511</fullName>
+        <default>false</default>
+        <label>S511</label>
+    </customValue>
+    <customValue>
+        <fullName>G010</fullName>
+        <default>false</default>
+        <label>G010</label>
+    </customValue>
+    <customValue>
+        <fullName>G040</fullName>
+        <default>false</default>
+        <label>G040</label>
+    </customValue>
+    <customValue>
+        <fullName>S524</fullName>
+        <default>false</default>
+        <label>S524</label>
+    </customValue>
+    <customValue>
+        <fullName>S520</fullName>
+        <default>false</default>
+        <label>S520</label>
+    </customValue>
+    <customValue>
+        <fullName>S512</fullName>
+        <default>false</default>
+        <label>S512</label>
+    </customValue>
+    <customValue>
+        <fullName>V736</fullName>
+        <default>false</default>
+        <label>90% T/T SIGHT+10% T/T 90DAYS</label>
+    </customValue>
+    <customValue>
+        <fullName>V696</fullName>
+        <default>false</default>
+        <label>90% T/T SIGHT+10% T/T 180DAYS</label>
+    </customValue>
+    <description>付款条件</description>
+    <masterLabel>Payment Term</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

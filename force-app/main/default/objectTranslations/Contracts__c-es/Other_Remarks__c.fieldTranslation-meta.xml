@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Want to print &quot;re-negotiated condition&quot; and &quot;freight condition&quot; --></help>
+    <label><!-- Other Remarks --></label>
+    <name>Other_Remarks__c</name>
+</CustomFieldTranslation>

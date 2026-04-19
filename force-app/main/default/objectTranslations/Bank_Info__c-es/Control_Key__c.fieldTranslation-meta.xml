@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Clave de control</label>
+    <name>Control_Key__c</name>
+    <picklistValues>
+        <masterLabel>01</masterLabel>
+        <translation><!-- 01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02</masterLabel>
+        <translation><!-- 02 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03</masterLabel>
+        <translation><!-- 03 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>99</masterLabel>
+        <translation><!-- 99 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

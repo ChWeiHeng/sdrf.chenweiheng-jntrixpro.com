@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Numero de orden</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Numero de orden</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Clone Field --></label>
+        <name>Clone_Field</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel><!-- Order Item Number --></nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- For tolling orders, please select products with a product code that starts with &apos;Z&apos;. --></errorMessage>
+        <name>Validate_Tolling_Product_Code</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>¡El pedido de YPF no puede elegir producto gratuito!</errorMessage>
+        <name>YPF_CheckProductType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>¡El precio unitario del pedido de YPF no puede ser modificado!</errorMessage>
+        <name>YPF_UnitPriceCheck</name>
+    </validationRules>
+</CustomObjectTranslation>

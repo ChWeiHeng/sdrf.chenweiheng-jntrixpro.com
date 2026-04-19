@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Product_Line</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(Related_Product_Level__c)==&apos;Product Line&apos;,ISBLANK(TEXT(Product_Line__c)))</errorConditionFormula>
+    <errorDisplayField>Product_Line__c</errorDisplayField>
+    <errorMessage>Product Line Required</errorMessage>
+</ValidationRule>

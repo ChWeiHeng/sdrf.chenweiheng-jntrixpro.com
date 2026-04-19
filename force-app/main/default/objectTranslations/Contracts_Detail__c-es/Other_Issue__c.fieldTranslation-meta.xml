@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Registration、Import Permits、Brand Approval、Quality Requirement --></help>
+    <label><!-- Remark --></label>
+    <name>Other_Issue__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>No. Regimen Fiscal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>No. Regimen Fiscal</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel><!-- Customer Tax Number Category Number --></nameFieldLabel>
+</CustomObjectTranslation>

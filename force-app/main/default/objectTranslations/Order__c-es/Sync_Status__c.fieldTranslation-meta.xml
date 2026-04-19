@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Estado de Sincronizacion</label>
+    <name>Sync_Status__c</name>
+    <picklistValues>
+        <masterLabel>Not synchronized</masterLabel>
+        <translation><!-- Not synchronized --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Synchronization error</masterLabel>
+        <translation><!-- Synchronization error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Synchronized</masterLabel>
+        <translation>Sincronizado</translation>
+    </picklistValues>
+</CustomFieldTranslation>

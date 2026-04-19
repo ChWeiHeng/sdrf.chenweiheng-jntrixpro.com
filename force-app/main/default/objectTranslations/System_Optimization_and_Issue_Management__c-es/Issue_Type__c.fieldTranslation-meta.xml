@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Issue Type --></label>
+    <name>Issue_Type__c</name>
+    <picklistValues>
+        <masterLabel>Bug</masterLabel>
+        <translation><!-- Bug --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Request</masterLabel>
+        <translation><!-- Change Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Issue</masterLabel>
+        <translation><!-- Data Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Explanation and Clarification</masterLabel>
+        <translation><!-- Explanation and Clarification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Improvement and Optimization</masterLabel>
+        <translation><!-- Improvement and Optimization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maloperation</masterLabel>
+        <translation><!-- Maloperation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Requirement</masterLabel>
+        <translation><!-- New Requirement --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

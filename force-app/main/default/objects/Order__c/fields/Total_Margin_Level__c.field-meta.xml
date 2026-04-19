@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Margin_Level__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    (TEXT(Sales_Org__c)==&apos;5070&apos; &amp;&amp; !Is_YPF__c),
+    IF(
+        Margin_Rate__c=0,
+        &apos;&apos;,
+        IF(
+            Margin_Rate__c*100&lt;10,
+            IMAGE($Label.Red, &apos;Margin Level&apos; , 20, 21),  
+            IF(
+                Margin_Rate__c*100&lt;=20,
+                IMAGE($Label.Yellow, &apos;Margin Level&apos; , 20, 21),
+                IMAGE($Label.Green, &apos;Margin Level&apos; , 20, 21)
+            )
+        )
+    ),
+    IF(
+        (Is_YPF__c || TEXT(Sales_Org__c)==&apos;5130&apos;),
+        IF(
+            Total_Margin_Estimate_Rate__c=0 || ISBLANK(Total_Margin_Estimate_Rate__c),
+            &apos;&apos;,
+            IF(
+                Total_Margin_Estimate_Rate__c*100&lt;20,
+                IMAGE($Label.Black, &apos;Margin Level&apos; , 20, 21),
+                IF(
+                    Total_Margin_Estimate_Rate__c*100&lt;28,
+                    IMAGE($Label.Red, &apos;Margin Level&apos; , 20, 21),
+                    IF(
+                        Total_Margin_Estimate_Rate__c*100&lt;35,
+                        IMAGE($Label.Yellow, &apos;Margin Level&apos; , 20, 21),
+                        IMAGE($Label.Green, &apos;Margin Level&apos; , 20, 21)
+                    )
+                    
+                )
+            )
+        ),
+        IF(
+            Margin_Rate__c=0,
+            &apos;&apos;,
+            IF(
+                OR(
+                    AND(TEXT(Deliver_Plant__c)==&apos;3010&apos;,Margin_Rate__c*100&lt;10),
+                    AND(TEXT(Deliver_Plant__c)==&apos;3011&apos;,Margin_Rate__c*100&lt;20),
+                    AND(TEXT(Deliver_Plant__c)==&apos;3020&apos;,Margin_Rate__c*100&lt;20)
+                ),
+                IMAGE($Label.Red, &apos;Margin Level&apos; , 20, 21),
+                IF(
+                    OR(
+                        AND(TEXT(Deliver_Plant__c)==&apos;3010&apos;,Margin_Rate__c*100&lt;=20),
+                        AND(TEXT(Deliver_Plant__c)==&apos;3011&apos;,Margin_Rate__c*100&lt;=40),
+                        AND(TEXT(Deliver_Plant__c)==&apos;3020&apos;,Margin_Rate__c*100&lt;=35)
+                    ),
+                    IMAGE($Label.Yellow, &apos;Margin Level&apos; , 20, 21),
+                    IMAGE($Label.Green, &apos;Margin Level&apos; , 20, 21)
+                )
+            )
+        )
+    )
+)</formula>
+    <label>Total Margin Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

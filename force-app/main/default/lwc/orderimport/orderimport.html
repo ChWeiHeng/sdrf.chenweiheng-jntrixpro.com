@@ -1,0 +1,76 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @start time        : 08-01-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <!-- 页面容器：统一边距、背景、阴影 -->
+    <div class="order-import-container slds-p-horizontal_medium slds-p-vertical_large">
+        <!-- 标题区域：居中、加大字号、与按钮区间距 -->
+        <div class="slds-text-align_center slds-m-bottom_small">
+            <h1 class="slds-text-heading_large slds-text-heading--bold">{label.OrderLabe1}</h1>
+        </div>
+
+    <!-- 操作按钮区：下载按钮左，上传按钮右 -->
+    <div class="slds-grid slds-grid_align-spread slds-m-bottom_small">
+        <!-- 下载模板按钮靠左 -->
+        <div class="slds-col slds-size_auto">
+            <lightning-button 
+                label="Download Template" 
+                onclick={downloadTemplate}
+                variant="neutral"
+                class="download-button"
+                style="width: 130px;">
+            </lightning-button>
+        </div>
+        
+        <!-- 文件上传按钮靠右 -->
+        <div class="slds-col slds-size_auto">
+            <lightning-input 
+                type="file" 
+                accept=".xlsx, .xls" 
+                onchange={handleFilesChange}
+                label="Upload Files"
+                variant="label-hidden"
+                class="slds-file-selector slds-file-selector_files upload-area">
+                <span class="slds-file-selector__text">{label.OrderLabe2}</span>
+                <span class="slds-file-selector__or">{label.OrderLabe3}</span>
+            </lightning-input>
+        </div>
+    </div>
+
+        <!-- 表格区：使用Lightning DataTable -->
+        <div class="slds-box slds-m-bottom_small" style="height: 22rem;fixedWidthinitialWidthinitialWidth: 100rem" >
+            <template if:true={hasOrderData}>
+                <lightning-datatable
+                    key-field="rowKey"
+                    data={orderAndOrderItems}
+                    columns={columns}
+                    hide-checkbox-column="true"
+                    class="order-datatable">
+                </lightning-datatable>
+            </template>
+            <template if:false={hasOrderData}>
+                <div class="slds-p-vertical_medium slds-text-align_center">
+                    <lightning-primitive-icon icon-name="utility:empty" alternative-text="No data" size="large"></lightning-primitive-icon>
+                    <p class="slds-p-top_small">{label.OrderLabe4}</p>
+                </div>
+            </template>
+        </div>
+
+        <!-- 底部操作区：按钮右对齐 -->
+        <div class="slds-text-align_right">
+            <lightning-button variant="neutral" label="Cancel" onclick={handleCancel}></lightning-button>
+            <lightning-button variant="brand" label="Save" disabled={notHasOrderData} onclick={handleSave}></lightning-button>
+        </div>
+
+        <!-- 加载态 -->
+        <template if:true={isProcessing}>
+            <div class="slds-align_absolute-center slds-p-vertical_large">
+                <lightning-spinner alternative-text="loading..." size="medium"></lightning-spinner>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AGR1</fullName>
+        <default>false</default>
+        <label>AGR1 Agroterrum office</label>
+    </customValue>
+    <customValue>
+        <fullName>Z001</fullName>
+        <default>false</default>
+        <label>Commercial Department 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Z002</fullName>
+        <default>false</default>
+        <label>Commercial Department 2</label>
+    </customValue>
+    <description>销售办公室</description>
+    <masterLabel>Sales Office</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

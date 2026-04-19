@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Customer --></label>
+    <lookupFilter>
+        <errorMessage><!-- Value does not &apos;Approved&apos; or &apos;Synchronized&apos; or NO Credit --></errorMessage>
+    </lookupFilter>
+    <name>Customer__c</name>
+    <relationshipLabel><!-- Order --></relationshipLabel>
+</CustomFieldTranslation>

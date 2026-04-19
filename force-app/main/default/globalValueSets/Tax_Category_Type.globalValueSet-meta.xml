@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>J1AU</fullName>
+        <default>false</default>
+        <label>J1AU IVA Ventas</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A1</fullName>
+        <default>false</default>
+        <label>J1A1 Perc. IIBB CABA</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A2</fullName>
+        <default>false</default>
+        <label>J1A2 Perc. IIBB ARBA</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A3</fullName>
+        <default>false</default>
+        <label>J1A3 Perc. IIBB EntreRios</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A4</fullName>
+        <default>false</default>
+        <label>J1A4 Perc. IIBB Santa Fe</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A5</fullName>
+        <default>false</default>
+        <label>J1A5 Perc. IIBB Córdoba</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A6</fullName>
+        <default>false</default>
+        <label>J1A6 Perc. IIBB Salta</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A7</fullName>
+        <default>false</default>
+        <label>J1A7 Perc. IIBB Tucumán</label>
+    </customValue>
+    <customValue>
+        <fullName>J1A8</fullName>
+        <default>false</default>
+        <label>J1A8 Perc. IIBB Otras</label>
+    </customValue>
+    <customValue>
+        <fullName>MWST</fullName>
+        <default>false</default>
+        <label>MWST IVA repercutido</label>
+    </customValue>
+    <customValue>
+        <fullName>MX01</fullName>
+        <default>false</default>
+        <label>MX01 I.E.P.S. (MEXICO)</label>
+    </customValue>
+    <masterLabel>Tax Category Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

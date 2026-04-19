@@ -1,0 +1,57 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+                     <!--Confirm the creation of the HQ contract?-->
+                     {customLabel.CreateContractHeader}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+           
+            <template if:true={isMSG}>
+                <!--<h2 class="slds-text-heading--medium">
+                     Confirm the creation of the HQ contract?
+                </h2>-->
+           
+            
+             <template if:false={isPC}>
+                 <lightning-layout>
+                    
+                    <lightning-layout-item padding="around-small" size="12">
+                        <template if:true={opList}>
+                        <lightning-select
+                        value={conType}
+                        options={opList}  required onchange={productChange} label={customLabel.CreateContractType}></lightning-select>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+            <template if:true={isPC}>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <template if:true={opList}>
+                        <lightning-select
+                        value={conType}
+                        options={opList}  required onchange={productChange} label={customLabel.CreateContractType}></lightning-select>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </template>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <template if:true={isMSG}>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

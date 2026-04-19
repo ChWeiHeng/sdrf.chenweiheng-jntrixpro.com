@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product Line --></label>
+    <name>Product_Line__c</name>
+    <picklistValues>
+        <masterLabel>BIOLOGICAL</masterLabel>
+        <translation><!-- BIOLOGICAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUNGICIDES</masterLabel>
+        <translation><!-- FUNGICIDES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HERBICIDES</masterLabel>
+        <translation><!-- HERBICIDES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INSECTICIDES</masterLabel>
+        <translation><!-- INSECTICIDES --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

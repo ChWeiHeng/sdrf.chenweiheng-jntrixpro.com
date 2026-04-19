@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AA</fullName>
+        <default>false</default>
+        <label>AA Asset Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>AF</fullName>
+        <default>false</default>
+        <label>AF Depreciation Pstngs</label>
+    </customValue>
+    <customValue>
+        <fullName>AN</fullName>
+        <default>false</default>
+        <label>AN Net Asset Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>CA</fullName>
+        <default>false</default>
+        <label>CA</label>
+    </customValue>
+    <customValue>
+        <fullName>CH</fullName>
+        <default>false</default>
+        <label>CH Contract Settlement</label>
+    </customValue>
+    <customValue>
+        <fullName>CO</fullName>
+        <default>false</default>
+        <label>CO CO Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>DA</fullName>
+        <default>false</default>
+        <label>DA Customer Document</label>
+    </customValue>
+    <customValue>
+        <fullName>DB</fullName>
+        <default>false</default>
+        <label>DB Customer Document</label>
+    </customValue>
+    <customValue>
+        <fullName>DC</fullName>
+        <default>false</default>
+        <label>DC Customer Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>DD</fullName>
+        <default>false</default>
+        <label>DD Customer Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>DE</fullName>
+        <default>false</default>
+        <label>DE Customer Document</label>
+    </customValue>
+    <customValue>
+        <fullName>DF</fullName>
+        <default>false</default>
+        <label>DF Customer Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>DG</fullName>
+        <default>false</default>
+        <label>DG Customer Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>DH</fullName>
+        <default>false</default>
+        <label>DH Customer Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>DI</fullName>
+        <default>false</default>
+        <label>DI Customer Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>DJ</fullName>
+        <default>false</default>
+        <label>DJ Customer Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>DM</fullName>
+        <default>false</default>
+        <label>DM Customer Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>DN</fullName>
+        <default>false</default>
+        <label>DN Customer Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>DR</fullName>
+        <default>false</default>
+        <label>DR Customer Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>DX</fullName>
+        <default>false</default>
+        <label>DX Customer Document</label>
+    </customValue>
+    <customValue>
+        <fullName>EU</fullName>
+        <default>false</default>
+        <label>EU Euro Rounding Diff.</label>
+    </customValue>
+    <customValue>
+        <fullName>EX</fullName>
+        <default>false</default>
+        <label>EX External Number</label>
+    </customValue>
+    <customValue>
+        <fullName>KA</fullName>
+        <default>false</default>
+        <label>KA Vendor Document</label>
+    </customValue>
+    <customValue>
+        <fullName>KG</fullName>
+        <default>false</default>
+        <label>KG Vendor Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>KN</fullName>
+        <default>false</default>
+        <label>KN Net Vendors</label>
+    </customValue>
+    <customValue>
+        <fullName>KP</fullName>
+        <default>false</default>
+        <label>KP Account Maintenance</label>
+    </customValue>
+    <customValue>
+        <fullName>KR</fullName>
+        <default>false</default>
+        <label>KR Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>KZ</fullName>
+        <default>false</default>
+        <label>KZ Vendor Payment</label>
+    </customValue>
+    <customValue>
+        <fullName>M1</fullName>
+        <default>false</default>
+        <label>M1 MCA Journal</label>
+    </customValue>
+    <customValue>
+        <fullName>M2</fullName>
+        <default>false</default>
+        <label>M2 FX Swap</label>
+    </customValue>
+    <customValue>
+        <fullName>M3</fullName>
+        <default>false</default>
+        <label>M3 P&amp;L Lock</label>
+    </customValue>
+    <customValue>
+        <fullName>M4</fullName>
+        <default>false</default>
+        <label>M4 P&amp;L Close</label>
+    </customValue>
+    <customValue>
+        <fullName>M5</fullName>
+        <default>false</default>
+        <label>M5 P&amp;L Transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>M6</fullName>
+        <default>false</default>
+        <label>M6 FX Valuation</label>
+    </customValue>
+    <customValue>
+        <fullName>M7</fullName>
+        <default>false</default>
+        <label>M7 MAR &amp; Restatement</label>
+    </customValue>
+    <customValue>
+        <fullName>M8</fullName>
+        <default>false</default>
+        <label>M8 IFX Correction</label>
+    </customValue>
+    <customValue>
+        <fullName>M9</fullName>
+        <default>false</default>
+        <label>M9 Reversal</label>
+    </customValue>
+    <customValue>
+        <fullName>MD</fullName>
+        <default>false</default>
+        <label>MD Data Load</label>
+    </customValue>
+    <customValue>
+        <fullName>ML</fullName>
+        <default>false</default>
+        <label>ML ML Settlement</label>
+    </customValue>
+    <customValue>
+        <fullName>PR</fullName>
+        <default>false</default>
+        <label>PR Price Change</label>
+    </customValue>
+    <customValue>
+        <fullName>RA</fullName>
+        <default>false</default>
+        <label>RA Sub.Cred.Memo Stlmt</label>
+    </customValue>
+    <customValue>
+        <fullName>RB</fullName>
+        <default>false</default>
+        <label>RB Reserve for Bad Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>RE</fullName>
+        <default>false</default>
+        <label>RE Invoice - Gross</label>
+    </customValue>
+    <customValue>
+        <fullName>RN</fullName>
+        <default>false</default>
+        <label>RN Invoice - Net</label>
+    </customValue>
+    <customValue>
+        <fullName>SA</fullName>
+        <default>false</default>
+        <label>SA G/L Account Document</label>
+    </customValue>
+    <customValue>
+        <fullName>SB</fullName>
+        <default>false</default>
+        <label>SB G/L Account Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>SK</fullName>
+        <default>false</default>
+        <label>SK Cash Document</label>
+    </customValue>
+    <customValue>
+        <fullName>SU</fullName>
+        <default>false</default>
+        <label>SU Adjustment Document</label>
+    </customValue>
+    <customValue>
+        <fullName>TN</fullName>
+        <default>false</default>
+        <label>TN TN</label>
+    </customValue>
+    <customValue>
+        <fullName>W1</fullName>
+        <default>false</default>
+        <label>W1 Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>W2</fullName>
+        <default>false</default>
+        <label>W2 Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>W3</fullName>
+        <default>false</default>
+        <label>W3 Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>W4</fullName>
+        <default>false</default>
+        <label>W4 Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>W5</fullName>
+        <default>false</default>
+        <label>W5 Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>W6</fullName>
+        <default>false</default>
+        <label>W6 Vendor Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>WA</fullName>
+        <default>false</default>
+        <label>WA Goods Issue</label>
+    </customValue>
+    <customValue>
+        <fullName>WE</fullName>
+        <default>false</default>
+        <label>WE Goods Receipt</label>
+    </customValue>
+    <customValue>
+        <fullName>WI</fullName>
+        <default>false</default>
+        <label>WI Inventory Document</label>
+    </customValue>
+    <customValue>
+        <fullName>WL</fullName>
+        <default>false</default>
+        <label>WL Goods Issue/Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>WN</fullName>
+        <default>false</default>
+        <label>WN Net Goods Receipt</label>
+    </customValue>
+    <customValue>
+        <fullName>WP</fullName>
+        <default>false</default>
+        <label>WP Warranty Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>WR</fullName>
+        <default>false</default>
+        <label>WR Warranty Debit</label>
+    </customValue>
+    <customValue>
+        <fullName>WS</fullName>
+        <default>false</default>
+        <label>WS WS</label>
+    </customValue>
+    <customValue>
+        <fullName>Z1</fullName>
+        <default>false</default>
+        <label>Z1 G/L Account Document</label>
+    </customValue>
+    <customValue>
+        <fullName>Z2</fullName>
+        <default>false</default>
+        <label>Z2 G/L Account Document</label>
+    </customValue>
+    <customValue>
+        <fullName>ZC</fullName>
+        <default>false</default>
+        <label>ZC Argentina-Cust.Paym.</label>
+    </customValue>
+    <customValue>
+        <fullName>ZD</fullName>
+        <default>false</default>
+        <label>ZD IN: Cust. Inv/Dr-FI</label>
+    </customValue>
+    <customValue>
+        <fullName>ZE</fullName>
+        <default>false</default>
+        <label>ZE Argent.-Cust.Pay.Rev</label>
+    </customValue>
+    <customValue>
+        <fullName>ZG</fullName>
+        <default>false</default>
+        <label>ZG IN: Cust. Cr Memo-FI</label>
+    </customValue>
+    <customValue>
+        <fullName>ZP</fullName>
+        <default>false</default>
+        <label>ZP Payment Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR</fullName>
+        <default>false</default>
+        <label>ZR Bank Reconciliation</label>
+    </customValue>
+    <customValue>
+        <fullName>ZS</fullName>
+        <default>false</default>
+        <label>ZS Payment by Check</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV</fullName>
+        <default>false</default>
+        <label>ZV Payment Clearing</label>
+    </customValue>
+    <customValue>
+        <fullName>AB</fullName>
+        <default>false</default>
+        <label>AB Accounting Document</label>
+    </customValue>
+    <customValue>
+        <fullName>DQ</fullName>
+        <default>false</default>
+        <label>DQ Customer Credit Memo</label>
+    </customValue>
+    <customValue>
+        <fullName>DZ</fullName>
+        <default>false</default>
+        <label>DZ Customer Payment</label>
+    </customValue>
+    <customValue>
+        <fullName>UE</fullName>
+        <default>false</default>
+        <label>UE Data Load</label>
+    </customValue>
+    <customValue>
+        <fullName>RV</fullName>
+        <default>false</default>
+        <label>RV Billing Doc.Transfer</label>
+    </customValue>
+    <masterLabel>Document Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

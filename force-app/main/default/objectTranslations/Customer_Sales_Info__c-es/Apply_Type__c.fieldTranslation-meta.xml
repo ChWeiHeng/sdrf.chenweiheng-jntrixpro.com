@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Apply Type --></label>
+    <name>Apply_Type__c</name>
+    <picklistValues>
+        <masterLabel>Freeze Customer</masterLabel>
+        <translation><!-- Freeze Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unfreeze Customer</masterLabel>
+        <translation><!-- Unfreeze Customer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

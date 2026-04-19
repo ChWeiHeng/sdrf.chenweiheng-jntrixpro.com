@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_not_pick_this_org</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(BEGINS(TEXT(Sales_Org__c)  , &apos;1&apos;) ,BEGINS( TEXT(Sales_Org__c)  , &apos;2&apos;))</errorConditionFormula>
+    <errorDisplayField>Sales_Org__c</errorDisplayField>
+    <errorMessage>Can not select this sales org</errorMessage>
+</ValidationRule>

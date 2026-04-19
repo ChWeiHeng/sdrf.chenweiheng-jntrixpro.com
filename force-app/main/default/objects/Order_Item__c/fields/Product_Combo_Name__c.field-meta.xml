@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Combo_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Product Combo Name</label>
+    <referenceTo>Product_Name__c</referenceTo>
+    <relationshipLabel>Order Item (Product Combo Name)</relationshipLabel>
+    <relationshipName>Order_Item_Combo</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

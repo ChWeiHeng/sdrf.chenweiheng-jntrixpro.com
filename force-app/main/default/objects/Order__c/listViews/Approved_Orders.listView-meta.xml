@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Orders</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Order_type__c</columns>
+    <columns>Order_Amount_USD__c</columns>
+    <columns>Total_Margin_Estimate_Rate__c</columns>
+    <columns>Total_Margin_Level__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Req_Deliv_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>SAP_Order_Code__c</columns>
+    <columns>Terms_Of_Payment__c</columns>
+    <columns>Approve_Date__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>Approved Orders</label>
+</ListView>

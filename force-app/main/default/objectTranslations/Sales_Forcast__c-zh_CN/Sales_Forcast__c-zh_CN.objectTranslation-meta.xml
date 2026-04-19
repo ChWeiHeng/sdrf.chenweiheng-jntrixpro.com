@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Forecast Detail</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- QueryField --></label>
+        <name>QueryField</name>
+    </fieldSets>
+    <recordTypes>
+        <label><!-- Sales Forecast Detail --></label>
+        <name>Detail_Sales_Forecast</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Total Sales Forecast(DELETE) --></label>
+        <name>Total_Sales_Forecast</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Product Name Deteled --></errorMessage>
+        <name>Product_Delete</name>
+    </validationRules>
+</CustomObjectTranslation>

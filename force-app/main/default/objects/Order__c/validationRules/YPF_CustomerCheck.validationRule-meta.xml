@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YPF_CustomerCheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT($Setup.GlobalSetting__c.Ignore_Validation__c)&amp;&amp;
+(
+				(RecordType.DeveloperName = &apos;Model_C&apos; &amp;&amp; TEXT( Deliver_Plant__c )=&apos;5070&apos; &amp;&amp; Text(Customer_Sales_Info__r.Payment_method__c) &lt;&gt; &apos;YPF&apos;)
+ || 
+(RecordType.DeveloperName &lt;&gt; &apos;Model_C&apos; &amp;&amp; TEXT( Deliver_Plant__c )&lt;&gt;&apos;5070&apos; &amp;&amp; Text(Customer_Sales_Info__r.Payment_method__c) = &apos;YPF&apos;)
+) &amp;&amp; $Profile.Name &lt;&gt; &apos;System Administrator&apos; &amp;&amp; $Profile.Name &lt;&gt; &apos;Interface Profile&apos; &amp;&amp; !SAP_Order__c</errorConditionFormula>
+    <errorDisplayField>Customer__c</errorDisplayField>
+    <errorMessage>YPF customer can only create the order that the Sales Org is &apos;5070&apos; and the record type is &apos;Model C&apos;.</errorMessage>
+</ValidationRule>

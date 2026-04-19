@@ -1,0 +1,100 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+                <!-- Order Close -->
+                {customLabel.ContractCreate}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isPC}>
+                <!--<lightning-record-edit-form object-api-name="Order__c" density="compact">
+                <div class="slds-p-around_medium slds-grid slds-wrap" >
+                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                    <div><span style="color:red">*</span>Order Type
+                    <template if:true={opList}>
+                        <lightning-select
+                        value={orderType} variant="label-hidden"
+                        options={opList}  required onchange={productChange} ></lightning-select>
+                    </template>
+                    </div>
+                </div>
+                
+                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                    <div>Down Payment
+                        <lightning-input-field    variant="label-hidden" name="Down_Payment__c"  value={downPayment}   onchange={downPaymentChange} >
+                        </lightning-input-field >
+                        <br><br>
+                    </div>   
+                </div>
+                
+                </div>
+                </lightning-record-edit-form>-->
+                 <lightning-layout>
+                    
+                    <lightning-layout-item padding="around-small" size="12">
+                        <template if:true={opList}>
+                        <lightning-select
+                        value={orderType}
+                        options={opList}  required onchange={productChange} label={customLabel.CreateOrderTypeLabel}></lightning-select>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <template if:true={isDisplayOrder}>
+                    
+                    
+                    <lightning-layout-item padding="around-small" size="12">
+                        
+                        <lightning-record-edit-form object-api-name="Order__c" >
+                        <lightning-input-field    field-name="Down_Payment__c" name="Down_Payment__c"  value={downPayment}   onchange={downPaymentChange} >
+                        </lightning-input-field >
+                        </lightning-record-edit-form>
+                        
+                    </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </template>
+            <template if:true={isPC}>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                	<lightning-layout-item padding="around-small" size="6">
+                		<template if:true={opList}>
+                        <lightning-select
+                        value={orderType}
+                        options={opList}  required onchange={productChange} label={customLabel.CreateOrderTypeLabel}></lightning-select>
+                        </template>
+                	</lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <template if:true={isDisplayOrder}>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                	
+                	<lightning-layout-item padding="around-small" size="6">
+                		
+                        <lightning-record-edit-form object-api-name="Order__c" >
+                	    <lightning-input-field    field-name="Down_Payment__c" name="Down_Payment__c"  value={downPayment}   onchange={downPaymentChange} >
+                        </lightning-input-field >
+                        </lightning-record-edit-form>
+                        
+                	</lightning-layout-item>
+                	</template>
+                </lightning-layout>
+            </template>
+                                        
+            
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

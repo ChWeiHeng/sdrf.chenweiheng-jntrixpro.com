@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Model__c</fullName>
+    <label>Business Model</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Delivery_Plant__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Business_Model1</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>3010</controllingFieldValue>
+            <controllingFieldValue>5070</controllingFieldValue>
+            <valueName>B0</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3020</controllingFieldValue>
+            <controllingFieldValue>5130</controllingFieldValue>
+            <valueName>C0</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3011</controllingFieldValue>
+            <valueName>C1</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

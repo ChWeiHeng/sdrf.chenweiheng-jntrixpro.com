@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Terms_Over_180__c</fullName>
+    <formula>CONTAINS(&quot;AR11,AR14,AR15&quot;,TEXT(Terms_Of_Payment__c))</formula>
+    <label>Payment Term over 180 Days</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

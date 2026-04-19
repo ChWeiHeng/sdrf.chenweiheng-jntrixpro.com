@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Labor/Ofcina</label>
+    <name>Laboratory_Office__c</name>
+    <picklistValues>
+        <masterLabel>001 A.I.</masterLabel>
+        <translation><!-- 001 A.I. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002 Formulation</masterLabel>
+        <translation><!-- 002 Formulation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Esc_Reason_Vertify</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Cancel_Reason__c),TEXT(Visit_Status__c)==&apos;Cancelled&apos;)</errorConditionFormula>
+    <errorDisplayField>Cancel_Reason__c</errorDisplayField>
+    <errorMessage>Please input the cancel reason.</errorMessage>
+</ValidationRule>

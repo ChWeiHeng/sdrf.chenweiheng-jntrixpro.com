@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unit_Estimate_Margin__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    TEXT(Product_Type__c) = &apos;Free Product&apos;,
+    null,
+    IF(
+        OR(
+            ISBLANK(Price__c),
+            ISNULL(Price__c),
+            ISBLANK(Unit_Estimate_Cost__c),
+            ISNULL(Unit_Estimate_Cost__c)
+        ),
+        null,
+        Price__c-Unit_Estimate_Cost__c
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Unit Estimate Margin</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

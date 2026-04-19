@@ -1,0 +1,179 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 07-15-2025
+  @last modified by  : Gerry 
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   07-15-2025   Gerry   Initial Version
+-->
+<apex:page controller="SendEmailOrder" renderAs="PDF"  showHeader="false" applyHtmlTag="false"  cache="true"  >
+    <head>
+        <style>
+            .@page{
+                margin-top: 0cm;
+                margin-left: 0cm;
+                margin-right: 0cm;
+                margin-bottom: 0cm;
+                size:a4;
+            }
+            .headBack{
+                /*width:100%;*/
+                height:90px;
+                /*opacity=50;*/
+                background-color:#008888
+            }
+            .typeface{
+                font-family:Arial Unicode MS;
+                font-size:10pt
+            }
+            .headTypeFace{
+                color:rgb(255,255,255);
+            }
+            .styleface-color{
+                color: rgb(255,255,255)
+            }
+            .headText{
+                text-align: center;
+                font-size: 18pt
+            }
+            .headback{
+                display:inline;
+                font-size:9pt
+            }
+            .back{
+                display:inline;
+            }
+            .center{
+                text-align:center  
+            }
+            .tablefixed{
+                table-layout:fixed
+            }
+            .p-headBack-style{
+                display: inline;
+                font-size: 9pt
+            }
+            .bgc1{
+                background-color:DarkGray
+            }
+            table {
+                border-collapse:collapse;
+            }
+            table td {
+                border: 1px solid #000000;
+            }
+            p{margin:0 auto} 
+        </style>
+    </head>
+    <div>
+        <apex:image id="theImage" value="{!imageUrl}" height="70" width="300"/> 
+        <div class="headText  typeface" style="display: inline-block;vertical-align: top;width: 300px;float: right; margin-right: 10px;">
+            {!companyName}
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <!-- <div align="center"> -->
+        <!-- <div 
+            style="border-radius: 3px;width: 400px;background-color: rgba(125, 190, 150, 0.938);border-style:solid;border-width:1px;" align="center">
+            {!companyAddress}<br/>
+            {!tax}<br/>
+        </div> -->
+        <div align="center" class="hr-line" style="border-top: 1px solid rgb(112, 173, 71);background-color:rgb(112, 173, 71);">
+            {!companyAddress}<br/>
+            {!tax}<br/>
+        </div>
+    <!-- </div> -->
+        
+    
+    <div class="hr-line" style="border-top: 1px solid rgb(11, 114, 240);margin: 10px 0;height:2px;background-color:rgb(11, 114, 240)"></div>
+    <!-- <hr style=" height:2px;border:none;border-top:2px dotted rgb(11, 114, 240);" /> -->
+    <div  style="border-style:solid;border-width:1px;" >
+        <div>&nbsp;Pagador: <span style="text-decoration: underline;">{!order.Customer__r.Name}</span></div>
+        <div>&nbsp;Nombre: <span style="text-decoration: underline;">{!order.Customer__r.MDG_Customer_Code__c}</span></div>
+        <div>&nbsp;RFC/CUID: <span style="text-decoration: underline;">{!order.Customer__r.Tax_Number__c}</span></div>
+        <div>&nbsp;Dirección: <span style="text-decoration: underline;">{!order.Shipping_Address_Text__c}</span></div>
+        <div>&nbsp;No Doc.: <span style="text-decoration: underline;">{!order.Name}</span></div>
+        <div>&nbsp;Fecha Documento: <span style="text-decoration: underline;">{!order.CreatedDate_Text__c}</span></div>
+        <div>&nbsp;INCOTERM: <span style="text-decoration: underline;">{!INCOTERM}</span></div>
+        <div style="display: inline-block;vertical-align: top;width: 20%;float: left;">&nbsp;Moneda: <span style="text-decoration: underline;">{!order.Currency__c}</span></div>
+        <div style="display: inline-block;vertical-align: top;width: 20%;float: 50%;">&nbsp;Referencia: <span style="text-decoration: underline;">{!order.Cust_Reference__c}</span></div>
+        <div style="display: inline-block;vertical-align: top;width: 30%;float: right;">&nbsp;Condciones de pago: <span style="text-decoration: underline;">{!order.Terms_Of_Payment__c}</span></div>
+    </div>
+    <div class="hr-line" style="border-top: 1px solid black;margin: 10px 0;"></div>
+    <table  Class="typeface " width="100%" style="border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+        <tr style="text-align: center;">
+            <td width="5%">No.</td>
+            <td width="10%">Cod.</td>
+            <td width="10%">Descripción</td>
+            <td width="5%">Cant</td>
+            <td width="5%">Unidad</td>
+            <td width="5%">Precio unit.</td>
+            <td width="10%">TotalValor</td>
+            <td width="20%">IEPS</td>
+            <td width="10%">Fecha de ent.</td>
+            <td width="10%">Uso</td>
+        </tr>
+        <apex:repeat value="{!orderItem}" var="qItem">
+            <tr>
+                <td align="center"><apex:outputText value="{!qItem.SAP_Item_Num__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"  ><apex:outputText value="{!qItem.Material_Number__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"  ><apex:outputText value="{!qItem.Material_Description__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="left"  ><apex:outputText value="{!qItem.Quantity__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="left"  ><apex:outputText value="{!qItem.Sales_Unit_Text__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="left"  ><apex:outputText value="{!qItem.Price__c}"   style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"><apex:outputText value="{!qItem.Amount_per_item__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"><apex:outputText value="{!qItem.SAP_Total_Tax__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"><apex:outputText value="{!qItem.Delivery_Date_Text__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+                <td align="center"><apex:outputText value="{!qItem.Product_Usage__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/></td>
+
+            </tr>
+        </apex:repeat>
+    </table>
+    <div class="hr-line" style="border-top: 1px solid black;margin: 10px 0;"></div>
+    <div >
+        
+        <div style="display: inline-block;vertical-align: center;float: left;text-align:left;"><apex:image id="theImage1" value="{!PDFLeft}" width="100" height="100"/> </div>
+        
+        <div style="display: inline-block;vertical-align: center;margin-left:80px;" align="center">
+            <div style="text-align:left;width:400px;"><span style="font-size:18px;">&nbsp;Comentanos: </span>
+                <apex:outputText value="{!order.Remark__c}"  style="font-family:Arial Unicode MS; overflow:auto;"  escape="false"/>
+            </div>
+            <div style="text-align:left;"><span style="font-size:18px;">&nbsp;SubTotal: </span>{!order.Total_Amount__c}</div>
+            <div style="text-align:left;"><span style="font-size:18px;">&nbsp;IVA: </span>{!order.Total_Tax__c}</div>
+            <div style="text-align:left;"><span style="font-size:18px;">&nbsp;Total: </span>{!order.Total_Amount_Tax__c}</div>
+        </div>
+        <div style="display: inline-block;vertical-align: center;float: right;text-align:right;"><apex:image id="theImage2" value="{!PDFRight}" width="100" height="100"/> </div>
+    </div>
+    <div class="hr-line" style="border-top: 1px solid rgb(11, 114, 240);margin: 10px 0;height:2px;background-color:rgb(11, 114, 240)"></div>
+    <div>
+        <div style="display: inline-block;vertical-align: top;width: 300px;margin-left: 10px;text-align:center;">
+            Fima
+            <br/>
+            <br/>
+            <br/>
+            <div class="hr-line" style="border-top: 1px solid black;margin: 10px 0;"></div>
+        </div>
+        <div style="text-align:center;display: inline-block;vertical-align: top;width: 300px;float: right; margin-right: 10px;">
+            Fecha
+            <br/>
+            <br/>
+            <br/>
+            <div class="hr-line" style="border-top: 1px solid black;margin: 10px 0;"></div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="headText  typeface" style="text-align:left;">
+        Condiciones Generales:
+    </div>
+    <div>
+        
+        <apex:repeat value="{!specialClause}" var="qItem">
+            {!qItem}<br/>
+        </apex:repeat>
+    </div>
+    <br/>
+</apex:page>

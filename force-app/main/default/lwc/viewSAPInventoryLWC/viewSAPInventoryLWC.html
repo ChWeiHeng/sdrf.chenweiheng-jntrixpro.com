@@ -1,0 +1,240 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 11-11-2025
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   10-28-2025   Gerry   Initial Version
+-->
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <template if:false={isPC}>
+            <div class="slds-grid" style="position: fixed;
+            z-index: 98;
+            
+            left: -1.75px;
+            right: 0px;
+            border-radius: 0px;
+            transform: translate3d(0px, -18px, 0px);
+            background-color:#f3f3f3;
+            border-radius:5px;
+           ">
+                <div class="slds-col" style="text-align: left;line-height:35px;">
+                    <lightning-button label={customLabel.CancelLable} onclick={close}></lightning-button>
+                </div>
+                <h2 class="slds-col" style="text-align:center;line-height:35px;">
+                    {customLabel.SAPInventoryHeader}
+                </h2>
+                <!-- <div class="slds-col" style="text-align: right;line-height:35px;">
+                    <lightning-button variant="brand" label={customLabel.CancelLable} onclick={close}>
+                    </lightning-button>
+                </div> -->
+            </div>
+        </template>
+        <template if:true={isPC}>
+            <div class="slds-modal__header">
+                <h2 class="slds-text-heading--medium">
+                    <!-- SAP Inventory -->
+                    {customLabel.SAPInventoryHeader}
+                </h2>
+            </div>
+        </template>
+        <div class="slds-modal__content modalBody menu">
+            <template if:true={isPC}>
+                <lightning-card>
+                    <!-- <lightning-button variant="brand" label='Add' onclick={addData} class="slds-p-around_x-small">
+                    </lightning-button> -->
+                    <div class="slds-scrollable" style="width: 100%;overflow-y: scroll">
+                        <table class="tableCss" style="width: 100%;" cellpadding="0" cellspacing="0">
+                            <thead>
+                                <tr style="background-color: rgb(243 243 243);">
+                                    <th width="5%;" height="30px;" class="slds-text-align_center" scope="col">
+                                        <span class="tableTitle" title="ItemNm__c">#</span>
+                                    </th>
+                                    <th width="15%;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="Name">{customLabel.ProductCode}</span>
+                                    </th>
+                                    <th width="15%;" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="Name">{customLabel.Product_Name}</span>
+                                    </th>
+                                    <!-- <th width="20%;" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span class="tableTitle" title="PreProjectStatus__c">{customLabel.SAPInventoryHeader}</span>
+                                    </th> -->
+                                    <th width="10%" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="SalesRep__c">{customLabel.defaultUnit}</span>
+                                    </th>
+                                    <th width="10%" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="ItemNm__c">{customLabel.Quantity}</span>
+                                        <lightning-helptext content={customLabel.QuantityHelpText}></lightning-helptext>
+                                    </th>
+                                    <th width="15%" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="ItemNm__c">{customLabel.ActualQuantity}</span>
+                                        <lightning-helptext content={customLabel.ActualQuantityHelpText}></lightning-helptext>
+                                    </th>
+                                    <th width="10%;" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="Name">{customLabel.Open_Order_Qty}</span>
+                                    </th>
+                                    <th width="10%;" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="Name">{customLabel.deliveryOrderQty}</span>
+                                    </th>
+                                    
+                                    <th width="10%;" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span style="margin-left: 10px;" class="tableTitle" title="Name">{customLabel.Approving_Qty}</span>
+                                    </th>
+                                    <!-- <th width="12%" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span class="tableTitle" title="SalesRep__c">{customLabel.Sales_Unit}</span>
+                                    </th>
+                                    <th width="12%" height="30px;" class="slds-text-align_left" scope="col">
+                                        <span class="tableTitle" title="ItemNm__c">{customLabel.salesQuantity}</span>
+                                    </th> -->
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <template if:true={orderItemList}>
+                        <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                            <div class="slds-scrollable" style="width: 100%;overflow-y: scroll; max-height:250px;height: 250px;">
+                                <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-resizable" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <template for:each={orderItemList} for:item=info for:index="index">
+                                            <tr key={info.index}>
+                                                <td class="slds-cell-wrap slds-text-align_center" style="border-bottom: 1px solid #ddd;" width="5%">
+                                                    {info.index}
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="15%;">
+                                                    {info.productCode} 
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="15%;">
+                                                    {info.productName} 
+                                                </td>
+                                                <!-- <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="20%;">
+                                                   {info.address}
+                                                </td> -->
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="10%">
+                                                    <lightning-input value={info.salesUnit} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="10%">
+                                                    <lightning-input value={info.Quantity} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="15%">
+                                                    <lightning-input value={info.actualQuantity} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="10%">
+                                                    <lightning-input value={info.openOrder} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="10%">
+                                                    <lightning-input value={info.deliveryOrder} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="10%">
+                                                    <lightning-input value={info.approvingOrder} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+                                                <!-- <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="12%">
+                                                    <lightning-input value={info.salesUnit} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td>
+                                                <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width="12%">
+                                                    <lightning-input value={info.salesQuantity} variant="label-hidden" disabled> 
+                                                    </lightning-input>
+                                                </td> -->
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </lightning-record-edit-form>
+                    </template>
+                </lightning-card>
+            </template>
+
+            <!-- 手机内容详细页面 -->
+            <template if:false={isPC}>
+                <div style="padding-left: 10px;padding-right: 10px;background-color:#ddd">
+                    <template if:true={orderItemList}>
+                        <template for:each={orderItemList} for:item=info for:index="index">
+                            <div key={info.index} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                                <lightning-card icon-name="standard:article">
+                                    <div class="slds-p-around_medium slds-grid slds-wrap" >
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                            <label>{customLabel.ProductCode}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                {info.productCode}
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                            <label>{customLabel.Product_Name}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                {info.productName}
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <label>{customLabel.SAPInventoryHeader}</label>
+                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                {info.address}
+                                            </div>
+                                        </div> -->
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                            <lightning-input value={info.salesUnit} label={customLabel.defaultUnit} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input value={info.Quantity} label={customLabel.Quantity} field-level-help={customLabel.QuantityHelpText} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input value={info.actualQuantity} label={customLabel.ActualQuantity} field-level-help={customLabel.ActualQuantityHelpText} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input value={info.openOrder} label={customLabel.Open_Order_Qty} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input value={info.deliveryOrder} label={customLabel.deliveryOrderQty} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input value={info.approvingOrder} label={customLabel.Approving_Qty} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <!-- <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                            <lightning-input value={info.salesUnit} label={customLabel.Sales_Unit} disabled> 
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                            <lightning-input value={info.salesQuantity} label={customLabel.salesQuantity} disabled> 
+                                            </lightning-input>
+                                        </div> -->
+                                        
+                                        <!-- <lightning-input-field  style="width: 100%;" data-record={index} field-name="Material_Description__c" name="Material_Description__c"  value={info.orderItemData.Material_Description__c} onchange={productChange} disabled> 
+                                        </lightning-input-field>  -->
+                                        
+                                    </div>
+                                </lightning-card>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </template>
+        </div>
+        <template if:true={isPC}>
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="">
+                    <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

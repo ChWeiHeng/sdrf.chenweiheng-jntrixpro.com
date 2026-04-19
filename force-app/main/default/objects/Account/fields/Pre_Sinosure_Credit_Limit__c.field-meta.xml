@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Sinosure_Credit_Limit__c</fullName>
+    <description>The expected Sinosure credit Limit</description>
+    <externalId>false</externalId>
+    <label>Expected Sinosure Credit (USD)</label>
+    <length>11</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

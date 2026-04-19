@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Purpose --></label>
+    <name>Visit_Purpose__c</name>
+    <picklistValues>
+        <masterLabel>Faciliate Distributor to Sell</masterLabel>
+        <translation><!-- Faciliate Distributor to Sell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finance-Collection follow-up</masterLabel>
+        <translation><!-- Finance-Collection follow-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Institutional Visit</masterLabel>
+        <translation><!-- Institutional Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics</masterLabel>
+        <translation><!-- Logistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regular Visit</masterLabel>
+        <translation><!-- Regular Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales-Order Negotiation</masterLabel>
+        <translation><!-- Sales-Order Negotiation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic Cooperation</masterLabel>
+        <translation><!-- Strategic Cooperation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Assistance/Claims</masterLabel>
+        <translation><!-- Technical Assistance/Claims --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

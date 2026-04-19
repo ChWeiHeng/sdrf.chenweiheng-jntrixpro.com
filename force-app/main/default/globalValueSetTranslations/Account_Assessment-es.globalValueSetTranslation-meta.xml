@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>01 Related</masterLabel>
+        <translation>Relacionado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>02 Non Related</masterLabel>
+        <translation>No relacionado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>A2</masterLabel>
+        <translation><!-- A2 --></translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

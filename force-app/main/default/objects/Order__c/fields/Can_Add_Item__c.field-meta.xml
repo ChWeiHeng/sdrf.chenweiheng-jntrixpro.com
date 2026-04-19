@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Add_Item__c</fullName>
+    <formula>IF( 
+    OR(
+        AND(
+            TEXT(Deliver_Plant__c)!=null,
+            Customer_Sales_Info__c!=null,
+            TEXT(Business_Model__c)!=null,
+            OR(
+                AND(
+                    NOT(
+                        ISBLANK(Customer_Shipping_Address__c)
+                    ),
+                    OR(
+                        TEXT(Sales_Org__c)=&apos;3010&apos;,
+                        TEXT(Sales_Org__c)=&apos;3020&apos;
+                    )
+                ),
+                AND( 
+                    NOT(
+                        ISBLANK(Ship_To__c)
+                    ),
+                    OR(
+                        TEXT(Sales_Org__c)=&apos;5070&apos;,
+                        TEXT(Sales_Org__c)=&apos;5130&apos;
+                    )
+                )
+            ),
+            RecordType_Name__c =&apos;Model_B&apos;
+        ),
+        AND(
+            TEXT(Deliver_Plant__c)!=null,
+            Customer_Sales_Info__c!=null,
+            TEXT(Business_Model__c)!=null,
+            OR(
+                AND(
+                    NOT(
+                        ISBLANK(Customer_Shipping_Address__c)
+                    ),
+                    OR(
+                        TEXT(Sales_Org__c)=&apos;3010&apos;,
+                        TEXT(Sales_Org__c)=&apos;3020&apos;
+                    )
+                ),
+                AND(
+                    NOT(
+                        ISBLANK(Ship_To__c)
+                    ),
+                    OR(
+                        TEXT(Sales_Org__c)=&apos;5070&apos;,
+                        TEXT(Sales_Org__c)=&apos;5130&apos;
+                    )
+                )
+            ),
+            RecordType_Name__c =&apos;Model_C&apos;,
+            NOT(
+                AND(
+                    ISBLANK(Price_Book__c),
+                    TEXT(Order_type__c)!=&apos;ZMX3&apos;,
+                    TEXT(Order_type__c)!=&apos;ZMX2&apos;,
+                    TEXT(Order_type__c)!=&apos;ZAR2&apos;,
+					TEXT(Order_type__c)!=&apos;ZMX4&apos;,
+                    TEXT(Order_type__c)!=&apos;ZFD&apos;
+                )
+            )
+        )
+    ),
+    true,
+    false
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Can Add Item</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

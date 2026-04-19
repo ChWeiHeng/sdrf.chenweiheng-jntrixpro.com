@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Visit Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Customer visit</masterLabel>
+        <translation><!-- Customer visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exhibition</masterLabel>
+        <translation><!-- Exhibition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meal reception</masterLabel>
+        <translation><!-- Meal reception --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Office visit</masterLabel>
+        <translation><!-- Office visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telephone/online conference</masterLabel>
+        <translation><!-- Telephone/online conference --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

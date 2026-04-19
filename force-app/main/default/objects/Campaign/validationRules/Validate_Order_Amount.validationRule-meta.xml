@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Order_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Whether_Generated_Orders__c,ISBLANK(Order_Amount__c))</errorConditionFormula>
+    <errorDisplayField>Order_Amount__c</errorDisplayField>
+    <errorMessage>Order Amount Required</errorMessage>
+</ValidationRule>

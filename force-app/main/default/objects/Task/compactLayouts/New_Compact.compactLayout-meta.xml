@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Compact</fullName>
+    <fields>Content__c</fields>
+    <fields>WhatId</fields>
+    <fields>ActivityDate</fields>
+    <label>New Compact</label>
+</CompactLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Order Return Reason --></label>
+    <name>Order_Reason__c</name>
+    <picklistValues>
+        <masterLabel>001	Sales call</masterLabel>
+        <translation><!-- 001	Sales call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>002	Trade fair sales activity</masterLabel>
+        <translation><!-- 002	Trade fair sales activity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>003	Television commercial</masterLabel>
+        <translation><!-- 003	Television commercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>004	Customer recommendation</masterLabel>
+        <translation><!-- 004	Customer recommendation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>005	Newspaper advertisement</masterLabel>
+        <translation><!-- 005	Newspaper advertisement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>006	Excellent price</masterLabel>
+        <translation><!-- 006	Excellent price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>007	Fast delivery</masterLabel>
+        <translation><!-- 007	Fast delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>008	Good service</masterLabel>
+        <translation><!-- 008	Good service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>009	Accelerated Return</masterLabel>
+        <translation><!-- 009	Accelerated Return --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100	Price difference: price was too high</masterLabel>
+        <translation><!-- 100	Price difference: price was too high --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>101	Poor quality</masterLabel>
+        <translation><!-- 101	Poor quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>102	Damaged in transit</masterLabel>
+        <translation><!-- 102	Damaged in transit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>103	Quantity discrepancy</masterLabel>
+        <translation><!-- 103	Quantity discrepancy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>104	Material ruined</masterLabel>
+        <translation><!-- 104	Material ruined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>105	Free of charge sample</masterLabel>
+        <translation><!-- 105	Free of charge sample --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>200	Price difference: price was too low</masterLabel>
+        <translation><!-- 200	Price difference: price was too low --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>300	Downpayment request</masterLabel>
+        <translation><!-- 300	Downpayment request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EDI	Self-billing proced.</masterLabel>
+        <translation><!-- EDI	Self-billing proced. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JDR	DRM Claims - Prc. Prot, ShpDeb, BillUp</masterLabel>
+        <translation><!-- JDR	DRM Claims - Prc. Prot, ShpDeb, BillUp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MX1	Early payment</masterLabel>
+        <translation><!-- MX1	Early payment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MX2	Incomplete product</masterLabel>
+        <translation><!-- MX2	Incomplete product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PNS	S2K: PN status inquiry</masterLabel>
+        <translation><!-- PNS	S2K: PN status inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POS	S2K: PO status inquiry</masterLabel>
+        <translation><!-- POS	S2K: PO status inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QBI	SBWAP: Difference Clearing (Qty/Value)</masterLabel>
+        <translation><!-- QBI	SBWAP: Difference Clearing (Qty/Value) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QOI	SBWAP: New Open Items (Quantity(Value)</masterLabel>
+        <translation><!-- QOI	SBWAP: New Open Items (Quantity(Value) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VBI	SBWAP: Difference Clearing (Value)</masterLabel>
+        <translation><!-- VBI	SBWAP: Difference Clearing (Value) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOI	SBWAP: New Open Items (Value)</masterLabel>
+        <translation><!-- VOI	SBWAP: New Open Items (Value) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z01	Incorrect goods received</masterLabel>
+        <translation><!-- Z01	Incorrect goods received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z04 Customer Overdue</masterLabel>
+        <translation><!-- Z04 Customer Overdue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z11 Rebate</masterLabel>
+        <translation><!-- Z11 Rebate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z99 Other reason</masterLabel>
+        <translation><!-- Z99 Other reason --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA1</masterLabel>
+        <translation><!-- ZA1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA2</masterLabel>
+        <translation><!-- ZA2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA3</masterLabel>
+        <translation><!-- ZA3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA4</masterLabel>
+        <translation><!-- ZA4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA5</masterLabel>
+        <translation><!-- ZA5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA6</masterLabel>
+        <translation><!-- ZA6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA7</masterLabel>
+        <translation><!-- ZA7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA9</masterLabel>
+        <translation><!-- ZA9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZAC</masterLabel>
+        <translation><!-- ZAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZAD	Accelerated Return</masterLabel>
+        <translation><!-- ZAD	Accelerated Return --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZAE</masterLabel>
+        <translation><!-- ZAE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZAP</masterLabel>
+        <translation><!-- ZAP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

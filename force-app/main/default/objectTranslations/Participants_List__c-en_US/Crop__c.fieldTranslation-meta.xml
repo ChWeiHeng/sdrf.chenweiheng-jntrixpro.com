@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Crop --></label>
+    <name>Crop__c</name>
+    <picklistValues>
+        <masterLabel>Agave</masterLabel>
+        <translation><!-- Agave --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alfalfa</masterLabel>
+        <translation><!-- Alfalfa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avocado</masterLabel>
+        <translation><!-- Avocado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Barley</masterLabel>
+        <translation><!-- Barley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bean</masterLabel>
+        <translation><!-- Bean --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Berries</masterLabel>
+        <translation><!-- Berries --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brasicas</masterLabel>
+        <translation><!-- Brasicas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citrus</masterLabel>
+        <translation><!-- Citrus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corn</masterLabel>
+        <translation><!-- Corn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cotton</masterLabel>
+        <translation><!-- Cotton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lemon</masterLabel>
+        <translation><!-- Lemon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onion</masterLabel>
+        <translation><!-- Onion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peanut</masterLabel>
+        <translation><!-- Peanut --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pineapple</masterLabel>
+        <translation><!-- Pineapple --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Potato</masterLabel>
+        <translation><!-- Potato --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rice</masterLabel>
+        <translation><!-- Rice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sorghum</masterLabel>
+        <translation><!-- Sorghum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Soybean</masterLabel>
+        <translation><!-- Soybean --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sugarcane</masterLabel>
+        <translation><!-- Sugarcane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sunflower</masterLabel>
+        <translation><!-- Sunflower --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tobacco</masterLabel>
+        <translation><!-- Tobacco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tomatoe &amp; pepper</masterLabel>
+        <translation><!-- Tomatoe &amp; pepper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vegetables</masterLabel>
+        <translation><!-- Vegetables --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wheat</masterLabel>
+        <translation><!-- Wheat --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

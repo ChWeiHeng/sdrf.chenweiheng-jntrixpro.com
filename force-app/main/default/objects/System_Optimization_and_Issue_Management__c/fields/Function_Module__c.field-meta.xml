@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Function_Module__c</fullName>
+    <label>Function Module</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Management</fullName>
+                <default>false</default>
+                <label>Customer Management</label>
+            </value>
+            <value>
+                <fullName>Product Management</fullName>
+                <default>false</default>
+                <label>Product Management</label>
+            </value>
+            <value>
+                <fullName>Order Management</fullName>
+                <default>false</default>
+                <label>Order Management</label>
+            </value>
+            <value>
+                <fullName>Sales Forecast Management</fullName>
+                <default>false</default>
+                <label>Sales Forecast Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

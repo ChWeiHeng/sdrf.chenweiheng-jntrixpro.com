@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1-Responsable IVA</fullName>
+        <default>false</default>
+        <label>1-Responsable IVA</label>
+    </customValue>
+    <customValue>
+        <fullName>2-Responsable no IVA</fullName>
+        <default>false</default>
+        <label>2-Responsable no IVA</label>
+    </customValue>
+    <customValue>
+        <fullName>3-No responsable IVA</fullName>
+        <default>false</default>
+        <label>3-No responsable IVA</label>
+    </customValue>
+    <customValue>
+        <fullName>4-Sujeto exención IVA</fullName>
+        <default>false</default>
+        <label>4-Sujeto exención IVA</label>
+    </customValue>
+    <customValue>
+        <fullName>5-IVA Consumidor Final</fullName>
+        <default>false</default>
+        <label>5-IVA Consumidor Final</label>
+    </customValue>
+    <customValue>
+        <fullName>6-Respons. Monotributo</fullName>
+        <default>false</default>
+        <label>6-Respons. Monotributo</label>
+    </customValue>
+    <customValue>
+        <fullName>7-Monotributo Resp.Imp</fullName>
+        <default>false</default>
+        <label>7-Monotributo Resp.Imp</label>
+    </customValue>
+    <customValue>
+        <fullName>8-Suj. no categorizado</fullName>
+        <default>false</default>
+        <label>8-Suj. no categorizado</label>
+    </customValue>
+    <customValue>
+        <fullName>9-Cliente del exterior</fullName>
+        <default>false</default>
+        <label>9-Cliente del exterior</label>
+    </customValue>
+    <customValue>
+        <fullName>0-CABA Sin Padrón</fullName>
+        <default>false</default>
+        <label>0-CABA Sin Padrón</label>
+    </customValue>
+    <customValue>
+        <fullName>A-CABA A.Riesgo</fullName>
+        <default>false</default>
+        <label>A-CABA A.Riesgo</label>
+    </customValue>
+    <customValue>
+        <fullName>B-CABA Dif.0,00%</fullName>
+        <default>false</default>
+        <label>B-CABA Dif.0,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>C-CABA Dif.0,50%</fullName>
+        <default>false</default>
+        <label>C-CABA Dif.0,50%</label>
+    </customValue>
+    <customValue>
+        <fullName>D-CABA Dif.0,00%</fullName>
+        <default>false</default>
+        <label>D-CABA Dif.0,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>E-CABA RG Grupo 01</fullName>
+        <default>false</default>
+        <label>E-CABA RG Grupo 01</label>
+    </customValue>
+    <customValue>
+        <fullName>F-CABA RG Grupo 02</fullName>
+        <default>false</default>
+        <label>F-CABA RG Grupo 02</label>
+    </customValue>
+    <customValue>
+        <fullName>G-CABA RG Grupo 03</fullName>
+        <default>false</default>
+        <label>G-CABA RG Grupo 03</label>
+    </customValue>
+    <customValue>
+        <fullName>H-CABA RG Grupo 04</fullName>
+        <default>false</default>
+        <label>H-CABA RG Grupo 04</label>
+    </customValue>
+    <customValue>
+        <fullName>I-CABA RG Grupo 05</fullName>
+        <default>false</default>
+        <label>I-CABA RG Grupo 05</label>
+    </customValue>
+    <customValue>
+        <fullName>J-CABA RG Grupo 06</fullName>
+        <default>false</default>
+        <label>J-CABA RG Grupo 06</label>
+    </customValue>
+    <customValue>
+        <fullName>K-CABA RG Grupo 07</fullName>
+        <default>false</default>
+        <label>K-CABA RG Grupo 07</label>
+    </customValue>
+    <customValue>
+        <fullName>L-CABA RG Grupo 08</fullName>
+        <default>false</default>
+        <label>L-CABA RG Grupo 08</label>
+    </customValue>
+    <customValue>
+        <fullName>M-CABA RG Grupo 09</fullName>
+        <default>false</default>
+        <label>M-CABA RG Grupo 09</label>
+    </customValue>
+    <customValue>
+        <fullName>N-CABA RG Grupo 10</fullName>
+        <default>false</default>
+        <label>N-CABA RG Grupo 10</label>
+    </customValue>
+    <customValue>
+        <fullName>O-CABA RG Grupo 11</fullName>
+        <default>false</default>
+        <label>O-CABA RG Grupo 11</label>
+    </customValue>
+    <customValue>
+        <fullName>P-CABA RG Grupo 12</fullName>
+        <default>false</default>
+        <label>P-CABA RG Grupo 12</label>
+    </customValue>
+    <customValue>
+        <fullName>Q-CABA RG Grupo 13</fullName>
+        <default>false</default>
+        <label>Q-CABA RG Grupo 13</label>
+    </customValue>
+    <customValue>
+        <fullName>R-CABA RG Grupo 14</fullName>
+        <default>false</default>
+        <label>R-CABA RG Grupo 14</label>
+    </customValue>
+    <customValue>
+        <fullName>S-CABA RG Grupo 15</fullName>
+        <default>false</default>
+        <label>S-CABA RG Grupo 15</label>
+    </customValue>
+    <customValue>
+        <fullName>T-CABA RG Grupo 16</fullName>
+        <default>false</default>
+        <label>T-CABA RG Grupo 16</label>
+    </customValue>
+    <customValue>
+        <fullName>U-CABA R. Simplif 0%</fullName>
+        <default>false</default>
+        <label>U-CABA R. Simplif 0%</label>
+    </customValue>
+    <customValue>
+        <fullName>0-ARBA - No Padrón</fullName>
+        <default>false</default>
+        <label>0-ARBA - No Padrón</label>
+    </customValue>
+    <customValue>
+        <fullName>A-ARBA - 0,00%</fullName>
+        <default>false</default>
+        <label>A-ARBA - 0,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>B-ARBA - 0,01%</fullName>
+        <default>false</default>
+        <label>B-ARBA - 0,01%</label>
+    </customValue>
+    <customValue>
+        <fullName>C-ARBA - 0,05%</fullName>
+        <default>false</default>
+        <label>C-ARBA - 0,05%</label>
+    </customValue>
+    <customValue>
+        <fullName>D-ARBA - 0,10%</fullName>
+        <default>false</default>
+        <label>D-ARBA - 0,10%</label>
+    </customValue>
+    <customValue>
+        <fullName>E-ARBA - 0,20%</fullName>
+        <default>false</default>
+        <label>E-ARBA - 0,20%</label>
+    </customValue>
+    <customValue>
+        <fullName>F-ARBA - 0,30%</fullName>
+        <default>false</default>
+        <label>F-ARBA - 0,30%</label>
+    </customValue>
+    <customValue>
+        <fullName>G-ARBA - 0,40%</fullName>
+        <default>false</default>
+        <label>G-ARBA - 0,40%</label>
+    </customValue>
+    <customValue>
+        <fullName>H-ARBA - 0,50%</fullName>
+        <default>false</default>
+        <label>H-ARBA - 0,50%</label>
+    </customValue>
+    <customValue>
+        <fullName>I-ARBA - 0,70%</fullName>
+        <default>false</default>
+        <label>I-ARBA - 0,70%</label>
+    </customValue>
+    <customValue>
+        <fullName>J-ARBA - 0,80%</fullName>
+        <default>false</default>
+        <label>J-ARBA - 0,80%</label>
+    </customValue>
+    <customValue>
+        <fullName>K-ARBA - 0,90%</fullName>
+        <default>false</default>
+        <label>K-ARBA - 0,90%</label>
+    </customValue>
+    <customValue>
+        <fullName>L-ARBA - 1,00%</fullName>
+        <default>false</default>
+        <label>L-ARBA - 1,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>M-ARBA - 1,10%</fullName>
+        <default>false</default>
+        <label>M-ARBA - 1,10%</label>
+    </customValue>
+    <customValue>
+        <fullName>N-ARBA - 1,20%</fullName>
+        <default>false</default>
+        <label>N-ARBA - 1,20%</label>
+    </customValue>
+    <customValue>
+        <fullName>O-ARBA - 1,30%</fullName>
+        <default>false</default>
+        <label>O-ARBA - 1,30%</label>
+    </customValue>
+    <customValue>
+        <fullName>P-ARBA - 1,50%</fullName>
+        <default>false</default>
+        <label>P-ARBA - 1,50%</label>
+    </customValue>
+    <customValue>
+        <fullName>Q-ARBA - 1,60%</fullName>
+        <default>false</default>
+        <label>Q-ARBA - 1,60%</label>
+    </customValue>
+    <customValue>
+        <fullName>R-ARBA - 1,75%</fullName>
+        <default>false</default>
+        <label>R-ARBA - 1,75%</label>
+    </customValue>
+    <customValue>
+        <fullName>S-ARBA - 2,00%</fullName>
+        <default>false</default>
+        <label>S-ARBA - 2,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>T-ARBA - 2,50%</fullName>
+        <default>false</default>
+        <label>T-ARBA - 2,50%</label>
+    </customValue>
+    <customValue>
+        <fullName>U-ARBA - 3,00%</fullName>
+        <default>false</default>
+        <label>U-ARBA - 3,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>V-ARBA - 3,50%</fullName>
+        <default>false</default>
+        <label>V-ARBA - 3,50%</label>
+    </customValue>
+    <customValue>
+        <fullName>W-ARBA - 4,00%</fullName>
+        <default>false</default>
+        <label>W-ARBA - 4,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>X-ARBA - 5,00%</fullName>
+        <default>false</default>
+        <label>X-ARBA - 5,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>Y-ARBA - 6,00%</fullName>
+        <default>false</default>
+        <label>Y-ARBA - 6,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>Z-ARBA - 8,00%</fullName>
+        <default>false</default>
+        <label>Z-ARBA - 8,00%</label>
+    </customValue>
+    <customValue>
+        <fullName>0-No Aplica - Exento</fullName>
+        <default>false</default>
+        <label>0-No Aplica - Exento</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Alícuota 3%</fullName>
+        <default>false</default>
+        <label>1-Alícuota 3%</label>
+    </customValue>
+    <customValue>
+        <fullName>2-Alícuota 1%</fullName>
+        <default>false</default>
+        <label>2-Alícuota 1%</label>
+    </customValue>
+    <customValue>
+        <fullName>3-Alícuota 6%</fullName>
+        <default>false</default>
+        <label>3-Alícuota 6%</label>
+    </customValue>
+    <customValue>
+        <fullName>4-Alícuota 0,1%</fullName>
+        <default>false</default>
+        <label>4-Alícuota 0,1%</label>
+    </customValue>
+    <customValue>
+        <fullName>5-Alícuota 0,25%</fullName>
+        <default>false</default>
+        <label>5-Alícuota 0,25%</label>
+    </customValue>
+    <customValue>
+        <fullName>6-Alícuota 0,50%</fullName>
+        <default>false</default>
+        <label>6-Alícuota 0,50%</label>
+    </customValue>
+    <customValue>
+        <fullName>7-Alícuota 2%</fullName>
+        <default>false</default>
+        <label>7-Alícuota 2%</label>
+    </customValue>
+    <customValue>
+        <fullName>A-Actividad 1</fullName>
+        <default>false</default>
+        <label>A-Actividad 1</label>
+    </customValue>
+    <customValue>
+        <fullName>B-Actividad 2</fullName>
+        <default>false</default>
+        <label>B-Actividad 2</label>
+    </customValue>
+    <customValue>
+        <fullName>C-Actividad 3</fullName>
+        <default>false</default>
+        <label>C-Actividad 3</label>
+    </customValue>
+    <customValue>
+        <fullName>P-Por Padrón</fullName>
+        <default>false</default>
+        <label>P-Por Padrón</label>
+    </customValue>
+    <customValue>
+        <fullName>0-No Aplica/Exento</fullName>
+        <default>false</default>
+        <label>0-No Aplica/Exento</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Contrib.Local</fullName>
+        <default>false</default>
+        <label>1-Contrib.Local</label>
+    </customValue>
+    <customValue>
+        <fullName>2-Inscripto CM</fullName>
+        <default>false</default>
+        <label>2-Inscripto CM</label>
+    </customValue>
+    <customValue>
+        <fullName>3-Activ.Agropecuaria</fullName>
+        <default>false</default>
+        <label>3-Activ.Agropecuaria</label>
+    </customValue>
+    <customValue>
+        <fullName>4-No Registrado</fullName>
+        <default>false</default>
+        <label>4-No Registrado</label>
+    </customValue>
+    <customValue>
+        <fullName>0-No Aplica</fullName>
+        <default>false</default>
+        <label>0-No Aplica</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Alícuota Gral Provi</fullName>
+        <default>false</default>
+        <label>1-Alícuota Gral Provi</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Aplica</fullName>
+        <default>false</default>
+        <label>1-Aplica</label>
+    </customValue>
+    <customValue>
+        <fullName>0-Exento/a de impto.</fullName>
+        <default>false</default>
+        <label>0-Exento/a de impto.</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Sujeto/a impuestos</fullName>
+        <default>false</default>
+        <label>1-Sujeto/a impuestos</label>
+    </customValue>
+    <customValue>
+        <fullName>2-Sujeto/a impuestos</fullName>
+        <default>false</default>
+        <label>2-Sujeto/a impuestos</label>
+    </customValue>
+    <customValue>
+        <fullName>0-Exento/a de I.E.P.S.</fullName>
+        <default>false</default>
+        <label>0-Exento/a de I.E.P.S.</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Sujeto/a de I.E.P.S.</fullName>
+        <default>false</default>
+        <label>1-Sujeto/a de I.E.P.S.</label>
+    </customValue>
+    <customValue>
+        <fullName>1-Alícuota Gral Prov</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1-Alícuota Gral Prov</label>
+    </customValue>
+    <masterLabel>Tax Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

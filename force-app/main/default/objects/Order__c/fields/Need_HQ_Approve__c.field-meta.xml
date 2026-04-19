@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_HQ_Approve__c</fullName>
+    <formula>(Over_Credit_Line_Percent__c*100&gt;10 &amp;&amp;  TEXT(Customer_Sales_Info__r.Acct_Assmt_Grp_Cust__c) = &apos;02&apos;) || (Max_Overdue_Days__c&gt;=31 &amp;&amp; Overdue_Amount__c&gt;=5000 &amp;&amp; TEXT(Customer_Sales_Info__r.Acct_Assmt_Grp_Cust__c) = &apos;02&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Need HQ Approve</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

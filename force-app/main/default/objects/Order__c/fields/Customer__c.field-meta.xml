@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Customer</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(((1 AND 2 AND 3 AND 6) OR 7 OR 8) AND 4) OR 5</booleanFilter>
+        <errorMessage>Value does not &apos;Approved&apos; or &apos;Synchronized&apos; or NO Credit</errorMessage>
+        <filterItems>
+            <field>Account.Customer_Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.CreditNumber__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Sync_Status__c</field>
+            <operation>equals</operation>
+            <value>Synchronized</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Company Account</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>contains</operation>
+            <value>Interface Profile, System Administrator</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.SAP_Order__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.SAP_Order__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Order</relationshipLabel>
+    <relationshipName>Order</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

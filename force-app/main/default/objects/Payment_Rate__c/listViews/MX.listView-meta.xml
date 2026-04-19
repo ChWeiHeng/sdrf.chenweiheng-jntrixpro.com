@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MX</fullName>
+    <columns>NAME</columns>
+    <columns>Payment_Term_Cost_Rate__c</columns>
+    <columns>Payment_Term_Cost_Rate_Subsidiary__c</columns>
+    <columns>Days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>G</value>
+    </filters>
+    <label>MX</label>
+    <sharedTo>
+        <group>X3010</group>
+        <group>X3011</group>
+        <group>X3020</group>
+    </sharedTo>
+</ListView>

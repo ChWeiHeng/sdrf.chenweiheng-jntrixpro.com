@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Crop_Solution__c</fullName>
+    <label>Crop Solution</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corn</fullName>
+                <default>false</default>
+                <label>Corn</label>
+            </value>
+            <value>
+                <fullName>Avocado</fullName>
+                <default>false</default>
+                <label>Avocado</label>
+            </value>
+            <value>
+                <fullName>Sugarcane</fullName>
+                <default>false</default>
+                <label>Sugarcane</label>
+            </value>
+            <value>
+                <fullName>Citrus</fullName>
+                <default>false</default>
+                <label>Citrus</label>
+            </value>
+            <value>
+                <fullName>Potato</fullName>
+                <default>false</default>
+                <label>Potato</label>
+            </value>
+            <value>
+                <fullName>Tomatoe &amp; pepper</fullName>
+                <default>false</default>
+                <label>Tomatoe &amp; pepper</label>
+            </value>
+            <value>
+                <fullName>Berries</fullName>
+                <default>false</default>
+                <label>Berries</label>
+            </value>
+            <value>
+                <fullName>Agave</fullName>
+                <default>false</default>
+                <label>Agave</label>
+            </value>
+            <value>
+                <fullName>Pineapple</fullName>
+                <default>false</default>
+                <label>Pineapple</label>
+            </value>
+            <value>
+                <fullName>Brasicas</fullName>
+                <default>false</default>
+                <label>Brasicas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,3902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ARContractPaymentTerms</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ARContractPaymentTerms</shortDescription>
+        <value>V524</value>
+    </labels>
+    <labels>
+        <fullName>ARContractSyncNoticeEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ARContractSyncNoticeEmail</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>ARDAYS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ARDAYS</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>ARFI</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>ARFI</shortDescription>
+        <value>005Hs00000FWJEyIAP</value>
+    </labels>
+    <labels>
+        <fullName>ARFI_B</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ARFI_B</shortDescription>
+        <value>005Hs00000FWJEyIAP</value>
+    </labels>
+    <labels>
+        <fullName>ARFI_BDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ARFI_BDays</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>AUFI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AUFI</shortDescription>
+        <value>005O400000gtS8VIAU</value>
+    </labels>
+    <labels>
+        <fullName>Acc3010</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc3010</shortDescription>
+        <value>001Po00000YEOWrIAP</value>
+    </labels>
+    <labels>
+        <fullName>Acc3010B</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc3010B</shortDescription>
+        <value>001Po00000YDF4OIAX</value>
+    </labels>
+    <labels>
+        <fullName>Acc3020</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc3020</shortDescription>
+        <value>001Po00000YEgn3IAD</value>
+    </labels>
+    <labels>
+        <fullName>Acc5070B</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc5070B</shortDescription>
+        <value>001Po00000YE8vLIAT</value>
+    </labels>
+    <labels>
+        <fullName>Acc5130</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc5130</shortDescription>
+        <value>001Hs00003UttyaIAB</value>
+    </labels>
+    <labels>
+        <fullName>AccFreezeError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccFreezeError</shortDescription>
+        <value>The customer has been frozen.</value>
+    </labels>
+    <labels>
+        <fullName>AccFreezeSumbitApprovalHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccFreezeSumbitApprovalHeader</shortDescription>
+        <value>Customer Freeze Approval</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamDelError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamDelError</shortDescription>
+        <value>You can&apos;t delete the customer team data created for the customer owner.</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamDelPlantError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamDelPlantError</shortDescription>
+        <value>You can&apos;t delete the customer team data that belongs to another business model.</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamEditDelError</fullName>
+        <categories>AccTeam</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamEditDelError</shortDescription>
+        <value>The sharing process is running, you can&apos;t edit or delete customer team data.</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamEditError</fullName>
+        <categories>AccTeam</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamEditError</shortDescription>
+        <value>The sharing process is running, you can&apos;t edit customer team data.</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamEditPlantError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamEditPlantError</shortDescription>
+        <value>You can&apos;t edit the customer team data that belongs to another business model.</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamInsertSameDeliveryError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamInsertSameDeliveryError</shortDescription>
+        <value>You do not have permission to add personnel across factories. If you need to share customer, please contact the administrator</value>
+    </labels>
+    <labels>
+        <fullName>AccTeamOwnerInsertError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccTeamOwnerInsertError</shortDescription>
+        <value>Only the customer owner can create the customer team.</value>
+    </labels>
+    <labels>
+        <fullName>AccUnFreezeSumbitApprovalHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccUnFreezeSumbitApprovalHeader</shortDescription>
+        <value>Customer Unfreeze Approval</value>
+    </labels>
+    <labels>
+        <fullName>AccVisitInsertUpdateError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccVisitInsertUpdateError</shortDescription>
+        <value>Only the leader can edit the comments.</value>
+    </labels>
+    <labels>
+        <fullName>AccVisitTaskDelError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccVisitTaskDelError</shortDescription>
+        <value>Only the creator can delete the data</value>
+    </labels>
+    <labels>
+        <fullName>AccVisitTaskInsertError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccVisitTaskInsertError</shortDescription>
+        <value>You can&apos;t assign tasks to persons who don&apos;t belong to the same business model as you.</value>
+    </labels>
+    <labels>
+        <fullName>AccVisitTaskUpdateError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccVisitTaskUpdateError</shortDescription>
+        <value>You can only update the status or the results.</value>
+    </labels>
+    <labels>
+        <fullName>Acc_Approved_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc Approved Title</shortDescription>
+        <value>Customer Approved:</value>
+    </labels>
+    <labels>
+        <fullName>Acc_Rejected_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acc Rejected Title</shortDescription>
+        <value>Customer Rejected:</value>
+    </labels>
+    <labels>
+        <fullName>AccountUpdateNotfication</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>AccountUpdateNotfication</shortDescription>
+        <value>Customer info updated. Click the link to view the customer.</value>
+    </labels>
+    <labels>
+        <fullName>AccountUpdateNotficationBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountUpdateNotficationBody</shortDescription>
+        <value>Click to view the customer.</value>
+    </labels>
+    <labels>
+        <fullName>AccountVisitRemindDay</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountVisitRemindDay</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Account_Required</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Account Required</shortDescription>
+        <value>[Customer Tax Number Category] is required, please fill in before approval.</value>
+    </labels>
+    <labels>
+        <fullName>Account_Sales_Info_Required</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Account Sales Info Required</shortDescription>
+        <value>[Customer Tax Category] is required, please fill in before approval.</value>
+    </labels>
+    <labels>
+        <fullName>Action</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Action</shortDescription>
+        <value>Action</value>
+    </labels>
+    <labels>
+        <fullName>ActualQuantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ActualQuantity</shortDescription>
+        <value>Actual Quantity</value>
+    </labels>
+    <labels>
+        <fullName>ActualQuantityHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ActualQuantityHelpText</shortDescription>
+        <value>CRM Available Quantity = Product Quantity in the Warehourse - Open Order Qty - DN Used Quantity - Approving Order Qty</value>
+    </labels>
+    <labels>
+        <fullName>Add_Contract_Detail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Contract Detail</shortDescription>
+        <value>Add Contract Detail</value>
+    </labels>
+    <labels>
+        <fullName>Add_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Error</shortDescription>
+        <value>Can not add order item</value>
+    </labels>
+    <labels>
+        <fullName>Add_Order_Contract_Detail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Order Contract Detail</shortDescription>
+        <value>Add Order Contract Detail</value>
+    </labels>
+    <labels>
+        <fullName>Amount_per_item</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Amount per item</shortDescription>
+        <value>Amount per item</value>
+    </labels>
+    <labels>
+        <fullName>Approving_Inventory</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Approving Inventory</shortDescription>
+        <value>Approving Inventory</value>
+    </labels>
+    <labels>
+        <fullName>Approving_Qty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approving Qty</shortDescription>
+        <value>Approving Qty</value>
+    </labels>
+    <labels>
+        <fullName>AutoReject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AutoReject</shortDescription>
+        <value>Orders pending approval for over [天数] days are automatically rejected by the system.</value>
+    </labels>
+    <labels>
+        <fullName>AutoZARACannotEdit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AutoZARACannotEdit</shortDescription>
+        <value>This order is auto-generated from ZARB, cannot be directly edited, but you can edit this order and auto-create ZAR1 through the &apos;Mass Edit Order&apos; button on the order list view!</value>
+    </labels>
+    <labels>
+        <fullName>Auto_ZARA_Email1</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Auto ZARA Email1</shortDescription>
+        <value>Estimado&amp;nbsp;&amp;nbsp;{0}&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Nos gustaría recordarle que los siguientes artículos de inventario en su posesión se están acercando a su fecha de vencimiento por antigüedad y requieren acción inmediata:&lt;br/&gt;&lt;br/&gt;Inventario Afectado:&lt;br/&gt;{1}&lt;br/&gt;Para cualquier consulta, contactarse con el representante de ventas de Agroterrum&lt;br/&gt;Saludos</value>
+    </labels>
+    <labels>
+        <fullName>Auto_ZARA_Email_CC</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Auto ZARA Email CC 5070</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>Auto_ZARA_Email_CC_5130</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Auto_ZARA_Email_CC_5130</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>Available_Inventory</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Available Inventory</shortDescription>
+        <value>Available Inventory</value>
+    </labels>
+    <labels>
+        <fullName>BPMNumberRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BPMNumberRequired</shortDescription>
+        <value>Number Required</value>
+    </labels>
+    <labels>
+        <fullName>BPMUsercode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BPMUsercode</shortDescription>
+        <value>songyn;chir;shiq;wangj10;zhaod;sunr2</value>
+    </labels>
+    <labels>
+        <fullName>BTOCBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BTOCBody</shortDescription>
+        <value>record link:</value>
+    </labels>
+    <labels>
+        <fullName>BTOCTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BTOCTitle</shortDescription>
+        <value>The quotation applied for by model B for model C has been approved,pls click the link to view detail info</value>
+    </labels>
+    <labels>
+        <fullName>BU_Margin_Rate</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>BU Margin Rate</shortDescription>
+        <value>BU Margin Rate</value>
+    </labels>
+    <labels>
+        <fullName>BU_Sales_Price</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BU Sales Price</shortDescription>
+        <value>BU Sales Price</value>
+    </labels>
+    <labels>
+        <fullName>Basic_Unit</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Basic Unit</shortDescription>
+        <value>Default Sales Unit</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportError1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportError1</shortDescription>
+        <value>Please add at least one record!</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportError2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportError2</shortDescription>
+        <value>Error parsing Excel file. Please try again. If the issue persists, please contact the system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportError3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportError3</shortDescription>
+        <value>Import no more than</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportError4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportError4</shortDescription>
+        <value>pieces of data at once！</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportMonthlyBudgetHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportMonthlyBudgetHeader</shortDescription>
+        <value>Batch Import Monthly Budget</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportParticipantsListHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportParticipantsListHeader</shortDescription>
+        <value>Batch Import Participants List</value>
+    </labels>
+    <labels>
+        <fullName>BatchImportPriceBookItemHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchImportPriceBookItemHeader</shortDescription>
+        <value>Batch Import Price Book Item</value>
+    </labels>
+    <labels>
+        <fullName>BatchSendEmailEndDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchSendEmailEndDate(default-0)直接配置当前用户东八时区DateTime:2025-12-05-15-00-53</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Black</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Black</shortDescription>
+        <value>https://rcg--rbdev.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Po00000zWufI&amp;operationContext=CHATTER&amp;contentId=05TPo000019qGgG</value>
+    </labels>
+    <labels>
+        <fullName>BudgetBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BudgetBody</shortDescription>
+        <value>Please adjust [Campaign Owner Name]&apos;s campaign budget allocation for next month to accommodate expenditure trends.</value>
+    </labels>
+    <labels>
+        <fullName>BudgetGreaterYearBudgetError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BudgetGreaterYearBudgetError</shortDescription>
+        <value>The total monthly budget is larger than the annual budget</value>
+    </labels>
+    <labels>
+        <fullName>BudgetLessSpentError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BudgetLessSpentError</shortDescription>
+        <value>The budget amount is less than the amount spent</value>
+    </labels>
+    <labels>
+        <fullName>BudgetTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BudgetTitle</shortDescription>
+        <value>Actual Cost exceeds monthly budget</value>
+    </labels>
+    <labels>
+        <fullName>CIF_Price</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>CIF Price</shortDescription>
+        <value>Quote Price</value>
+    </labels>
+    <labels>
+        <fullName>CIF_Price_Include_Commission</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CIF Price Include Commission</shortDescription>
+        <value>CIF Price Include Commission</value>
+    </labels>
+    <labels>
+        <fullName>CIF_Price_Without_Margin</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>CIF Price Without Margin</shortDescription>
+        <value>Quote Cost</value>
+    </labels>
+    <labels>
+        <fullName>CQN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQN</shortDescription>
+        <value>Consignment Quantity Notification</value>
+    </labels>
+    <labels>
+        <fullName>CamFileError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamFileError</shortDescription>
+        <value>Please ensure you upload at least 5 on-site photos and 1 video to maintain the completeness of campaign</value>
+    </labels>
+    <labels>
+        <fullName>CampaignProductInsertError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CampaignProductInsertError</shortDescription>
+        <value>The campaign has been approved, and you can&apos;t add the campaign product.</value>
+    </labels>
+    <labels>
+        <fullName>CampaignProductUpdateError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CampaignProductUpdateError</shortDescription>
+        <value>The campaign has been approved, and you can&apos;t update the campaign product.</value>
+    </labels>
+    <labels>
+        <fullName>CanNotChangeCustomerKeyInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanNotChangeCustomerKeyInfo</shortDescription>
+        <value>The [XXXX] field information cannot be modified here. To modify it, please click the update button in the upper right corner.</value>
+    </labels>
+    <labels>
+        <fullName>CancelLable</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>CancelLable</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Contract_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel Contract Header</shortDescription>
+        <value>Confirm to cancel the contract?</value>
+    </labels>
+    <labels>
+        <fullName>CannotDeleteOrder</fullName>
+        <categories>ZAR1</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CannotDeleteOrder</shortDescription>
+        <value>You cannot delete this order!</value>
+    </labels>
+    <labels>
+        <fullName>CashPrice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CashPrice</shortDescription>
+        <value>Cash Price</value>
+    </labels>
+    <labels>
+        <fullName>ChangeCustomerSalesInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChangeCustomerSalesInfo</shortDescription>
+        <value>Confirm Change Customer Sales Info</value>
+    </labels>
+    <labels>
+        <fullName>ChangeCustomerSalesInfoHeard</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChangeCustomerSalesInfoHeard</shortDescription>
+        <value>Change Customer Sales Info</value>
+    </labels>
+    <labels>
+        <fullName>ChangeIsCustomerConfirmHead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChangeIsCustomerConfirmHead</shortDescription>
+        <value>Change Is Customer Confirmed</value>
+    </labels>
+    <labels>
+        <fullName>Clearance_Cost_Percentage</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clearance Cost Percentage</shortDescription>
+        <value>Customs Clearance %</value>
+    </labels>
+    <labels>
+        <fullName>CloneQuoteDetailRemoveField</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloneQuoteDetailRemoveField</shortDescription>
+        <value>Payment_Terms__c;Commission_Percent__c;CIF_90_Days_Without_Margin__c;BU_Profit_Rate__c;Gross_Margin__c;Item_Cost__c;Approval_Status__c</value>
+    </labels>
+    <labels>
+        <fullName>CloneSaleInfoRemoveField</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloneSaleInfoRemoveField</shortDescription>
+        <value>Sales_View_Status__c;Sync_Status__c;Sync_Failure_Reasons__c;External_ID__c;Province_State__c;City__c;District__c;Street__c;House_Number__c;Postal_Code__c;</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseHeader</shortDescription>
+        <value>Close Complaint</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseReason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseReason</shortDescription>
+        <value>Cancel Reason</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseReasonRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseReasonRequired</shortDescription>
+        <value>Please input cancel reason</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseResolve</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseResolve</shortDescription>
+        <value>Resolve</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseResolveRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseResolveRequired</shortDescription>
+        <value>Pelase input resolved</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseStatus</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>CloseEscCaseStatusRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseEscCaseStatusRequired</shortDescription>
+        <value>Pelase input the status</value>
+    </labels>
+    <labels>
+        <fullName>Comment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comment</shortDescription>
+        <value>Comment</value>
+    </labels>
+    <labels>
+        <fullName>Commission</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Commission</shortDescription>
+        <value>Commission Per Unit</value>
+    </labels>
+    <labels>
+        <fullName>CommissionNotComplete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommissionNotComplete</shortDescription>
+        <value>Commission information is incomplete</value>
+    </labels>
+    <labels>
+        <fullName>Commission_Amount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Commission Amount</shortDescription>
+        <value>Commission Amount</value>
+    </labels>
+    <labels>
+        <fullName>Commission_Calculation_Method</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Commission Calculation Method</shortDescription>
+        <value>Commission Calculation Method</value>
+    </labels>
+    <labels>
+        <fullName>Commission_Info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Commission Info</shortDescription>
+        <value>Please fill in the commission information</value>
+    </labels>
+    <labels>
+        <fullName>Commission_Percent</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Commission Percent</shortDescription>
+        <value>Commission Percentage</value>
+    </labels>
+    <labels>
+        <fullName>Commission_Rate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Commission Rate</shortDescription>
+        <value>Commission Rate</value>
+    </labels>
+    <labels>
+        <fullName>Commodity</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Commodity</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>ComplaintApproving</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ComplaintApproving</shortDescription>
+        <value>The complaint has been submitted for approval, you can&apos;t update the data.</value>
+    </labels>
+    <labels>
+        <fullName>ComplaintCancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ComplaintCancel</shortDescription>
+        <value>The complaint has already been canceled</value>
+    </labels>
+    <labels>
+        <fullName>ComplaintClose</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ComplaintClose</shortDescription>
+        <value>The complaint has already been closed.</value>
+    </labels>
+    <labels>
+        <fullName>CompleteBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CompleteBody</shortDescription>
+        <value>The credit investigation of 【客户名称】 is completed，please log in the system to view the detail info with following link:【链接】.</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmLabel</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>ConfirmLabel</shortDescription>
+        <value>Confirm</value>
+    </labels>
+    <labels>
+        <fullName>ConfirmSubmitOrder</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>ConfirmSubmitOrder</shortDescription>
+        <value>Confirm Submit Order</value>
+    </labels>
+    <labels>
+        <fullName>Confirm_Submit_Order</fullName>
+        <categories>Submit Order</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Confirm Submit Order</shortDescription>
+        <value>Confirm Submit Order</value>
+    </labels>
+    <labels>
+        <fullName>ConsignmentOpen</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConsignmentOpen</shortDescription>
+        <value>YES</value>
+    </labels>
+    <labels>
+        <fullName>ContentSize</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContentSize</shortDescription>
+        <value>Content Size</value>
+    </labels>
+    <labels>
+        <fullName>ContractChangeSyncStatusError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContractChangeSyncStatusError</shortDescription>
+        <value>The contract has been synced to BPM, you can&apos;t change the contract.</value>
+    </labels>
+    <labels>
+        <fullName>ContractCreate</fullName>
+        <categories>ContractCreate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContractCreate</shortDescription>
+        <value>Create Contract</value>
+    </labels>
+    <labels>
+        <fullName>ContractFieldRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContractFieldRequired</shortDescription>
+        <value>Input Required</value>
+    </labels>
+    <labels>
+        <fullName>ContractSyncBPMBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContractSyncBPMBody</shortDescription>
+        <value>The contract synced BPM  of 【合同编号】 . Please to BPM Supplementary Contract Info</value>
+    </labels>
+    <labels>
+        <fullName>Contract_Processing_Product</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contract Processing Product</shortDescription>
+        <value>Tolling Product</value>
+    </labels>
+    <labels>
+        <fullName>Contract_Processing_Product_Name</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contract Processing Product Name</shortDescription>
+        <value>Tolling Product Name</value>
+    </labels>
+    <labels>
+        <fullName>Contract_Sync_BPM</fullName>
+        <categories>Contract Sync BPM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contract Sync BPM</shortDescription>
+        <value>Contract Synced to BPM</value>
+    </labels>
+    <labels>
+        <fullName>CopyCustomerConfirmInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CopyCustomerConfirmInfo</shortDescription>
+        <value>Confirm the creation of the Ship To address?</value>
+    </labels>
+    <labels>
+        <fullName>CopyCustomerConfirmInfoHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CopyCustomerConfirmInfoHeader</shortDescription>
+        <value>Create Ship To</value>
+    </labels>
+    <labels>
+        <fullName>CopyCustomerVertifySumbit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CopyCustomerVertifySumbit</shortDescription>
+        <value>[Customer Tax Category] is required, please fill in before sync</value>
+    </labels>
+    <labels>
+        <fullName>Corn</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Corn</shortDescription>
+        <value>Crop</value>
+    </labels>
+    <labels>
+        <fullName>Cost</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cost</shortDescription>
+        <value>Material Cost</value>
+    </labels>
+    <labels>
+        <fullName>CreateContractError</fullName>
+        <categories>CreateContractError</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateContractError</shortDescription>
+        <value>Please input contract type</value>
+    </labels>
+    <labels>
+        <fullName>CreateContractHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateContractHeader</shortDescription>
+        <value>Confirm the creation of the HQ contract?</value>
+    </labels>
+    <labels>
+        <fullName>CreateContractType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateContractType</shortDescription>
+        <value>Contract Type</value>
+    </labels>
+    <labels>
+        <fullName>CreateContractTypeRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateContractTypeRequired</shortDescription>
+        <value>Pelase input contract type</value>
+    </labels>
+    <labels>
+        <fullName>CreateFreeOrder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateFreeOrder</shortDescription>
+        <value>Create Free Order</value>
+    </labels>
+    <labels>
+        <fullName>CreateFreeOrderConfirm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateFreeOrderConfirm</shortDescription>
+        <value>Confirm the creation of the free order?</value>
+    </labels>
+    <labels>
+        <fullName>CreateOrderError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateOrderError</shortDescription>
+        <value>Pelase input order type</value>
+    </labels>
+    <labels>
+        <fullName>CreateOrderTypeLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateOrderTypeLabel</shortDescription>
+        <value>Order Type</value>
+    </labels>
+    <labels>
+        <fullName>CreateOrderTypeRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreateOrderTypeRequired</shortDescription>
+        <value>Pelase input order type</value>
+    </labels>
+    <labels>
+        <fullName>Created_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Created Date</shortDescription>
+        <value>Created Date</value>
+    </labels>
+    <labels>
+        <fullName>CreditNotificationBody</fullName>
+        <categories>CreditNotification</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>CreditNotificationBody</shortDescription>
+        <value>Confirm Credit Investigation Request</value>
+    </labels>
+    <labels>
+        <fullName>CreditNotificationHeader</fullName>
+        <categories>CreditNotification</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>CreditNotificationHeader</shortDescription>
+        <value>Credit Investigation Request</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Approved_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Approved Title</shortDescription>
+        <value>Credit Limit Approved:</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Rejected_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Rejected Title</shortDescription>
+        <value>Credit Limit Rejected:</value>
+    </labels>
+    <labels>
+        <fullName>Currency</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Currency</shortDescription>
+        <value>Currency</value>
+    </labels>
+    <labels>
+        <fullName>Current_Aging_Period</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Current Aging Period</shortDescription>
+        <value>Período de Antigüedad Actual</value>
+    </labels>
+    <labels>
+        <fullName>CustomerAddressRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerAddressRequired</shortDescription>
+        <value>Address Informatoin Required.</value>
+    </labels>
+    <labels>
+        <fullName>CustomerApprovalNotification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerApprovalNotification</shortDescription>
+        <value>Customer Approval Notification</value>
+    </labels>
+    <labels>
+        <fullName>CustomerName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerName</shortDescription>
+        <value>Customer Name</value>
+    </labels>
+    <labels>
+        <fullName>CustomerUpdateNotification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerUpdateNotification</shortDescription>
+        <value>The customer modification request has been submitted to you for more than 24 hours. Please process it promptly:</value>
+    </labels>
+    <labels>
+        <fullName>CustomerVisitSubmitConfirm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerVisitSubmitConfirm</shortDescription>
+        <value>Confirm to submit the customer visit?</value>
+    </labels>
+    <labels>
+        <fullName>CustomerVisitSubmitHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerVisitSubmitHeader</shortDescription>
+        <value>Submit Customer Visit</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Approved</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Customer Approved</shortDescription>
+        <value>The customer has been approved, you can&apos;t change the tax number category.</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Field_Edit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Field Edit</shortDescription>
+        <value>This field cannot be modified</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Team_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Team User</shortDescription>
+        <value>005Po00000HFXZlIAP</value>
+    </labels>
+    <labels>
+        <fullName>CustometVisitCommentNotice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustometVisitCommentNotice</shortDescription>
+        <value>Comment Already Adjust,Please Look Detail Info</value>
+    </labels>
+    <labels>
+        <fullName>CustometVisitSubmitError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustometVisitSubmitError</shortDescription>
+        <value>Please maintain the manager for the user.</value>
+    </labels>
+    <labels>
+        <fullName>CustometVisitSubmitNoticeManager</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustometVisitSubmitNoticeManager</shortDescription>
+        <value>Submitted. Please click to view and fill in the detail info.</value>
+    </labels>
+    <labels>
+        <fullName>CustometVisitSubmitNoticeUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustometVisitSubmitNoticeUser</shortDescription>
+        <value>005Po00000HFD1aIAH;005Po00000HA1tuIAD;005Po00000HA1ttIAD</value>
+    </labels>
+    <labels>
+        <fullName>Days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Days</shortDescription>
+        <value>7</value>
+    </labels>
+    <labels>
+        <fullName>DeleteDeliveryError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeleteDeliveryError</shortDescription>
+        <value>The delivery note is already linked to the xxx order and cannot be deleted.</value>
+    </labels>
+    <labels>
+        <fullName>DeleteError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeleteError</shortDescription>
+        <value>Deletion failed</value>
+    </labels>
+    <labels>
+        <fullName>DeliveryAttachment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeliveryAttachment</shortDescription>
+        <value>Delivery Note Attachment Upload Notice</value>
+    </labels>
+    <labels>
+        <fullName>DeliveryAttachmentBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeliveryAttachmentBody</shortDescription>
+        <value>Your delivery note [xx] has been uploaded more than 20 days ago. Please process it promptly.</value>
+    </labels>
+    <labels>
+        <fullName>DeliveryBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeliveryBody</shortDescription>
+        <value>The customer&apos;s order has been synchronized to the SAP system, order number 【订单号】, please go to the SAP system to ship the order</value>
+    </labels>
+    <labels>
+        <fullName>DeliveryOrderQty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeliveryOrderQty</shortDescription>
+        <value>DN Used Qty</value>
+    </labels>
+    <labels>
+        <fullName>DeliveryTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeliveryTitle</shortDescription>
+        <value>Shipping reminder for customer 【客户名】</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Changed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Changed</shortDescription>
+        <value>The delivery note [XXXXX] has been changed, and the remaining quantity is no longer sufficient.</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Date</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Date</shortDescription>
+        <value>Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Note_Number</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Note Number</shortDescription>
+        <value>Delivery Note Number</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Time</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Time</shortDescription>
+        <value>Delivery Time</value>
+    </labels>
+    <labels>
+        <fullName>Discount_Unit_Price</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Discount Unit Price</shortDescription>
+        <value>Discount Unit Price</value>
+    </labels>
+    <labels>
+        <fullName>DistrubutorExchangeRate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DistrubutorExchangeRate</shortDescription>
+        <value>Distrubutor Exchange Rate</value>
+    </labels>
+    <labels>
+        <fullName>EditConDetailStatusError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditConDetailStatusError</shortDescription>
+        <value>can not edit this contract detail</value>
+    </labels>
+    <labels>
+        <fullName>EditContractDetailHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditContractDetailHeader</shortDescription>
+        <value>Edit Contracts Detail</value>
+    </labels>
+    <labels>
+        <fullName>EditOrderItemError1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditOrderItemError1</shortDescription>
+        <value>Please select available products.</value>
+    </labels>
+    <labels>
+        <fullName>EditOrderItemError2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditOrderItemError2</shortDescription>
+        <value>No product name data found for selected product.</value>
+    </labels>
+    <labels>
+        <fullName>EditOrderItemError3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditOrderItemError3</shortDescription>
+        <value>No product sales info found.</value>
+    </labels>
+    <labels>
+        <fullName>Edit_Order_Contracts_Detail_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Edit Order Contracts Detail Header</shortDescription>
+        <value>Edit Order Contracts Detail</value>
+    </labels>
+    <labels>
+        <fullName>EmailBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailBody</shortDescription>
+        <value>The order has been approved, please check the attachment for details</value>
+    </labels>
+    <labels>
+        <fullName>EmailBodyContract</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailBodyContract</shortDescription>
+        <value>The contract has been approved, please check the attachment for details</value>
+    </labels>
+    <labels>
+        <fullName>EmailSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailSubject</shortDescription>
+        <value>Order Information</value>
+    </labels>
+    <labels>
+        <fullName>EmailSubjectContract</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailSubjectContract</shortDescription>
+        <value>Contract Information</value>
+    </labels>
+    <labels>
+        <fullName>Email_Admin_Config</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Admin Config(defalut-0)</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error</shortDescription>
+        <value>System error encountered. Please contact the administrator for assistance.</value>
+    </labels>
+    <labels>
+        <fullName>ErrorLoading</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ErrorLoading</shortDescription>
+        <value>Error loading attachment:</value>
+    </labels>
+    <labels>
+        <fullName>EstimateCost</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EstimateCost</shortDescription>
+        <value>Estimate Cost</value>
+    </labels>
+    <labels>
+        <fullName>EstimateGM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EstimateGM</shortDescription>
+        <value>Estimate GM</value>
+    </labels>
+    <labels>
+        <fullName>EstimatedInvoicingDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EstimatedInvoicingDate</shortDescription>
+        <value>Estimated Invoicing Date</value>
+    </labels>
+    <labels>
+        <fullName>Estimated_delivery_date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Estimated delivery date</shortDescription>
+        <value>Estimated delivery date</value>
+    </labels>
+    <labels>
+        <fullName>ExceedingQuantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExceedingQuantity</shortDescription>
+        <value>The [XXXXX] remaining quantity exceeds the shipped quantity.</value>
+    </labels>
+    <labels>
+        <fullName>ExistSameBudgetError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExistSameBudgetError</shortDescription>
+        <value>The monthly budget has already been set for the current sales representative.</value>
+    </labels>
+    <labels>
+        <fullName>Expiry_Date</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expiry Date</shortDescription>
+        <value>Fecha de Vencimiento</value>
+    </labels>
+    <labels>
+        <fullName>FECHA_DE_PAGO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FECHA DE PAGO</shortDescription>
+        <value>FECHA DE PAGO</value>
+    </labels>
+    <labels>
+        <fullName>FECHA_DE_VENCIMIENTO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FECHA DE VENCIMIENTO</shortDescription>
+        <value>FECHA DE VENCIMIENTO</value>
+    </labels>
+    <labels>
+        <fullName>FOBNotificationBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FOBNotificationBody</shortDescription>
+        <value>The FOB price in the Price List has been updated. Please check the latest FOB price on the Homepage.</value>
+    </labels>
+    <labels>
+        <fullName>FOBNotificationSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FOBNotificationSubject</shortDescription>
+        <value>Price List Changed</value>
+    </labels>
+    <labels>
+        <fullName>FOB_Bulking_Price</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>FOB Bulking Price</shortDescription>
+        <value>FOB Bulking Price</value>
+    </labels>
+    <labels>
+        <fullName>FOB_Price</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>FOB Price</shortDescription>
+        <value>FOB Price</value>
+    </labels>
+    <labels>
+        <fullName>File</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>File</shortDescription>
+        <value>Upload Attachment</value>
+    </labels>
+    <labels>
+        <fullName>FileDeleted</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FileDeleted</shortDescription>
+        <value>File deleted</value>
+    </labels>
+    <labels>
+        <fullName>FileName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FileName</shortDescription>
+        <value>File Name</value>
+    </labels>
+    <labels>
+        <fullName>FileType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FileType</shortDescription>
+        <value>File Type</value>
+    </labels>
+    <labels>
+        <fullName>FillInHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FillInHeader</shortDescription>
+        <value>Update Quote Product Name</value>
+    </labels>
+    <labels>
+        <fullName>FillUpOrder</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>FillUpOrder</shortDescription>
+        <value>Fill Up Order Number</value>
+    </labels>
+    <labels>
+        <fullName>FillUpOrderCreateDate</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>FillUpOrderCreateDate</shortDescription>
+        <value>Fill Up Order Create Date</value>
+    </labels>
+    <labels>
+        <fullName>FreezeInitNoticeError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FreezeInitNoticeError</shortDescription>
+        <value>Current Stutus Cannot Freeze.</value>
+    </labels>
+    <labels>
+        <fullName>FreezeNoticeError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FreezeNoticeError</shortDescription>
+        <value>There are quotations, HQ contracts, or orders pending for approval, you can&apos;t submit the customer freeze request.</value>
+    </labels>
+    <labels>
+        <fullName>Freight_Cost</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Freight Cost</shortDescription>
+        <value>Freight Cost</value>
+    </labels>
+    <labels>
+        <fullName>GenerateDeliveryNoteBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GenerateDeliveryNoteBody</shortDescription>
+        <value>The order {Order_Number} has been successfully synchronized to our SAP system. The necessary shipping documents can now be created.
+
+Action Required: Please generate the corresponding delivery note for this order.</value>
+    </labels>
+    <labels>
+        <fullName>GenerateDeliveryNoteTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GenerateDeliveryNoteTitle</shortDescription>
+        <value>Generate Delivery Note Reminder</value>
+    </labels>
+    <labels>
+        <fullName>Green</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Green</shortDescription>
+        <value>https://rcg--rbdev.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Po00000zXGcP&amp;operationContext=CHATTER&amp;contentId=05TPo000019qYEm</value>
+    </labels>
+    <labels>
+        <fullName>Gross_Weight</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Gross Weight</shortDescription>
+        <value>Gross Weight(KG)</value>
+    </labels>
+    <labels>
+        <fullName>GuidePrice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GuidePrice</shortDescription>
+        <value>Guide Price</value>
+    </labels>
+    <labels>
+        <fullName>HQ_Contract_Unit_Price</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HQ Contract Unit Price</shortDescription>
+        <value>HQ Contract Unit Price</value>
+    </labels>
+    <labels>
+        <fullName>If_Designated_Products</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>If Designated Products</shortDescription>
+        <value>If Designated Products</value>
+    </labels>
+    <labels>
+        <fullName>If_Pallet</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>If Pallet</shortDescription>
+        <value>If Pallet</value>
+    </labels>
+    <labels>
+        <fullName>ImageType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ImageType</shortDescription>
+        <value>jpg;jpeg;png;gif;bmp</value>
+    </labels>
+    <labels>
+        <fullName>Import_Quote_Detail_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Import Quote Detail Header</shortDescription>
+        <value>Batch Import Quote Detail</value>
+    </labels>
+    <labels>
+        <fullName>Inland_Cost_Including_Insurance</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inland Cost Including Insurance</shortDescription>
+        <value>Inland Cost Including Insurance</value>
+    </labels>
+    <labels>
+        <fullName>Insufficient_Avilable_Quantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Insufficient Avilable Quantity</shortDescription>
+        <value>Insufficient available quantity; remaining available quantity:</value>
+    </labels>
+    <labels>
+        <fullName>Insufficient_Remaining_Quantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Insufficient Remaining Quantity</shortDescription>
+        <value>insufficient returnable quantity,The returnable quantity is</value>
+    </labels>
+    <labels>
+        <fullName>Inventory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inventory</shortDescription>
+        <value>Inventory</value>
+    </labels>
+    <labels>
+        <fullName>InventoryEmailContact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InventoryEmailContact</shortDescription>
+        <value>Cecilia</value>
+    </labels>
+    <labels>
+        <fullName>Invoice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invoice</shortDescription>
+        <value>Invoice</value>
+    </labels>
+    <labels>
+        <fullName>InvoiceItemNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvoiceItemNumber</shortDescription>
+        <value>Invoice Item Number</value>
+    </labels>
+    <labels>
+        <fullName>IsCustomerConfirmed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IsCustomerConfirmed</shortDescription>
+        <value>Is Customer Confirmed</value>
+    </labels>
+    <labels>
+        <fullName>IssueQtyError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IssueQtyError</shortDescription>
+        <value>The quantity of the product &quot;{0}&quot; exceeds the used quantity *{1}*（Order Item_ZARB Used Quantity） of the related ZARB order item.</value>
+    </labels>
+    <labels>
+        <fullName>LatestMinSalesPrice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LatestMinSalesPrice</shortDescription>
+        <value>Latest Min Sales Price</value>
+    </labels>
+    <labels>
+        <fullName>Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Link</shortDescription>
+        <value>Link</value>
+    </labels>
+    <labels>
+        <fullName>Local_Currency</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Local Currency</shortDescription>
+        <value>Price</value>
+    </labels>
+    <labels>
+        <fullName>MXBPMUsercode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXBPMUsercode</shortDescription>
+        <value>zhangjq;chenhy1;zhangxy8;yanghl3;chenlj;lium;liueh;liugg</value>
+    </labels>
+    <labels>
+        <fullName>MXCMinAmount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXCMinAmount</shortDescription>
+        <value>160000</value>
+    </labels>
+    <labels>
+        <fullName>MXCPlusAmount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXCPlusAmount</shortDescription>
+        <value>240000</value>
+    </labels>
+    <labels>
+        <fullName>MXContractPaymentTerms</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXContractPaymentTerms</shortDescription>
+        <value>null</value>
+    </labels>
+    <labels>
+        <fullName>MXContractSyncNoticeEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXContractSyncNoticeEmail</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>MXDAYS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXDAYS</shortDescription>
+        <value>7</value>
+    </labels>
+    <labels>
+        <fullName>MXFI</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>MXFI</shortDescription>
+        <value>005Hs00000FWJEtIAP</value>
+    </labels>
+    <labels>
+        <fullName>MXFIDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXFIDays</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>MXFIRAMX</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXFIRAMX</shortDescription>
+        <value>005Hs00000FXQlMIAX</value>
+    </labels>
+    <labels>
+        <fullName>MXFIRAMXDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXFIRAMXDays</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>MXMODELCPLUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXMODELCPLUS</shortDescription>
+        <value>1. Los términos de pago están sujetos a la aprobación de SINOSURE.;2. Al momento del vencimiento del plazo ordinario de la factura, se hará acreedor del 1.5% de nota de cargo mensual del importe vencido.;3. Después de 30 días de retraso en pago de facturas vencidas, se suspende el abasto.;</value>
+    </labels>
+    <labels>
+        <fullName>MXSubmitError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MXSubmitError</shortDescription>
+        <value>For Model c, only orders with a total amount exceeding [modelcAmount] are allowed to be submitted; For Model c+, only orders with a total amount exceeding [modelcplusAmount] are allowed to be submitted.</value>
+    </labels>
+    <labels>
+        <fullName>MX_B</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX B</shortDescription>
+        <value>005Hs00000FXQlMIAX</value>
+    </labels>
+    <labels>
+        <fullName>MX_BDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_BDays</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>MX_Submit_Limit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX Submit Limit</shortDescription>
+        <value>YES</value>
+    </labels>
+    <labels>
+        <fullName>MarginLevel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MarginLevel</shortDescription>
+        <value>Margin Level</value>
+    </labels>
+    <labels>
+        <fullName>MarginRate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MarginRate</shortDescription>
+        <value>Margin Rate</value>
+    </labels>
+    <labels>
+        <fullName>Margin_Rate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Margin Rate</shortDescription>
+        <value>Margin Rate</value>
+    </labels>
+    <labels>
+        <fullName>Material_Code</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Material Code</shortDescription>
+        <value>Material Code</value>
+    </labels>
+    <labels>
+        <fullName>Material_Descriptio</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Material_Descriptio</shortDescription>
+        <value>Material Description</value>
+    </labels>
+    <labels>
+        <fullName>Min_Price</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Min Price</shortDescription>
+        <value>Min Sales Price</value>
+    </labels>
+    <labels>
+        <fullName>MoreThan</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>MoreThan</shortDescription>
+        <value>Order amount cannot excess the total amount of Down Payment order.</value>
+    </labels>
+    <labels>
+        <fullName>NOCustomerCredit</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>NOCustomerCredit</shortDescription>
+        <value>The customer has no credit view.</value>
+    </labels>
+    <labels>
+        <fullName>NOSalesInfo</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>NOSalesInfo</shortDescription>
+        <value>No Customer Sales Info</value>
+    </labels>
+    <labels>
+        <fullName>Net_Weight</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Net Weight</shortDescription>
+        <value>Net Weight(KG)</value>
+    </labels>
+    <labels>
+        <fullName>New_Amount_per_item</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Amount per item</shortDescription>
+        <value>New Amount per item</value>
+    </labels>
+    <labels>
+        <fullName>New_Delivery_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Delivery Date</shortDescription>
+        <value>New Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>New_Price</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Price</shortDescription>
+        <value>New Price</value>
+    </labels>
+    <labels>
+        <fullName>New_Quantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Quantity</shortDescription>
+        <value>New Quantity</value>
+    </labels>
+    <labels>
+        <fullName>NoChangeCampaignInfoError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoChangeCampaignInfoError</shortDescription>
+        <value>The campaign has been approved, and you can&apos;t update the approved information</value>
+    </labels>
+    <labels>
+        <fullName>NoChangeDescriptionInfoError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoChangeDescriptionInfoError</shortDescription>
+        <value>Current Status No Change Description Information</value>
+    </labels>
+    <labels>
+        <fullName>NoChanged</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoChanged</shortDescription>
+        <value>There is no change in this data</value>
+    </labels>
+    <labels>
+        <fullName>NoCredit</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>NoCredit</shortDescription>
+        <value>Please submit the customer first and then apply for the credit limit.</value>
+    </labels>
+    <labels>
+        <fullName>NoCustomerSalesInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoCustomerSalesInfo</shortDescription>
+        <value>No Approevd Customer Sales Info</value>
+    </labels>
+    <labels>
+        <fullName>NoMapMonthBudgetError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoMapMonthBudgetError</shortDescription>
+        <value>The monthly budget has not been set for the current sales representative.</value>
+    </labels>
+    <labels>
+        <fullName>NoPaymentDaysInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoPaymentDaysInfo</shortDescription>
+        <value>No Map Payment Rate Info</value>
+    </labels>
+    <labels>
+        <fullName>NotMatchProductName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotMatchProductName</shortDescription>
+        <value>No matching product name found.</value>
+    </labels>
+    <labels>
+        <fullName>NotficationBody</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>NotficationBody</shortDescription>
+        <value>Click the link to view sync failure reasons</value>
+    </labels>
+    <labels>
+        <fullName>NotficationOrderBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotficationOrderBody</shortDescription>
+        <value>The order need to be closed, please click the link to the view the detail data and close the order.</value>
+    </labels>
+    <labels>
+        <fullName>NotficationOrderTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotficationOrderTitle</shortDescription>
+        <value>Order Close Notification:</value>
+    </labels>
+    <labels>
+        <fullName>NotficationService</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotficationService</shortDescription>
+        <value>Click to view the customer info</value>
+    </labels>
+    <labels>
+        <fullName>NotficationServiceBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotficationServiceBody</shortDescription>
+        <value>【提交人信息】于【提交日期】提交【客户名称】资信调查请求，请尽快完成此客户调查，并点击此链接填写调查结果:【链接】。</value>
+    </labels>
+    <labels>
+        <fullName>NotficationServiceSaleTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotficationServiceSaleTitle</shortDescription>
+        <value>Credit investigation completed</value>
+    </labels>
+    <labels>
+        <fullName>NotficationServiceTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NotficationServiceTitle</shortDescription>
+        <value>Credit Investigation Request</value>
+    </labels>
+    <labels>
+        <fullName>NotficationSyncErrorTitle</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>NotficationSyncErrorTitle</shortDescription>
+        <value>Synchronization failed
+.</value>
+    </labels>
+    <labels>
+        <fullName>ORGLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ORGLabel</shortDescription>
+        <value>3010;3020;5130;5070</value>
+    </labels>
+    <labels>
+        <fullName>Observation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Observation</shortDescription>
+        <value>Observation</value>
+    </labels>
+    <labels>
+        <fullName>OnlyDeleteOwnerData</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OnlyDeleteOwnerData</shortDescription>
+        <value>You can only delete orders that you created</value>
+    </labels>
+    <labels>
+        <fullName>Open_Order_Qty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Open Order Qty</shortDescription>
+        <value>Open Order Qty</value>
+    </labels>
+    <labels>
+        <fullName>OrderApproingAmount</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>OrderApproingAmount</shortDescription>
+        <value>CRM Approving Order Amount</value>
+    </labels>
+    <labels>
+        <fullName>OrderCloneBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderCloneBody</shortDescription>
+        <value>Confirm Clone Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderCloneCreate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderCloneCreate</shortDescription>
+        <value>Create Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderCloneHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderCloneHeader</shortDescription>
+        <value>Order Clone</value>
+    </labels>
+    <labels>
+        <fullName>OrderCloseBody</fullName>
+        <categories>Order Close</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>OrderCloseBody</shortDescription>
+        <value>Input reason</value>
+    </labels>
+    <labels>
+        <fullName>OrderCloseHeader</fullName>
+        <categories>Order Close</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>OrderCloseHeader</shortDescription>
+        <value>Order Close</value>
+    </labels>
+    <labels>
+        <fullName>OrderCreateBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderCreateBody</shortDescription>
+        <value>Confirm Create Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderCustomerSyncError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderCustomerSyncError</shortDescription>
+        <value>The order customer is not synchronized.</value>
+    </labels>
+    <labels>
+        <fullName>OrderDeliveryDateRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderDeliveryDateRequired</shortDescription>
+        <value>Delivery Date Required</value>
+    </labels>
+    <labels>
+        <fullName>OrderFieldRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderFieldRequired</shortDescription>
+        <value>Input Required</value>
+    </labels>
+    <labels>
+        <fullName>OrderFillAmountPercentageError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderFillAmountPercentageError</shortDescription>
+        <value>Please fill in Commission Percentage</value>
+    </labels>
+    <labels>
+        <fullName>OrderFillComissionAmountError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderFillComissionAmountError</shortDescription>
+        <value>Please fill in Commission Amount</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport1</shortDescription>
+        <value>Customer&apos;s PO</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport10</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport10</shortDescription>
+        <value>Customer Shipping Address</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport11</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport11</shortDescription>
+        <value>Product Code</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport12</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport13</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport13</shortDescription>
+        <value>Order Item Quantity</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport14</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport14</shortDescription>
+        <value>Unit Price</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport15</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport15</shortDescription>
+        <value>Inventory Location</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport16</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport16</shortDescription>
+        <value>Crop</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport17</shortDescription>
+        <value>Error Message</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport18</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport18</shortDescription>
+        <value>Delivery Date</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport19</shortDescription>
+        <value>Stock Aging Limit</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport2</shortDescription>
+        <value>Delivery Plant</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport3</shortDescription>
+        <value>Distribution Channel</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport4</shortDescription>
+        <value>Order Type</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport5</shortDescription>
+        <value>Customer</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport6</shortDescription>
+        <value>Ship To</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport7</shortDescription>
+        <value>Pricing Date</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport8</shortDescription>
+        <value>Currency</value>
+    </labels>
+    <labels>
+        <fullName>OrderImport9</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImport9</shortDescription>
+        <value>Payment Term</value>
+    </labels>
+    <labels>
+        <fullName>OrderImportTemplateId</fullName>
+        <categories>Order Import</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderImportTemplateId</shortDescription>
+        <value>015Po00000L3xtt</value>
+    </labels>
+    <labels>
+        <fullName>OrderItem</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>OrderItem</shortDescription>
+        <value>Order Item</value>
+    </labels>
+    <labels>
+        <fullName>OrderItemHeader</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>OrderItemHeader</shortDescription>
+        <value>Manage Order Item</value>
+    </labels>
+    <labels>
+        <fullName>OrderItemInvoiceStatusVertify</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderItemInvoiceStatusVertify</shortDescription>
+        <value>You can&apos;t change the price since the invoice has been generated.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe1</shortDescription>
+        <value>Order Import</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe10</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe10</shortDescription>
+        <value>is missing required fields:</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe11</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe11</shortDescription>
+        <value>Order type must be the same</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe12</shortDescription>
+        <value>The number of data entries imported cannot exceed 100, please check the uploaded file.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe13</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe13</shortDescription>
+        <value>The unit price in line</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe14</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe14</shortDescription>
+        <value>is not valid</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe15</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe15</shortDescription>
+        <value>File parse failed.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe16</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe16</shortDescription>
+        <value>Are you sure to refresh the page?</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe17</shortDescription>
+        <value>No data to save.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe18</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe18</shortDescription>
+        <value>Save successful!</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe19</shortDescription>
+        <value>Save failed, check error file.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe2</shortDescription>
+        <value>Upload Files</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe20</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe20</shortDescription>
+        <value>Save failed.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe21</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe21</shortDescription>
+        <value>error</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe22</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe22</shortDescription>
+        <value>success</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe23</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe23</shortDescription>
+        <value>Unknown Error</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe24</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe24</shortDescription>
+        <value>Order_Import_Errors.xlsx</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe25</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe25</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe26</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe26</shortDescription>
+        <value>Order Insert Error:</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe27</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe27</shortDescription>
+        <value>Order ID not found</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe28</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe28</shortDescription>
+        <value>Order Item Insert Error:</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe3</shortDescription>
+        <value>Or drop files</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe4</shortDescription>
+        <value>Please upload the file first!</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe5</shortDescription>
+        <value>SheetJS library failed to load.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe6</shortDescription>
+        <value>Please select a file.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe7</shortDescription>
+        <value>Invalid template.</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe8</shortDescription>
+        <value>Insufficient template data!!!!!!</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabe9</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabe9</shortDescription>
+        <value>The line</value>
+    </labels>
+    <labels>
+        <fullName>OrderPaymentDayVertify</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderPaymentDayVertify</shortDescription>
+        <value>order payment term day not over sales info payment term day.</value>
+    </labels>
+    <labels>
+        <fullName>OrderPriceQuantityVertify</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderPriceQuantityVertify</shortDescription>
+        <value>Quantity and price can not be negative</value>
+    </labels>
+    <labels>
+        <fullName>OrderRejectedBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderRejectedBody</shortDescription>
+        <value>The order approval of 【订单号】 which is placed on 【下单日期】 for 【客户】 
+ has been rejected by 【审批驳回人】 on 【驳回日期】. Please check the rejected reason and adjust the order info by following link:【链接】</value>
+    </labels>
+    <labels>
+        <fullName>OrderRejectedBodyLocal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderRejectedBodyLocal</shortDescription>
+        <value>La autorización del pedido de venta 【订单号】 generado el día 【下单日期】 
+ para el cliente【客户】 ha sido rechazada por 【审批驳回人】 el día 【驳回日期】.  Por favor verifique la razón del rechazo y realice las modificaciones en el pedido mediante el siguiente link:【链接】</value>
+    </labels>
+    <labels>
+        <fullName>OrderSalesUnitRequired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderSalesUnitRequired</shortDescription>
+        <value>Sales Unit Required</value>
+    </labels>
+    <labels>
+        <fullName>OrderSendPDFConfirm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderSendPDFConfirm</shortDescription>
+        <value>Confirm send PDF to the owner&apos;s email?</value>
+    </labels>
+    <labels>
+        <fullName>OrderSendPDFHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderSendPDFHeader</shortDescription>
+        <value>Order Send PDF</value>
+    </labels>
+    <labels>
+        <fullName>OrderSumbitApprovalHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderSumbitApprovalHeader</shortDescription>
+        <value>Submit Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderUnlockSyncSapHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderUnlockSyncSapHeader</shortDescription>
+        <value>Confirm sync to SAP?</value>
+    </labels>
+    <labels>
+        <fullName>Order_Amount</fullName>
+        <categories>Submit Order</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Order Amount</shortDescription>
+        <value>Order Amount</value>
+    </labels>
+    <labels>
+        <fullName>Order_Approved_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Approved Title</shortDescription>
+        <value>Order Approved:</value>
+    </labels>
+    <labels>
+        <fullName>Order_Qnty</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Order Qnty</shortDescription>
+        <value>Order Qnty</value>
+    </labels>
+    <labels>
+        <fullName>Order_Reason_Required</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Order Reason Required</shortDescription>
+        <value>Order Reason Required</value>
+    </labels>
+    <labels>
+        <fullName>Order_Rejected_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Rejected Title</shortDescription>
+        <value>Order Rejected:</value>
+    </labels>
+    <labels>
+        <fullName>Other_Issue</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other Issue</shortDescription>
+        <value>Remark</value>
+    </labels>
+    <labels>
+        <fullName>Overdue</fullName>
+        <categories>Submit Order</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Overdue</shortDescription>
+        <value>Overdue</value>
+    </labels>
+    <labels>
+        <fullName>PDFLeft</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PDFLeft</shortDescription>
+        <value>https://rcg--rbdev.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=068O400000I64hh&amp;operationContext=CHATTER&amp;contentId=05TO400000NkD3R</value>
+    </labels>
+    <labels>
+        <fullName>PDFRight</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PDFRight</shortDescription>
+        <value>https://rcg--rbdev.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=068O400000I64mX&amp;operationContext=CHATTER&amp;contentId=05TO400000NkDD7</value>
+    </labels>
+    <labels>
+        <fullName>Pack_Size</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pack Size</shortDescription>
+        <value>Pack Size</value>
+    </labels>
+    <labels>
+        <fullName>Packing_Cost</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Packing Cost</shortDescription>
+        <value>Packing Cost</value>
+    </labels>
+    <labels>
+        <fullName>Packing_Size</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Packing Size</shortDescription>
+        <value>Packing Size</value>
+    </labels>
+    <labels>
+        <fullName>Packing_Size_Description</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Packing Size Description</shortDescription>
+        <value>Packing Size Description</value>
+    </labels>
+    <labels>
+        <fullName>Pallet</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Pallet</shortDescription>
+        <value>Pallet Cost</value>
+    </labels>
+    <labels>
+        <fullName>Payment_Terms</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Payment Terms</shortDescription>
+        <value>Payment Term Cost Rate</value>
+    </labels>
+    <labels>
+        <fullName>Place_order</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Place order</shortDescription>
+        <value>Placed Order Before</value>
+    </labels>
+    <labels>
+        <fullName>Price</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Price</shortDescription>
+        <value>Price</value>
+    </labels>
+    <labels>
+        <fullName>PriceBookNoPrice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PriceBookNoPrice</shortDescription>
+        <value>Some price book item does not have price,can&apos;t submit</value>
+    </labels>
+    <labels>
+        <fullName>PriceRate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PriceRate</shortDescription>
+        <value>Price Rate</value>
+    </labels>
+    <labels>
+        <fullName>PriceRateHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PriceRateHelpText</shortDescription>
+        <value>5130 Or YPF:(Guide Price-Cash Price)/(Guide Price)
+Other:(Guide Price-Unit Price(w/o tax))/(Guide Price)</value>
+    </labels>
+    <labels>
+        <fullName>Price_List_Name</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Price List Name</shortDescription>
+        <value>Price List Name</value>
+    </labels>
+    <labels>
+        <fullName>Processing_Cost</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Processing Cost</shortDescription>
+        <value>Tolling Fee</value>
+    </labels>
+    <labels>
+        <fullName>Product</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Product</shortDescription>
+        <value>Quote English Name</value>
+    </labels>
+    <labels>
+        <fullName>ProductCode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductCode</shortDescription>
+        <value>Product Code</value>
+    </labels>
+    <labels>
+        <fullName>ProductDuplicate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductDuplicate</shortDescription>
+        <value>Data duplication, duplicate row numbers:</value>
+    </labels>
+    <labels>
+        <fullName>ProductName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductName</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>ProductNameOrderItem</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>ProductNameOrderItem</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>ProductNotFind</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductNotFind</shortDescription>
+        <value>Product name can&apos;t find or deleted</value>
+    </labels>
+    <labels>
+        <fullName>Product_Code</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Code</shortDescription>
+        <value>Product Code</value>
+    </labels>
+    <labels>
+        <fullName>Product_Cost</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Cost</shortDescription>
+        <value>Product Cost</value>
+    </labels>
+    <labels>
+        <fullName>Product_English_Name</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product English Name</shortDescription>
+        <value>Product English Name</value>
+    </labels>
+    <labels>
+        <fullName>Product_Name</fullName>
+        <categories>SAP Inventory</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Product Name</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>Product_Name1</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Name</shortDescription>
+        <value>Nombre del Artículo</value>
+    </labels>
+    <labels>
+        <fullName>Product_Name_Print</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Name(Print)</shortDescription>
+        <value>Product Name(Print)</value>
+    </labels>
+    <labels>
+        <fullName>Product_Names_Name</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Name&apos;s Name</shortDescription>
+        <value>Nombre del Producto</value>
+    </labels>
+    <labels>
+        <fullName>Product_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Type</shortDescription>
+        <value>Product Type</value>
+    </labels>
+    <labels>
+        <fullName>Product_Usage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product_Usage</shortDescription>
+        <value>Product Usage</value>
+    </labels>
+    <labels>
+        <fullName>ProfitCenterRequired</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>ProfitCenterRequired</shortDescription>
+        <value>Profit Center Required</value>
+    </labels>
+    <labels>
+        <fullName>PullGood</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PullGood</shortDescription>
+        <value>The order {Order_Number} for customer {Customer_Name} has been successfully synchronized to SAP under the reference number {SAP_Document_ID}.
+
+Action Required: Please proceed to pull the goods for this order from the warehouse inventory.</value>
+    </labels>
+    <labels>
+        <fullName>PullGoodTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PullGoodTitle</shortDescription>
+        <value>Pull Goods Reminder</value>
+    </labels>
+    <labels>
+        <fullName>Qnty</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Qnty</shortDescription>
+        <value>Qnty</value>
+    </labels>
+    <labels>
+        <fullName>Quantity</fullName>
+        <categories>SAP Inventory</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Quantity</shortDescription>
+        <value>Quantity</value>
+    </labels>
+    <labels>
+        <fullName>QuantityHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuantityHelpText</shortDescription>
+        <value>Physical inventory in the warehouse</value>
+    </labels>
+    <labels>
+        <fullName>QuoteApprovalBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteApprovalBody</shortDescription>
+        <value>The quote approval of 【报价单号】 . Please check the quote info by following link:【链接】</value>
+    </labels>
+    <labels>
+        <fullName>QuoteApprovalBodyLocal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteApprovalBodyLocal</shortDescription>
+        <value>La autorización del pedido de venta 【报价单号】 . Por favor verifique la razón del rechazo y realice las modificaciones en el pedido mediante el siguiente link:【链接】</value>
+    </labels>
+    <labels>
+        <fullName>QuoteApprovalNoticeEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteApprovalNoticeEmail</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>QuoteChangeStatusError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteChangeStatusError</shortDescription>
+        <value>The quotation has been confirmed by the customer, you can&apos;t change the status.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteCloneBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteCloneBody</shortDescription>
+        <value>Confirm Clone Quotation</value>
+    </labels>
+    <labels>
+        <fullName>QuoteCloneHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteCloneHeader</shortDescription>
+        <value>Clone Quotation</value>
+    </labels>
+    <labels>
+        <fullName>QuoteDetail</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>QuoteDetail</shortDescription>
+        <value>Quote Detail</value>
+    </labels>
+    <labels>
+        <fullName>QuoteDetailHeader</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>QuoteDetailHeader</shortDescription>
+        <value>Manage Quote Detail</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Approval_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Approval Title</shortDescription>
+        <value>Quote Approval Success :</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Approved_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Approved Title</shortDescription>
+        <value>Quotation Approved :</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Price</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Price</shortDescription>
+        <value>Quote Price</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Product_Name</fullName>
+        <categories>Quote Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Product Name</shortDescription>
+        <value>Quote Product Name</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Rejected_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Rejected Title</shortDescription>
+        <value>Quotation Rejected :</value>
+    </labels>
+    <labels>
+        <fullName>Reason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>01</value>
+    </labels>
+    <labels>
+        <fullName>RecallContractBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RecallContractBody</shortDescription>
+        <value>Comfirm recall the contract from BPM</value>
+    </labels>
+    <labels>
+        <fullName>RecallContractHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RecallContractHeader</shortDescription>
+        <value>Recall Contract</value>
+    </labels>
+    <labels>
+        <fullName>Recheck_Margin</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recheck Margin</shortDescription>
+        <value>Recheck Margin</value>
+    </labels>
+    <labels>
+        <fullName>Red</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Red</shortDescription>
+        <value>https://rcg--rbdev.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Po00000zXLlj&amp;operationContext=CHATTER&amp;contentId=05TPo000019qjEo</value>
+    </labels>
+    <labels>
+        <fullName>RefreshOrderBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RefreshOrderBody</shortDescription>
+        <value>Confirm and update order credit information</value>
+    </labels>
+    <labels>
+        <fullName>RefreshOrderHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RefreshOrderHeader</shortDescription>
+        <value>Refresh Order</value>
+    </labels>
+    <labels>
+        <fullName>RemainQtyError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RemainQtyError</shortDescription>
+        <value>The quantity of the product &quot;{0}&quot; exceeds the remain quantity *{1}*（Order Item_ZARB Remain Quantity） of the related ZARB order item.</value>
+    </labels>
+    <labels>
+        <fullName>RemainQuantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RemainQuantity</shortDescription>
+        <value>Remain Quantity</value>
+    </labels>
+    <labels>
+        <fullName>Remain_Qty</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remain Qty</shortDescription>
+        <value>Cantidad Restante</value>
+    </labels>
+    <labels>
+        <fullName>RemainingCredit</fullName>
+        <categories>Submit Order</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>RemainingCredit</shortDescription>
+        <value>Actual Remaining Credit Limit</value>
+    </labels>
+    <labels>
+        <fullName>ReminderLogistic5070</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReminderLogistic5070</shortDescription>
+        <value>005Hs00000FW9XTIA11</value>
+    </labels>
+    <labels>
+        <fullName>ReminderLogistic5130</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReminderLogistic5130</shortDescription>
+        <value>005Hs00000FW9XTIA1</value>
+    </labels>
+    <labels>
+        <fullName>Resync_Body</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Resync Body</shortDescription>
+        <value>Confirm Resync Data</value>
+    </labels>
+    <labels>
+        <fullName>Resync_Data</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Resync Data</shortDescription>
+        <value>Resync Data</value>
+    </labels>
+    <labels>
+        <fullName>Rolling_Not_Customer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rolling Not Customer</shortDescription>
+        <value>The customer does not exist in the annual target</value>
+    </labels>
+    <labels>
+        <fullName>SAPInventoryHeader</fullName>
+        <categories>SAP Inventory</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>SAPInventoryHeader</shortDescription>
+        <value>Inventory Location</value>
+    </labels>
+    <labels>
+        <fullName>SAP_Remain_Stock</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP Remain Stock</shortDescription>
+        <value>SAP Remain Stock</value>
+    </labels>
+    <labels>
+        <fullName>SalesInfoCannotSave</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>SalesInfoCannotSave</shortDescription>
+        <value>The customer is under approval and cannot be saved.</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Approved_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Approved Title</shortDescription>
+        <value>Customer Sales Info Approved:</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_External</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast External</shortDescription>
+        <value>Year, Month, Product Name, Customer required!</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_External_Exis</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast External Exis</shortDescription>
+        <value>Same sales forecast already exists!</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_April</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp April</shortDescription>
+        <value>April target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_August</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp August</shortDescription>
+        <value>August target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Customer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Customer</shortDescription>
+        <value>Customer not exist</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_December</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp December</shortDescription>
+        <value>December target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Del</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Del</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Enclosure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Enclosure</shortDescription>
+        <value>enclosure</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Excel_Rows</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Excel Rows</shortDescription>
+        <value>Excel Rows</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Failures</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Failures</shortDescription>
+        <value>Number of failed verifications:</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_February</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp February</shortDescription>
+        <value>February target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_File</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp File</shortDescription>
+        <value>Please upload the file first!</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Jan</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Jan</shortDescription>
+        <value>January target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_July</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp July</shortDescription>
+        <value>July target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_June</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp June</shortDescription>
+        <value>June target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_List</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp List</shortDescription>
+        <value>Verification Failure Record List</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_March</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp March</shortDescription>
+        <value>March target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_May</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp May</shortDescription>
+        <value>May target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_November</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp November</shortDescription>
+        <value>November target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Number</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Number</shortDescription>
+        <value>Number of total imports:</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_October</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp October</shortDescription>
+        <value>October target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Pro_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Pro Name</shortDescription>
+        <value>Product Name not exist or deleted</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Reason_Failure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Reason Failure</shortDescription>
+        <value>Failure Reason</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Repeat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Repeat</shortDescription>
+        <value>Data Duplication</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Required</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Required</shortDescription>
+        <value>Required</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Result</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Result</shortDescription>
+        <value>File import results</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_SalesOrg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp SalesOrg</shortDescription>
+        <value>You can&apos;t import because you don&apos;t belong to the sales organization for the current sales forecast.</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Save</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Save</shortDescription>
+        <value>Import Records</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_September</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp September</shortDescription>
+        <value>September target must be a number</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Success</shortDescription>
+        <value>Number of successful verifications:</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_System_Exception</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp System Exception</shortDescription>
+        <value>System exception:</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Tem</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Tem</shortDescription>
+        <value>Click to download the template</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp Title</shortDescription>
+        <value>Batch import of sales forecast :</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Forcast_Imp_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Forcast Imp User</shortDescription>
+        <value>User not exist</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Rejected_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Rejected Title</shortDescription>
+        <value>Customer Sales Info Rejected:</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Unit</fullName>
+        <categories>SAP Inventory</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Sales Unit</shortDescription>
+        <value>Sales Unit</value>
+    </labels>
+    <labels>
+        <fullName>SameSameYearBudget</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SameSameYearBudget</shortDescription>
+        <value>The campaign budget has already been created for the subdiary, please select existing data.</value>
+    </labels>
+    <labels>
+        <fullName>SapCredit</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>SapCredit</shortDescription>
+        <value>SAP Available Credit Limit</value>
+    </labels>
+    <labels>
+        <fullName>Search</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Search</shortDescription>
+        <value>Search by product name/material code</value>
+    </labels>
+    <labels>
+        <fullName>Search_Product</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Search Product</shortDescription>
+        <value>Search by price list name</value>
+    </labels>
+    <labels>
+        <fullName>Search_Result</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Search Result</shortDescription>
+        <value>Search Result</value>
+    </labels>
+    <labels>
+        <fullName>ShipToAccountSyncSapConfirmInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShipToAccountSyncSapConfirmInfo</shortDescription>
+        <value>Confirm sync to SAP?</value>
+    </labels>
+    <labels>
+        <fullName>ShipToSapSuccessInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShipToSapSuccessInfo</shortDescription>
+        <value>Data is being synchronized. You can view the synchronization status later.</value>
+    </labels>
+    <labels>
+        <fullName>Show_Less</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Show Less</shortDescription>
+        <value>Show Less</value>
+    </labels>
+    <labels>
+        <fullName>Show_More</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Show More</shortDescription>
+        <value>Show More</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause</shortDescription>
+        <value>1.- Si el cliente no puede realizar el pago a tiempo, deberá asumir el coste de los intereses moratorios (1% del importe mensual), así como los gastos de juicio relacionados y cualquier perdida causada a RAINBOW;
+2.- Los términos de pago están sujetos a la aprobación de SINOSURE</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract</shortDescription>
+        <value>LAS MATERIAS PRIMAS Y EL EMPAQUE NECESARIO PARA ESTE SERVICIO SERÁN PROVISTOS POR RAINBOW 
+AGROSCIENCES S.A.;EL PRINCIPIO ACTIVO ESTE SERVICIO SERÁ PROVISTO POR CLIENTE.;EL PRECIO ESTA EXPRESADO EN DOLARES ESTADOUNIDENSES Y EL PAGO ESTA SUJETO AL TIPO DE 
+CAMBIO VENDEDOR DEL BANCO DE LA NACION ARGENTINA, COTIZACION DIVISAS, AL CIERRE DEL DIA 
+ANTERIOR AL PAGO. DICHO PRECIO NO INCLUYE IVA Y OTROS IMPUESTOS.;RAINBOW AGROSCIENCES S.A. OFRECE ALMACENAMIENTO A CLIENTE HASTA QUINCE (15) DÍAS CORRIDOS 
+DESDE LA APROBACIÓN DE CADA LOTE POR PARTE DE SU LABORATORIO DE CALIDAD SIN COSTO ALGUNO. 
+PASADO DICHO TIEMPO LAS PARTES ACUERDAN UN VALOR MENSUAL DE OCHO (8) DÓLARES 
+ESTADOUNIDENSE POR PALLET. EL MISMO SERÁ FACTURADO A PRINCIPIO DE CADA MES, DE ACUERDO AL 
+STOCK EXISTENTE QUE EXCEDA EL TIEMPO GRATUITO DE ALMACENAMIENTO.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract1</shortDescription>
+        <value>LAS MATERIAS PRIMAS Y EL EMPAQUE NECESARIO PARA ESTE SERVICIO SERÁN PROVISTOS POR
+RAINBOW AGROSCIENCES S.A..;EL PRINCIPIO ACTIVO ESTE SERVICIO SERÁ PROVISTO POR CLIENTE.;EL PRECIO ESTA EXPRESADO EN DOLARES ESTADOUNIDENSES Y EL PAGO ESTA SUJETO AL TIPO DE
+CAMBIO VENDEDOR DEL BANCO DE LA NACION ARGENTINA, COTIZACION DIVISAS, AL CIERRE DEL DIA
+ANTERIOR AL PAGO. DICHO PRECIO NO INCLUYE IVA Y OTROS IMPUESTOS.;RAINBOW AGROSCIENCE S.A. OFRECE ALMACENAMIENTO A CLIENTE HASTA QUINCE (15) DÍAS
+CORRIDOS DESDE LA APROBACIÓN DE CADA LOTE POR PARTE DE SU LABORATORIO DE CALIDAD SIN
+COSTO ALGUNO. PASADO DICHO TIEMPO LAS PARTES ACUERDAN UN VALOR MENSUAL DE OCHO (8)
+DÓLARES ESTADOUNIDENSE POR PALLET. EL MISMO SERÁ FACTURADO A PRINCIPIO DE CADA MES, DE
+ACUERDO AL STOCK EXISTENTE QUE EXCEDA EL TIEMPO GRATUITO DE ALMACENAMIENTO.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract2</shortDescription>
+        <value>DEBERÁ EXTENDER A RAINBOW
+AGROSCIENCE S.A. UN CERTIFICADO DE COBERTURA POR HURTO, INCENDIO Y/O DESTRUCCIÓN POR
+LA MERCADERÍA ALMACENADA EN SU PLANTA QUE INCLUYA UNA CLÁUSULA DE NO REPETICIÓN HACIA
+RAINBOW AGROSCIENCE S.A., PREVIO AL ENVÍO DE CUALQUIER MATERIAL.;POR PAGOS FUERA DE TERMINO SE APLICARAN INTERESES A LA TASA DE 2.0% DEL VALOR ADEUDADO
+POR MES SI LA DEUDA ESTA PESIFICADA Y DEL 1.0% POR MES EN CASO DE QUE LA DEUDA ESTE
+DOLARIZADA, COMO ASI TAMBIEN COSTOS DE DEMANDA Y CUALQUIER OTRO COSTO CAUSADO A LA
+PARTE VENDEDORA.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract3</shortDescription>
+        <value>EN CASO DE PAGO ANTICIPADO SE EFECTUARA UN DESCUENTO DEL 0,60% MENSUAL. DE EFECTUAR EL
+PAGO ANTICIPADO MEDIANTE EL USO DE CHEQUES POSDATADOS NO CORRESPONDERA DESCUENTO
+ALGUNO Y EL PRECIO SERA AJUSTADO AL TIPO DE CAMBIO VENDEDOR DEL BANCO DE LA NACION
+ARGENTINA, COTIZACION BILLETE, AL CIERRE DEL DIA ANTERIOR A LA ACREDITACION DEL CHEQUE EN
+CUENTA.;ESTE CONTRATO ES VALIDO SOLO SI LA PARTE VENDEDORA RECIBE EL PRESENTE FIRMADO POR LA
+PARTE COMPRADORA DENTRO DE TRES DÍAS HÁBILES.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract4</shortDescription>
+        <value>1. Si el cliente no realiza el pago en tiempo, debe asumir el coste de los intereses moratorios (1% del importe mensual), así como los gastos de juicio relacionados y cualquier perdida causada a RAINBOW.;2. Los términos de pago están sujetos a la aprobación de SINOSURE.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract5</shortDescription>
+        <value>3. CIF: El precio anterior no incluye gastos de importación, impuestos y demás gastos relacionados con el despacho aduanal, tales como gastos ocasionados por PROFEPA o cualquier gasto adicional generado por factores ajenos a Rainbow. Todos los gastos extra necesitan ser pagados antes de que se entregue el producto.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract5_Model_C</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract5 Model C</shortDescription>
+        <value>4. CIF: El precio anterior no incluye gastos de importación, impuestos y demás gastos relacionados con el despacho aduanal, tales como gastos ocasionados por PROFEPA o cualquier gasto adicional generado por factores ajenos a Rainbow. Todos los gastos extra necesitan ser pagados antes de que se entregue el producto.;
+5. El precio del flete marítimo en el contrato se calcula sobre la base de USD 3600/40&apos;HQ. Si el flete marítimo real varía en más de USD 400, el contrato deberá ser renegociado.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract6</shortDescription>
+        <value>3. DAP: El término DAP incluye gastos de importación (≤15 días), no incluye IEPS.los impuestos correspondientes deben pagarse antes de la entrega. Los gastos adicionales derivados del despacho aduanal que exceda los 15 días (debido a fuerza mayor como huelgas, cambios de política, condiciones climáticas, y no atribuibles a la empresa vendedora) serán cubiertos por el comprador.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract6_Model_C</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract6 Model C</shortDescription>
+        <value>4. DAP: El término DAP incluye gastos de importación (≤15 días), no incluye IEPS.los impuestos correspondientes deben pagarse antes de la entrega. Los gastos adicionales derivados del despacho aduanal que exceda los 15 días (debido a fuerza mayor como huelgas, cambios de política, condiciones climáticas, y no atribuibles a la empresa vendedora) serán cubiertos por el comprador.;
+5. El precio del flete marítimo en el contrato se calcula sobre la base de USD 3600/40&apos;HQ. Si el flete marítimo real varía en más de USD 400, el contrato deberá ser renegociado.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract7</shortDescription>
+        <value>3. DDP: El término DDP incluye gastos de importación (≤15 días) y IEPS. los impuestos deben pagarse a la fecha de vencimiento de la factura. Los gastos adicionales derivados del despacho aduanal que exceda los 15 días (debido a fuerza mayor como huelgas, cambios de política, condiciones climáticas, y no atribuibles a la empresa vendedora) serán cubiertos por el comprador.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract7_Model_C</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract7 Model C</shortDescription>
+        <value>4. DDP: El término DDP incluye gastos de importación (≤15 días) y IEPS. los impuestos deben pagarse a la fecha de vencimiento de la factura. Los gastos adicionales derivados del despacho aduanal que exceda los 15 días (debido a fuerza mayor como huelgas, cambios de política, condiciones climáticas, y no atribuibles a la empresa vendedora) serán cubiertos por el comprador.;
+5. El precio del flete marítimo en el contrato se calcula sobre la base de USD 3600/40&apos;HQ. Si el flete marítimo real varía en más de USD 400, el contrato deberá ser renegociado.</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract8</shortDescription>
+        <value>LA OPERACIÓN DEBERA CANCELARSE POR MEDIO DE TRANSFERENCIA ELECTRONICA EN LA
+FECHA DEL VENCIMIENTO DE LA FACTURA O CHEQUE PROPIO CON FECHA DEL DIA DE LA FECHA
+DEL VENCIMIENTO DE LA FACTURA.;EL PRECIO ESTA EXPRESADO EN DOLARES ESTADOUNIDENSES Y EL PAGO ESTA SUJETO AL TIPO
+DE CAMBIO VENDEDOR DEL BANCO DE LA NACION ARGENTINA, COTIZACION DIVISA, AL CIERRE
+DEL DIA ANTERIOR AL PAGO. DICHO PRECIO NO INCLUYE IVA Y OTROS IMPUESTOS.;EL FLETE Y SEGURO CORREN POR CUENTA Y ORDEN DE LA PARTE COMPRADORA.;POR PAGOS FUERA DE TERMINO SE APLICARAN INTERESES A LA TASA DE 2.0% DEL VALOR
+ADEUDADO POR MES SI LA DEUDA ESTA PESIFICADA Y DEL 1.0% POR MES EN CASO DE QUE LA
+DEUDA ESTE DOLARIZADA COMO ASI TAMBIEN COSTOS DE DEMANDA Y CUALQUIER OTRO COSTO CAUSADO A LA PARTE VENDEDORA.;</value>
+    </labels>
+    <labels>
+        <fullName>Special_Clause_Contract9</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Clause Contract9</shortDescription>
+        <value>EN CASO DE PAGO ANTICIPADO SE EFECTUARA UN DESCUENTO DEL 0,57% MENSUAL.
+EN CASO DE QUE DICHO PAGO ANTICIPADO SEA EFECTUADO MEDIANTE EL USO DE CHEQUES
+POSDATADOS NO CORRESPONDERA DESCUENTO ALGUNO Y EL PRECIO SERA AJUSTADO AL TIPO
+DE CAMBIO VENDEDOR DEL BANCO DE LA NACION ARGENTINA, COTIZACION BILLETE, AL CIERRE
+DEL DIA ANTERIOR A LA ACREDITACION DEL CHEQUE EN CUENTA.;EL PLAZO DE PAGO ESTA SUJETO A LA APROBACION CREDITICIA POR PARTE DE SINOSURE.;ESTE CONTRATO ES VALIDO SOLO SI LA PARTE VENDEDORA RECIBE EL PRESENTE FIRMADO
+POR LA PARTE COMPRADORA DENTRO DE TRES DÍAS HÁBILES.</value>
+    </labels>
+    <labels>
+        <fullName>SpecificDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpecificDate(格式：2025-09-02 08:00:00)</shortDescription>
+        <value>1900-01-01 08:00:00</value>
+    </labels>
+    <labels>
+        <fullName>Storage_Location</fullName>
+        <categories>SAP Inventory</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Storage Location</shortDescription>
+        <value>Storage Location</value>
+    </labels>
+    <labels>
+        <fullName>SubmitContractBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubmitContractBody</shortDescription>
+        <value>Confirm Submit Order</value>
+    </labels>
+    <labels>
+        <fullName>SubmitContractHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubmitContractHeader</shortDescription>
+        <value>Submit Contract</value>
+    </labels>
+    <labels>
+        <fullName>SubmitContractStatusError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubmitContractStatusError</shortDescription>
+        <value>Can not submit this contract</value>
+    </labels>
+    <labels>
+        <fullName>SubmitOrderHeader</fullName>
+        <categories>Submit Order</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>SubmitOrderHeader</shortDescription>
+        <value>Submit Order</value>
+    </labels>
+    <labels>
+        <fullName>Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SupplementaryProductCode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupplementaryProductCode</shortDescription>
+        <value>Please supplementary Product Code</value>
+    </labels>
+    <labels>
+        <fullName>TargetArrivalDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TargetArrivalDate</shortDescription>
+        <value>Target Arrival Date</value>
+    </labels>
+    <labels>
+        <fullName>Total_Amount</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total Amount</shortDescription>
+        <value>Total Cost</value>
+    </labels>
+    <labels>
+        <fullName>Toxicity_Classification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Toxicity Classification</shortDescription>
+        <value>Toxicity Classification</value>
+    </labels>
+    <labels>
+        <fullName>Tracking_Code</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tracking Code</shortDescription>
+        <value>Tracking Code</value>
+    </labels>
+    <labels>
+        <fullName>UnFreezeInitNoticeError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UnFreezeInitNoticeError</shortDescription>
+        <value>Current Status Cannot UnFreeze.</value>
+    </labels>
+    <labels>
+        <fullName>Unit</fullName>
+        <categories>Quote Detail</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>Unit</shortDescription>
+        <value>Unit</value>
+    </labels>
+    <labels>
+        <fullName>Unit_Price</fullName>
+        <categories>Contract Detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unit Price</shortDescription>
+        <value>Unit Cost</value>
+    </labels>
+    <labels>
+        <fullName>UpdateBPMNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UpdateBPMNumber</shortDescription>
+        <value>Update BPM Damage Assessment Number</value>
+    </labels>
+    <labels>
+        <fullName>Upload</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Upload</shortDescription>
+        <value>Upload attachments</value>
+    </labels>
+    <labels>
+        <fullName>UploadedSuccessfully</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UploadedSuccessfully</shortDescription>
+        <value>file uploaded successfully</value>
+    </labels>
+    <labels>
+        <fullName>User3010</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User3010</shortDescription>
+        <value>005D5000004L319IAC</value>
+    </labels>
+    <labels>
+        <fullName>User3010B</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User3010B</shortDescription>
+        <value>005D5000004L319IAC</value>
+    </labels>
+    <labels>
+        <fullName>User3020</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User3020</shortDescription>
+        <value>005D5000004L319IAC</value>
+    </labels>
+    <labels>
+        <fullName>User5070B</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User5070B</shortDescription>
+        <value>005D5000004L319IAC</value>
+    </labels>
+    <labels>
+        <fullName>User5130</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User5130</shortDescription>
+        <value>005D5000004L319IAC</value>
+    </labels>
+    <labels>
+        <fullName>ValueNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ValueNumber</shortDescription>
+        <value>It must be a number</value>
+    </labels>
+    <labels>
+        <fullName>VideoType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VideoType</shortDescription>
+        <value>mp4;avi;mov;wmv;flv</value>
+    </labels>
+    <labels>
+        <fullName>VisitFileError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VisitFileError</shortDescription>
+        <value>Please confirm whether to upload the attachment</value>
+    </labels>
+    <labels>
+        <fullName>X5070LogisticsEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>5070LogisticsEmail</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>X5130LogisticsEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>5130LogisticsEmail</shortDescription>
+        <value>15683548230@163.com</value>
+    </labels>
+    <labels>
+        <fullName>YPF_Order_Approved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YPF Order Approved</shortDescription>
+        <value>The ypf order has been approved, this is the order detail link:</value>
+    </labels>
+    <labels>
+        <fullName>Yellow</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Yellow</shortDescription>
+        <value>https://rcg--rbdev.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Po00000zXXZx&amp;operationContext=CHATTER&amp;contentId=05TPo000019qtcI</value>
+    </labels>
+    <labels>
+        <fullName>ZARBContinueProduct</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZARBContinueProduct</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>ZAREOrderNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZAREOrderNumber</shortDescription>
+        <value>ZARE Order Number</value>
+    </labels>
+    <labels>
+        <fullName>ZARFCannotSubmit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZARFCannotSubmit</shortDescription>
+        <value>The following ZARE orders &apos;{0}&apos; are still under review and the current ZARF order cannot be submitted!</value>
+    </labels>
+    <labels>
+        <fullName>ZDFSubmitValidation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZDFSubmitValidation</shortDescription>
+        <value>Order details are incomplete. Please supplement them and try again.</value>
+    </labels>
+    <labels>
+        <fullName>cannotSubmit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>cannotSubmit</shortDescription>
+        <value>Please click the [Resync Data] Button</value>
+    </labels>
+    <labels>
+        <fullName>comments</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>comments</shortDescription>
+        <value>Submit Comments</value>
+    </labels>
+    <labels>
+        <fullName>daysNotify5130</fullName>
+        <categories>Email</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>daysNotify5130</shortDescription>
+        <value>50</value>
+    </labels>
+    <labels>
+        <fullName>defaultUnit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>defaultUnit</shortDescription>
+        <value>Default Unit</value>
+    </labels>
+    <labels>
+        <fullName>deleteLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>deleteLabel</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>lockOrderHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>lockOrderHeader</shortDescription>
+        <value>Confirm Lock Order</value>
+    </labels>
+    <labels>
+        <fullName>mass1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass1</shortDescription>
+        <value>Payment Term is required!</value>
+    </labels>
+    <labels>
+        <fullName>mass2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass2</shortDescription>
+        <value>please select at least one record</value>
+    </labels>
+    <labels>
+        <fullName>mass3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass3</shortDescription>
+        <value>select up to 100 records</value>
+    </labels>
+    <labels>
+        <fullName>mass4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass4</shortDescription>
+        <value>Save Success</value>
+    </labels>
+    <labels>
+        <fullName>mass5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass5</shortDescription>
+        <value>ZARA</value>
+    </labels>
+    <labels>
+        <fullName>mass6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass6</shortDescription>
+        <value>Order Number</value>
+    </labels>
+    <labels>
+        <fullName>mass7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass7</shortDescription>
+        <value>Payment Term</value>
+    </labels>
+    <labels>
+        <fullName>mass8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mass8</shortDescription>
+        <value>Auto Create ZAR1</value>
+    </labels>
+    <labels>
+        <fullName>no_access</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No access</shortDescription>
+        <value>No access</value>
+    </labels>
+    <labels>
+        <fullName>notifacationBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notifacationBody</shortDescription>
+        <value>Please ensure that the order item information is completed</value>
+    </labels>
+    <labels>
+        <fullName>productCost</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>productCost</shortDescription>
+        <value>Cost</value>
+    </labels>
+    <labels>
+        <fullName>productDescription</fullName>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>productDescription</shortDescription>
+        <value>Product Description</value>
+    </labels>
+    <labels>
+        <fullName>rate1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>rate1</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>rate2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>rate2</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>salesQuantity</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>salesQuantity</shortDescription>
+        <value>Sales Quantity</value>
+    </labels>
+    <labels>
+        <fullName>searchText</fullName>
+        <categories>Order Item</categories>
+        <language>zh_CN</language>
+        <protected>false</protected>
+        <shortDescription>searchText</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>updateSapOrderError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>updateSapOrderError</shortDescription>
+        <value>For orders created in SAP, you can&apos;t edit in CRM.</value>
+    </labels>
+</CustomLabels>

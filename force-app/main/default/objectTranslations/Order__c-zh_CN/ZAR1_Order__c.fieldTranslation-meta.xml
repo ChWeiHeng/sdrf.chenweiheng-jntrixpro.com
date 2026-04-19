@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ZAR1 Order --></label>
+    <name>ZAR1_Order__c</name>
+    <relationshipLabel><!-- Order (ZAR1 Order) --></relationshipLabel>
+</CustomFieldTranslation>

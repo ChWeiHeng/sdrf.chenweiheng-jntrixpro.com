@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_User__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( OR(TEXT($User.LocaleSidKey) =&apos;es_MX&apos;,TEXT($User.LocaleSidKey) =&apos;es_AR&apos;), Spanish_Description__c ,English_Description__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Item_Undelivered_Quantity_Report__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(isClosed__c,0,IF(TEXT(Order__r.Order_type__c )==&apos;ZARF&apos;,(Quantity__c - Delivery_Quantity__c)*-1, (Quantity__c - Delivery_Quantity__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Order Item Undelivered Quantity Report</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Sales_Info__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Customer Sales Info</label>
+    <lookupFilter>
+        <active>false</active>
+        <errorMessage>Customer Sales Info is not synchronized</errorMessage>
+        <filterItems>
+            <field>Customer_Sales_Info__c.Sync_Status__c</field>
+            <operation>equals</operation>
+            <value>Synchronized</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Customer_Sales_Info__c</referenceTo>
+    <relationshipLabel>Order</relationshipLabel>
+    <relationshipName>Order</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <fields>Commodity__c</fields>
+    <fields>Guide_Price__c</fields>
+    <fields>Price__c</fields>
+    <fields>Quantity__c</fields>
+    <fields>Amount_per_item__c</fields>
+    <fields>Min_Sales_Price__c</fields>
+    <label>All</label>
+</CompactLayout>

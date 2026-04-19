@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZAR00</fullName>
+        <default>false</default>
+        <label>ZAR00 CABA</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR01</fullName>
+        <default>false</default>
+        <label>ZAR01 Buenos Aires</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR02</fullName>
+        <default>false</default>
+        <label>ZAR02 Catamarca</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR03</fullName>
+        <default>false</default>
+        <label>ZAR03 Córdoba</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR04</fullName>
+        <default>false</default>
+        <label>ZAR04 Corrientes</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR05</fullName>
+        <default>false</default>
+        <label>ZAR05 Entre Rios</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR06</fullName>
+        <default>false</default>
+        <label>ZAR06 Jujuy</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR07</fullName>
+        <default>false</default>
+        <label>ZAR07 Mendoza</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR08</fullName>
+        <default>false</default>
+        <label>ZAR08 La Rioja</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR09</fullName>
+        <default>false</default>
+        <label>ZAR09 Salta</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR10</fullName>
+        <default>false</default>
+        <label>ZAR10 San Juan</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR11</fullName>
+        <default>false</default>
+        <label>ZAR11 San Luis</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR12</fullName>
+        <default>false</default>
+        <label>ZAR12 Santa Fé</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR13</fullName>
+        <default>false</default>
+        <label>ZAR13 S. del Estero</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR14</fullName>
+        <default>false</default>
+        <label>ZAR14 Tucumán</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR16</fullName>
+        <default>false</default>
+        <label>ZAR16 Chaco</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR17</fullName>
+        <default>false</default>
+        <label>ZAR17 Chubut</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR18</fullName>
+        <default>false</default>
+        <label>ZAR18 Formosa</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR19</fullName>
+        <default>false</default>
+        <label>ZAR19 Misiones</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR20</fullName>
+        <default>false</default>
+        <label>ZAR20 Neuquen</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR21</fullName>
+        <default>false</default>
+        <label>ZAR21 La Pampa</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR22</fullName>
+        <default>false</default>
+        <label>ZAR22 Rio Negro</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR23</fullName>
+        <default>false</default>
+        <label>ZAR23 Santa Cruz</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR24</fullName>
+        <default>false</default>
+        <label>ZAR24 Tierra de Fuego</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX01</fullName>
+        <default>false</default>
+        <label>ZMX01 Pacifico Sur</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX02</fullName>
+        <default>false</default>
+        <label>ZMX02 Altiplano</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX03</fullName>
+        <default>false</default>
+        <label>ZMX03 Centro</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX04</fullName>
+        <default>false</default>
+        <label>ZMX04 Golfo</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX05</fullName>
+        <default>false</default>
+        <label>ZMX05 Michoacan</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX06</fullName>
+        <default>false</default>
+        <label>ZMX06 Occidente</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX07</fullName>
+        <default>false</default>
+        <label>ZMX07 Pacifico Norte</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX00</fullName>
+        <default>false</default>
+        <label>ZMX00 HISTORY ORDER</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00007</fullName>
+        <default>false</default>
+        <label>Z00007 拉美大区墨西哥业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00004</fullName>
+        <default>false</default>
+        <label>Z00004 巴西及阿根廷大区阿根廷小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00015</fullName>
+        <default>false</default>
+        <label>Z00015 澳新及中东大区</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00000</fullName>
+        <default>false</default>
+        <label>Z00000 中国地区</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00001</fullName>
+        <default>false</default>
+        <label>Z00001 亚洲大区东亚业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00002</fullName>
+        <default>false</default>
+        <label>Z00002 亚洲大区泰巴业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00003</fullName>
+        <default>false</default>
+        <label>Z00003 亚洲大区</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00005</fullName>
+        <default>false</default>
+        <label>Z00005 巴西及阿根廷大区巴西小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00006</fullName>
+        <default>false</default>
+        <label>Z00006 巴西及阿根廷大区</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00008</fullName>
+        <default>false</default>
+        <label>Z00008 拉美大区中美业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00009</fullName>
+        <default>false</default>
+        <label>Z00009 拉美大区安第斯业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00010</fullName>
+        <default>false</default>
+        <label>Z00010 拉美大区Southern Cone业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00011</fullName>
+        <default>false</default>
+        <label>Z00011 欧洲及非洲大区欧洲业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00012</fullName>
+        <default>false</default>
+        <label>Z00012 欧洲及非洲大区中亚业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00013</fullName>
+        <default>false</default>
+        <label>Z00013 欧洲及非洲大区东南部非洲业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00014</fullName>
+        <default>false</default>
+        <label>Z00014 欧洲及非洲大区</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00016</fullName>
+        <default>false</default>
+        <label>Z00016 亚洲大区菲韩日业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00017</fullName>
+        <default>false</default>
+        <label>Z00017 亚洲大区缅束业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00018</fullName>
+        <default>false</default>
+        <label>Z00018 亚洲大区印度业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00019</fullName>
+        <default>false</default>
+        <label>Z00019 北美大区北美业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00020</fullName>
+        <default>false</default>
+        <label>Z00020 欧洲及非洲大区东非业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00021</fullName>
+        <default>false</default>
+        <label>Z00021 欧洲及非洲大区西非英语区业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00022</fullName>
+        <default>false</default>
+        <label>Z00022 欧洲及非洲大区西/中非法语区业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00023</fullName>
+        <default>false</default>
+        <label>Z00023 澳新及中东大区澳新业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00024</fullName>
+        <default>false</default>
+        <label>Z00024 澳新及中东大区中东业务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00025</fullName>
+        <default>false</default>
+        <label>Z00025 澳新及中东大区北非业务小组</label>
+    </customValue>
+    <description>销售区域</description>
+    <masterLabel>Sales District</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

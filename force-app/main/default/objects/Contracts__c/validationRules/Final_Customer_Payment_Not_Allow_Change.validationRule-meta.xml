@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Customer_Payment_Not_Allow_Change</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(AND(!ISBLANK(Quote__c),ISCHANGED(Final_Customer_Payment_Terms__c)),AND(Contract_Item__c&gt;0,ISBLANK(Quote__c),OR(TEXT(Status__c)==&apos;Draft&apos;,TEXT(Status__c)==&apos;Rejected&apos;,ISCHANGED(Final_Customer_Payment_Terms__c))))</errorConditionFormula>
+    <errorMessage>You cannot update the final customer payment term since you have already added contract details</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 04-15-2026
+  @last modified by  : Gerry 
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   04-15-2026   Gerry   Initial Version
+-->
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" access="global">
+	<aura:html tag="style">
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-modal__container{
+            max-width: 100%;
+            width:100% !important;
+        }
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }
+        .slds-modal__content{
+            <!-- overflow-y:hidden !important; -->
+            height:unset !important;
+            max-height:unset !important;
+        }
+    </aura:html>
+    <c:addCampaignProductLWC recordId="{!v.recordId}" onrefreshview="{!c.refreshview}" onclosemodal="{!c.closeModal}"/>
+</aura:component>

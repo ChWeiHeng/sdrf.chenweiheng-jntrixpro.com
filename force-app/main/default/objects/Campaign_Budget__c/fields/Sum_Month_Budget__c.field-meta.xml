@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sum_Month_Budget__c</fullName>
+    <label>Sum Month Budget</label>
+    <summarizedField>Monthly_Budget__c.Budgeted_Amount__c</summarizedField>
+    <summaryForeignKey>Monthly_Budget__c.Campaign_Budget__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,62 @@
+@isTest
+private class SAPReceivableWebServiceTest {
+    static testMethod void testMethod1() {
+        Invoice__c inv = new Invoice__c();
+        inv.External_Id__c = '11';
+        insert inv;
+        Account a = new Account();
+        a.Name = 'Test';
+        a.Group_Name__c = 'test';
+        a.MDG_Customer_Code__c = '123';
+        a.Customer_Approval_Status__c = 'Approved';
+        a.Sync_Status__c = 'Synchronized';
+        Insert a;
+        Customer_Credit_Info__c cci = new Customer_Credit_Info__c();
+        cci.Customer__c = a.Id;
+        cci.ExternalId__c = a.Id;
+        insert cci;
+        Customer_Sales_Info__c csi = new Customer_Sales_Info__c();
+        csi.Sales_Org__c = '5130';
+        csi.Distr_Channel__c = '00';
+        csi.Acct_Assmt_Grp_Cust__c = '01';
+        csi.Sales_View_Status__c = 'Approved';
+        csi.Customer__c = a.Id;
+        insert csi;
+        List<SAPReceivableWebService.ReqOrderInfo> rbList = new List<SAPReceivableWebService.ReqOrderInfo>();
+        SAPReceivableWebService.ReqOrderInfo rb = new SAPReceivableWebService.ReqOrderInfo();
+        rb.KUNNR = '123';
+        rb.BUKRS = '5130';
+        rb.GJAHR = '11';
+        rb.BELNR = '11';
+        rb.BUZEI = '11';
+        rb.H_BLART = 'AA';
+        rb.H_WAERS = 'AED';
+        rb.RFCCUR = 'AED';
+        rb.KURSF = '10';
+        rb.H_BUDAT = '2024-06-07';
+        rb.SHKZG = 'H';
+        rb.WRBTR = '10';
+        rb.DMBTR = '10';
+        rb.ZFBDT = '2024-06-07';
+        rb.ZTERM = 'AR01';
+        rb.NETDT = '2024-06-07';
+        rb.ZYQTS = '1';
+        rb.ZUONR = '11';
+        rb.HKONT = '11';
+        rb.VBELV = '11';
+        rb.AUART = 'ZAR1';
+        rb.VKORG = '5130';
+        rbList.add(rb);
+        SAPReceivableWebService.feedbackOrderInfo(rbList);
+        RestRequest request = new RestRequest();
+        request.requestUri = '/services/apexrest/SAPReceivableWebService';
+        request.httpMethod = 'POST';
+        request.addHeader('Content-Type', 'application/json');
+        String requestContent = '{"esbinfo":{},"resultinfo":{}}';
+        request.requestBody = Blob.valueOf(requestContent);
+        RestContext.request = request;
+        Test.startTest();
+        SAPReceivableWebService.doPost();
+        Test.stopTest();
+    }
+}

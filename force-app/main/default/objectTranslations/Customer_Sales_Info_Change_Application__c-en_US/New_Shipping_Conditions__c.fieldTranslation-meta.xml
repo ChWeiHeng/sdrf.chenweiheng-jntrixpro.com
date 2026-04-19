@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- New Shipping Conditions --></label>
+    <name>New_Shipping_Conditions__c</name>
+</CustomFieldTranslation>

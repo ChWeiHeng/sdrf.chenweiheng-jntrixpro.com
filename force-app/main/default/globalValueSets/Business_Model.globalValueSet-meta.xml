@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>TBD</fullName>
+        <default>false</default>
+        <label>TBD</label>
+    </customValue>
+    <description>客户组</description>
+    <masterLabel>Business Model待删除</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

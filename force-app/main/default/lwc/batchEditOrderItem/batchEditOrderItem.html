@@ -1,0 +1,52 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 04-13-2026
+  @last modified by  : Gerry 
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   04-13-2026   Gerry   Initial Version
+-->
+<template>
+    <lightning-card title="批量编辑订单项" icon-name="standard:order_item">
+        <div class="slds-card__body slds-card__body_inner">
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="加载中..." size="small"></lightning-spinner>
+            </template>
+
+            <!-- Data Table -->
+            <template if:true={hasOrderItems}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={orderItems}
+                    columns={columns}
+                    draft-values={draftValues}
+                    onsave={handleSave}
+                    oncancel={handleCancel}
+                    hide-checkbox-column
+                    show-row-number-column>
+                </lightning-datatable>
+            </template>
+
+            <!-- No Data Message -->
+            <template if:false={hasOrderItems}>
+                <div class="slds-text-align_center slds-p-around_medium">
+                    <p class="slds-text-color_weak">此订单暂无订单项</p>
+                </div>
+            </template>
+        </div>
+
+        <!-- Footer with Action Buttons -->
+        <div slot="footer" class="slds-clearfix">
+            <div class="slds-float_right">
+                <lightning-button 
+                    label="关闭" 
+                    onclick={closeModal}
+                    class="slds-m-right_small">
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

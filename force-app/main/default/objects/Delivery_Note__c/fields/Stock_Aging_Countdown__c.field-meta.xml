@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_Aging_Countdown__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK( Delivery_Post_Date__c ),
+NULL,
+IF(
+TODAY() - (Delivery_Post_Date__c + 2) &lt;= 0  &amp;&amp; ISPICKVAL(Delivery_Post_Status__c  , &apos;C&apos;) ,
+  VALUE( TEXT(Order__r.Stock_Aging_Limit__c) ) ,
+VALUE( TEXT(Order__r.Stock_Aging_Limit__c) )- (TODAY() - (Delivery_Post_Date__c + 2))
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Order&apos;s Stock Aging Limit - (TODAY - (Delivery Post Date + 2))</inlineHelpText>
+    <label>Stock Aging Countdown(days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MX_C_Delivery_Invoice_Status_Tracking</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Order_type__c</columns>
+    <columns>Cust_Reference__c</columns>
+    <columns>Status__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Total_Amount__c</columns>
+    <columns>Delivery_Amount__c</columns>
+    <columns>Invoice_Amount_Net__c</columns>
+    <columns>Amount_of_refund__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Remaining_Amount__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Deliver_Plant__c</field>
+        <operation>equals</operation>
+        <value>3020</value>
+    </filters>
+    <filters>
+        <field>Customer__c</field>
+        <operation>equals</operation>
+        <value>ERIC RENE HERRERA AVILA</value>
+    </filters>
+    <label>MX C Delivery &amp; Invoice Status Tracking</label>
+    <sharedTo>
+        <group>X3010</group>
+    </sharedTo>
+</ListView>

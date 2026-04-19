@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference_Actual_Price__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				OR(
+								TEXT(Order__r.Order_type__c)=&apos;ZMX2&apos;,
+								TEXT(Order__r.Order_type__c)=&apos;ZMX3&apos;
+				),
+				IF(
+								isClosed__c,
+								Cash_Price__c*Delivery_Quantity__c*-1,
+								Cash_Price__c*Quantity__c*-1
+				),
+				if(
+				    TEXT(Order__r.Order_type__c)=&apos;ZMX4&apos;,
+								IF(
+												isClosed__c,
+												Cash_Price__c*Delivery_Quantity__c,
+												Cash_Price__c*Quantity__c
+								),
+								IF(
+												isClosed__c,
+												Price__c*Delivery_Quantity__c,
+												Price__c*Quantity__c
+								)
+								
+				)
+				
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Reference Actual Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,120 @@
+<!--
+    @description       : 
+    @author            : Gerry
+    @group             : 
+    @last modified on  : 01-20-2026
+    @last modified by  : Gerry
+    Modifications Log
+    Ver   Date         Author   Modification
+    1.0   07-18-2025   Gerry   Initial Version
+  -->
+  <template>
+    <!-- <template if:true={show}> -->
+        <!-- 手机端 -->
+        <template if:false={isPC}>
+            <div class="slds-scrollable_y" style="height: 500px;padding-left: 10px;padding-right: 10px;background-color:#ddd;">
+                <span style="margin-left: 10px;font-size: initial;margin-top: 10px;margin-right: 10px;">Order Margin Level</span><lightning-formatted-rich-text value={infoData.orderMarginLevel}></lightning-formatted-rich-text>
+                <template for:each={infoData.orderItemList} for:item=info for:index="index">
+                    <div key={info.indexNum} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                        <lightning-card icon-name="standard:article">
+                            <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                                <div class="slds-p-around_medium slds-grid slds-wrap" >
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                        <label>#</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <input type="text" disabled value={info.SAP_Item_Num__c}>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.ProductCode}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            {info.Material_Number__c}
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.ProductNameOrderItem}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            {info.Commodity_Name__c}
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                        <label>{customLabel.MarginLevel}</label>
+                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                            <lightning-formatted-rich-text value={info.Margin_Level__c}></lightning-formatted-rich-text>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </lightning-record-edit-form>
+                            <!-- <div slot="footer">
+                                <template if:false={info.Show_More__c}>
+                                    <lightning-badge label={customLabel.Show_More} name={index} onclick={shooMoreMe}></lightning-badge>
+                                </template>
+                                <template if:true={info.Show_More__c}>
+                                    <lightning-badge label={customLabel.Show_Less} name={index} onclick={shooLessMe}></lightning-badge>
+                                </template>
+                            </div> -->
+                        </lightning-card>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- PC端 -->
+        <template if:true={isPC}>
+            <template if:true={lengthData}>
+                <span style="margin-left: 10px;font-size: initial;margin-top: 10px;margin-right: 10px;">Order Margin Level<lightning-formatted-rich-text value={infoData.orderMarginLevel}></lightning-formatted-rich-text></span>
+                <lightning-card>
+                    <!-- <lightning-button variant="brand" label='Add' onclick={addData} class="slds-p-around_x-small">
+                    </lightning-button> -->
+                    <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                        <div class="slds-scrollable_x slds-scrollable_y" style="height: 300px;">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                <thead>
+                                    <tr class="slds-line-height_reset" style="background-color: rgb(243 243 243);">
+                                        <th width={lengthData.num}  height="30px;" class="slds-is-fixed" scope="col" >
+                                            <span class="tableTitle" title="ItemNm__c">#</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="tableTitle" title="Name">{customLabel.ProductCode}</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="tableTitle" title="Name">{customLabel.ProductNameOrderItem}</span>
+                                        </th>
+
+                                        <!-- Margin_Level__c -->
+                                        <th scope="col">
+                                            <!-- <template if:true={cu}> -->
+                                            <span class="tableTitle" title="SalesRep__c">{customLabel.MarginLevel}</span>
+                                            <!-- </template> -->
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={infoData.orderItemList} for:item=info for:index="index">
+                                        <tr key={info.Id}>
+                                            <td class="slds-is-fixed slds-text-align_left" style="border-bottom: 1px solid #ddd;" width={lengthData.num}>
+                                                {info.SAP_Item_Num__c}
+                                            </td>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                {info.Material_Number__c}
+                                            </td>
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Commodity}>
+                                                {info.Commodity_Name__c}
+                                            </td>
+                                            
+                                            <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Price}>
+                                                <lightning-formatted-rich-text value={info.Margin_Level__c}></lightning-formatted-rich-text>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </lightning-record-edit-form>
+                </lightning-card>
+            </template>
+        </template>
+    <!-- </template> -->
+</template>

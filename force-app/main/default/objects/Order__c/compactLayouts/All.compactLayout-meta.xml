@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <fields>Name</fields>
+    <fields>Total_Amount__c</fields>
+    <fields>Margin_Rate__c</fields>
+    <fields>Amount_Difference__c</fields>
+    <fields>Amount_Rate__c</fields>
+    <fields>Actual_available_Credit_Limit__c</fields>
+    <fields>Exceeded_Credit_Limit_USD__c</fields>
+    <fields>Overdue__c</fields>
+    <label>All</label>
+</CompactLayout>

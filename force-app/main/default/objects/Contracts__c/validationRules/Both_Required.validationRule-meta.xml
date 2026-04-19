@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Both_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+ISBLANK(Inco_Location1__c) ,
+NOT(ISBLANK(TEXT(Incoterms__c )))
+),
+AND(
+NOT(ISBLANK(Inco_Location1__c)),
+ISBLANK(TEXT(Incoterms__c ))
+)
+)</errorConditionFormula>
+    <errorMessage>Both Incoterms and Inco Location1 are required</errorMessage>
+</ValidationRule>

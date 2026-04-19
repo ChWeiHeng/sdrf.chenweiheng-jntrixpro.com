@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Margin__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	OR(TEXT(Order__r.Deliver_Plant__c  )=&apos;3011&apos;,TEXT(Order__r.Deliver_Plant__c )=&apos;3020&apos;),(Actual_Total_Cash_Price__c - Actual_Total_Cost__c ),(Actual_Total_Price__c - Actual_Total_Cost__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual Margin</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

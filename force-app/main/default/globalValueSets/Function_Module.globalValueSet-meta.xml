@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Customer Management</fullName>
+        <default>false</default>
+        <label>Customer Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Quotation</fullName>
+        <default>false</default>
+        <label>Quotation</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract-HQ</fullName>
+        <default>false</default>
+        <label>Contract-HQ</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract-client</fullName>
+        <default>false</default>
+        <label>Contract-client</label>
+    </customValue>
+    <customValue>
+        <fullName>Order Management</fullName>
+        <default>false</default>
+        <label>Order Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Management</fullName>
+        <default>false</default>
+        <label>Product Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Forecast Management</fullName>
+        <default>false</default>
+        <label>Sales Forecast Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Report and Dashboard</fullName>
+        <default>false</default>
+        <label>Report and Dashboard</label>
+    </customValue>
+    <customValue>
+        <fullName>System Configuration</fullName>
+        <default>false</default>
+        <label>System Configuration</label>
+    </customValue>
+    <masterLabel>Function Module</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

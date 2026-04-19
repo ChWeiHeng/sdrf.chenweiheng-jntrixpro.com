@@ -1,0 +1,46 @@
+.slds-is-fixed {
+    position: sticky;
+    left: 0;
+    background-color: #f5f5f5; /* 浅灰色 */
+    z-index: 1;
+}
+
+.slds-table_fixed-layout {
+    table-layout: auto;
+    width: 100%;
+}
+
+.slds-scrollable_x {
+    overflow-x: auto;
+}
+
+.slds-scrollable_y {
+    overflow-y: auto;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5; /* 浅灰色 */
+    z-index: 2;
+}
+
+tbody tr td {
+    white-space: nowrap;
+}
+
+/* Ensure the first column is always visible when scrolling horizontally */
+thead th:first-child,
+tbody tr td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #f5f5f5; /* 浅灰色 */
+    z-index: 3;
+}
+thead th:nth-child(2),
+tbody tr td:nth-child(2) {
+    position: sticky;
+    left: 82px;
+    background-color: #f5f5f5; /* 浅灰色 */
+    z-index: 3;
+}

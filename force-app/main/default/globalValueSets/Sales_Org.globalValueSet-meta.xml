@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3010</fullName>
+        <default>false</default>
+        <label>3010 RAMX</label>
+    </customValue>
+    <customValue>
+        <fullName>3020</fullName>
+        <default>false</default>
+        <label>3020 AGT MX</label>
+    </customValue>
+    <customValue>
+        <fullName>5130</fullName>
+        <default>false</default>
+        <label>5130 AGT AR</label>
+    </customValue>
+    <customValue>
+        <fullName>5070</fullName>
+        <default>false</default>
+        <label>5070 RAAR</label>
+    </customValue>
+    <customValue>
+        <fullName>1040</fullName>
+        <default>false</default>
+        <label>1040_SHANDONG WEIFANG RAINBOW CHEMICAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>1050</fullName>
+        <default>false</default>
+        <label>1050_QINGDAO RAINBOW CHEMICAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>1060</fullName>
+        <default>false</default>
+        <label>1060_NINGXIA RAINBOW CHEMICAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>1080</fullName>
+        <default>false</default>
+        <label>1080_SHANDONG RAINBOW INTERNATIONAL CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>1100</fullName>
+        <default>false</default>
+        <label>1100_Ningxia Hanrun Biotechnology Co., Ltd.</label>
+    </customValue>
+    <customValue>
+        <fullName>2010</fullName>
+        <default>false</default>
+        <label>2010_SHANDONG RAINBOW AGROSCIENCES CO.,LTD</label>
+    </customValue>
+    <customValue>
+        <fullName>2210</fullName>
+        <default>false</default>
+        <label>2210_RAINBOW AGROSCIENCES MX CO.,LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2240</fullName>
+        <default>false</default>
+        <label>2240_AGROTECH INTERNATIONAL CO., LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>1081</fullName>
+        <default>false</default>
+        <label>1081_山东润科采购一部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1041</fullName>
+        <default>false</default>
+        <label>1041_润丰采购一部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1042</fullName>
+        <default>false</default>
+        <label>1042_润丰采购二部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1043</fullName>
+        <default>false</default>
+        <label>1043_润丰采购三部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1044</fullName>
+        <default>false</default>
+        <label>1044_润丰服务类销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1051</fullName>
+        <default>false</default>
+        <label>1051_青岛润农采购一部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1052</fullName>
+        <default>false</default>
+        <label>1052_青岛润农采购二部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1053</fullName>
+        <default>false</default>
+        <label>1053_青岛润农采购三部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1054</fullName>
+        <default>false</default>
+        <label>1054_青岛润农服务类销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1061</fullName>
+        <default>false</default>
+        <label>1061_宁夏格瑞采购一部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1062</fullName>
+        <default>false</default>
+        <label>1062_宁夏格瑞采购二部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1063</fullName>
+        <default>false</default>
+        <label>1063_宁夏格瑞采购三部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1064</fullName>
+        <default>false</default>
+        <label>1064_宁夏格瑞服务类销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1070</fullName>
+        <default>false</default>
+        <label>1070_山东润博生物科技有限公司销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1082</fullName>
+        <default>false</default>
+        <label>1082_山东润科采购二部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1083</fullName>
+        <default>false</default>
+        <label>1083_山东润科采购三部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1084</fullName>
+        <default>false</default>
+        <label>1084_山东润科服务类销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1090</fullName>
+        <default>false</default>
+        <label>1090_山东润博安全科技有限公司销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1101</fullName>
+        <default>false</default>
+        <label>1101_宁夏汉润采购一部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1102</fullName>
+        <default>false</default>
+        <label>1102_宁夏汉润采购二部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1103</fullName>
+        <default>false</default>
+        <label>1103_宁夏汉润采购三部销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>1104</fullName>
+        <default>false</default>
+        <label>1104_宁夏汉润服务类销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>2220</fullName>
+        <default>false</default>
+        <label>2220_山东润丰农科（香港）销售组织</label>
+    </customValue>
+    <customValue>
+        <fullName>2230</fullName>
+        <default>false</default>
+        <label>2230_Rainbow Agrosciences (AGO) Limited</label>
+    </customValue>
+    <customValue>
+        <fullName>2290</fullName>
+        <default>false</default>
+        <label>2290_AGROFARM CO., LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2380</fullName>
+        <default>false</default>
+        <label>2380_AGROFUTURE CO., LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>2100</fullName>
+        <default>false</default>
+        <label>2100</label>
+    </customValue>
+    <description>销售组织
+24.12.27：根据订单实际用到的销售组织禁用了部分总部相关选项值</description>
+    <masterLabel>Sales Org</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

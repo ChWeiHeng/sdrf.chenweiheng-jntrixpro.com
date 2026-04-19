@@ -1,0 +1,77 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 01-15-2026
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   01-15-2026   Gerry   Initial Version
+-->
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+                <!-- Submit Order -->
+                {customLabel.SubmitOrderHeader}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+            <!-- 非借贷项订单 -->
+            <template if:false={isCDOrder}>
+                <template if:true={info}>
+                    <div class="slds-align_absolute-center slds-text-heading_medium" style="height:100%;">
+                        <template if:true={info.isShow}>
+                            <div class="slds-p-around_medium slds-grid slds-wrap" >
+                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                    <lightning-input type="text" value={info.sapCreditOrder} label={customLabel.SapCredit} disabled=true></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                    <lightning-input type="text" value={info.orderApproingAmountOrder} label={customLabel.OrderApproingAmount} disabled=true></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                    <lightning-input type="text" value={info.remainingCreditOrder} label={customLabel.RemainingCredit} disabled=true></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                    <lightning-input type="text" value={info.orderAmountOrder} label={customLabel.Order_Amount} disabled=true></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                    <span style="font-size: 12px;">{customLabel.Overdue}</span>
+                                    <template if:true={info.overdue}>
+                                        <lightning-input type="checkbox" value={info.overdue} label="Overdue" disabled=true checked variant="label-hidden"></lightning-input>
+                                    </template>
+                                    <template if:false={info.overdue}>
+                                        <lightning-input type="checkbox" value={info.overdue} label="Overdue" disabled=true variant="label-hidden"></lightning-input>
+                                    </template>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                    <lightning-input type="text" value={info.comments} label={customLabel.comments} onchange={commentsChange}></lightning-input>
+                                </div>
+                            </div>
+                        </template>
+                        <template if:false={info.isShow}>
+                            {info.showText}
+                        </template>
+                    </div>
+                </template>
+            </template>
+            
+            <!-- 借贷项订单 -->
+            <template if:true={isCDOrder}>
+                <c-order-item-margin-l-w-c info-data-par={orderListData}></c-order-item-margin-l-w-c>
+            </template>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <template if:true={info.isCanSubmit}>
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                    </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

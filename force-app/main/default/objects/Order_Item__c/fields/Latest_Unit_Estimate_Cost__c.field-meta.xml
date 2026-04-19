@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Unit_Estimate_Cost__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Order__r.Currency__c)=&apos;USD&apos;,Price_Book_Item__r.Estimation_Cost_USD__c, Price_Book_Item__r.Estimation_Cost_Local__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Latest Unit Estimate Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>20</fullName>
+        <default>false</default>
+        <label>20 Product</label>
+    </customValue>
+    <customValue>
+        <fullName>2001</fullName>
+        <default>false</default>
+        <label>2001 Herbicide</label>
+    </customValue>
+    <customValue>
+        <fullName>200101</fullName>
+        <default>false</default>
+        <label>200101 Herbicide (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200102</fullName>
+        <default>false</default>
+        <label>200102 Herbicide (2 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200103</fullName>
+        <default>false</default>
+        <label>200103 Herbicide (3 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200104</fullName>
+        <default>false</default>
+        <label>200104 Herbicide (4 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>2002</fullName>
+        <default>false</default>
+        <label>2002 Fungicide</label>
+    </customValue>
+    <customValue>
+        <fullName>200201</fullName>
+        <default>false</default>
+        <label>200201 Fungicide (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200202</fullName>
+        <default>false</default>
+        <label>200202 Fungicide (2 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200203</fullName>
+        <default>false</default>
+        <label>200203 Fungicide (3 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200204</fullName>
+        <default>false</default>
+        <label>200204 Fungicide (4 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>2003</fullName>
+        <default>false</default>
+        <label>2003 Insecticide</label>
+    </customValue>
+    <customValue>
+        <fullName>200301</fullName>
+        <default>false</default>
+        <label>200301 Insecticide (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200302</fullName>
+        <default>false</default>
+        <label>200302 Insecticide (2 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200303</fullName>
+        <default>false</default>
+        <label>200303 Insecticide (3 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200304</fullName>
+        <default>false</default>
+        <label>200304 Insecticide (4 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>2004</fullName>
+        <default>false</default>
+        <label>2004 Plant Growth Regulators</label>
+    </customValue>
+    <customValue>
+        <fullName>200401</fullName>
+        <default>false</default>
+        <label>200401 Plant Growth Regulators (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200402</fullName>
+        <default>false</default>
+        <label>200402 Plant Growth Regulators (2 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200403</fullName>
+        <default>false</default>
+        <label>200403 Plant Growth Regulators (3 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200404</fullName>
+        <default>false</default>
+        <label>200404 Plant Growth Regulators (4 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>2005</fullName>
+        <default>false</default>
+        <label>2005 Rodenticide</label>
+    </customValue>
+    <customValue>
+        <fullName>200501</fullName>
+        <default>false</default>
+        <label>200501 Rodenticide (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200502</fullName>
+        <default>false</default>
+        <label>200502 Rodenticide (2 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200503</fullName>
+        <default>false</default>
+        <label>200503 Rodenticide (3 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200504</fullName>
+        <default>false</default>
+        <label>200504 Rodenticide (4 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>2006</fullName>
+        <default>false</default>
+        <label>2006 Biostimulant</label>
+    </customValue>
+    <customValue>
+        <fullName>200601</fullName>
+        <default>false</default>
+        <label>200601 Biostimulant (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200602</fullName>
+        <default>false</default>
+        <label>200602 Biostimulant (2 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200603</fullName>
+        <default>false</default>
+        <label>200603 Biostimulant (3 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>200604</fullName>
+        <default>false</default>
+        <label>200604 Biostimulant (4 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00002</fullName>
+        <default>false</default>
+        <label>Z00002 Non-Product</label>
+    </customValue>
+    <customValue>
+        <fullName>210301</fullName>
+        <default>false</default>
+        <label>210301 Semi-Insecticide (1 A.I.)</label>
+    </customValue>
+    <customValue>
+        <fullName>100101</fullName>
+        <default>false</default>
+        <label>100101</label>
+    </customValue>
+    <customValue>
+        <fullName>100201</fullName>
+        <default>false</default>
+        <label>100201</label>
+    </customValue>
+    <customValue>
+        <fullName>110102</fullName>
+        <default>false</default>
+        <label>110102</label>
+    </customValue>
+    <customValue>
+        <fullName>110303</fullName>
+        <default>false</default>
+        <label>110303</label>
+    </customValue>
+    <customValue>
+        <fullName>110305</fullName>
+        <default>false</default>
+        <label>110305</label>
+    </customValue>
+    <customValue>
+        <fullName>110306</fullName>
+        <default>false</default>
+        <label>110306</label>
+    </customValue>
+    <customValue>
+        <fullName>110307</fullName>
+        <default>false</default>
+        <label>110307</label>
+    </customValue>
+    <customValue>
+        <fullName>110308</fullName>
+        <default>false</default>
+        <label>110308</label>
+    </customValue>
+    <customValue>
+        <fullName>110309</fullName>
+        <default>false</default>
+        <label>110309</label>
+    </customValue>
+    <customValue>
+        <fullName>Z00003</fullName>
+        <default>false</default>
+        <label>Z00003</label>
+    </customValue>
+    <customValue>
+        <fullName>300102</fullName>
+        <default>false</default>
+        <label>300102</label>
+    </customValue>
+    <customValue>
+        <fullName>300117</fullName>
+        <default>false</default>
+        <label>300117</label>
+    </customValue>
+    <customValue>
+        <fullName>300201</fullName>
+        <default>false</default>
+        <label>300201</label>
+    </customValue>
+    <customValue>
+        <fullName>210101</fullName>
+        <default>false</default>
+        <label>210101	One element herbicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210102</fullName>
+        <default>false</default>
+        <label>210102 Binary herbicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210103</fullName>
+        <default>false</default>
+        <label>210103 Ternary herbicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210104</fullName>
+        <default>false</default>
+        <label>210104 Quadratic herbicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210201</fullName>
+        <default>false</default>
+        <label>210201 Mono fungicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210202</fullName>
+        <default>false</default>
+        <label>210202 Binary fungicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210203</fullName>
+        <default>false</default>
+        <label>210203 Ternary fungicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210204</fullName>
+        <default>false</default>
+        <label>210204 Quadruple fungicide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210302</fullName>
+        <default>false</default>
+        <label>210302 Binary insecticide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210303</fullName>
+        <default>false</default>
+        <label>210303 Ternary insecticide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210304</fullName>
+        <default>false</default>
+        <label>210304 Quadratic insecticide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210401</fullName>
+        <default>false</default>
+        <label>210401 One element plant growth regulator materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210402</fullName>
+        <default>false</default>
+        <label>210402 Binary plant growth regulator materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210403</fullName>
+        <default>false</default>
+        <label>210403 Ternary plant growth regulator materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210404</fullName>
+        <default>false</default>
+        <label>210404 Quadratic plant growth regulator materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210501</fullName>
+        <default>false</default>
+        <label>210501 One element rodenticide material</label>
+    </customValue>
+    <customValue>
+        <fullName>210502</fullName>
+        <default>false</default>
+        <label>210502 Binary rodenticide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210503</fullName>
+        <default>false</default>
+        <label>210503 Ternary rodenticide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210504</fullName>
+        <default>false</default>
+        <label>210504 Quaternary rodenticide materials</label>
+    </customValue>
+    <customValue>
+        <fullName>210601</fullName>
+        <default>false</default>
+        <label>210601</label>
+    </customValue>
+    <customValue>
+        <fullName>1001</fullName>
+        <default>false</default>
+        <label>1001</label>
+    </customValue>
+    <customValue>
+        <fullName>530102</fullName>
+        <default>false</default>
+        <label>530102</label>
+    </customValue>
+    <customValue>
+        <fullName>540904</fullName>
+        <default>false</default>
+        <label>540904 Promotion</label>
+    </customValue>
+    <customValue>
+        <fullName>450402</fullName>
+        <default>false</default>
+        <label>450402</label>
+    </customValue>
+    <customValue>
+        <fullName>410204</fullName>
+        <default>false</default>
+        <label>410204</label>
+    </customValue>
+    <customValue>
+        <fullName>100301</fullName>
+        <default>false</default>
+        <label>100301</label>
+    </customValue>
+    <customValue>
+        <fullName>300105</fullName>
+        <default>false</default>
+        <label>300105</label>
+    </customValue>
+    <customValue>
+        <fullName>300113</fullName>
+        <default>false</default>
+        <label>300113</label>
+    </customValue>
+    <customValue>
+        <fullName>300111</fullName>
+        <default>false</default>
+        <label>300111</label>
+    </customValue>
+    <customValue>
+        <fullName>210602</fullName>
+        <default>false</default>
+        <label>210602</label>
+    </customValue>
+    <description>物料组</description>
+    <masterLabel>Material Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

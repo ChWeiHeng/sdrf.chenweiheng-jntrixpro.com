@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_a</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Request_System__c</columns>
+    <columns>Destination_System__c</columns>
+    <columns>Interact_Time__c</columns>
+    <columns>Is_Success__c</columns>
+    <columns>Exception_Message__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>recordID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Description__c</field>
+        <operation>contains</operation>
+        <value>CRM同步订单至SAP</value>
+    </filters>
+    <label>CRM同步订单至SAP</label>
+</ListView>

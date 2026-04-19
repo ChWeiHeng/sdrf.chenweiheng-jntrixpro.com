@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Customer Sales Info Change Application --></label>
+    <name>Customer_Sales_Info_Change_Application__c</name>
+    <relationshipLabel><!-- Customer Tax Category Application --></relationshipLabel>
+</CustomFieldTranslation>

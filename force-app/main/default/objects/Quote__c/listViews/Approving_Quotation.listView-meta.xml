@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approving_Quotation</fullName>
+    <columns>NAME</columns>
+    <columns>Quote_Name__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Payment_Term__c</columns>
+    <columns>Total_Gross_Margin__c</columns>
+    <columns>Deliver_Plant__c</columns>
+    <columns>Approval_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approving</value>
+    </filters>
+    <label>Approving Quotation</label>
+</ListView>

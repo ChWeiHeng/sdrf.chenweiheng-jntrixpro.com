@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Customer__c</field>
+        <field>Overdue__c</field>
+        <field>Max_Overdue_Days__c</field>
+        <field>Ultra_Credit__c</field>
+        <field>SAP_Credit_Limit__c</field>
+        <field>Owner</field>
+        <field>Total_Amount__c</field>
+        <field>Order_Amount_Guide__c</field>
+        <field>Amount_Difference__c</field>
+        <field>Amount_Rate__c</field>
+        <field>Margin_Rate__c</field>
+        <field>Order_type__c</field>
+        <field>Currency__c</field>
+        <field>Terms_Of_Payment__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <label>Reginal Manager</label>
+        <name>Reginal_Manager</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>benjamin.robles@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Country Manager</label>
+        <name>Carlos</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>laryfan@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(AND(TEXT(Order_type__c)=&apos;ZMX1&apos;,Total_Price__c&gt;=160000,Total_Price__c&lt;200000),Max_Price_Rate__c*100 &gt;20,Margin_Rate__c*100&lt;20,Over_Credit_Line_Percent__c*100&gt;10,Max_Overdue_Days__c&gt;=60)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Area Head</label>
+        <name>Eric</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>doris_li@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(AND(Over_Credit_Line_Percent__c*100&gt;10,TEXT(Terms_Of_Payment__c)!=&apos;G001&apos;),Max_Overdue_Days__c&gt;60)</formula>
+        </entryCriteria>
+        <label>HQ Committee</label>
+        <name>HQ_Doris</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+    OR(
+        TEXT(Status__c)= &apos;Draft&apos;,
+        TEXT(Status__c)= &apos;Rejected&apos;
+    ), 
+    OR(
+        TEXT(Order_type__c)=&apos;ZMX1&apos;,
+        TEXT(Order_type__c)=&apos;ZMX6&apos;
+    ),  
+    RecordType.Name =&apos;Model C&apos;, 
+    TEXT($User.Delivery_Plant__c)=&apos;3020&apos; 
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>OrderApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>OrderApproveFailed</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>OrderApproving</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Standrad Order MX C4</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>26</processOrder>
+    <recallActions>
+        <action>
+            <name>OrderDraft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

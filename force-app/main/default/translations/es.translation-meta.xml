@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- ARContractPaymentTerms --></label>
+        <name>ARContractPaymentTerms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ARContractSyncNoticeEmail --></label>
+        <name>ARContractSyncNoticeEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ARDAYS --></label>
+        <name>ARDAYS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ARFI --></label>
+        <name>ARFI</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ARFI_B --></label>
+        <name>ARFI_B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ARFI_BDays --></label>
+        <name>ARFI_BDays</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AUFI --></label>
+        <name>AUFI</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc3010 --></label>
+        <name>Acc3010</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc3010B --></label>
+        <name>Acc3010B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc3020 --></label>
+        <name>Acc3020</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc5070B --></label>
+        <name>Acc5070B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc5130 --></label>
+        <name>Acc5130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccFreezeError --></label>
+        <name>AccFreezeError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccFreezeSumbitApprovalHeader --></label>
+        <name>AccFreezeSumbitApprovalHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamDelError --></label>
+        <name>AccTeamDelError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamDelPlantError --></label>
+        <name>AccTeamDelPlantError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamEditDelError --></label>
+        <name>AccTeamEditDelError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamEditError --></label>
+        <name>AccTeamEditError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamEditPlantError --></label>
+        <name>AccTeamEditPlantError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamInsertSameDeliveryError --></label>
+        <name>AccTeamInsertSameDeliveryError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccTeamOwnerInsertError --></label>
+        <name>AccTeamOwnerInsertError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccUnFreezeSumbitApprovalHeader --></label>
+        <name>AccUnFreezeSumbitApprovalHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccVisitInsertUpdateError --></label>
+        <name>AccVisitInsertUpdateError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccVisitTaskDelError --></label>
+        <name>AccVisitTaskDelError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccVisitTaskInsertError --></label>
+        <name>AccVisitTaskInsertError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccVisitTaskUpdateError --></label>
+        <name>AccVisitTaskUpdateError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc Approved Title --></label>
+        <name>Acc_Approved_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Acc Rejected Title --></label>
+        <name>Acc_Rejected_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccountUpdateNotfication --></label>
+        <name>AccountUpdateNotfication</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccountUpdateNotficationBody --></label>
+        <name>AccountUpdateNotficationBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AccountVisitRemindDay --></label>
+        <name>AccountVisitRemindDay</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account Required --></label>
+        <name>Account_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account Sales Info Required --></label>
+        <name>Account_Sales_Info_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Action --></label>
+        <name>Action</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ActualQuantity --></label>
+        <name>ActualQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ActualQuantityHelpText --></label>
+        <name>ActualQuantityHelpText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Contract Detail --></label>
+        <name>Add_Contract_Detail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Error --></label>
+        <name>Add_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Order Contract Detail --></label>
+        <name>Add_Order_Contract_Detail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Amount per item --></label>
+        <name>Amount_per_item</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approving Inventory --></label>
+        <name>Approving_Inventory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approving Qty --></label>
+        <name>Approving_Qty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AutoReject --></label>
+        <name>AutoReject</name>
+    </customLabels>
+    <customLabels>
+        <label>Este pedido es generado automáticamente desde ZARB, no puede editarse directamente, pero puede editar este pedido y crear automáticamente ZAR1 mediante el botón &quot;Edición Masiva de Pedido&quot; en la vista de lista de pedidos.</label>
+        <name>AutoZARACannotEdit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Auto ZARA Email1 --></label>
+        <name>Auto_ZARA_Email1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Auto ZARA Email CC 5070 --></label>
+        <name>Auto_ZARA_Email_CC</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Auto_ZARA_Email_CC_5130 --></label>
+        <name>Auto_ZARA_Email_CC_5130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available Inventory --></label>
+        <name>Available_Inventory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BPMNumberRequired --></label>
+        <name>BPMNumberRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BPMUsercode --></label>
+        <name>BPMUsercode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BTOCBody --></label>
+        <name>BTOCBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BTOCTitle --></label>
+        <name>BTOCTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BU Margin Rate --></label>
+        <name>BU_Margin_Rate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BU Sales Price --></label>
+        <name>BU_Sales_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Basic Unit --></label>
+        <name>Basic_Unit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportError1 --></label>
+        <name>BatchImportError1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportError2 --></label>
+        <name>BatchImportError2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportError3 --></label>
+        <name>BatchImportError3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportError4 --></label>
+        <name>BatchImportError4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportMonthlyBudgetHeader --></label>
+        <name>BatchImportMonthlyBudgetHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportParticipantsListHeader --></label>
+        <name>BatchImportParticipantsListHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchImportPriceBookItemHeader --></label>
+        <name>BatchImportPriceBookItemHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BatchSendEmailEndDate(default-0)直接配置当前用户东八时区DateTime:2025-12-05-15-00-53 --></label>
+        <name>BatchSendEmailEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Black --></label>
+        <name>Black</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BudgetBody --></label>
+        <name>BudgetBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BudgetGreaterYearBudgetError --></label>
+        <name>BudgetGreaterYearBudgetError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BudgetLessSpentError --></label>
+        <name>BudgetLessSpentError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BudgetTitle --></label>
+        <name>BudgetTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CIF Price --></label>
+        <name>CIF_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CIF Price Include Commission --></label>
+        <name>CIF_Price_Include_Commission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CIF Price Without Margin --></label>
+        <name>CIF_Price_Without_Margin</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CQN --></label>
+        <name>CQN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CamFileError --></label>
+        <name>CamFileError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CampaignProductInsertError --></label>
+        <name>CampaignProductInsertError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CampaignProductUpdateError --></label>
+        <name>CampaignProductUpdateError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CanNotChangeCustomerKeyInfo --></label>
+        <name>CanNotChangeCustomerKeyInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CancelLable --></label>
+        <name>CancelLable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel Contract Header --></label>
+        <name>Cancel_Contract_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CannotDeleteOrder --></label>
+        <name>CannotDeleteOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CashPrice --></label>
+        <name>CashPrice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChangeCustomerSalesInfo --></label>
+        <name>ChangeCustomerSalesInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChangeCustomerSalesInfoHeard --></label>
+        <name>ChangeCustomerSalesInfoHeard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChangeIsCustomerConfirmHead --></label>
+        <name>ChangeIsCustomerConfirmHead</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Clearance Cost Percentage --></label>
+        <name>Clearance_Cost_Percentage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloneQuoteDetailRemoveField --></label>
+        <name>CloneQuoteDetailRemoveField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloneSaleInfoRemoveField --></label>
+        <name>CloneSaleInfoRemoveField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseHeader --></label>
+        <name>CloseEscCaseHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseReason --></label>
+        <name>CloseEscCaseReason</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseReasonRequired --></label>
+        <name>CloseEscCaseReasonRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseResolve --></label>
+        <name>CloseEscCaseResolve</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseResolveRequired --></label>
+        <name>CloseEscCaseResolveRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseStatus --></label>
+        <name>CloseEscCaseStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseEscCaseStatusRequired --></label>
+        <name>CloseEscCaseStatusRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comment --></label>
+        <name>Comment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commission --></label>
+        <name>Commission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CommissionNotComplete --></label>
+        <name>CommissionNotComplete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commission Amount --></label>
+        <name>Commission_Amount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commission Calculation Method --></label>
+        <name>Commission_Calculation_Method</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commission Info --></label>
+        <name>Commission_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commission Percent --></label>
+        <name>Commission_Percent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commission Rate --></label>
+        <name>Commission_Rate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commodity --></label>
+        <name>Commodity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ComplaintApproving --></label>
+        <name>ComplaintApproving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ComplaintCancel --></label>
+        <name>ComplaintCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ComplaintClose --></label>
+        <name>ComplaintClose</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CompleteBody --></label>
+        <name>CompleteBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ConfirmLabel --></label>
+        <name>ConfirmLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ConfirmSubmitOrder --></label>
+        <name>ConfirmSubmitOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm Submit Order --></label>
+        <name>Confirm_Submit_Order</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ConsignmentOpen --></label>
+        <name>ConsignmentOpen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ContentSize --></label>
+        <name>ContentSize</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ContractChangeSyncStatusError --></label>
+        <name>ContractChangeSyncStatusError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ContractCreate --></label>
+        <name>ContractCreate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ContractFieldRequired --></label>
+        <name>ContractFieldRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ContractSyncBPMBody --></label>
+        <name>ContractSyncBPMBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contract Processing Product --></label>
+        <name>Contract_Processing_Product</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contract Processing Product Name --></label>
+        <name>Contract_Processing_Product_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contract Sync BPM --></label>
+        <name>Contract_Sync_BPM</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CopyCustomerConfirmInfo --></label>
+        <name>CopyCustomerConfirmInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CopyCustomerConfirmInfoHeader --></label>
+        <name>CopyCustomerConfirmInfoHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CopyCustomerVertifySumbit --></label>
+        <name>CopyCustomerVertifySumbit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Corn --></label>
+        <name>Corn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cost --></label>
+        <name>Cost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateContractError --></label>
+        <name>CreateContractError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateContractHeader --></label>
+        <name>CreateContractHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateContractType --></label>
+        <name>CreateContractType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateContractTypeRequired --></label>
+        <name>CreateContractTypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateFreeOrder --></label>
+        <name>CreateFreeOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateFreeOrderConfirm --></label>
+        <name>CreateFreeOrderConfirm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateOrderError --></label>
+        <name>CreateOrderError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateOrderTypeLabel --></label>
+        <name>CreateOrderTypeLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreateOrderTypeRequired --></label>
+        <name>CreateOrderTypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Created Date --></label>
+        <name>Created_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreditNotificationBody --></label>
+        <name>CreditNotificationBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CreditNotificationHeader --></label>
+        <name>CreditNotificationHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Credit Approved Title --></label>
+        <name>Credit_Approved_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Credit Rejected Title --></label>
+        <name>Credit_Rejected_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Currency --></label>
+        <name>Currency</name>
+    </customLabels>
+    <customLabels>
+        <label>Período de Antigüedad Actual</label>
+        <name>Current_Aging_Period</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerAddressRequired --></label>
+        <name>CustomerAddressRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerApprovalNotification --></label>
+        <name>CustomerApprovalNotification</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerName --></label>
+        <name>CustomerName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerUpdateNotification --></label>
+        <name>CustomerUpdateNotification</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerVisitSubmitConfirm --></label>
+        <name>CustomerVisitSubmitConfirm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerVisitSubmitHeader --></label>
+        <name>CustomerVisitSubmitHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Customer Approved --></label>
+        <name>Customer_Approved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Customer Field Edit --></label>
+        <name>Customer_Field_Edit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Customer Team User --></label>
+        <name>Customer_Team_User</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustometVisitCommentNotice --></label>
+        <name>CustometVisitCommentNotice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustometVisitSubmitError --></label>
+        <name>CustometVisitSubmitError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustometVisitSubmitNoticeManager --></label>
+        <name>CustometVisitSubmitNoticeManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustometVisitSubmitNoticeUser --></label>
+        <name>CustometVisitSubmitNoticeUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Days --></label>
+        <name>Days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeleteDeliveryError --></label>
+        <name>DeleteDeliveryError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeleteError --></label>
+        <name>DeleteError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeliveryAttachment --></label>
+        <name>DeliveryAttachment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeliveryAttachmentBody --></label>
+        <name>DeliveryAttachmentBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeliveryBody --></label>
+        <name>DeliveryBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeliveryOrderQty --></label>
+        <name>DeliveryOrderQty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DeliveryTitle --></label>
+        <name>DeliveryTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivery Changed --></label>
+        <name>Delivery_Changed</name>
+    </customLabels>
+    <customLabels>
+        <label>Fecha de entrega</label>
+        <name>Delivery_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivery Note Number --></label>
+        <name>Delivery_Note_Number</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivery Time --></label>
+        <name>Delivery_Time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Discount Unit Price --></label>
+        <name>Discount_Unit_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DistrubutorExchangeRate --></label>
+        <name>DistrubutorExchangeRate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EditConDetailStatusError --></label>
+        <name>EditConDetailStatusError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EditContractDetailHeader --></label>
+        <name>EditContractDetailHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EditOrderItemError1 --></label>
+        <name>EditOrderItemError1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EditOrderItemError2 --></label>
+        <name>EditOrderItemError2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EditOrderItemError3 --></label>
+        <name>EditOrderItemError3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit Order Contracts Detail Header --></label>
+        <name>Edit_Order_Contracts_Detail_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EmailBody --></label>
+        <name>EmailBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EmailBodyContract --></label>
+        <name>EmailBodyContract</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EmailSubject --></label>
+        <name>EmailSubject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EmailSubjectContract --></label>
+        <name>EmailSubjectContract</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Admin Config(defalut-0) --></label>
+        <name>Email_Admin_Config</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error --></label>
+        <name>Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ErrorLoading --></label>
+        <name>ErrorLoading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimateCost --></label>
+        <name>EstimateCost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimateGM --></label>
+        <name>EstimateGM</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EstimatedInvoicingDate --></label>
+        <name>EstimatedInvoicingDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Estimated delivery date --></label>
+        <name>Estimated_delivery_date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ExceedingQuantity --></label>
+        <name>ExceedingQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ExistSameBudgetError --></label>
+        <name>ExistSameBudgetError</name>
+    </customLabels>
+    <customLabels>
+        <label>Fecha de Vencimiento</label>
+        <name>Expiry_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FECHA DE PAGO --></label>
+        <name>FECHA_DE_PAGO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FECHA DE VENCIMIENTO --></label>
+        <name>FECHA_DE_VENCIMIENTO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FOBNotificationBody --></label>
+        <name>FOBNotificationBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FOBNotificationSubject --></label>
+        <name>FOBNotificationSubject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FOB Bulking Price --></label>
+        <name>FOB_Bulking_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FOB Price --></label>
+        <name>FOB_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File --></label>
+        <name>File</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FileDeleted --></label>
+        <name>FileDeleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FileName --></label>
+        <name>FileName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FileType --></label>
+        <name>FileType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FillInHeader --></label>
+        <name>FillInHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FillUpOrder --></label>
+        <name>FillUpOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FillUpOrderCreateDate --></label>
+        <name>FillUpOrderCreateDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FreezeInitNoticeError --></label>
+        <name>FreezeInitNoticeError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FreezeNoticeError --></label>
+        <name>FreezeNoticeError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Freight Cost --></label>
+        <name>Freight_Cost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GenerateDeliveryNoteBody --></label>
+        <name>GenerateDeliveryNoteBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GenerateDeliveryNoteTitle --></label>
+        <name>GenerateDeliveryNoteTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Green --></label>
+        <name>Green</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Gross Weight --></label>
+        <name>Gross_Weight</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GuidePrice --></label>
+        <name>GuidePrice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- HQ Contract Unit Price --></label>
+        <name>HQ_Contract_Unit_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- If Designated Products --></label>
+        <name>If_Designated_Products</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- If Pallet --></label>
+        <name>If_Pallet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ImageType --></label>
+        <name>ImageType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Quote Detail Header --></label>
+        <name>Import_Quote_Detail_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inland Cost Including Insurance --></label>
+        <name>Inland_Cost_Including_Insurance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient Avilable Quantity --></label>
+        <name>Insufficient_Avilable_Quantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient Remaining Quantity --></label>
+        <name>Insufficient_Remaining_Quantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inventory --></label>
+        <name>Inventory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InventoryEmailContact --></label>
+        <name>InventoryEmailContact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invoice --></label>
+        <name>Invoice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvoiceItemNumber --></label>
+        <name>InvoiceItemNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- IsCustomerConfirmed --></label>
+        <name>IsCustomerConfirmed</name>
+    </customLabels>
+    <customLabels>
+        <label>La cantidad del producto &quot;{0}&quot; excede la cantidad utilizada {1} (Cantidad utilizada en ítem del pedido ZARB) del ítem de pedido ZARB relacionado.</label>
+        <name>IssueQtyError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LatestMinSalesPrice --></label>
+        <name>LatestMinSalesPrice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Link --></label>
+        <name>Link</name>
+    </customLabels>
+    <customLabels>
+        <label>Precio</label>
+        <name>Local_Currency</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXBPMUsercode --></label>
+        <name>MXBPMUsercode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXCMinAmount --></label>
+        <name>MXCMinAmount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXCPlusAmount --></label>
+        <name>MXCPlusAmount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXContractPaymentTerms --></label>
+        <name>MXContractPaymentTerms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXContractSyncNoticeEmail --></label>
+        <name>MXContractSyncNoticeEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXDAYS --></label>
+        <name>MXDAYS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXFI --></label>
+        <name>MXFI</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXFIDays --></label>
+        <name>MXFIDays</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXFIRAMX --></label>
+        <name>MXFIRAMX</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXFIRAMXDays --></label>
+        <name>MXFIRAMXDays</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXMODELCPLUS --></label>
+        <name>MXMODELCPLUS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MXSubmitError --></label>
+        <name>MXSubmitError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MX B --></label>
+        <name>MX_B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MX_BDays --></label>
+        <name>MX_BDays</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MX Submit Limit --></label>
+        <name>MX_Submit_Limit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MarginLevel --></label>
+        <name>MarginLevel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MarginRate --></label>
+        <name>MarginRate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Margin Rate --></label>
+        <name>Margin_Rate</name>
+    </customLabels>
+    <customLabels>
+        <label>Codigo de material</label>
+        <name>Material_Code</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Material_Descriptio --></label>
+        <name>Material_Descriptio</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Min Price --></label>
+        <name>Min_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoreThan --></label>
+        <name>MoreThan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NOCustomerCredit --></label>
+        <name>NOCustomerCredit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NOSalesInfo --></label>
+        <name>NOSalesInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Net Weight --></label>
+        <name>Net_Weight</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Amount per item --></label>
+        <name>New_Amount_per_item</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Delivery Date --></label>
+        <name>New_Delivery_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Price --></label>
+        <name>New_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Quantity --></label>
+        <name>New_Quantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoChangeCampaignInfoError --></label>
+        <name>NoChangeCampaignInfoError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoChangeDescriptionInfoError --></label>
+        <name>NoChangeDescriptionInfoError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoChanged --></label>
+        <name>NoChanged</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoCredit --></label>
+        <name>NoCredit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoCustomerSalesInfo --></label>
+        <name>NoCustomerSalesInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoMapMonthBudgetError --></label>
+        <name>NoMapMonthBudgetError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoPaymentDaysInfo --></label>
+        <name>NoPaymentDaysInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotMatchProductName --></label>
+        <name>NotMatchProductName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationBody --></label>
+        <name>NotficationBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationOrderBody --></label>
+        <name>NotficationOrderBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationOrderTitle --></label>
+        <name>NotficationOrderTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationService --></label>
+        <name>NotficationService</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationServiceBody --></label>
+        <name>NotficationServiceBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationServiceSaleTitle --></label>
+        <name>NotficationServiceSaleTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationServiceTitle --></label>
+        <name>NotficationServiceTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotficationSyncErrorTitle --></label>
+        <name>NotficationSyncErrorTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ORGLabel --></label>
+        <name>ORGLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Observation --></label>
+        <name>Observation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OnlyDeleteOwnerData --></label>
+        <name>OnlyDeleteOwnerData</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Open Order Qty --></label>
+        <name>Open_Order_Qty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderApproingAmount --></label>
+        <name>OrderApproingAmount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCloneBody --></label>
+        <name>OrderCloneBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCloneCreate --></label>
+        <name>OrderCloneCreate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCloneHeader --></label>
+        <name>OrderCloneHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCloseBody --></label>
+        <name>OrderCloseBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCloseHeader --></label>
+        <name>OrderCloseHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCreateBody --></label>
+        <name>OrderCreateBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderCustomerSyncError --></label>
+        <name>OrderCustomerSyncError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderDeliveryDateRequired --></label>
+        <name>OrderDeliveryDateRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderFieldRequired --></label>
+        <name>OrderFieldRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderFillAmountPercentageError --></label>
+        <name>OrderFillAmountPercentageError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderFillComissionAmountError --></label>
+        <name>OrderFillComissionAmountError</name>
+    </customLabels>
+    <customLabels>
+        <label>Orden de compra del cliente (PO)</label>
+        <name>OrderImport1</name>
+    </customLabels>
+    <customLabels>
+        <label>Dirección de envío del cliente</label>
+        <name>OrderImport10</name>
+    </customLabels>
+    <customLabels>
+        <label>Código de producto</label>
+        <name>OrderImport11</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre del producto</label>
+        <name>OrderImport12</name>
+    </customLabels>
+    <customLabels>
+        <label>Cantidad del ítem del pedido</label>
+        <name>OrderImport13</name>
+    </customLabels>
+    <customLabels>
+        <label>Precio unitario</label>
+        <name>OrderImport14</name>
+    </customLabels>
+    <customLabels>
+        <label>Ubicación de inventario</label>
+        <name>OrderImport15</name>
+    </customLabels>
+    <customLabels>
+        <label>Cultivo</label>
+        <name>OrderImport16</name>
+    </customLabels>
+    <customLabels>
+        <label>Mensaje de error</label>
+        <name>OrderImport17</name>
+    </customLabels>
+    <customLabels>
+        <label>Fecha de entrega</label>
+        <name>OrderImport18</name>
+    </customLabels>
+    <customLabels>
+        <label>Límite de antigüedad del stock</label>
+        <name>OrderImport19</name>
+    </customLabels>
+    <customLabels>
+        <label>Planta de entrega</label>
+        <name>OrderImport2</name>
+    </customLabels>
+    <customLabels>
+        <label>Canal de distribución</label>
+        <name>OrderImport3</name>
+    </customLabels>
+    <customLabels>
+        <label>Tipo de pedido</label>
+        <name>OrderImport4</name>
+    </customLabels>
+    <customLabels>
+        <label>Cliente</label>
+        <name>OrderImport5</name>
+    </customLabels>
+    <customLabels>
+        <label>Enviar a</label>
+        <name>OrderImport6</name>
+    </customLabels>
+    <customLabels>
+        <label>Fecha de precios</label>
+        <name>OrderImport7</name>
+    </customLabels>
+    <customLabels>
+        <label>Moneda</label>
+        <name>OrderImport8</name>
+    </customLabels>
+    <customLabels>
+        <label>Condición de pago</label>
+        <name>OrderImport9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderImportTemplateId --></label>
+        <name>OrderImportTemplateId</name>
+    </customLabels>
+    <customLabels>
+        <label>No de orden</label>
+        <name>OrderItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderItemHeader --></label>
+        <name>OrderItemHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderItemInvoiceStatusVertify --></label>
+        <name>OrderItemInvoiceStatusVertify</name>
+    </customLabels>
+    <customLabels>
+        <label>Importación de pedidos</label>
+        <name>OrderLabe1</name>
+    </customLabels>
+    <customLabels>
+        <label>faltan campos obligatorios:</label>
+        <name>OrderLabe10</name>
+    </customLabels>
+    <customLabels>
+        <label>El tipo de pedido debe ser el mismo</label>
+        <name>OrderLabe11</name>
+    </customLabels>
+    <customLabels>
+        <label>El número de registros importados no puede exceder los 100, por favor revise el archivo cargado.</label>
+        <name>OrderLabe12</name>
+    </customLabels>
+    <customLabels>
+        <label>El precio unitario en la línea</label>
+        <name>OrderLabe13</name>
+    </customLabels>
+    <customLabels>
+        <label>no es válido</label>
+        <name>OrderLabe14</name>
+    </customLabels>
+    <customLabels>
+        <label>Error al procesar el archivo.</label>
+        <name>OrderLabe15</name>
+    </customLabels>
+    <customLabels>
+        <label>¿Está seguro de actualizar la página?</label>
+        <name>OrderLabe16</name>
+    </customLabels>
+    <customLabels>
+        <label>No hay datos para guardar.</label>
+        <name>OrderLabe17</name>
+    </customLabels>
+    <customLabels>
+        <label>¡Guardado exitoso!</label>
+        <name>OrderLabe18</name>
+    </customLabels>
+    <customLabels>
+        <label>Error al guardar, revise el archivo de errores.</label>
+        <name>OrderLabe19</name>
+    </customLabels>
+    <customLabels>
+        <label>Subir archivos</label>
+        <name>OrderLabe2</name>
+    </customLabels>
+    <customLabels>
+        <label>Error al guardar.</label>
+        <name>OrderLabe20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderLabe21 --></label>
+        <name>OrderLabe21</name>
+    </customLabels>
+    <customLabels>
+        <label>éxito</label>
+        <name>OrderLabe22</name>
+    </customLabels>
+    <customLabels>
+        <label>Error desconocido</label>
+        <name>OrderLabe23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderLabe24 --></label>
+        <name>OrderLabe24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderLabe25 --></label>
+        <name>OrderLabe25</name>
+    </customLabels>
+    <customLabels>
+        <label>Error al insertar pedido:</label>
+        <name>OrderLabe26</name>
+    </customLabels>
+    <customLabels>
+        <label>ID de pedido no encontrado</label>
+        <name>OrderLabe27</name>
+    </customLabels>
+    <customLabels>
+        <label>Error al insertar ítem de pedido:</label>
+        <name>OrderLabe28</name>
+    </customLabels>
+    <customLabels>
+        <label>O suelte los archivos aquí</label>
+        <name>OrderLabe3</name>
+    </customLabels>
+    <customLabels>
+        <label>¡Primero cargue el archivo!</label>
+        <name>OrderLabe4</name>
+    </customLabels>
+    <customLabels>
+        <label>No se pudo cargar la librería SheetJS.</label>
+        <name>OrderLabe5</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione un archivo.</label>
+        <name>OrderLabe6</name>
+    </customLabels>
+    <customLabels>
+        <label>Plantilla inválida.</label>
+        <name>OrderLabe7</name>
+    </customLabels>
+    <customLabels>
+        <label>¡¡¡¡Datos de plantilla insuficientes!!!!</label>
+        <name>OrderLabe8</name>
+    </customLabels>
+    <customLabels>
+        <label>La línea</label>
+        <name>OrderLabe9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderPaymentDayVertify --></label>
+        <name>OrderPaymentDayVertify</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderPriceQuantityVertify --></label>
+        <name>OrderPriceQuantityVertify</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderRejectedBody --></label>
+        <name>OrderRejectedBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderRejectedBodyLocal --></label>
+        <name>OrderRejectedBodyLocal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderSalesUnitRequired --></label>
+        <name>OrderSalesUnitRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderSendPDFConfirm --></label>
+        <name>OrderSendPDFConfirm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderSendPDFHeader --></label>
+        <name>OrderSendPDFHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderSumbitApprovalHeader --></label>
+        <name>OrderSumbitApprovalHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrderUnlockSyncSapHeader --></label>
+        <name>OrderUnlockSyncSapHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Order Amount --></label>
+        <name>Order_Amount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Order Approved Title --></label>
+        <name>Order_Approved_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Order Qnty --></label>
+        <name>Order_Qnty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Order Reason Required --></label>
+        <name>Order_Reason_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Order Rejected Title --></label>
+        <name>Order_Rejected_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Other Issue --></label>
+        <name>Other_Issue</name>
+    </customLabels>
+    <customLabels>
+        <label>Vencido</label>
+        <name>Overdue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PDFLeft --></label>
+        <name>PDFLeft</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PDFRight --></label>
+        <name>PDFRight</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pack Size --></label>
+        <name>Pack_Size</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Packing Cost --></label>
+        <name>Packing_Cost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Packing Size --></label>
+        <name>Packing_Size</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Packing Size Description --></label>
+        <name>Packing_Size_Description</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pallet --></label>
+        <name>Pallet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Payment Terms --></label>
+        <name>Payment_Terms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Place order --></label>
+        <name>Place_order</name>
+    </customLabels>
+    <customLabels>
+        <label>Precio</label>
+        <name>Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PriceBookNoPrice --></label>
+        <name>PriceBookNoPrice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PriceRate --></label>
+        <name>PriceRate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PriceRateHelpText --></label>
+        <name>PriceRateHelpText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Price List Name --></label>
+        <name>Price_List_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Processing Cost --></label>
+        <name>Processing_Cost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product --></label>
+        <name>Product</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductCode --></label>
+        <name>ProductCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductDuplicate --></label>
+        <name>ProductDuplicate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductName --></label>
+        <name>ProductName</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre de producto</label>
+        <name>ProductNameOrderItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProductNotFind --></label>
+        <name>ProductNotFind</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product Code --></label>
+        <name>Product_Code</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product Cost --></label>
+        <name>Product_Cost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product English Name --></label>
+        <name>Product_English_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre de producto</label>
+        <name>Product_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre del Artículo</label>
+        <name>Product_Name1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product Name(Print) --></label>
+        <name>Product_Name_Print</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre del Producto</label>
+        <name>Product_Names_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product Type --></label>
+        <name>Product_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Product_Usage --></label>
+        <name>Product_Usage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProfitCenterRequired --></label>
+        <name>ProfitCenterRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PullGood --></label>
+        <name>PullGood</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PullGoodTitle --></label>
+        <name>PullGoodTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Qnty --></label>
+        <name>Qnty</name>
+    </customLabels>
+    <customLabels>
+        <label>Cantidad</label>
+        <name>Quantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuantityHelpText --></label>
+        <name>QuantityHelpText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteApprovalBody --></label>
+        <name>QuoteApprovalBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteApprovalBodyLocal --></label>
+        <name>QuoteApprovalBodyLocal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteApprovalNoticeEmail --></label>
+        <name>QuoteApprovalNoticeEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteChangeStatusError --></label>
+        <name>QuoteChangeStatusError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteCloneBody --></label>
+        <name>QuoteCloneBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteCloneHeader --></label>
+        <name>QuoteCloneHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteDetail --></label>
+        <name>QuoteDetail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuoteDetailHeader --></label>
+        <name>QuoteDetailHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quote Approval Title --></label>
+        <name>Quote_Approval_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quote Approved Title --></label>
+        <name>Quote_Approved_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quote Price --></label>
+        <name>Quote_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quote Product Name --></label>
+        <name>Quote_Product_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quote Rejected Title --></label>
+        <name>Quote_Rejected_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reason --></label>
+        <name>Reason</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RecallContractBody --></label>
+        <name>RecallContractBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RecallContractHeader --></label>
+        <name>RecallContractHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recheck Margin --></label>
+        <name>Recheck_Margin</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Red --></label>
+        <name>Red</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RefreshOrderBody --></label>
+        <name>RefreshOrderBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RefreshOrderHeader --></label>
+        <name>RefreshOrderHeader</name>
+    </customLabels>
+    <customLabels>
+        <label>La cantidad del producto &quot;{0}&quot; excede la cantidad restante {1} (Cantidad restante de ítem del pedido ZARB) del ítem de pedido ZARB relacionado.</label>
+        <name>RemainQtyError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemainQuantity --></label>
+        <name>RemainQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label>Cantidad Restante</label>
+        <name>Remain_Qty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemainingCredit --></label>
+        <name>RemainingCredit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReminderLogistic5070 --></label>
+        <name>ReminderLogistic5070</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReminderLogistic5130 --></label>
+        <name>ReminderLogistic5130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Resync Body --></label>
+        <name>Resync_Body</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Resync Data --></label>
+        <name>Resync_Data</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rolling Not Customer --></label>
+        <name>Rolling_Not_Customer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SAPInventoryHeader --></label>
+        <name>SAPInventoryHeader</name>
+    </customLabels>
+    <customLabels>
+        <label>Stock restante SAP</label>
+        <name>SAP_Remain_Stock</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalesInfoCannotSave --></label>
+        <name>SalesInfoCannotSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Approved Title --></label>
+        <name>Sales_Approved_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast External --></label>
+        <name>Sales_Forcast_External</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast External Exis --></label>
+        <name>Sales_Forcast_External_Exis</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp April --></label>
+        <name>Sales_Forcast_Imp_April</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp August --></label>
+        <name>Sales_Forcast_Imp_August</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Customer --></label>
+        <name>Sales_Forcast_Imp_Customer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp December --></label>
+        <name>Sales_Forcast_Imp_December</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Del --></label>
+        <name>Sales_Forcast_Imp_Del</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Enclosure --></label>
+        <name>Sales_Forcast_Imp_Enclosure</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Excel Rows --></label>
+        <name>Sales_Forcast_Imp_Excel_Rows</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Failures --></label>
+        <name>Sales_Forcast_Imp_Failures</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp February --></label>
+        <name>Sales_Forcast_Imp_February</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp File --></label>
+        <name>Sales_Forcast_Imp_File</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Jan --></label>
+        <name>Sales_Forcast_Imp_Jan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp July --></label>
+        <name>Sales_Forcast_Imp_July</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp June --></label>
+        <name>Sales_Forcast_Imp_June</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp List --></label>
+        <name>Sales_Forcast_Imp_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp March --></label>
+        <name>Sales_Forcast_Imp_March</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp May --></label>
+        <name>Sales_Forcast_Imp_May</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp November --></label>
+        <name>Sales_Forcast_Imp_November</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Number --></label>
+        <name>Sales_Forcast_Imp_Number</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp October --></label>
+        <name>Sales_Forcast_Imp_October</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Pro Name --></label>
+        <name>Sales_Forcast_Imp_Pro_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Reason Failure --></label>
+        <name>Sales_Forcast_Imp_Reason_Failure</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Repeat --></label>
+        <name>Sales_Forcast_Imp_Repeat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Required --></label>
+        <name>Sales_Forcast_Imp_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Result --></label>
+        <name>Sales_Forcast_Imp_Result</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp SalesOrg --></label>
+        <name>Sales_Forcast_Imp_SalesOrg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Save --></label>
+        <name>Sales_Forcast_Imp_Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp September --></label>
+        <name>Sales_Forcast_Imp_September</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Success --></label>
+        <name>Sales_Forcast_Imp_Success</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp System Exception --></label>
+        <name>Sales_Forcast_Imp_System_Exception</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Tem --></label>
+        <name>Sales_Forcast_Imp_Tem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Forcast Imp Title --></label>
+        <name>Sales_Forcast_Imp_Title</name>
+    </customLabels>
+    <customLabels>
+        <label>Usuario no existe</label>
+        <name>Sales_Forcast_Imp_User</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Rejected Title --></label>
+        <name>Sales_Rejected_Title</name>
+    </customLabels>
+    <customLabels>
+        <label>Unidad de ventas</label>
+        <name>Sales_Unit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SameSameYearBudget --></label>
+        <name>SameSameYearBudget</name>
+    </customLabels>
+    <customLabels>
+        <label>Limite de credito disponible en SAP</label>
+        <name>SapCredit</name>
+    </customLabels>
+    <customLabels>
+        <label>Busqueda por nombre del producto/codigo del material</label>
+        <name>Search</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search Product --></label>
+        <name>Search_Product</name>
+    </customLabels>
+    <customLabels>
+        <label>Resultado de la busqueda</label>
+        <name>Search_Result</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ShipToAccountSyncSapConfirmInfo --></label>
+        <name>ShipToAccountSyncSapConfirmInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ShipToSapSuccessInfo --></label>
+        <name>ShipToSapSuccessInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>Mostrar menos</label>
+        <name>Show_Less</name>
+    </customLabels>
+    <customLabels>
+        <label>Mostrar mas</label>
+        <name>Show_More</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause --></label>
+        <name>Special_Clause</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract --></label>
+        <name>Special_Clause_Contract</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract1 --></label>
+        <name>Special_Clause_Contract1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract2 --></label>
+        <name>Special_Clause_Contract2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract3 --></label>
+        <name>Special_Clause_Contract3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract4 --></label>
+        <name>Special_Clause_Contract4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract5 --></label>
+        <name>Special_Clause_Contract5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract5 Model C --></label>
+        <name>Special_Clause_Contract5_Model_C</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract6 --></label>
+        <name>Special_Clause_Contract6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract6 Model C --></label>
+        <name>Special_Clause_Contract6_Model_C</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract7 --></label>
+        <name>Special_Clause_Contract7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract7 Model C --></label>
+        <name>Special_Clause_Contract7_Model_C</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract8 --></label>
+        <name>Special_Clause_Contract8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Special Clause Contract9 --></label>
+        <name>Special_Clause_Contract9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SpecificDate(格式：2025-09-02 08:00:00) --></label>
+        <name>SpecificDate</name>
+    </customLabels>
+    <customLabels>
+        <label>Localizacion de almacen</label>
+        <name>Storage_Location</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubmitContractBody --></label>
+        <name>SubmitContractBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubmitContractHeader --></label>
+        <name>SubmitContractHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubmitContractStatusError --></label>
+        <name>SubmitContractStatusError</name>
+    </customLabels>
+    <customLabels>
+        <label>Orden enviada</label>
+        <name>SubmitOrderHeader</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Success --></label>
+        <name>Success</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SupplementaryProductCode --></label>
+        <name>SupplementaryProductCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TargetArrivalDate --></label>
+        <name>TargetArrivalDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total Amount --></label>
+        <name>Total_Amount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Toxicity Classification --></label>
+        <name>Toxicity_Classification</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tracking Code --></label>
+        <name>Tracking_Code</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UnFreezeInitNoticeError --></label>
+        <name>UnFreezeInitNoticeError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unit --></label>
+        <name>Unit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unit Price --></label>
+        <name>Unit_Price</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UpdateBPMNumber --></label>
+        <name>UpdateBPMNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload --></label>
+        <name>Upload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UploadedSuccessfully --></label>
+        <name>UploadedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User3010 --></label>
+        <name>User3010</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User3010B --></label>
+        <name>User3010B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User3020 --></label>
+        <name>User3020</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User5070B --></label>
+        <name>User5070B</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User5130 --></label>
+        <name>User5130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ValueNumber --></label>
+        <name>ValueNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VideoType --></label>
+        <name>VideoType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VisitFileError --></label>
+        <name>VisitFileError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 5070LogisticsEmail --></label>
+        <name>X5070LogisticsEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 5130LogisticsEmail --></label>
+        <name>X5130LogisticsEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- YPF Order Approved --></label>
+        <name>YPF_Order_Approved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Yellow --></label>
+        <name>Yellow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ZARBContinueProduct --></label>
+        <name>ZARBContinueProduct</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ZAREOrderNumber --></label>
+        <name>ZAREOrderNumber</name>
+    </customLabels>
+    <customLabels>
+        <label>¡Las siguientes órdenes ZARE &apos;{0}&apos; aún están en revisión y el pedido ZARF actual no puede ser enviado!</label>
+        <name>ZARFCannotSubmit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ZDFSubmitValidation --></label>
+        <name>ZDFSubmitValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- cannotSubmit --></label>
+        <name>cannotSubmit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- comments --></label>
+        <name>comments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- daysNotify5130 --></label>
+        <name>daysNotify5130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- defaultUnit --></label>
+        <name>defaultUnit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- deleteLabel --></label>
+        <name>deleteLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- lockOrderHeader --></label>
+        <name>lockOrderHeader</name>
+    </customLabels>
+    <customLabels>
+        <label>¡La condición de pago es obligatoria!</label>
+        <name>mass1</name>
+    </customLabels>
+    <customLabels>
+        <label>por favor seleccione al menos un registro</label>
+        <name>mass2</name>
+    </customLabels>
+    <customLabels>
+        <label>seleccione hasta 100 registros</label>
+        <name>mass3</name>
+    </customLabels>
+    <customLabels>
+        <label>Guardado exitoso</label>
+        <name>mass4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mass5 --></label>
+        <name>mass5</name>
+    </customLabels>
+    <customLabels>
+        <label>Número de pedido</label>
+        <name>mass6</name>
+    </customLabels>
+    <customLabels>
+        <label>Condición de pago</label>
+        <name>mass7</name>
+    </customLabels>
+    <customLabels>
+        <label>Creación automática de ZAR1</label>
+        <name>mass8</name>
+    </customLabels>
+    <customLabels>
+        <label>Sin acceso</label>
+        <name>no_access</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notifacationBody --></label>
+        <name>notifacationBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- productCost --></label>
+        <name>productCost</name>
+    </customLabels>
+    <customLabels>
+        <label>Descripcion del producto</label>
+        <name>productDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- rate1 --></label>
+        <name>rate1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- rate2 --></label>
+        <name>rate2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- salesQuantity --></label>
+        <name>salesQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label>Busqueda</label>
+        <name>searchText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- updateSapOrderError --></label>
+        <name>updateSapOrderError</name>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>AccountNameOld</name>
+                </fields>
+                <fields>
+                    <name>el_0</name>
+                </fields>
+                <name>Key_Info_Update</name>
+            </screens>
+        </flows>
+        <fullName>AccountKeyFieldUpdate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Price_List_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>SetCommodityProduct</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>SetPriceBookItem</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>SetUserText</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Set_Order_Submit_Date</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Set_address_Customer_Name</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Product_Name_Item_Uniquekey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>ConfirmMsg</name>
+                </fields>
+                <name>Confirm</name>
+            </screens>
+        </flows>
+        <fullName>manualGenerateZARA</fullName>
+    </flowDefinitions>
+</Translations>

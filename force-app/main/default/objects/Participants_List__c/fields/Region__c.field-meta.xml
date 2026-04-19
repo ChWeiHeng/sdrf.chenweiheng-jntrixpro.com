@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <label>Region</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NOA</fullName>
+                <default>false</default>
+                <label>NOA</label>
+            </value>
+            <value>
+                <fullName>NEA</fullName>
+                <default>false</default>
+                <label>NEA</label>
+            </value>
+            <value>
+                <fullName>CORDOBA</fullName>
+                <default>false</default>
+                <label>CORDOBA</label>
+            </value>
+            <value>
+                <fullName>LITORAL</fullName>
+                <default>false</default>
+                <label>LITORAL</label>
+            </value>
+            <value>
+                <fullName>BS AS</fullName>
+                <default>false</default>
+                <label>BS AS</label>
+            </value>
+            <value>
+                <fullName>LA PAMPA</fullName>
+                <default>false</default>
+                <label>LA PAMPA</label>
+            </value>
+            <value>
+                <fullName>CUYO</fullName>
+                <default>false</default>
+                <label>CUYO</label>
+            </value>
+            <value>
+                <fullName>OTROS</fullName>
+                <default>false</default>
+                <label>OTROS</label>
+            </value>
+            <value>
+                <fullName>Occidente Norte</fullName>
+                <default>false</default>
+                <label>Occidente Norte</label>
+            </value>
+            <value>
+                <fullName>Occidente Sur</fullName>
+                <default>false</default>
+                <label>Occidente Sur</label>
+            </value>
+            <value>
+                <fullName>Michichoacán</fullName>
+                <default>false</default>
+                <label>Michichoacán</label>
+            </value>
+            <value>
+                <fullName>Bajío</fullName>
+                <default>false</default>
+                <label>Bajío</label>
+            </value>
+            <value>
+                <fullName>Pacifico</fullName>
+                <default>false</default>
+                <label>Pacifico</label>
+            </value>
+            <value>
+                <fullName>Norte</fullName>
+                <default>false</default>
+                <label>Norte</label>
+            </value>
+            <value>
+                <fullName>Centro</fullName>
+                <default>false</default>
+                <label>Centro</label>
+            </value>
+            <value>
+                <fullName>Altiplano</fullName>
+                <default>false</default>
+                <label>Altiplano</label>
+            </value>
+            <value>
+                <fullName>Golfo Norte</fullName>
+                <default>false</default>
+                <label>Golfo Norte</label>
+            </value>
+            <value>
+                <fullName>Golfo Sur</fullName>
+                <default>false</default>
+                <label>Golfo Sur</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

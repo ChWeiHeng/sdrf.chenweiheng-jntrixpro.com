@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Change__c</fullName>
+    <formula>NOT(
+	AND(
+        OR(
+            ISNULL(TEXT(New_Shipping_Conditions__c)),
+            ISBLANK(TEXT(New_Shipping_Conditions__c))
+        ),
+        OR(
+            ISNULL(TEXT(New_Payment_term__c)),
+            ISBLANK(TEXT(New_Payment_term__c))
+        ),
+        OR(
+            ISNULL(TEXT(New_Customer_Group__c)),
+            ISBLANK(TEXT(New_Customer_Group__c))
+        ),
+        OR(
+            ISNULL(TEXT(New_Currency__c)),
+            ISBLANK(TEXT(New_Currency__c))
+        ),
+					   OR(
+            ISNULL(TEXT(New_Account_Assessment__c)),
+            ISBLANK(TEXT(New_Account_Assessment__c))
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Change</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

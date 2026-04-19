@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Agroterrum_C</fullName>
+    <columns>NAME</columns>
+    <columns>Annual__c</columns>
+    <columns>Company_Code__c</columns>
+    <columns>Post_Date__c</columns>
+    <columns>Voucher_Number__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Company_Code__c</field>
+        <operation>equals</operation>
+        <value>5130</value>
+    </filters>
+    <label>AR Agroterrum C</label>
+    <sharedTo>
+        <group>X5030</group>
+        <role>Argentina_Area_Head</role>
+        <role>HQ_Commercial</role>
+    </sharedTo>
+</ListView>

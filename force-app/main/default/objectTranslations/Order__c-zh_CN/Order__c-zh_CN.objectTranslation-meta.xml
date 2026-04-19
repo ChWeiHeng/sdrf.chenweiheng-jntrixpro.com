@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Order</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- clone field --></label>
+        <name>clone_field</name>
+    </fieldSets>
+    <recordTypes>
+        <label><!-- Model B --></label>
+        <name>Model_B</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Model C --></label>
+        <name>Model_C</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Both Incoterms and Inco Location1 are required --></errorMessage>
+        <name>Both_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t change invoice , please remove order item --></errorMessage>
+        <name>Can_Not_Change_Invoice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t change reason, please remove order item --></errorMessage>
+        <name>Can_Not_Change_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t change reference order , please remove order item --></errorMessage>
+        <name>Can_Not_Change_Reference_Order</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Order has items,order type can&apos;t change --></errorMessage>
+        <name>Can_not_Change_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change the fields populated from the quotation. --></errorMessage>
+        <name>Can_not_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t update the order type since you have already added order details --></errorMessage>
+        <name>Can_not_change_order_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can not select this sales org --></errorMessage>
+        <name>Can_not_pick_this_org</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only AGROTERRUM S.A. (Argentina) can pick this payment term --></errorMessage>
+        <name>Can_not_pick_this_payment</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can not select this order type --></errorMessage>
+        <name>CannotOrderType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change order currency, please remove order item --></errorMessage>
+        <name>Cannot_Change_Order_Currency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When sales org is 5070, the customer&apos;s po is required --></errorMessage>
+        <name>CheckCustomerPo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can only choose the price book of corresponding sales org! --></errorMessage>
+        <name>CheckPriceBook</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can only create return order --></errorMessage>
+        <name>Create_Retrun_Order</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only can choose [101][MX1][Z11][Z99] Reason in crm --></errorMessage>
+        <name>Creditdebit_note</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Standard order MX should link to a downpayment order, other orde types can not link to any downpayment order. --></errorMessage>
+        <name>DownPaymentRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only ZAR2 order can choose invoice --></errorMessage>
+        <name>InvoiceRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Order Reason Required --></errorMessage>
+        <name>Order_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The customer in the reference order is different from the customer in the actual order, or the reference order has not been approved, or the reference order type is incorrect. --></errorMessage>
+        <name>Reference_Order_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Business Model can only be ModelC --></errorMessage>
+        <name>YPFCanOnlyCreateModelcOrder</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot fill the commission information in YPF order. --></errorMessage>
+        <name>YPF_CheckCommission</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- YPF customer can only create the order that the Sales Org is &apos;5070&apos; and the record type is &apos;Model C&apos;. --></errorMessage>
+        <name>YPF_CustomerCheck</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Mass_Edit_Order --></label>
+        <name>Mass_Edit_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Print_PDF --></label>
+        <name>Print_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Consignment_Inventory --></label>
+        <name>View_Consignment_Inventory</name>
+    </webLinks>
+</CustomObjectTranslation>

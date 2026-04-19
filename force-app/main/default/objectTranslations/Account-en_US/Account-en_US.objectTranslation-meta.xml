@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customers</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Can not change --></label>
+        <name>Can_not_change</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ChangeFieldByFinance --></label>
+        <name>ChangeFieldByFinance</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Customer Info --></label>
+        <name>Customer_Info</name>
+    </fieldSets>
+    <recordTypes>
+        <label><!-- Company Account --></label>
+        <name>Company_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Finance Account --></label>
+        <name>Finance_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Personal Account --></label>
+        <name>Personal_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ShipTo Customer --></label>
+        <name>ShipTo_Account</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Can not select this group --></errorMessage>
+        <name>Can_not_pick_this_group</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid email format --></errorMessage>
+        <name>Not_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- It&apos;s not a phone number --></errorMessage>
+        <name>Phone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- please remove &apos;+&apos; --></errorMessage>
+        <name>Phone_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The format of Tax Number should be: XX-XXXXXXXX-X --></errorMessage>
+        <name>Tax_Number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- print_pdf --></label>
+        <name>print_pdf</name>
+    </webLinks>
+</CustomObjectTranslation>

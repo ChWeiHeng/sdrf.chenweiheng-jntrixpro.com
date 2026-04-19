@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SAP Customer Type --></label>
+    <name>SAP_Customer_Type__c</name>
+    <picklistValues>
+        <masterLabel>Producing</masterLabel>
+        <translation><!-- Producing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trading</masterLabel>
+        <translation><!-- Trading --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

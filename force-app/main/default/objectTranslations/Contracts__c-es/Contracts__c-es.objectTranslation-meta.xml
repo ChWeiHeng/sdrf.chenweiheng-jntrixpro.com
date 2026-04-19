@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- HQ Contracts --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- HQ Contracts --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Contract Number --></nameFieldLabel>
+    <recordTypes>
+        <label><!-- Headquarters --></label>
+        <name>Headquarters</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Both Incoterms and Inco Location1 are required --></errorMessage>
+        <name>Both_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can not select this sales org --></errorMessage>
+        <name>Can_not_pick_this_org</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot update the final customer payment term since you have already added contract details --></errorMessage>
+        <name>Final_Customer_Payment_Not_Allow_Change</name>
+    </validationRules>
+</CustomObjectTranslation>

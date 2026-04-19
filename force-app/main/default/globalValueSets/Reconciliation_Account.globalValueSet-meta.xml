@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1122020100</fullName>
+        <default>false</default>
+        <label>1122020100 Accounts Receivable - None-Related parties-local</label>
+    </customValue>
+    <customValue>
+        <fullName>1122020200</fullName>
+        <default>false</default>
+        <label>1122020200 Accounts Receivable - None-Related parties-Foreign</label>
+    </customValue>
+    <customValue>
+        <fullName>1122020000</fullName>
+        <default>false</default>
+        <label>1122020000 AR: Accounts Receivable - None-Related parties</label>
+    </customValue>
+    <customValue>
+        <fullName>1122010000</fullName>
+        <default>false</default>
+        <label>1122010000 AR: Accounts Receivable - Related parties</label>
+    </customValue>
+    <customValue>
+        <fullName>1122010100</fullName>
+        <default>false</default>
+        <label>1122010100 Accounts Receivable - Related parties-local</label>
+    </customValue>
+    <customValue>
+        <fullName>1122000000</fullName>
+        <default>false</default>
+        <label>1122000000 Cuentas a Cobrar</label>
+    </customValue>
+    <masterLabel>Reconciliation Account</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

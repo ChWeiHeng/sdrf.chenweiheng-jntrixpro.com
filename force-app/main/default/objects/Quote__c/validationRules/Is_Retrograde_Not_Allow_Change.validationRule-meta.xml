@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Retrograde_Not_Allow_Change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Quote_Detail_Count__c&gt;0,ISCHANGED(Is_Retrograde__c))</errorConditionFormula>
+    <errorMessage>You cannot update whether the quotation is based on market price since you have already added quotation details.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Amount__c</fullName>
+    <label>Delivered Amount</label>
+    <summarizedField>Delivery_Note__c.Delivery_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Delivery_Note__c.Delivery_Post_Status__c</field>
+        <operation>equals</operation>
+        <value>B 	Partially processed, C 	Completely processed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Delivery_Note__c.Order__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

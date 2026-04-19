@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Type__c</fullName>
+    <label>Issue Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <label>Bug</label>
+            </value>
+            <value>
+                <fullName>Data Issue</fullName>
+                <default>false</default>
+                <label>Data Issue</label>
+            </value>
+            <value>
+                <fullName>Improvement and Optimization</fullName>
+                <default>false</default>
+                <label>Improvement and Optimization</label>
+            </value>
+            <value>
+                <fullName>Maloperation</fullName>
+                <default>false</default>
+                <label>Maloperation</label>
+            </value>
+            <value>
+                <fullName>Explanation and Clarification</fullName>
+                <default>false</default>
+                <label>Explanation and Clarification</label>
+            </value>
+            <value>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>New Requirement</fullName>
+                <default>false</default>
+                <label>New Requirement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

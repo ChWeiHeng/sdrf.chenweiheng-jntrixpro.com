@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Customer Request --></label>
+    <name>Customer_Request__c</name>
+    <picklistValues>
+        <masterLabel>Compensation</masterLabel>
+        <translation><!-- Compensation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exchange</masterLabel>
+        <translation><!-- Exchange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return</masterLabel>
+        <translation><!-- Return --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Support</masterLabel>
+        <translation><!-- Technical Support --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

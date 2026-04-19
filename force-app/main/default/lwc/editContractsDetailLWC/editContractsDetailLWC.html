@@ -1,0 +1,1057 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 01-22-2026
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   05-19-2025   Gerry   Initial Version
+-->
+<template>
+    <!-- <div class="slds-is-relative"> -->
+        <template if:true={isShowSpinner}>
+            <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+
+        <!-- 手机头 -->
+        <template if:false={isPC}>
+            <div class="slds-grid" style="position: fixed;
+            z-index: 98;
+            
+            left: -1.75px;
+            right: 0px;
+            border-radius: 0px;
+            transform: translate3d(0px, -18px, 0px);
+            background-color:#f3f3f3;
+            border-radius:5px;
+           ">
+                <div class="slds-col" style="text-align: left;line-height:35px;">
+                    <lightning-button label={customLabel.CancelLable} onclick={close}></lightning-button>
+                </div>
+                <h2 class="slds-col" style="text-align:center;line-height:35px;">
+                    <!--Edit Contracts Detail-->
+                    {customLabel.EditContractDetailHeader}
+                </h2>
+                <div class="slds-col" style="text-align: right;line-height:35px;">
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData}>
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- PC头 -->
+        <template if:true={isPC}>
+            <div class="slds-grid slds-modal__header">
+                <lightning-card class="slds-color__background_gray-4 pageHeader" style="position: fixed;
+                        z-index: 98;
+                        height: 4px;
+                        left: -1.75px;
+                        right: 0px;
+                        border-radius: 0px;
+                        transform: translate3d(0px, -30px, 0px);
+                        background: #e40707;" title="Edit Contracts Detail" icon-name="standard:article">
+                </lightning-card>
+            </div>
+        </template>
+
+        <!--<div class="slds-modal__content modalBody menu">-->
+        <!-- PC内容 -->
+        <template if:true={isPC}>
+            <!--<div style="padding-left: 10px;padding-right: 10px;">
+                    <br>
+                    <div class="condition_head_title" style="display: inline-block;font-weight: inherit;font-size: 13px;">
+                        <lightning-button variant="brand" label="AddProduct" title="Search action" onclick={addProduct}></lightning-button>
+                    </div>
+                </div>
+                <br>-->
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="12">
+                    <template if:false={isBaseQuote}>
+                        <lightning-button variant="brand" label={customLabel.Add_Contract_Detail} title="Search action"
+                            onclick={addProduct}></lightning-button></template>
+                </lightning-layout-item>
+            </lightning-layout>
+            <!-- <lightning-layout> -->
+                <template if:true={lengthData}>
+                    <lightning-record-edit-form object-api-name="Contracts_Detail__c">
+                        <div class="slds-scrollable_x slds-scrollable_y" style="height: 450px;">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <!-- 删除 -->
+                                        <th scope="col" >
+                                             <div class="slds-truncate" style={lengthData.small} title="Del">Del</div>
+                                        </th>
+                                        <th scope="col" >
+                                             <div class="slds-truncate" style={lengthData.small} title="Copy">Copy</div>
+                                        </th>
+                                        <th  scope="col"  >
+                                             <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.File}>
+                                                {customLabel.File}
+                                            </div>
+                                        </th>
+                                        
+                                        <th scope="col" >
+                                             <div class="slds-truncate" style={lengthData.big} title={customLabel.Product_Code}>
+                                                <span style="color:red">*</span>{customLabel.Product_Code}
+                                            </div>
+                                        </th>
+                        
+                        
+                                        <th scope="col" >
+                                             <div class="slds-truncate" style={lengthData.big} title={customLabel.Product_Name}>
+                                                {customLabel.Product_Name}
+                                            </div>
+                                        </th>
+                                        <template if:true={isBaseQuote}>
+                                            <th scope="col" >
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Product_English_Name} >
+                                                    {customLabel.Product_English_Name}
+                                                </div>
+                                            </th>
+                                        </template>
+                        
+                                        <template if:false={isHQContract}>
+                                            <th scope="col" >
+                                                <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.BU_Sales_Price}>
+                                                    {customLabel.BU_Sales_Price}
+                                                </div>
+                                            </th>
+                        
+                        
+                                            <th scope="col" >
+                                                <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Delivery_Time}>
+                                                    {customLabel.Delivery_Time}
+                                                </div>
+                                            </th>
+                        
+                        
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Unit}>
+                                                    {customLabel.Unit}
+                                                </div>
+                                            </th>
+                        
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Total_Amount}>
+                                                    {customLabel.Total_Amount}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Qnty}>
+                                                    {customLabel.Qnty}
+                                                </div>
+                                            </th>
+                                            <template if:true={isSaleContract}>
+                        
+                                                <th scope="col" >
+                                                     <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Discount_Unit_Price}>
+                                                        {customLabel.Discount_Unit_Price}
+                                                    </div>
+                                                </th>
+                                            </template>
+                                        </template>
+                                        <template if:true={isHQContract}>
+                                            <!--<th scope="col">
+                                                         <div class="slds-truncate" title="column 1">
+                                                            {customLabel.Product_English_Name}
+                                                        </div>
+                                                    </th>-->
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Product_Name_Print} style={lengthData.medium}>
+                                                    <span style="color:red">*</span>{customLabel.Product_Name_Print}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.If_Designated_Products} style={lengthData.medium}>
+                                                    <span style="color:red">*</span>{customLabel.If_Designated_Products}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.If_Pallet} style={lengthData.medium}>
+                                                    <span style="color:red">*</span>{customLabel.If_Pallet}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Packing_Size} style={lengthData.medium}>
+                                                    {customLabel.Packing_Size}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Unit} style={lengthData.mediumSmall}>
+                                                    <span style="color:red">*</span>{customLabel.Unit}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Qnty} style={lengthData.mediumSmall}>
+                                                    <span style="color:red">*</span>{customLabel.Qnty}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Unit_Price} style={lengthData.mediumSmall}>
+                                                    {customLabel.Unit_Price}
+                                                </div>
+                                            </th>
+                                            <template if:true={isEditHqPrice}>
+                                                <th scope="col" >
+                                                     <div class="slds-truncate" title={customLabel.HQ_Contract_Unit_Price} style={lengthData.medium}>
+                                                        <span style="color:red">*</span>{customLabel.HQ_Contract_Unit_Price}
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.BU_Sales_Price} style={lengthData.mediumSmall}>
+                                                    {customLabel.BU_Sales_Price}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Total_Amount} style={lengthData.mediumSmall}>
+                                                    {customLabel.Total_Amount}
+                                                </div>
+                                            </th>
+                        
+                        
+                                            <!--<th style="width: 12rem;" class=textWrap scope="col">
+                                                     <div class="slds-truncate" title="column 1">
+                                                        Clearance Cost Percentage
+                                                    </div>
+                                                    </th>-->
+                        
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.FOB_Bulking_Price} style={lengthData.medium}>
+                                                    {customLabel.FOB_Bulking_Price}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Packing_Cost} style={lengthData.medium}>
+                                                    {customLabel.Packing_Cost}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Pallet} style={lengthData.mediumSmall}>
+                                                    {customLabel.Pallet}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Freight_Cost} style={lengthData.medium}>
+                                                    <span style="color:red">*</span>{customLabel.Freight_Cost}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Inland_Cost_Including_Insurance} style={lengthData.medium}>
+                                                    {customLabel.Inland_Cost_Including_Insurance}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Commission} style={lengthData.medium}>
+                                                    {customLabel.Commission}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Packing_Size_Description} style={lengthData.medium}>
+                                                    {customLabel.Packing_Size_Description}
+                                                </div>
+                                            </th>
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Recheck_Margin} style={lengthData.medium}>
+                                                    <span style="color:red">*</span>{customLabel.Recheck_Margin}
+                                                </div>
+                                            </th>
+                                            <!-- 新增跟踪码 start -->
+                                            <template if:true={isAR}>
+                                                <th scope="col" >
+                                                     <div class="slds-truncate" title={customLabel.Tracking_Code} style={lengthData.medium}>
+                                                        <span style="color:red">*</span>{customLabel.Tracking_Code}
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            <!-- 新增跟踪码 end -->
+                                            <!-- <th scope="col" >
+                                                <div class="slds-truncate" title={customLabel.TargetArrivalDate} style={lengthData.medium}>
+                                                   <span style="color:red">*</span>{customLabel.TargetArrivalDate}
+                                               </div>
+                                            </th> -->
+                                            <!--<th scope="col">
+                                                     <div class="slds-truncate" title="column 1">
+                                                        Quality Requirement 
+                                                    </div>
+                                                    </th>-->
+                                            <th scope="col" >
+                                                 <div class="slds-truncate" title={customLabel.Other_Issue} style={lengthData.big}>
+                                                    <span style="color:red">*</span>{customLabel.Other_Issue}
+                                                </div>
+                                            </th>
+                                        </template>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={quoteDetailList} for:item=cmqp for:index="index">
+                        
+                                        <tr key={cmqp.index} class="slds-hint-parent">
+                        
+                                            <!-- 删除 -->
+                                            <td>
+                                                <div class="slds-truncate">
+                                                    <lightning-button-icon icon-name="utility:delete" value={index}
+                                                    data-record={index}
+                                                    onclick={deleteDetailData}></lightning-button-icon>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">
+                                                    <lightning-button-icon icon-name="utility:add" value={index}
+                                                    data-record={index} onclick={copyData}></lightning-button-icon>
+                                                </div>
+                                            </td>
+                                            <td >
+                                                <div class="slds-truncate">
+                                                    <lightning-button-icon icon-name="utility:upload" value={index}
+                                                    data-record={cmqp.conDetailData.Id}
+                                                    onclick={showFileMe}></lightning-button-icon>
+                                                </div>
+                                            </td>
+                                            <template if:true={isBaseQuote}>
+                                                <!--<td>
+                                                        <lightning-input-field data-record={index} variant="label-hidden"   field-name="Quote_Detail__c" name="Quote_Detail__c"  value={cmqp.conDetailData.Quote_Detail__c}   onchange={productChange} disabled>
+                                                        </lightning-input-field >
+                                                    </td>-->
+                                                
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-select value={cmqp.conDetailData.Product__c}
+                                                        options={cmqp.proList} variant="label-hidden" required
+                                                        onchange={getProductNameMap} data-record={index}
+                                                        name="Product__c"></lightning-select>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-select value={cmqp.conDetailData.Commodity__c}
+                                                        options={cmqp.proNameList} variant="label-hidden"
+                                                        onchange={mapProductChange} data-record={index}
+                                                        name="Commodity__c"></lightning-select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate slds-cell-wrap" style={lengthData.medium}>
+                                                        {cmqp.productEnglishName}
+                                                    </div>
+                                                   
+                                                </td>
+                                            </template>
+                                            <template if:false={isBaseQuote}>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Product__c"
+                                                        name="Product__c" value={cmqp.conDetailData.Product__c}
+                                                        onchange={getProductNameMap} required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                        
+                                                <td>
+                                                    <!--<lightning-input-field data-record={index} variant="label-hidden"   field-name="Commodity__c" name="Commodity__c"  value={cmqp.conDetailData.Commodity__c}   onchange={productChange} >
+                                                        </lightning-input-field >-->
+                                                    <div class="slds-truncate">
+                                                        <lightning-select value={cmqp.conDetailData.Commodity__c}
+                                                        options={cmqp.proNameList} variant="label-hidden"
+                                                        onchange={mapProductChange} data-record={index}
+                                                        name="Commodity__c"></lightning-select>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </template>
+                                            <template if:false={isHQContract}>
+                        
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="BU_Sales_Price__c"
+                                                        name="BU_Sales_Price__c"
+                                                        value={cmqp.conDetailData.BU_Sales_Price__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <input type="date" name="Delivery_Time__c"
+                                                        value={cmqp.conDetailData.Delivery_Time__c}
+                                                        data-record={index} onchange={productChange}></input>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <!-- <lightning-select value={cmqp.conDetailData.Unit__c}
+                                                        options={cmqp.proUnitList} variant="label-hidden" required
+                                                        onchange={productChange} data-record={index}
+                                                        name="Unit__c"></lightning-select> -->
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                            field-name="Unit_Label__c" name="Unit_Label__c"
+                                                            value={cmqp.conDetailData.Unit_Label__c}
+                                                            disabled variant="label-hidden">
+                                                        </lightning-input-field>
+                                                    </div>
+                                                        
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                            variant="label-hidden" field-name="Total_Amount__c"
+                                                            name="Total_Amount__c"
+                                                            value={cmqp.conDetailData.Total_Amount__c}
+                                                            onchange={productChange} disabled>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                            variant="label-hidden" field-name="Qnty__c" name="Qnty__c"
+                                                            value={cmqp.conDetailData.Qnty__c} onchange={productChange}
+                                                            required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <template if:true={isSaleContract}>
+                                                    <td>
+                                                        <div class="slds-truncate">
+                                                            <lightning-input-field data-record={index}
+                                                            variant="label-hidden"
+                                                            field-name="Discount_Unit_Price__c"
+                                                            name="Discount_Unit_Price__c"
+                                                            value={cmqp.conDetailData.Discount_Unit_Price__c}
+                                                            onchange={productChange} disabled>
+                                                            </lightning-input-field>
+                                                        </div>
+                                                        
+                                                    </td>
+                                                </template>
+                                            </template>
+                                            <template if:true={isHQContract}>
+                                                <!--<td>
+                                                            <lightning-input-field data-record={index} variant="label-hidden"   field-name="Product_English_Name__c" name="Product_English_Name__c"  value={cmqp.conDetailData.Product_English_Name__c}   onchange={productChange} >
+                                                            </lightning-input-field >
+                                                        </td>-->
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Product_Name__c"
+                                                        name="Product_Name__c"
+                                                        value={cmqp.conDetailData.Product_Name__c}
+                                                        onchange={productChange} required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-select
+                                                        value={cmqp.conDetailData.If_Designated_Products__c}
+                                                        options={ifDesignatedProductOption} variant="label-hidden"
+                                                        required onchange={productChange} data-record={index}
+                                                        name="If_Designated_Products__c"></lightning-select>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-select value={cmqp.conDetailData.If_Pallet__c}
+                                                        options={ifPalletOption} variant="label-hidden" required
+                                                        onchange={productChange} data-record={index}
+                                                        name="If_Pallet__c"></lightning-select>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Packing_Size__c"
+                                                        name="Packing_Size__c"
+                                                        value={cmqp.conDetailData.Packing_Size__c}
+                                                        onchange={productChange} disabled={isBaseQuote}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <!-- <lightning-select value={cmqp.conDetailData.Unit__c}
+                                                        options={cmqp.proUnitList} variant="label-hidden" required
+                                                        onchange={productChange} data-record={index}
+                                                        name="Unit__c"></lightning-select> -->
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        field-name="Unit_Label__c" name="Unit_Label__c"
+                                                        value={cmqp.conDetailData.Unit_Label__c}
+                                                        disabled variant="label-hidden">
+                                                        </lightning-input-field>
+                                                    </div>
+                                                        
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Qnty__c" name="Qnty__c"
+                                                        value={cmqp.conDetailData.Qnty__c} onchange={productChange}
+                                                        required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                        
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Unit_Price__c"
+                                                        name="Unit_Price__c"
+                                                        value={cmqp.conDetailData.Unit_Price__c}
+                                                        onchange={productChange} disabled>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <template if:true={isEditHqPrice}>
+                                                    <td>
+                                                        <div class="slds-truncate">
+                                                            <lightning-input-field data-record={index}
+                                                                variant="label-hidden"
+                                                                field-name="HQ_Contract_Unit_Price__c"
+                                                                name="HQ_Contract_Unit_Price__c"
+                                                                value={cmqp.conDetailData.HQ_Contract_Unit_Price__c}
+                                                                onchange={productChange} required>
+                                                            </lightning-input-field>
+                                                        </div>
+                                                        
+                                                    </td>
+                                                </template>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="BU_Sales_Price__c"
+                                                        name="BU_Sales_Price__c"
+                                                        value={cmqp.conDetailData.BU_Sales_Price__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Total_Amount__c"
+                                                        name="Total_Amount__c"
+                                                        value={cmqp.conDetailData.Total_Amount__c}
+                                                        onchange={productChange} disabled>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                        
+                                                <!--<td>
+                                                            <lightning-input-field data-record={index} variant="label-hidden"   field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={cmqp.conDetailData.Clearance_Cost_Percentage__c}   onchange={productChange} >
+                                                            </lightning-input-field >
+                                                        </td>-->
+                        
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="FOB_Price__c"
+                                                        name="FOB_Price__c" value={cmqp.conDetailData.FOB_Price__c}
+                                                        onchange={productChange} disabled={isBaseQuote}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Packing_cost__c"
+                                                        name="Packing_cost__c"
+                                                        value={cmqp.conDetailData.Packing_cost__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                   
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Pallet_Cost__c"
+                                                        name="Pallet_Cost__c"
+                                                        value={cmqp.conDetailData.Pallet_Cost__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Freight_Cost__c"
+                                                        name="Freight_Cost__c"
+                                                        value={cmqp.conDetailData.Freight_Cost__c}
+                                                        onchange={productChange} required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden"
+                                                        field-name="Inland_Cost_Including_Insurance__c"
+                                                        name="Inland_Cost_Including_Insurance__c"
+                                                        value={cmqp.conDetailData.Inland_Cost_Including_Insurance__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Commission_Unit_Price__c"
+                                                        name="Commission_Unit_Price__c"
+                                                        value={cmqp.conDetailData.Commission_Unit_Price__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                   
+                                                </td>
+                        
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden"
+                                                        field-name="Packing_Size_Description__c"
+                                                        name="Packing_Size_Description__c"
+                                                        value={cmqp.conDetailData.Packing_Size_Description__c}
+                                                        onchange={productChange}>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                        
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-select value={cmqp.conDetailData.Recheck_Margin__c}
+                                                        options={recheckMarginOption} variant="label-hidden"
+                                                        required onchange={productChange} data-record={index}
+                                                        name="Recheck_Margin__c"></lightning-select>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <!--<td>
+                                                            <lightning-input-field data-record={index} variant="label-hidden"   field-name="Quality_Requirement__c" name="Quality_Requirement__c"  value={cmqp.conDetailData.Quality_Requirement__c}   onchange={productChange} >
+                                                            </lightning-input-field >
+                                                        </td>-->
+                                                <template if:true={isAR}>
+                                                    <td>
+                                                        <div class="slds-truncate">
+                                                            <lightning-input-field data-record={index}
+                                                            variant="label-hidden" field-name="Tracking_Code__c"
+                                                            name="Tracking_Code__c"
+                                                            value={cmqp.conDetailData.Tracking_Code__c}
+                                                            onchange={productChange} required>
+                                                            </lightning-input-field>
+                                                        </div>
+                                                        
+                                                    </td>
+                                                </template> 
+                                                <!-- <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Target_Arrival_Date__c"
+                                                        name="Target_Arrival_Date__c"
+                                                        value={cmqp.conDetailData.Target_Arrival_Date__c}
+                                                        onchange={productChange} required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td> -->
+                                                <td>
+                                                    <div class="slds-truncate">
+                                                        <lightning-input-field data-record={index}
+                                                        variant="label-hidden" field-name="Other_Issue__c"
+                                                        name="Other_Issue__c"
+                                                        value={cmqp.conDetailData.Other_Issue__c}
+                                                        onchange={productChange} required>
+                                                        </lightning-input-field>
+                                                    </div>
+                                                    
+                                                </td>
+                        
+                                            </template>
+                                            
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </lightning-record-edit-form>
+                </template>
+            <!-- </lightning-layout> -->
+        </template>
+
+        <!-- 手机内容详细页面 -->
+        <template if:false={isPC}>
+            <div style="padding-left: 10px;padding-right: 10px;background-color:#ddd">
+                <br>
+                <template if:false={isBaseQuote}>
+                    <lightning-button variant="brand" label={customLabel.Add_Contract_Detail} title="Search action"
+                        onclick={addProduct}></lightning-button></template>
+                <template for:each={quoteDetailList} for:item=info for:index="index">
+                    <div key={info.index} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                        <lightning-card icon-name="standard:article">
+                            <div slot="actions">
+                                <lightning-button-icon variant="bare" style="margin-right: 15px;"
+                                    icon-name="utility:delete" size='large' onclick={deleteDetailData}
+                                    data-record={index} name={indexDetail}></lightning-button-icon>
+
+                                    <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:add"
+                                    size='large' onclick={copyData} data-record={index}
+                                    name={indexDetail}></lightning-button-icon>
+
+                                    <lightning-button-icon icon-name="utility:upload" value={index}
+                                                    data-record={info.conDetailData.Id}
+                                                    onclick={showFileMe}></lightning-button-icon>
+                            </div>
+                            
+                            <template if:true={info.conDetailData}>
+                                <lightning-record-edit-form object-api-name="Contracts_Detail__c" density="compact">
+                                    <div class="slds-p-around_medium slds-grid slds-wrap">
+                                        <template if:true={isBaseQuote}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <!--<lightning-input-field data-record={index} field-name="Quote_Detail__c" name="Quote_Detail__c"  value={info.conDetailData.Quote_Detail__c} onchange={productChange} disabled > 
+                                                </lightning-input-field>-->
+                                                <lightning-input data-record={index} label="Product English Name"
+                                                    name="Quote_Detail__c" value={info.productEnglishName}
+                                                    onchange={productChange} disabled>
+                                                </lightning-input>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-select value={info.conDetailData.Product__c}
+                                                    label={customLabel.Product_Code} options={info.proList} required
+                                                    onchange={getProductNameMap} data-record={index}
+                                                    name="Product__c"></lightning-select>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-select value={info.conDetailData.Commodity__c}
+                                                    label={customLabel.Product_Name} options={info.proNameList}
+                                                    onchange={mapProductChange} data-record={index}
+                                                    name="Commodity__c"></lightning-select>
+                                            </div>
+                                        </template>
+                                        <template if:false={isBaseQuote}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Product__c"
+                                                    name="Product__c" value={info.conDetailData.Product__c}
+                                                    onchange={getProductNameMap} required>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <!--<lightning-input-field data-record={index} variant="label-hidden"   field-name="Commodity__c" name="Commodity__c"  value={cmqp.conDetailData.Commodity__c}   onchange={productChange} >
+                                                            </lightning-input-field >-->
+                                                <lightning-select value={info.conDetailData.Commodity__c}
+                                                    options={info.proNameList} label={customLabel.Product_Name}
+                                                    onchange={mapProductChange} data-record={index}
+                                                    name="Commodity__c"></lightning-select>
+                                            </div>
+                                        </template>
+
+
+
+                                        <!--<div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Product__c" name="Product__c"  value={info.conDetailData.Product__c} onchange={vertifyProduct}  required> 
+                                                </lightning-input-field> 
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Commodity__c" name="Commodity__c"  value={info.conDetailData.Commodity__c} onchange={mapProductChange}  > 
+                                                </lightning-input-field> 
+                                                </div>-->
+                                        <template if:false={isHQContract}>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index}
+                                                    field-name="BU_Sales_Price__c" name="BU_Sales_Price__c"
+                                                    value={info.conDetailData.BU_Sales_Price__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small"
+                                                style="margin-left:5px;">
+                                                {customLabel.Delivery_Time}
+                                                <div>
+                                                    <input type="date" style="width: 100%;" data-record={index}
+                                                        name="Delivery_Time__c"
+                                                        value={info.conDetailData.Delivery_Time__c}
+                                                        onchange={productChange}></input>
+                                                </div>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <!-- <lightning-select value={info.conDetailData.Unit__c}
+                                                    options={info.proUnitList} label={customLabel.Unit} required
+                                                    onchange={productChange} data-record={index}
+                                                    name="Unit__c"></lightning-select> -->
+                                                    <lightning-input-field data-record={index}
+                                                        field-name="Unit_Label__c" name="Unit_Label__c"
+                                                        value={info.conDetailData.Unit_Label__c}
+                                                        disabled >
+                                                    </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Total_Amount__c"
+                                                    name="Total_Amount__c" value={info.conDetailData.Total_Amount__c}
+                                                    onchange={productChange} disabled>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Qnty__c"
+                                                    name="Qnty__c" value={info.conDetailData.Qnty__c}
+                                                    onchange={productChange} required>
+                                                </lightning-input-field>
+                                            </div>
+                                            <template if:true={isSaleContract}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index}
+                                                        field-name="Discount_Unit_Price__c"
+                                                        name="Discount_Unit_Price__c"
+                                                        value={info.conDetailData.Discount_Unit_Price__c}
+                                                        onchange={productChange} disabled>
+                                                    </lightning-input-field>
+                                                </div>
+                                            </template>
+                                        </template>
+                                        <template if:true={isHQContract}>
+
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Product_Name__c"
+                                                    name="Product_Name__c" value={info.conDetailData.Product_Name__c}
+                                                    onchange={productChange} required>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-select value={info.conDetailData.If_Designated_Products__c}
+                                                    options={ifDesignatedProductOption}
+                                                    label={customLabel.If_Designated_Products} required
+                                                    onchange={productChange} data-record={index}
+                                                    name="If_Designated_Products__c"></lightning-select>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-select value={info.conDetailData.If_Pallet__c}
+                                                    options={ifPalletOption} label={customLabel.If_Pallet} required
+                                                    onchange={productChange} data-record={index}
+                                                    name="If_Pallet__c"></lightning-select>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Packing_Size__c"
+                                                    name="Packing_Size__c" value={info.conDetailData.Packing_Size__c}
+                                                    onchange={productChange} disabled={isBaseQuote}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <!-- <lightning-select value={info.conDetailData.Unit__c}
+                                                    options={info.proUnitList} label={customLabel.Unit} required
+                                                    onchange={productChange} data-record={index}
+                                                    name="Unit__c"></lightning-select> -->
+                                                    <lightning-input-field data-record={index}
+                                                        field-name="Unit_Label__c" name="Unit_Label__c"
+                                                        value={info.conDetailData.Unit_Label__c}
+                                                        disabled>
+                                                    </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Qnty__c"
+                                                    name="Qnty__c" value={info.conDetailData.Qnty__c}
+                                                    onchange={productChange} required>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Unit_Price__c"
+                                                    name="Unit_Price__c" value={info.conDetailData.Unit_Price__c}
+                                                    onchange={productChange} disabled>
+                                                </lightning-input-field>
+                                            </div>
+                                            <template if:true={isEditHqPrice}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index}
+                                                        field-name="HQ_Contract_Unit_Price__c"
+                                                        name="HQ_Contract_Unit_Price__c"
+                                                        value={info.conDetailData.HQ_Contract_Unit_Price__c} required
+                                                        onchange={productChange}>
+                                                    </lightning-input-field>
+                                                </div>
+                                            </template>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index}
+                                                    field-name="BU_Sales_Price__c" name="BU_Sales_Price__c"
+                                                    value={info.conDetailData.BU_Sales_Price__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Total_Amount__c"
+                                                    name="Total_Amount__c" value={info.conDetailData.Total_Amount__c}
+                                                    onchange={productChange} disabled>
+                                                </lightning-input-field>
+                                            </div>
+
+
+                                            <!--<div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Clearance_Cost_Percentage__c" name="Clearance_Cost_Percentage__c"  value={info.conDetailData.Clearance_Cost_Percentage__c} onchange={productChange}  > 
+                                                </lightning-input-field> 
+                                                </div>-->
+
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="FOB_Price__c"
+                                                    name="FOB_Price__c" value={info.conDetailData.FOB_Price__c}
+                                                    onchange={productChange} disabled={isBaseQuote}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Packing_cost__c"
+                                                    name="Packing_cost__c" value={info.conDetailData.Packing_cost__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Pallet_Cost__c"
+                                                    name="Pallet_Cost__c" value={info.conDetailData.Pallet_Cost__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Freight_Cost__c"
+                                                    name="Freight_Cost__c" value={info.conDetailData.Freight_Cost__c}
+                                                    onchange={productChange} required>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index}
+                                                    field-name="Inland_Cost_Including_Insurance__c"
+                                                    name="Inland_Cost_Including_Insurance__c"
+                                                    value={info.conDetailData.Inland_Cost_Including_Insurance__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index}
+                                                    field-name="Commission_Unit_Price__c"
+                                                    name="Commission_Unit_Price__c"
+                                                    value={info.conDetailData.Commission_Unit_Price__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index}
+                                                    field-name="Packing_Size_Description__c"
+                                                    name="Packing_Size_Description__c"
+                                                    value={info.conDetailData.Packing_Size_Description__c}
+                                                    onchange={productChange}>
+                                                </lightning-input-field>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-select value={info.conDetailData.Recheck_Margin__c}
+                                                    options={recheckMarginOption} label={customLabel.Recheck_Margin}
+                                                    required onchange={productChange} data-record={index}
+                                                    name="Recheck_Margin__c"></lightning-select>
+                                            </div>
+                                            <!--<div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Quality_Requirement__c" name="Quality_Requirement__c"  value={info.quoteDetailData.Quality_Requirement__c} onchange={productChange}  > 
+                                                </lightning-input-field> 
+                                                </div>  -->
+                                            <template if:true={isAR}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Tracking_Code__c"
+                                                        name="Tracking_Code__c" value={info.conDetailData.Tracking_Code__c}
+                                                        onchange={productChange} required>
+                                                    </lightning-input-field>
+                                                </div>
+                                            </template>
+                                            <!-- <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Target_Arrival_Date__c"
+                                                    name="Target_Arrival_Date__c" value={info.conDetailData.Target_Arrival_Date__c}
+                                                    onchange={productChange} required>
+                                                </lightning-input-field>
+                                            </div> -->
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="Other_Issue__c"
+                                                    name="Other_Issue__c" value={info.conDetailData.Other_Issue__c}
+                                                    onchange={productChange} required>
+                                                </lightning-input-field>
+                                            </div>
+                                        </template>
+
+
+                                        <!--<template if:true = {info.quoteDetailData.Show_More__c}>
+                                                
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.quoteDetailData.Gross_Weight__c} onchange={productChange}> 
+                                                    </lightning-input-field> 
+                                                </div>
+
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.quoteDetailData.Net_Weight__c} onchange={productChange}> 
+                                                    </lightning-input-field>
+                                                </div>
+                                            </template>-->
+                                    </div>
+                                </lightning-record-edit-form>
+                                <!--<div slot="footer">
+                                        <template if:false={info.quoteDetailData.Show_More__c}>
+                                            <lightning-badge label={customLabel.Show_More} name={index} onclick={shooMoreMe}></lightning-badge>
+                                        </template>
+                                        <template if:true={info.quoteDetailData.Show_More__c}>
+                                            <lightning-badge label={customLabel.Show_Less} name={index} onclick={shooLessMe}></lightning-badge>
+                                        </template>
+                                    </div>-->
+                            </template>
+                        </lightning-card>
+                    </div>
+                </template>
+            </div>
+        </template>
+        <template if:true={isPC}>
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="">
+                    <lightning-button label={customLabel.CancelLable} onclick={close}
+                        class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData}
+                        class="slds-p-around_x-small">
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+        <template if:true={showFile}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container " style="max-width:100%;width:87% !important">
+                    <div class="slds-modal__header">
+                        <h2 class="slds-text-heading--medium">
+                            {customLabel.File}
+                        </h2>
+                    </div>
+                    <div class="slds-modal__content modalBody menu">
+                        <c-upload-file-l-w-c record-id={recordDetailId} attachments={fileData} ></c-upload-file-l-w-c>
+                    </div>
+                    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                        <div class="">
+                            <lightning-button label={customLabel.ConfirmLabel} onclick={closeFile} class="slds-p-around_x-small"></lightning-button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            
+        </template>
+    <!-- </div> -->
+</template>

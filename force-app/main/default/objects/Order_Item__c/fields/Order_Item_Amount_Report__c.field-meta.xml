@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Item_Amount_Report__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    (TEXT(Order__r.Status__c)!=&apos;Approved&apos;),
+    0,
+    IF(
+        isClosed__c,
+        Invoice_Amount__c,
+        Amount_per_item__c
+    )
+)
+*
+IF(CONTAINS(&apos;ZAR3,ZAR8,ZMX2,ZRE,ZRE1,ZREQ,ZR1Q,ZMX3,ZARA,ZARF,ZARH,ZAR2&apos;,TEXT(Order__r.Order_type__c)), -1, 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Order Item Amount Report</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

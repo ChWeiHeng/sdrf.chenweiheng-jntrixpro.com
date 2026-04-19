@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>01	Assigned by the System (Internal)</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <label>02	Delivery date too late</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>03	Poor quality</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <label>04	Too expensive</label>
+    </customValue>
+    <customValue>
+        <fullName>05</fullName>
+        <default>false</default>
+        <label>05	Competitor better</label>
+    </customValue>
+    <customValue>
+        <fullName>06</fullName>
+        <default>false</default>
+        <label>06	Guarantee</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>10	Unreasonable request</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>11	Cust.to receive replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>12	suspend order</label>
+    </customValue>
+    <customValue>
+        <fullName>50</fullName>
+        <default>false</default>
+        <label>50	Transaction is being checked</label>
+    </customValue>
+    <customValue>
+        <fullName>CR</fullName>
+        <default>false</default>
+        <label>CR	Copied and Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>G1</fullName>
+        <default>false</default>
+        <label>G1	SMP-Notification</label>
+    </customValue>
+    <customValue>
+        <fullName>G2</fullName>
+        <default>false</default>
+        <label>G2	SMP-Suspended</label>
+    </customValue>
+    <customValue>
+        <fullName>G3</fullName>
+        <default>false</default>
+        <label>G3	SMP-Declined</label>
+    </customValue>
+    <customValue>
+        <fullName>G4</fullName>
+        <default>false</default>
+        <label>G4	SMP-Flagged (Deleted during Release)</label>
+    </customValue>
+    <customValue>
+        <fullName>J1</fullName>
+        <default>false</default>
+        <label>J1	DRM Claim Canellation/Rejection</label>
+    </customValue>
+    <customValue>
+        <fullName>LV</fullName>
+        <default>false</default>
+        <label>LV	Bill of services completed</label>
+    </customValue>
+    <customValue>
+        <fullName>NR</fullName>
+        <default>false</default>
+        <label>NR	Copy Failure: New SA Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Z1</fullName>
+        <default>false</default>
+        <label>Z1	Cancel by Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>00</fullName>
+        <default>false</default>
+        <label>00</label>
+    </customValue>
+    <customValue>
+        <fullName>20</fullName>
+        <default>false</default>
+        <label>20 Cancalled sales order</label>
+    </customValue>
+    <masterLabel>Closure Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

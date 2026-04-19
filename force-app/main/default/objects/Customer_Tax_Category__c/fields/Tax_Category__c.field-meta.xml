@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Category__c</fullName>
+    <label>Tax Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tax_Category_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Tax_Category</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>MX01</controllingFieldValue>
+            <valueName>0-Exento/a de I.E.P.S.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MX01</controllingFieldValue>
+            <valueName>1-Sujeto/a de I.E.P.S.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>1-Responsable IVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>2-Responsable no IVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>3-No responsable IVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>4-Sujeto exención IVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>5-IVA Consumidor Final</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>6-Respons. Monotributo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>7-Monotributo Resp.Imp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>8-Suj. no categorizado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1AU</controllingFieldValue>
+            <valueName>9-Cliente del exterior</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>0-CABA Sin Padrón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>A-CABA A.Riesgo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>B-CABA Dif.0,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>C-CABA Dif.0,50%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>D-CABA Dif.0,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>E-CABA RG Grupo 01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>F-CABA RG Grupo 02</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>G-CABA RG Grupo 03</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>H-CABA RG Grupo 04</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>I-CABA RG Grupo 05</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>J-CABA RG Grupo 06</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>K-CABA RG Grupo 07</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>L-CABA RG Grupo 08</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>M-CABA RG Grupo 09</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>N-CABA RG Grupo 10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>O-CABA RG Grupo 11</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>P-CABA RG Grupo 12</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>Q-CABA RG Grupo 13</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>R-CABA RG Grupo 14</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>S-CABA RG Grupo 15</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>T-CABA RG Grupo 16</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A1</controllingFieldValue>
+            <valueName>U-CABA R. Simplif 0%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>0-ARBA - No Padrón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>A-ARBA - 0,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>B-ARBA - 0,01%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>C-ARBA - 0,05%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>D-ARBA - 0,10%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>E-ARBA - 0,20%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>F-ARBA - 0,30%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>G-ARBA - 0,40%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>H-ARBA - 0,50%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>I-ARBA - 0,70%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>J-ARBA - 0,80%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>K-ARBA - 0,90%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>L-ARBA - 1,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>M-ARBA - 1,10%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>N-ARBA - 1,20%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>O-ARBA - 1,30%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>P-ARBA - 1,50%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>Q-ARBA - 1,60%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>R-ARBA - 1,75%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>S-ARBA - 2,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>T-ARBA - 2,50%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>U-ARBA - 3,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>V-ARBA - 3,50%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>W-ARBA - 4,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>X-ARBA - 5,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>Y-ARBA - 6,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A2</controllingFieldValue>
+            <valueName>Z-ARBA - 8,00%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>0-No Aplica - Exento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>1-Alícuota 3%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>2-Alícuota 1%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>3-Alícuota 6%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>4-Alícuota 0,1%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>5-Alícuota 0,25%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>6-Alícuota 0,50%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>7-Alícuota 2%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <controllingFieldValue>J1A5</controllingFieldValue>
+            <controllingFieldValue>J1A6</controllingFieldValue>
+            <controllingFieldValue>J1A7</controllingFieldValue>
+            <valueName>A-Actividad 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <controllingFieldValue>J1A5</controllingFieldValue>
+            <controllingFieldValue>J1A6</controllingFieldValue>
+            <controllingFieldValue>J1A7</controllingFieldValue>
+            <valueName>B-Actividad 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <controllingFieldValue>J1A5</controllingFieldValue>
+            <controllingFieldValue>J1A6</controllingFieldValue>
+            <controllingFieldValue>J1A7</controllingFieldValue>
+            <valueName>C-Actividad 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A3</controllingFieldValue>
+            <valueName>P-Por Padrón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A4</controllingFieldValue>
+            <valueName>0-No Aplica/Exento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A4</controllingFieldValue>
+            <valueName>1-Contrib.Local</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A4</controllingFieldValue>
+            <valueName>2-Inscripto CM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A4</controllingFieldValue>
+            <valueName>3-Activ.Agropecuaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A4</controllingFieldValue>
+            <valueName>4-No Registrado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A5</controllingFieldValue>
+            <controllingFieldValue>J1A6</controllingFieldValue>
+            <controllingFieldValue>J1A7</controllingFieldValue>
+            <controllingFieldValue>J1A8</controllingFieldValue>
+            <valueName>0-No Aplica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A5</controllingFieldValue>
+            <controllingFieldValue>J1A6</controllingFieldValue>
+            <controllingFieldValue>J1A7</controllingFieldValue>
+            <valueName>1-Alícuota Gral Provi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>J1A8</controllingFieldValue>
+            <valueName>1-Aplica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MWST</controllingFieldValue>
+            <valueName>0-Exento/a de impto.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MWST</controllingFieldValue>
+            <valueName>1-Sujeto/a impuestos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MWST</controllingFieldValue>
+            <valueName>2-Sujeto/a impuestos</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

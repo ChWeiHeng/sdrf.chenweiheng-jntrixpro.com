@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Total_Cost__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+    isClosed__c,
+    IF(
+        OR(
+            TEXT(Delivery_Plant__c)=&apos;3011&apos;,
+            TEXT(Delivery_Plant__c)=&apos;3020&apos;
+        ),
+							
+								Delivery_Total_Cost__c,
+        
+        Delivery_Quantity__c*Product_Cost__c
+    ),
+    IF(
+        OR(
+            TEXT(Delivery_Plant__c)=&apos;3011&apos;,
+            TEXT(Delivery_Plant__c)=&apos;3020&apos;
+        ),
+								IF(
+								    Delivery_Quantity__c = 0,
+												Quantity__c*Product_Cost__c,
+												(Quantity__c-Delivery_Quantity__c)*Delivery_Unit_Cost__c+Delivery_Total_Cost__c
+								),
+        Quantity__c*Product_Cost__c
+    )
+    
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual Total Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

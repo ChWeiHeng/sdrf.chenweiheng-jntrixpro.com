@@ -1,0 +1,56 @@
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">
+             <!--Account Visit Submit-->
+             {customLabel.CustomerVisitSubmitHeader}
+            </h2>
+        </div>
+        <div class="slds-modal__content modalBody menu">
+           
+            <template if:true={isMSG}>
+               
+           
+            
+             <template if:false={isPC}>
+             	 <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="2">
+                    </lightning-layout-item>
+                	<lightning-layout-item padding="around-small" size="8">
+                		 <h2 class="slds-text-heading--medium">
+                             <!--Confirm the Submit of the Account Visit?-->
+                             {customLabel.CustomerVisitSubmitConfirm}
+                         </h2>
+                	</lightning-layout-item>
+                </lightning-layout>
+             	
+            </template>
+            <template if:true={isPC}>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="3">
+                    </lightning-layout-item>
+                	<lightning-layout-item padding="around-small" size="6">
+                		 <h2 class="slds-text-heading--medium">
+                            <!--
+                             Confirm the Submit of the Account Visit?-->
+                             {customLabel.CustomerVisitSubmitConfirm}
+                         </h2>
+                	</lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </template>
+        </div>
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="">
+                <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                <template if:true={isMSG}>
+                <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

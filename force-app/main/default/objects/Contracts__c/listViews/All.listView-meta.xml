@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Export_Country__c</columns>
+    <columns>BPM_Contrct_Numbder__c</columns>
+    <columns>Contract_Type__c</columns>
+    <columns>Quote__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Final_Customer__c</columns>
+    <columns>Final_Customer_Payment_Terms__c</columns>
+    <columns>Subsidiary_Period__c</columns>
+    <columns>BPM_Final_Customer_Payment_Terms__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Status__c</columns>
+    <columns>Sync_Status__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>CRM_Approval_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

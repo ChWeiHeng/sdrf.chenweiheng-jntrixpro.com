@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Customer__c</field>
+        <field>Overdue__c</field>
+        <field>Ultra_Credit__c</field>
+        <field>SAP_Credit_Limit__c</field>
+        <field>Owner</field>
+        <field>Total_Amount__c</field>
+        <field>Order_Amount_Guide__c</field>
+        <field>Amount_Difference__c</field>
+        <field>Amount_Rate__c</field>
+        <field>Order_type__c</field>
+        <field>Total_Margin_Level__c</field>
+        <field>Currency__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>如果不是经理提交跳过该步骤</description>
+        <entryCriteria>
+            <formula>CONTAINS($UserRole.Name, &apos;Sales Rep&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Sales Leader</label>
+        <name>Sales_Leader</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>finanzas2_mx@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1. Excess credit limit
+2. AR overdue
+3. Discount &lt; 20%
+4. Gross margin rate &lt; 0%
+5. Payment term longer than default payment term</description>
+        <entryCriteria>
+            <formula>OR( Ultra_Credit__c ,Overdue__c,	Aprove_Level__c &lt;3,Margin_Rate__c&lt;0,Payment_Term_Longer__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Finance MX</label>
+        <name>Finance_MX1</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>benjamin.robles@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1. Discount &gt; 20%
+2. Gross margin rate &lt; 0%
+3. Payment term longer than default payment term</description>
+        <entryCriteria>
+            <formula>OR(Aprove_Level__c =3,Margin_Rate__c&lt;0,Payment_Term_Longer__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>General Manager</label>
+        <name>General_Manager1</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>laryfan@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>1. Discount &gt; 20%
+2. Gross margin rate &lt; 0%
+3. Payment term longer than default payment term</description>
+        <entryCriteria>
+            <formula>OR(Aprove_Level__c =3,Margin_Rate__c&lt;0,Payment_Term_Longer__c)</formula>
+        </entryCriteria>
+        <label>Price-Area Head</label>
+        <name>Price_Approved2</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>墨西哥3010</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6 OR 8) AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Order__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Draft,Rejected</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Order_type__c</field>
+            <operation>equals</operation>
+            <value>ZMX1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>3010</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Aprove_Level__c</field>
+            <operation>notEqual</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Overdue__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Ultra_Credit__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Model C</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.Payment_Term_Longer__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>OrderApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>OrderApproveFailed</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>OrderApproving</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Standard Order 3011</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>OrderDraft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

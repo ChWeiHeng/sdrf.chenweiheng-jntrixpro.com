@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>01 Trading Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <label>02 Performances</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>03</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <label>04</label>
+    </customValue>
+    <customValue>
+        <fullName>M0</fullName>
+        <default>false</default>
+        <label>M0 POR LOGISTICA</label>
+    </customValue>
+    <customValue>
+        <fullName>M1</fullName>
+        <default>false</default>
+        <label>M1 ADICION DE MARCA</label>
+    </customValue>
+    <customValue>
+        <fullName>M2</fullName>
+        <default>false</default>
+        <label>M2 POR INTERESES</label>
+    </customValue>
+    <customValue>
+        <fullName>M3</fullName>
+        <default>false</default>
+        <label>M3 DEV Y DESC 0%</label>
+    </customValue>
+    <customValue>
+        <fullName>M4</fullName>
+        <default>false</default>
+        <label>M4 DEV Y DESC 16%</label>
+    </customValue>
+    <customValue>
+        <fullName>M5</fullName>
+        <default>false</default>
+        <label>M5 Downpayment</label>
+    </customValue>
+    <customValue>
+        <fullName>Z1</fullName>
+        <default>false</default>
+        <label>Z1 Productos Producidos</label>
+    </customValue>
+    <customValue>
+        <fullName>Z2</fullName>
+        <default>false</default>
+        <label>Z2 Dif. Realiz. Gananc.</label>
+    </customValue>
+    <customValue>
+        <fullName>Z3</fullName>
+        <default>false</default>
+        <label>Z3 Correo y Mensajería</label>
+    </customValue>
+    <customValue>
+        <fullName>Z4</fullName>
+        <default>false</default>
+        <label>Z4 Bs de Uso - Rodados</label>
+    </customValue>
+    <customValue>
+        <fullName>Z5</fullName>
+        <default>false</default>
+        <label>Z5 Comisiones Bancarias</label>
+    </customValue>
+    <customValue>
+        <fullName>Z6</fullName>
+        <default>false</default>
+        <label>Z6 Venta (No Productos)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z7</fullName>
+        <default>false</default>
+        <label>Z7 Dctos y Bonif.</label>
+    </customValue>
+    <customValue>
+        <fullName>Z8</fullName>
+        <default>false</default>
+        <label>Z8 Intereses</label>
+    </customValue>
+    <customValue>
+        <fullName>Z9</fullName>
+        <default>false</default>
+        <label>Z9 Anticipo de Clientes</label>
+    </customValue>
+    <customValue>
+        <fullName>ZA</fullName>
+        <default>false</default>
+        <label>ZA Cheque Rechazado</label>
+    </customValue>
+    <customValue>
+        <fullName>ZB</fullName>
+        <default>false</default>
+        <label>ZB Dif. Realiz. Perdida</label>
+    </customValue>
+    <customValue>
+        <fullName>ZD</fullName>
+        <default>false</default>
+        <label>ZD</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>11</label>
+    </customValue>
+    <masterLabel>Material Subject Assign Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

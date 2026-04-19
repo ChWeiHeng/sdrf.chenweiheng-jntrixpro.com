@@ -1,0 +1,1586 @@
+<!--
+  @description       : 
+  @author            : Gerry
+  @group             : 
+  @last modified on  : 03-13-2026
+  @last modified by  : Gerry
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   07-28-2025   Gerry   Initial Version
+-->
+<template>
+	<div class="slds-is-relative">
+		<template if:true={isShowSpinner} >
+           <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+        </template>
+
+        <!-- 手机头 -->
+        <template if:false={isPC}>
+            <div class="slds-grid" style="position: fixed;
+            z-index: 98;
+            
+            left: -1.75px;
+            right: 0px;
+            border-radius: 0px;
+            transform: translate3d(0px, -18px, 0px);
+            background-color:#f3f3f3;
+            border-radius:5px;
+           ">
+                <div class="slds-col" style="text-align: left;line-height:35px;">
+                    <lightning-button label={customLabel.CancelLable} onclick={close}></lightning-button>
+                </div>
+                <h2 class="slds-col" style="text-align:center;line-height:35px;">
+                    <!-- Manage Order Item -->
+                    {customLabel.OrderItemHeader}
+                </h2>
+                <div class="slds-col" style="text-align: right;line-height:35px;">
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData}>
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- PC头 -->
+        <template if:true={isPC}>
+            <div class="slds-grid slds-modal__header">
+                <lightning-card class="slds-color__background_gray-4 pageHeader" 
+			        	style="position: fixed;
+					    z-index: 98;
+					    height: 4px;
+					    left: -1.75px;
+					    right: 0px;
+					    border-radius: 0px;
+					    transform: translate3d(0px, -30px, 0px);
+					    background: #e40707;" title={customLabel.OrderItemHeader} icon-name="standard:article">
+                    </lightning-card>
+                </div>
+        </template>
+
+        <div class="slds-modal__content modalBody menu">
+            <template if:false={isPC}>
+                <template if:false={isNotShowSearch}>
+                    <div style="position: fixed;
+                    z-index: 98;
+                    
+                    left: -1.75px;
+                    right: 0px;
+                    border-radius: 0px;
+                    transform: translate(80%, 801%);
+                    ">
+                        <template if:false={disableAction}>
+                            <template if:false={isAutoZAR1}>
+                                <lightning-icon icon-name='action:add_relationship' alternative-text='add_relationship' size='small' title='add_relationship' onclick={showSearch}></lightning-icon>
+                            </template>
+                        </template>
+                    </div>
+                </template>
+                
+            </template>
+
+            <!-- PC内容 -->
+            <template if:true={isPC}>
+                <div style="padding-left: 10px;padding-right: 10px;">
+                    <!-- 采销协同订单不显示 start -->
+                    <template if:false={disableAction}>
+                        <!-- Mass Edit Auto生成的ZAR1订单不显示 -->
+                        <template if:false={isNotShowSearch}>
+                            <template if:false={isAutoZAR1}>
+                                <div style="margin-right:10px;display:inline-block;width:400px;margin-top:10px;">
+                                    <lightning-input placeholder={customLabel.Search} type="text" variant="label-hidden" value={queryText} onchange={textChange}></lightning-input>
+                                </div>
+                                <div style="margin-left:5px;display:inline-block;">
+                                    <lightning-button variant="brand" label={customLabel.searchText} onclick={queryData}></lightning-button>
+                                </div>
+                                <div class="condition_head_title" style="font-weight: inherit;font-size: 13px;">
+                                    <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                                    {customLabel.Search_Result}
+                                </div>
+                                <lightning-card>
+                                    <!-- <lightning-button variant="brand" label='Add' onclick={addData} class="slds-p-around_x-small">
+                                    </lightning-button> -->
+                                    <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                                        <div class="slds-scrollable_x slds-scrollable_y" style="height: 450px;">
+                                            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                                <thead>
+                                                    <tr class="slds-line-height_reset">
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.small} title="#">{customLabel.Action}</div>
+                                                        </th>
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.medium} title={customLabel.Material_Code}>{customLabel.Material_Code}</div>
+                                                        </th>
+                                                        <template if:true={isZAR2}>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.invoiceItemNumber}>{customLabel.invoiceItemNumber}</div>
+                                                            </th>
+                                                        </template>
+                                                        
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.medium} title={customLabel.ProductNameOrderItem}>{customLabel.ProductNameOrderItem}</div>
+                                                        </th>
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.medium} title={customLabel.productDescription}>{customLabel.productDescription}</div>
+                                                        </th>
+                                                        
+                                                        <template if:true={isShowFiled}>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.FillUpOrder}>{customLabel.FillUpOrder}</div>
+                                                            </th>
+
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.FillUpOrderCreateDate}>{customLabel.FillUpOrderCreateDate}</div>
+                                                            </th>
+                                                            <template if:true={isZARF}>
+                                                                <th scope="col" >
+                                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Delivery_Note_Number}>{customLabel.Delivery_Note_Number}</div>
+                                                                </th>
+                                                            </template>
+                                                        </template>
+                                                        <template if:true={isCreditNote}>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Quantity}>{customLabel.Quantity}</div>
+                                                            </th>
+                                                        </template>
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.medium} title={customLabel.Local_Currency}>{customLabel.Local_Currency}</div>
+                                                        </th>
+                                                        <template if:true={isCreditNote}>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Amount_per_item}>{customLabel.Amount_per_item}</div>
+                                                            </th>
+                                                        </template>
+                                                        <!-- <th width={lengthData.cost} height="30px;" class="slds-text-align_left" scope="col">
+                                                            <span class="tableTitle" title="ItemNm__c">{customLabel.productCost}</span>
+                                                        </th> -->
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.medium} title={customLabel.Basic_Unit}>{customLabel.Basic_Unit}</div>
+                                                        </th>
+                                                        <template if:false={isCreditNote}>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Available_Inventory}>{customLabel.Available_Inventory}</div>
+                                                            </th>
+
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Approving_Inventory}>{customLabel.Approving_Inventory}</div>
+                                                            </th>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.Place_order}>{customLabel.Place_order}</div>
+                                                            </th>
+                                                        </template>
+                                                        
+                                                        <template if:true={isFROMInvoice}>
+                                                            <th scope="col" >
+                                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.FECHA_DE_PAGO}>{customLabel.FECHA_DE_PAGO}</div>
+                                                            </th>
+                                                        </template>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <template if:true={productItemList}>
+                                                        <template for:each={productItemList} for:item=info for:index="index">
+                                                            <tr key={info.indexNum} class="slds-hint-parent">
+                                                                <td>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-button-icon icon-name="utility:add" data-record={index} onclick={selectChange}></lightning-button-icon>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="slds-truncate slds-cell-wrap">
+                                                                        {info.materialCode}
+                                                                    </div>
+                                                                </td>
+                                                                <template if:true={isZAR2}>
+                                                                    <td>
+                                                                        <div class="slds-truncate slds-cell-wrap">
+                                                                            {info.invoiceItemNumber}
+                                                                        </div>
+                                                                    </td>
+                                                                </template>
+                                                                <td>
+                                                                    <div class="slds-truncate slds-cell-wrap">
+                                                                        {info.productName}
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="slds-truncate slds-cell-wrap">
+                                                                        {info.productDescription}
+                                                                    </div>
+                                                                </td>
+                                                                <template if:true={isShowFiled}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.oldCode} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.createDate} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+                                                                    <template if:true={isZARF}>
+                                                                        <td>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input type="text" value={info.deliveryNoteNumber} variant="label-hidden" disabled=true></lightning-input>
+                                                                            </div>
+                                                                        </td>
+                                                                    </template>
+                                                                </template>
+                                                                <template if:true={isCreditNote}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.quantity} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+                                                                </template>
+                                                                <td>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input type="text" value={info.Price} variant="label-hidden" disabled=true></lightning-input>
+                                                                    </div>
+                                                                </td>
+                                                                <template if:true={isCreditNote}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.amount} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+                                                                </template>
+                                                                <!-- <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.cost}>
+                                                                    <lightning-input type="text" value={info.cost} variant="label-hidden" disabled=true></lightning-input>
+                                                                </td> -->
+                                                                <td>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input type="text" value={info.salesUnitName} variant="label-hidden" disabled=true></lightning-input>
+                                                                    </div>
+                                                                </td>
+
+                                                                <template if:false={isCreditNote}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.availableInventory} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+        
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.approvingInventory} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+                                                                    <template if:true={info.placeOrder}>
+                                                                        <td>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input type="checkbox" value={info.placeOrder} variant="label-hidden" checked disabled=true></lightning-input>
+                                                                            </div>
+                                                                        </td>
+                                                                    </template>
+        
+                                                                    <template if:false={info.placeOrder}>
+                                                                        <td>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input type="checkbox" value={info.placeOrder} variant="label-hidden" disabled=true></lightning-input>
+                                                                            </div>
+                                                                        </td>
+                                                                    </template>
+                                                                </template>
+
+                                                                <template if:true={isFROMInvoice}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input type="text" value={info.FECHA_DE_PAGO} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </div>
+                                                                    </td>
+                                                                    
+                                                                </template>
+                                                            </tr>
+                                                        </template>
+                                                    </template>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </lightning-record-edit-form>
+                                    
+                                </lightning-card>
+                            </template>
+                        </template>
+                        
+                    </template>
+                    <!-- 采销协同订单不显示 end -->
+
+                    <div class="condition_head_title" style="display: inline-block;font-weight: inherit;font-size: 13px;">
+                        <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                        {customLabel.OrderItem}
+                    </div>
+                    <lightning-card>
+                        <!-- <lightning-button variant="brand" label='Add' onclick={addData} class="slds-p-around_x-small">
+                        </lightning-button> -->
+                        <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                            <div class="slds-scrollable_x slds-scrollable_y" style="height: 450px;">
+                                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th scope="col" >
+                                                <div class="slds-truncate" style={lengthData.small} title="#">#</div>
+                                            </th>
+                                            <th scope="col" >
+                                                <div class="slds-truncate" style={lengthData.medium} title={customLabel.ProductNameOrderItem}>{customLabel.ProductNameOrderItem}</div>
+                                            </th>
+                                            <template if:true={isZAR2}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.invoiceItemNumber}>{customLabel.invoiceItemNumber}</div>
+                                                </th>
+                                            </template>
+                                            <template if:true={isZARF}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Product_Code}>{customLabel.Product_Code}</div>
+                                                </th>
+                                            </template>
+                                            <template if:true={isZARF}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.ZAREOrderNumber}>{customLabel.ZAREOrderNumber}</div>
+                                                </th>
+                                            </template>
+                                            <template if:true={isZARF}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Delivery_Note_Number}>{customLabel.Delivery_Note_Number}</div>
+                                                </th>
+                                            </template>
+                                            <template if:false={isCreditNote}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Product_Type}>
+                                                        <span class="tableTitle" title="PreProjectStatus__c"><span style="color:red">*</span>{customLabel.Product_Type}</span>
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            
+                                            <th scope="col" >
+                                                <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Quantity}>
+                                                    <span class="tableTitle" title="ItemNm__c"><span style="color:red">*</span>{customLabel.Quantity}</span>
+                                                </div>
+                                            </th>
+                                            <!-- <th width={lengthData.Quantity} height="30px;" class="slds-text-align_left" scope="col">
+                                                <span class="tableTitle" title="ItemNm__c">Basic Quantity</span>
+                                            </th> -->
+                                            <template if:false={isZFD}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Price}>
+                                                        <template if:true={cu}>
+                                                            <span class="tableTitle" title="SalesRep__c"><span style="color:red">*</span>{customLabel.Price}({cu})</span>
+                                                        </template>
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            
+                                            <template if:false={isZFD}>
+                                                <template if:false={isCreditNote}>
+                                                    <template if:true={showCashPrice}>
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Price}>
+                                                                <template if:true={cu}>
+                                                                    <span class="tableTitle" title="SalesRep__c">{customLabel.CashPrice}</span>
+                                                                </template>
+                                                            </div>
+                                                        </th>
+                                                    </template>
+                                                </template>
+                                            </template>
+                                            
+                                            <!-- <template if:false={disableAction}>
+                                                <th width={lengthData.cost} height="30px;" class="slds-text-align_left slds-cell-wrap" scope="col">
+                                                    <span class="tableTitle" title="SalesRep__c">{customLabel.productCost}({cu})</span>
+                                                </th>
+                                            </template> -->
+                                            <template if:false={isCreditNote}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Sales_Unit}>
+                                                        <span class="tableTitle" title="SalesRep__c"><span style="color:red">*</span>{customLabel.Sales_Unit}</span>
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            
+                                            <template if:false={isZFD}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.Amount_per_item} title={customLabel.Amount_per_item}>
+                                                        <!-- <span style="color:red;">*</span> -->
+                                                        <span class="tableTitle" title="BuildAddr__c">{customLabel.Amount_per_item}</span>
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            
+                                            <!-- <template if:false={disableAction}>
+                                                <th width={lengthData.MarginRate} height="30px;" class="slds-text-align_left slds-cell-wrap" scope="col">
+                                                    <span class="tableTitle" title="BuildAddr__c">{customLabel.MarginRate}</span>
+                                                </th>
+                                            </template> -->
+                                            <template if:true={isFROMInvoice}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.FECHA_DE_VENCIMIENTO}>
+                                                        <span class="tableTitle" title="PreProjectStatus__c"><span style="color:red">*</span>{customLabel.FECHA_DE_VENCIMIENTO}</span>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.FECHA_DE_PAGO}>
+                                                        <span class="tableTitle" title="PreProjectStatus__c">{customLabel.FECHA_DE_PAGO}</span>
+                                                    </div>
+                                                </th>
+                                            </template>
+                                            
+                                            <template if:false={isCreditNote}>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Delivery_Date}>
+                                                        <span class="tableTitle" title="PreProjectStatus__c"><span style="color:red">*</span>{customLabel.Delivery_Date}</span>
+                                                    </div>
+                                                </th>
+                                                <!-- 墨西哥特殊字段 -->
+                                                <template if:true={isMX}>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Toxicity_Classification}>
+                                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Toxicity_Classification}</span>
+                                                        </div>
+                                                    </th> 
+                                                </template>
+                                                
+                                                
+                                                <template if:false={disableAction}>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Inventory}>
+                                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Inventory}</span>
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Corn}>
+                                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Corn}</span>
+                                                        </div>
+                                                    </th>
+                                                    <template if:true={isShowUsage}>
+                                                        <th scope="col" >
+                                                            <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Product_Usage}>
+                                                                <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Product_Usage}</span>
+                                                            </div>
+                                                        </th>
+                                                    </template>
+                                                </template>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.medium} title={customLabel.Gross_Weight}>
+                                                        <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Gross_Weight}</span>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" >
+                                                    <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Net_Weight}>
+                                                        <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Net_Weight}</span>
+                                                    </div>
+                                                </th>
+                                                <template if:true={showCommission}>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.medium} title={customLabel.Commission_Calculation_Method}>
+                                                            <span class="tableTitle" title="CommissionType__c">{customLabel.Commission_Calculation_Method}</span>
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Commission_Rate}>
+                                                            <span class="tableTitle" title="Commission_Rate__c">{customLabel.Commission_Rate}</span>
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.mediumBig} title={customLabel.Commission_Amount}>
+                                                            <span class="tableTitle" title="CommissionAmount__c">{customLabel.Commission_Amount}</span>
+                                                        </div>
+                                                    </th>
+                                                </template>
+                                            </template>
+                                            <template if:false={isNotShowSearch}>
+                                                <template if:false={disableAction}>
+                                                    <th scope="col" >
+                                                        <div class="slds-truncate" style={lengthData.small} title={customLabel.Action}>
+                                                            <span class="tableTitle" title="PreProjectStatus__c">{customLabel.Action}</span>
+                                                        </div>
+                                                    </th>
+                                                </template>
+                                            </template>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <template if:true={orderItemList}>
+                                        
+                                        <tbody>
+                                            <template for:each={orderItemList} for:item=info for:index="index">
+                                                <template if:true={info.orderItemData}>
+                                                    <tr key={info.indexNum} class="slds-hint-parent">
+                                                        <td>
+                                                            <div class="slds-truncate">
+                                                                <lightning-input-field data-record={index} field-name="SAP_Item_Num__c" name="SAP_Item_Num__c"  value={info.orderItemData.SAP_Item_Num__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                </lightning-input-field> 
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="slds-truncate slds-cell-wrap">
+                                                                <!-- <lightning-input-field data-record={index} field-name="Commodity__c" name="Commodity__c"  value={info.orderItemData.Commodity__c} onchange={productChange} variant="label-hidden" disabled>
+                                                                    
+                                                                </lightning-input-field> -->
+                                                                {info.orderItemData.Material_Description__c}
+                                                            </div>
+                                                        </td>
+                                                        <template if:true={isZAR2}>
+                                                            <td>
+                                                                <div class="slds-truncate slds-cell-wrap">
+                                                                    <!-- <lightning-input-field data-record={index} field-name="Commodity__c" name="Commodity__c"  value={info.orderItemData.Commodity__c} onchange={productChange} variant="label-hidden" disabled>
+                                                                        
+                                                                    </lightning-input-field> -->
+                                                                    {info.orderItemData.Invoice_Item_Number__c}
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <template if:true={isZARF}>
+                                                            <td>
+                                                                <div class="slds-truncate slds-cell-wrap">
+                                                                    <!-- <lightning-input-field data-record={index} field-name="Commodity__c" name="Commodity__c"  value={info.orderItemData.Commodity__c} onchange={productChange} variant="label-hidden" disabled>
+                                                                        
+                                                                    </lightning-input-field> -->
+                                                                    {info.orderItemData.Material_Number__c}
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <template if:true={isZARF}>
+                                                            <td>
+                                                                <div class="slds-truncate slds-cell-wrap">
+                                                                    <!-- <lightning-input-field data-record={index} field-name="Commodity__c" name="Commodity__c"  value={info.orderItemData.Commodity__c} onchange={productChange} variant="label-hidden" disabled>
+                                                                        
+                                                                    </lightning-input-field> -->
+                                                                    {info.orderItemData.ZARE_Order_Number__c}
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <template if:true={isZARF}>
+                                                            <td>
+                                                                <div class="slds-truncate slds-cell-wrap">
+                                                                    <!-- <lightning-input-field data-record={index} field-name="Commodity__c" name="Commodity__c"  value={info.orderItemData.Commodity__c} onchange={productChange} variant="label-hidden" disabled>
+                                                                        
+                                                                    </lightning-input-field> -->
+                                                                    {info.orderItemData.Delivery_Note_Number__c}
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <template if:false={isCreditNote}>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <template if:false={info.orderItemData.Invoice_Item__c}>
+                                                                        <template if:false={info.orderItemData.Reference_Order_Item__c}>
+                                                                            <template if:false={isAutoZAR1}>
+                                                                                <template if:false={isZFD}>
+                                                                                    <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                                    </lightning-input-field>
+                                                                                </template>
+                                                                            </template>
+                                                                            <template if:true={isAutoZAR1}>
+                                                                                <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                                </lightning-input-field> 
+                                                                            </template>
+                                                                            <template if:true={isZFD}>
+                                                                                <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                                </lightning-input-field> 
+                                                                            </template>
+                                                                        </template>
+                                                                    </template>
+                                                                    <template if:true={info.orderItemData.Invoice_Item__c}>
+                                                                        <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                        </lightning-input-field> 
+                                                                    </template>
+                                                                    <template if:true={info.orderItemData.Reference_Order_Item__c}>
+                                                                        <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                        </lightning-input-field> 
+                                                                    </template>
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <template if:false={isCreditNote}>
+                                                            <td>
+                                                                <template if:false={disableAction}>
+                                                                    <template if:false={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                            </lightning-input-field>
+                                                                        </div>
+                                                                    </template>
+                                                                    <template if:true={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field disabled data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                            </lightning-input-field>
+                                                                        </div>
+                                                                    </template>
+                                                                </template>
+                                                                <template if:true={disableAction}>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                        </lightning-input-field> 
+                                                                    </div>
+                                                                </template>
+                                                            </td>
+                                                        </template>
+
+                                                        <template if:true={isCreditNote}>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <lightning-input-field disabled data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                    </lightning-input-field>
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        
+                        
+                                                        <!-- <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.Quantity}>
+                                                            <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.basicQuantity} onchange={productChange} variant="label-hidden" read-only> 
+                                                            </lightning-input-field> 
+                                                        </td> -->
+                                                        <template if:false={isZFD}>
+                                                            <td>
+                                                            <template if:false={disableAction}>
+                                                                <template if:false={info.orderItemData.Product_Combo_Name__c}>
+                                                                    <template if:true={isFROMInvoice}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                            </lightning-input-field> 
+                                                                        </div>
+                                                                    </template>
+
+                                                                    <template if:false={isFROMInvoice}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                            </lightning-input-field> 
+                                                                        </div>
+                                                                    </template>
+                                                                    
+                                                                </template>
+                                                                <template if:true={info.orderItemData.Product_Combo_Name__c}>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                        </lightning-input-field> 
+                                                                    </div>
+                                                                </template>
+                                                                
+                                                            </template>
+                                                            <template if:true={disableAction}>
+                                                                <div class="slds-truncate">
+                                                                    <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                    </lightning-input-field> 
+                                                                </div>
+                                                                
+                                                            </template>
+                                                        </td>
+                                                        </template>
+                                                        
+                                                        <template if:false={isZFD}>
+                                                            <template if:false={isCreditNote}>
+                                                                <template if:true={showCashPrice}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field data-record={index} field-name="Cash_Price__c" name="Cash_Price__c"  value={info.orderItemData.Cash_Price__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                            </lightning-input-field> 
+                                                                        </div>
+                                                                    </td>
+                                                                </template>
+                                                            </template>
+                                                        </template>
+                                                        
+                                                        
+                                                        
+                                                        <!-- <template if:false={disableAction}>
+                                                            <td class="slds-cell-wrap slds-text-align_left" style="border-bottom: 1px solid #ddd;" width={lengthData.cost}>
+                                                                    <lightning-input-field data-record={index} field-name="Product_Cost__c" name="Product_Cost__c"  value={info.orderItemData.Product_Cost__c} variant="label-hidden" read-only> 
+                                                                    </lightning-input-field> 
+                                                            </td>
+                                                        </template> -->
+
+                                                        <template if:false={isCreditNote}>
+                                                            <td>
+                                                                <!-- <lightning-input-field data-record={index} field-name="Sales_Unit__c" name="Sales_Unit__c"  value={info.orderItemData.Sales_Unit__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                </lightning-input-field>  -->
+                                                                <template if:false={disableAction}>
+                                                                    <div class="slds-truncate">
+                                                                        <template if:false={info.orderItemData.Invoice_Item__c}>
+                                                                            <template if:false={info.orderItemData.Reference_Order_Item__c}>
+                                                                                <template if:false={isYPF}>
+                                                                                    <template if:false={isAutoZAR1}>
+                                                                                        <lightning-combobox
+                                                                                            value={info.orderItemData.Sales_Unit__c}
+                                                                                            options={info.opList} variant="label-hidden" required onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                                    </template>
+                                                                                    <template if:true={isAutoZAR1}>
+                                                                                        <lightning-combobox
+                                                                                            value={info.orderItemData.Sales_Unit__c}
+                                                                                            options={info.opList} variant="label-hidden" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                                    </template>
+                                                                                </template>
+                                                                                <template if:true={isYPF}>
+                                                                                    <lightning-combobox
+                                                                                    value={info.orderItemData.Sales_Unit__c}
+                                                                                    options={info.opList} variant="label-hidden" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                                </template>
+                                                                            </template>
+                                                                        </template>
+                                                                        <template if:true={info.orderItemData.Invoice_Item__c}>
+                                                                            <lightning-combobox
+                                                                            value={info.orderItemData.Sales_Unit__c}
+                                                                            options={info.opList} variant="label-hidden" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                        </template>
+
+                                                                        <template if:true={info.orderItemData.Reference_Order_Item__c}>
+                                                                            <lightning-combobox
+                                                                            value={info.orderItemData.Sales_Unit__c}
+                                                                            options={info.opList} variant="label-hidden" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                        </template>
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                </template>
+                                                                <template if:true={disableAction}>
+                                                                    <template if:false={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-combobox
+                                                                            value={info.orderItemData.Sales_Unit__c}
+                                                                            options={info.opList} variant="label-hidden" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                        </div>
+                                                                    </template>
+                                                                </template>
+                                                            </td>
+                                                        </template>
+                                                        <template if:false={isZFD}>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <lightning-input-field data-record={index} field-name="Amount_per_item__c" name="Amount_per_item__c"  value={info.orderItemData.Amount_per_item__c} onchange={productChange} variant="label-hidden" read-only> 
+                                                                    </lightning-input-field> 
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        <template if:true={isFROMInvoice}>
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <input type="date" data-record={index} name="FECHA_DE_VENCIMIENTO__c" value={info.orderItemData.FECHA_DE_VENCIMIENTO__c} required onchange={productChange}></input>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="slds-truncate">
+                                                                    <input disabled type="date" data-record={index} name="FECHA_DE_PAGO__c" value={info.orderItemData.FECHA_DE_PAGO__c} onchange={productChange}></input>
+                                                                </div>
+                                                            </td>
+                                                        </template>
+                                                        
+                                                        <!-- <template if:false={disableAction}>
+                                                            <td class="slds-cell-wrap slds-text-align_left" style="border-bottom: 1px solid #ddd;" width={lengthData.MarginRate}>
+                                                                <lightning-input-field data-record={index} field-name="Margin_Rate__c" name="Margin_Rate__c"  value={info.orderItemData.Margin_Rate__c} onchange={productChange} variant="label-hidden" read-only> 
+                                                                </lightning-input-field> 
+                                                            </td>
+                                                        </template> -->
+
+                                                        <template if:false={isCreditNote}>
+                                                            <td>
+                                                                <!-- <lightning-input-field data-record={index} field-name="Delivery_Date__c" name="Delivery_Date__c"  value={info.orderItemData.Delivery_Date__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                </lightning-input-field>  -->
+                                                                <!-- <lightning-input data-record={index} name="Delivery_Date__c" value={info.orderItemData.Delivery_Date__c} onchange={productChange} type="date" variant="label-hidden" required="true"></lightning-input> -->
+                                                                <template if:false={isAutoZAR1}>
+                                                                    <div class="slds-truncate">
+                                                                        <input type="date" data-record={index} name="Delivery_Date__c" value={info.orderItemData.Delivery_Date__c} required onchange={productChange}></input>
+                                                                    </div>
+                                                                </template>
+                                                                <template if:true={isAutoZAR1}>
+                                                                    <div class="slds-truncate">
+                                                                        <input disabled type="date" data-record={index} name="Delivery_Date__c" value={info.orderItemData.Delivery_Date__c} required onchange={productChange}></input>
+                                                                    </div>
+                                                                </template>
+                                                            </td>
+                                                            <template if:true={isMX}>
+                                                                <td>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-combobox
+                                                                        value={info.orderItemData.Toxicity_Classification__c}
+                                                                        options={toxicityList} variant="label-hidden" onchange={productChange} data-record={index} name="Toxicity_Classification__c"></lightning-combobox>
+                                                                    </div>
+                                                                </td>
+                                                            </template>
+                                                            <template if:false={disableAction}>
+                                                                <td>
+                                                                    <template if:false={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-combobox
+                                                                            value={info.orderItemData.Inventory_Location__c}
+                                                                            options={inList} variant="label-hidden" onchange={productChange} data-record={index} name="Inventory_Location__c"></lightning-combobox>
+                                                                        </div>
+                                                                    </template>
+                                                                    <template if:true={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-combobox
+                                                                            disabled
+                                                                            value={info.orderItemData.Inventory_Location__c}
+                                                                            options={inList} variant="label-hidden" onchange={productChange} data-record={index} name="Inventory_Location__c"></lightning-combobox>
+                                                                        </div>
+                                                                    </template>
+                                                                </td>
+                                                                <template if:false={iscornReq}>
+                                                                    
+                                                                    <td>
+                                                                        <template if:false={isAutoZAR1}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange} variant="label-hidden"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                        <template if:true={isAutoZAR1}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field disabled data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange} variant="label-hidden"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                    </td>
+                                                                </template>
+                                                                <template if:true={iscornReq}>
+                                                                    <td>
+                                                                        <template if:false={isAutoZAR1}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                        <template if:true={isAutoZAR1}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field  disabled data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange} variant="label-hidden"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                    </td>
+                                                                </template>
+                                                                <template if:true={isShowUsage}>
+                                                                    <td>
+                                                                        <template if:false={isAutoZAR1}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field data-record={index} field-name="Product_Usage__c" name="Product_Usage__c"  value={info.orderItemData.Product_Usage__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                        <template if:true={isAutoZAR1}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field disabled data-record={index} field-name="Product_Usage__c" name="Product_Usage__c"  value={info.orderItemData.Product_Usage__c} onchange={productChange} variant="label-hidden"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                    </td>
+                                                                </template>
+                                                            </template>
+                                                            <td>
+                                                                <template if:false={isAutoZAR1}>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input-field data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.orderItemData.Gross_Weight__c} onchange={productChange} variant="label-hidden"> 
+                                                                        </lightning-input-field> 
+                                                                    </div>
+                                                                </template>
+                                                                <template if:true={isAutoZAR1}>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input-field disabled data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.orderItemData.Gross_Weight__c} onchange={productChange} variant="label-hidden"> 
+                                                                        </lightning-input-field> 
+                                                                    </div>
+                                                                </template>
+                                                            </td>
+                            
+                                                            <td>
+                                                                <template if:false={isAutoZAR1}>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input-field data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.orderItemData.Net_Weight__c} onchange={productChange} variant="label-hidden"> 
+                                                                        </lightning-input-field> 
+                                                                    </div>
+                                                                </template> 
+                                                                <template if:true={isAutoZAR1}>
+                                                                    <div class="slds-truncate">
+                                                                        <lightning-input-field disabled data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.orderItemData.Net_Weight__c} onchange={productChange} variant="label-hidden"> 
+                                                                        </lightning-input-field> 
+                                                                    </div>
+                                                                </template> 
+                                                            </td>
+                                                            
+                                                        
+                                                            <template if:true={showCommission}>
+                                                                <td >
+                                                                    <template if:false={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-combobox
+                                                                                data-record={index}
+                                                                                name="Commission_Calculation_Method__c"
+                                                                                value={info.orderItemData.Commission_Calculation_Method__c}
+                                                                                options={commissionTypeOptions}
+                                                                                onchange={commissionTypeChange}
+                                                                                variant="label-hidden">
+                                                                            </lightning-combobox>
+                                                                        </div>
+                                                                    </template>
+                                                                    <template if:true={isAutoZAR1}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-combobox
+                                                                                disabled 
+                                                                                data-record={index}
+                                                                                name="Commission_Calculation_Method__c"
+                                                                                value={info.orderItemData.Commission_Calculation_Method__c}
+                                                                                options={commissionTypeOptions}
+                                                                                onchange={commissionTypeChange}
+                                                                                variant="label-hidden">
+                                                                            </lightning-combobox>
+                                                                        </div>
+                                                                    </template>
+                                                                </td>
+                                                                <td>
+                                                                    <template if:true={info.showPercentage}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field variant="label-hidden" required data-record={index} field-name="Commission_Rate__c" name="Commission_Rate__c"  value={info.orderItemData.Commission_Rate__c} onchange={commissionRateChange}> 
+                                                                            </lightning-input-field>
+                                                                            <!-- <lightning-input
+                                                                                data-record={index}
+                                                                                name="Commission_Rate__c"
+                                                                                type="number"
+                                                                                value={info.orderItemData.Commission_Rate__c}
+                                                                                onchange={commissionRateChange}
+                                                                                required
+                                                                                formatter="percent" step="0.01"
+                                                                                variant="label-hidden">
+                                                                            </lightning-input> -->
+                                                                        </div>
+                                                                    </template>
+                                                                    <template if:false={info.showPercentage}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input-field disabled data-record={index} variant="label-hidden" field-name="Commission_Rate__c" name="Commission_Rate__c"  value={info.orderItemData.Commission_Rate__c} onchange={commissionRateChange}> 
+                                                                            </lightning-input-field>
+                                                                            <!-- <lightning-input
+                                                                                data-record={index}
+                                                                                name="Commission_Rate__c"
+                                                                                type="precent"
+                                                                                value={info.orderItemData.Commission_Rate__c}
+                                                                                onchange={commissionRateChange}
+                                                                                disabled
+                                                                                formatter="percent" step="0.01"
+                                                                                variant="label-hidden">
+                                                                            </lightning-input> -->
+                                                                        </div>
+                                                                    </template>
+                                                                    
+                                                                </td>
+                                                                <td>
+                                                                    <template if:false={info.showCommissionAmount}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input
+                                                                                data-record={index}
+                                                                                name="Commission_Amount__c"
+                                                                                type="number"
+                                                                                value={info.orderItemData.Commission_Amount__c}
+                                                                                onchange={commissionAmountChange}
+                                                                                disabled
+                                                                                variant="label-hidden">
+                                                                            </lightning-input>
+                                                                        </div>
+                                                                        
+                                                                    </template>
+                                                                    <template if:true={info.showCommissionAmount}>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-input
+                                                                                data-record={index}
+                                                                                name="Commission_Amount__c"
+                                                                                type="number"
+                                                                                value={info.orderItemData.Commission_Amount__c}
+                                                                                onchange={commissionAmountChange}
+                                                                                required
+                                                                                step="0.01"
+                                                                                variant="label-hidden">
+                                                                            </lightning-input>
+                                                                        </div>
+                                                                        
+                                                                    </template>
+                                                                    
+                                                                </td>
+                                                            </template>
+                                                            
+                                                        </template>
+                                                        <template if:false={isNotShowSearch}>
+                                                            <template if:false={disableAction}>
+                                                                <template if:false={isAutoZAR1}>
+                                                                    <td>
+                                                                        <div class="slds-truncate">
+                                                                            <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:delete" size='large' onclick={deleteDetailData} data-record={index} name={indexDetail}></lightning-button-icon>
+                                                                        </div>
+                                                                        
+                                                                    </td>
+                                                                </template>
+                                                            </template>
+                                                        </template>
+                                                    </tr>
+                                                </template>
+                                            </template>
+                                        </tbody>
+                                        
+                                    </template>
+                                </table>
+                            </div>
+                        </lightning-record-edit-form>    
+                    </lightning-card>
+                </div>
+            </template>
+
+            <!-- 手机内容详细页面 -->
+            <template if:false={isPC}>
+                <div style="padding-left: 10px;padding-right: 10px;background-color:#ddd">
+                    <template for:each={orderItemList} for:item=info for:index="index">
+                        <div key={info.indexNum} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                            <lightning-card icon-name="standard:article">
+                                <template if:false={isNotShowSearch}>
+                                    <template if:false={disableAction}>
+                                        <template if:false={isAutoZAR1}>
+                                            <div slot="actions">
+                                                <lightning-button-icon variant="bare" style="margin-right: 5px;" icon-name="utility:delete" size='large' onclick={deleteDetailData} data-record={index} name={indexDetail}></lightning-button-icon>
+                                            </div>
+                                        </template>
+                                    </template>
+                                </template>
+                                
+                                <template if:true={info.orderItemData}>
+                                    <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                                        <div class="slds-p-around_medium slds-grid slds-wrap" >
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <lightning-input-field data-record={index} field-name="SAP_Item_Num__c" name="SAP_Item_Num__c"  value={info.orderItemData.SAP_Item_Num__c} onchange={productChange}  disabled> 
+                                                </lightning-input-field> 
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                <label>{customLabel.Material_Descriptio}</label>
+                                                <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                    {info.orderItemData.Material_Description__c}
+                                                </div>
+                                            </div>
+                                            <template if:true={isZAR2}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <label>{customLabel.invoiceItemNumber}</label>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        {info.orderItemData.Invoice_Item_Number__c}
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <template if:true={isZARF}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <label>{customLabel.Product_Code}</label>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        {info.orderItemData.Material_Number__c}
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <template if:true={isZARF}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <label>{customLabel.ZAREOrderNumber}</label>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        {info.orderItemData.ZARE_Order_Number__c}
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <template if:true={isZARF}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <label>{customLabel.Delivery_Note_Number}</label>
+                                                    <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                        {info.orderItemData.Delivery_Note_Number__c}
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <template if:false={isCreditNote}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <template if:false={info.orderItemData.Invoice_Item__c}>
+                                                        <template if:false={info.orderItemData.Reference_Order_Item__c}>
+                                                            <template if:false={isZFD}>
+                                                                <template if:false={isAutoZAR1}>
+                                                                    <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} required="true"> 
+                                                                    </lightning-input-field> 
+                                                                </template>
+                                                                
+                                                            </template>
+                                                            <template if:true={isAutoZAR1}>
+                                                                <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} disabled> 
+                                                                </lightning-input-field> 
+                                                            </template>
+                                                            <template if:true={isZFD}>
+                                                                <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} disabled> 
+                                                                </lightning-input-field> 
+                                                            </template>
+                                                        </template>
+                                                        
+                                                    </template>
+                                                    
+                                                    <template if:true={info.orderItemData.Invoice_Item__c}>
+                                                        <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} disabled> 
+                                                        </lightning-input-field> 
+                                                    </template>
+                                                    <template if:true={info.orderItemData.Reference_Order_Item__c}>
+                                                        <lightning-input-field data-record={index} field-name="Product_Type__c" name="Product_Type__c"  value={info.orderItemData.Product_Type__c} onchange={productChange} disabled> 
+                                                        </lightning-input-field> 
+                                                    </template>
+                                                </div>
+                                            </template>
+                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                <template if:false={isCreditNote}>
+                                                    <template if:false={disableAction}>
+                                                        <template if:false={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} required="true"> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                        <template if:true={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} disabled> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                    </template>
+                                                    <template if:true={disableAction}>
+                                                        <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} disabled> 
+                                                        </lightning-input-field> 
+                                                    </template>
+                                                </template>
+                                                <template if:true={isCreditNote}>
+                                                    <lightning-input-field data-record={index} field-name="Quantity__c" name="Quantity__c"  value={info.orderItemData.Quantity__c} onchange={productChange} disabled> 
+                                                    </lightning-input-field>
+                                                </template>
+                                            </div>
+                                            
+                                            <!-- <lightning-input-field  style="width: 100%;" data-record={index} field-name="Material_Description__c" name="Material_Description__c"  value={info.orderItemData.Material_Description__c} onchange={productChange} disabled> 
+                                            </lightning-input-field>  -->
+                                            <template if:false={isZFD}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <template if:false={disableAction}>
+                                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                            <span style="color:red">*</span>{customLabel.Price}({cu})
+                                                        </div>
+                                                        <template if:false={info.orderItemData.Product_Combo_Name__c}>
+                                                            <template if:true={isFROMInvoice}>
+                                                                <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} disabled> 
+                                                                </lightning-input-field>
+                                                            </template>
+
+                                                            <template if:false={isFROMInvoice}>
+                                                                <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} required="true"> 
+                                                                </lightning-input-field>
+                                                            </template>
+                                                             
+                                                        </template>
+                                                        <template if:true={info.orderItemData.Product_Combo_Name__c}>
+                                                            <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} disabled> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                    </template>  
+                                                    
+                                                    <template if:true={disableAction}>
+                                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                            <span style="color:red">*</span>{customLabel.Price}({cu})
+                                                        </div>
+                                                        <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} disabled> 
+                                                        </lightning-input-field> 
+                                                    </template> 
+                                                </div>  
+                                            </template>
+                                            
+                                            <!-- cash price start -->
+                                            <template if:false={isCreditNote}>
+                                                <template if:false={isZFD}>
+                                                    <template if:true={showCashPrice}>
+                                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                            <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                                {customLabel.CashPrice}
+                                                            </div>
+                                                            <lightning-input-field data-record={index} field-name="Cash_Price__c" name="Cash_Price__c"  value={info.orderItemData.Cash_Price__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                            </lightning-input-field> 
+                                                        </div>
+                                                        
+                                                    </template>
+                                                </template>
+                                                
+                                                <!-- cash price end -->
+                                                <!-- <template if:false={disableAction}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                        <div class="slds-cell-wrap" style="margin-top: 5px;margin-bottom:5px;">
+                                                            {customLabel.productCost}({cu})
+                                                        </div>
+                                                        <lightning-input-field variant="label-hidden" data-record={index} field-name="Product_Cost__c" name="Product_Cost__c"  value={info.orderItemData.Product_Cost__c} disabled> 
+                                                        </lightning-input-field> 
+                                                    </div>
+                                                </template> -->
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <template if:false={disableAction}>
+                                                        <template if:false={info.orderItemData.Invoice_Item__c}>
+                                                            <template if:false={info.orderItemData.Reference_Order_Item__c}>
+                                                                <template if:false={isYPF}>
+                                                                    <template if:false={isAutoZAR1}>
+                                                                        <lightning-combobox
+                                                                        value={info.orderItemData.Sales_Unit__c} style="width: 100%;"
+                                                                        options={info.opList} label="Sales Unit" required onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                    </template>
+                                                                    <template if:true={isAutoZAR1}>
+                                                                        <lightning-combobox
+                                                                        value={info.orderItemData.Sales_Unit__c} style="width: 100%;"
+                                                                        options={info.opList} label="Sales Unit" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                    </template>
+                                                                </template>
+                                                                <template if:true={isYPF}>
+                                                                    <lightning-combobox
+                                                                    value={info.orderItemData.Sales_Unit__c} style="width: 100%;"
+                                                                    options={info.opList} label="Sales Unit" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                                </template>
+                                                            </template>
+                                                        </template>
+                                                        <template if:true={info.orderItemData.Invoice_Item__c}>
+                                                            <lightning-combobox
+                                                                value={info.orderItemData.Sales_Unit__c} style="width: 100%;"
+                                                                options={info.opList} label="Sales Unit" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                        </template>
+                                                        <template if:true={info.orderItemData.Reference_Order_Item__c}>
+                                                            <lightning-combobox
+                                                                value={info.orderItemData.Sales_Unit__c} style="width: 100%;"
+                                                                options={info.opList} label="Sales Unit" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                        </template>
+                                                        
+                                                    </template>
+                                                    <template if:true={disableAction}>
+                                                        <lightning-combobox
+                                                        value={info.orderItemData.Sales_Unit__c} style="width: 100%;"
+                                                        options={info.opList} label="Sales Unit" disabled onchange={productChange} data-record={index} name="Sales_Unit__c"></lightning-combobox>
+                                                    </template>
+
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                    <span style="color:red">*</span>{customLabel.Delivery_Date}
+                                                    <div>
+                                                        <template if:false={isAutoZAR1}>
+                                                            <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c" value={info.orderItemData.Delivery_Date__c} required onchange={productChange}></input>    
+                                                        </template>
+                                                        <template if:true={isAutoZAR1}>
+                                                            <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c" value={info.orderItemData.Delivery_Date__c} disabled onchange={productChange}></input>    
+                                                        </template>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <template if:false={isZFD}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="Amount_per_item__c" name="Amount_per_item__c"  value={info.orderItemData.Amount_per_item__c} onchange={productChange} read-only> 
+                                                    </lightning-input-field> 
+                                                </div>
+                                            </template>
+                                            <template if:true={isFROMInvoice}>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="FECHA_DE_VENCIMIENTO__c" name="FECHA_DE_VENCIMIENTO__c"  value={info.orderItemData.FECHA_DE_VENCIMIENTO__c} onchange={productChange} required> 
+                                                    </lightning-input-field>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                    <lightning-input-field data-record={index} field-name="FECHA_DE_PAGO__c" name="FECHA_DE_PAGO__c"  value={info.orderItemData.FECHA_DE_PAGO__c} onchange={productChange} disabled> 
+                                                    </lightning-input-field>
+                                                </div>
+                                                
+                                            </template>
+                                                <!-- <template if:false={disableAction}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                        <lightning-input-field data-record={index} field-name="Margin_Rate__c" name="Margin_Rate__c"  value={info.orderItemData.Margin_Rate__c} onchange={productChange} read-only> 
+                                                        </lightning-input-field> 
+                                                    </div>
+                                                </template> -->
+                                            <template if:false={isCreditNote}>    
+                                                <template if:true={isShowUsage}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                        <template if:false={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Product_Usage__c" name="Product_Usage__c"  value={info.orderItemData.Product_Usage__c} onchange={productChange} required="true"> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                        <template if:true={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Product_Usage__c" name="Product_Usage__c"  value={info.orderItemData.Product_Usage__c} onchange={productChange} disabled> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                    </div>
+                                                </template>
+                                                <template if:true={isMX}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                        <lightning-combobox
+                                                            value={info.orderItemData.Toxicity_Classification__c}
+                                                            options={toxicityList} label={customLabel.Toxicity_Classification} onchange={productChange} data-record={index} name="Toxicity_Classification__c"></lightning-combobox>
+                                                    </div>
+                                                </template>
+                                                <template if:false={disableAction}>
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left:5px;">
+                                                        <template if:false={isAutoZAR1}>
+                                                            <lightning-combobox
+                                                            value={info.orderItemData.Inventory_Location__c}
+                                                            options={inList} label={customLabel.Inventory} onchange={productChange} data-record={index} name="Inventory_Location__c" ></lightning-combobox>
+                                                        </template>
+                                                        <template if:true={isAutoZAR1}>
+                                                            <lightning-combobox
+                                                            disabled 
+                                                            value={info.orderItemData.Inventory_Location__c}
+                                                            options={inList} label={customLabel.Inventory} onchange={productChange} data-record={index} name="Inventory_Location__c" ></lightning-combobox>
+                                                        </template>
+                                                    </div>
+                                                    <template if:true={iscornReq}>
+                                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                            <template if:false={isAutoZAR1}>
+                                                                <lightning-input-field data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange} required="true"> 
+                                                                </lightning-input-field> 
+                                                            </template>
+                                                            <template if:true={isAutoZAR1}>
+                                                                <lightning-input-field disabled data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange}> 
+                                                                </lightning-input-field> 
+                                                            </template>
+                                                        </div>
+                                                    </template>
+                                                    <template if:false={iscornReq}>
+                                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                            <template if:false={isAutoZAR1}>
+                                                                <lightning-input-field data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange}> 
+                                                                </lightning-input-field> 
+                                                            </template>
+                                                            <template if:true={isAutoZAR1}>
+                                                                <lightning-input-field data-record={index} field-name="Crop__c" name="Crop__c"  value={info.orderItemData.Crop__c} onchange={productChange} disabled> 
+                                                                </lightning-input-field> 
+                                                            </template>
+                                                        </div>
+                                                    </template>
+                                                </template>
+                                                <template if:true = {info.orderItemData.Show_More__c}><!-- 查看更多 -->
+                                                    
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                        <template if:false={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.orderItemData.Gross_Weight__c} onchange={productChange}> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                        <template if:true={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Gross_Weight__c" name="Gross_Weight__c"  value={info.orderItemData.Gross_Weight__c} onchange={productChange} disabled> 
+                                                            </lightning-input-field> 
+                                                        </template>
+                                                    </div>
+
+                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                        <template if:false={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.orderItemData.Net_Weight__c} onchange={productChange}> 
+                                                            </lightning-input-field>
+                                                        </template>
+                                                        <template if:true={isAutoZAR1}>
+                                                            <lightning-input-field data-record={index} field-name="Net_Weight__c" name="Net_Weight__c"  value={info.orderItemData.Net_Weight__c} onchange={productChange} disabled> 
+                                                            </lightning-input-field>
+                                                        </template>
+                                                    </div>
+                                                    <!-- 佣金 start -->
+                                                    <template if:true={showCommission}>
+                                                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                            <template if:false={isAutoZAR1}>
+                                                                <lightning-input-field data-record={index} field-name="Commission_Calculation_Method__c" name="Commission_Calculation_Method__c"  value={info.orderItemData.Commission_Calculation_Method__c} onchange={commissionTypeChange}> 
+                                                                </lightning-input-field>
+                                                            </template>
+                                                            <template if:true={isAutoZAR1}>
+                                                                <lightning-input-field data-record={index} field-name="Commission_Calculation_Method__c" name="Commission_Calculation_Method__c"  value={info.orderItemData.Commission_Calculation_Method__c} onchange={commissionTypeChange} disabled> 
+                                                                </lightning-input-field>
+                                                            </template>
+                                                        </div>
+                                                        <template if:true={info.showPercentage}>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                                <lightning-input-field required data-record={index} field-name="Commission_Rate__c" name="Commission_Rate__c"  value={info.orderItemData.Commission_Rate__c} onchange={commissionRateChange}> 
+                                                                </lightning-input-field>
+                                                            </div>
+                                                        </template>
+                                                        <template if:false={info.showPercentage}>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                                <lightning-input-field disabled data-record={index} field-name="Commission_Rate__c" name="Commission_Rate__c"  value={info.orderItemData.Commission_Rate__c} onchange={commissionRateChange}> 
+                                                                </lightning-input-field>
+                                                            </div>
+                                                        </template>
+                                                        <template if:false={info.showCommissionAmount}>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                                <lightning-input-field disabled data-record={index} field-name="Commission_Amount__c" name="Commission_Amount__c"  value={info.orderItemData.Commission_Amount__c} onchange={commissionAmountChange}> 
+                                                                </lightning-input-field>
+                                                            </div>
+                                                        </template>
+                                                        <template if:true={info.showCommissionAmount}>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" >
+                                                                <lightning-input-field required data-record={index} field-name="Commission_Amount__c" name="Commission_Amount__c"  value={info.orderItemData.Commission_Amount__c} onchange={commissionAmountChange}> 
+                                                                </lightning-input-field>
+                                                            </div>
+                                                        </template>
+                                                    </template>
+                                                    <!-- 佣金 end -->
+                                                </template>
+                                            </template>
+                                        </div>
+                                    </lightning-record-edit-form>
+                                    <div slot="footer">
+                                        <template if:false={info.orderItemData.Show_More__c}>
+                                            <lightning-badge label={customLabel.Show_More} name={index} onclick={shooMoreMe}></lightning-badge>
+                                        </template>
+                                        <template if:true={info.orderItemData.Show_More__c}>
+                                            <lightning-badge label={customLabel.Show_Less} name={index} onclick={shooLessMe}></lightning-badge>
+                                        </template>
+                                    </div>
+                                </template>
+                            </lightning-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+        <template if:true={isPC}>
+            <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="">
+                    <lightning-button label={customLabel.CancelLable} onclick={close} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={customLabel.ConfirmLabel} onclick={confirmData} class="slds-p-around_x-small">
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- 手机添加产品页面 -->
+    <template if:true={showSearchPage}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container " style="max-width:100%;width:87% !important">
+                <template if:true={isShowSpinner} >
+                    <lightning-spinner size="medium" variant="brand"></lightning-spinner>
+                </template>
+                <div class="slds-modal__header">
+                    <div class="slds-col" style="font-weight: 900;font-size: large;display: inline-block;float: left;">
+                        Search Data
+                    </div>
+                    
+                    <div class="slds-col" style="display: inline-block;float: right;">
+	                   	<div class="slds-col" style="display: inline-block;margin-right: 5px;">
+	                        <lightning-button variant="neutral" style="font-size: 16px;margin-right: 5pox;" label={customLabel.CancelLable}  onclick={cancelAddPage}></lightning-button>
+	                    </div>
+	                </div>
+                </div>
+
+                <div class="slds-modal__content modalBody menu" style="background-color: rgb(243, 242, 242) !important;">
+                	<div style="background-color: rgb(255, 255, 255);padding:16px;margin-bottom:20px;">
+	                	<div style="padding-left: 10px;padding-right: 10px;">
+                            <div style="margin-right:10px;display:inline-block;width:250px;margin-top:10px;">
+                                <lightning-input placeholder={customLabel.Search} type="text" variant="label-hidden" value={queryText} onchange={textChange}></lightning-input>
+                            </div>
+                            <div style="display:inline-block;margin-top:10px;">
+                                <lightning-button variant="brand" label={customLabel.searchText} onclick={queryData}></lightning-button>
+                            </div>
+                            <div class="condition_head_title" style="font-weight: inherit;font-size: 13px;">
+                                <span style="color: #0078d7;font-weight: inherit;font-size: 18px;">|</span> 
+                                {customLabel.Search_Result}
+                            </div>
+                            <lightning-card>
+                                <lightning-record-edit-form object-api-name="Order_Item__c" density="compact">
+                                    <template if:true={productItemList}>
+                                        <template for:each={productItemList} for:item=info for:index="index">
+                                            <div key={info.indexNum} style="border: 1px solid rgb(201 201 201);margin-top:10px;">
+                                                <lightning-card>
+                                                    <div class="slds-grid slds-wrap" >
+                                                        <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small">
+                                                        <!--     <div class="slds-grid slds-wrap" >
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-button-icon variant="brand" icon-name="utility:add" size="xx-small" value={index} onclick={selectChange}></lightning-button-icon>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-col slds-size_11-of-12 slds-p-horizontal_x-small"> -->
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <lightning-input type="text" value={info.materialCode} label= {customLabel.Material_Code} disabled=true></lightning-input> 
+                                                            </div>
+                                                            <template if:true={isZAR2}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.invoiceItemNumber} label= {customLabel.invoiceItemNumber} disabled=true></lightning-input> 
+                                                                </div>
+                                                            </template>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.ProductNameOrderItem}</label>
+                                                                <div class="slds-cell-wrap">{info.productName}</div>
+                                                            </div> 
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small slds-cell-wrap">
+                                                                <label>{customLabel.productDescription}</label>
+                                                                <div class="slds-cell-wrap">{info.productDescription}</div>
+                                                            </div> 
+
+                                                            <template if:true={isShowFiled}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.oldCode} label={customLabel.FillUpOrder} disabled=true></lightning-input>
+                                                                </div> 
+
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.createDate} label={customLabel.FillUpOrderCreateDate} disabled=true></lightning-input>
+                                                                </div> 
+                                                                <template if:true={isZARF}>
+                                                                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                        <lightning-input type="text" value={info.deliveryNoteNumber} label={customLabel.Delivery_Note_Number} disabled=true></lightning-input>
+                                                                    </div> 
+                                                                </template>
+                                                            </template>
+                                                            <template if:true={isCreditNote}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.quantity} label={customLabel.Quantity} disabled=true></lightning-input> 
+                                                                </div> 
+                                                            </template>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <lightning-input type="text" value={info.Price} label={customLabel.Local_Currency} disabled=true></lightning-input> 
+                                                            </div> 
+                                                            <!-- <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <lightning-input type="text" value={info.Cost} label={customLabel.productCost} disabled=true></lightning-input> 
+                                                            </div>  -->
+                                                            <template if:true={isCreditNote}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.amount} label={customLabel.Amount_per_item} disabled=true></lightning-input> 
+                                                                </div> 
+                                                            </template>
+
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <lightning-input type="text" value={info.salesUnitName} label={customLabel.Basic_Unit} disabled=true></lightning-input> 
+                                                            </div>
+                                                            <template if:false={isCreditNote}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.availableInventory} label={customLabel.Available_Inventory} disabled=true></lightning-input>
+                                                                </div> 
+    
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.approvingInventory} label={customLabel.Approving_Inventory} disabled=true></lightning-input>
+                                                                </div> 
+    
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <template if:true={info.placeOrder}>
+                                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.DeliveryDate}>
+                                                                            <label>{customLabel.Place_order}</label>
+                                                                            <lightning-input label="Place Order" type="checkbox" value={info.placeOrder} variant="label-hidden" checked disabled=true></lightning-input>
+                                                                        </td>
+                                                                    </template>
+                        
+                                                                    <template if:false={info.placeOrder}>
+                                                                        <td class="slds-cell-wrap" style="border-bottom: 1px solid #ddd;" width={lengthData.DeliveryDate}>
+                                                                            <label>{customLabel.Place_order}</label>
+                                                                            <lightning-input label="Place Order" type="checkbox" value={info.placeOrder} variant="label-hidden" disabled=true></lightning-input>
+                                                                        </td>
+                                                                    </template>
+                                                                </div>
+                                                            </template>
+                                                            <template if:true={isFROMInvoice}>
+                                                                <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                    <lightning-input type="text" value={info.FECHA_DE_PAGO} label={customLabel.FECHA_DE_PAGO} disabled=true></lightning-input> 
+                                                                </div>
+                                                            </template>
+                                                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                                                <div style="text-align:center;background-color:#0176d3;border-radius:5px;" onclick={selectChange} data-record={index}>
+                                                                    <lightning-button-icon variant="brand" icon-name="utility:add" size="x-small" value={index}></lightning-button-icon>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </lightning-card>
+                                            </div>
+                                            
+                                        </template>
+                                    </template>
+                                </lightning-record-edit-form>
+                            </lightning-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

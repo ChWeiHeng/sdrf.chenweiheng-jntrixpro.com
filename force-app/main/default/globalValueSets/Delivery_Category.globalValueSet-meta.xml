@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZMX1</fullName>
+        <default>false</default>
+        <label>ZMX1	Outbound Delivery MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZMX2</fullName>
+        <default>false</default>
+        <label>ZMX2	Returns Delivery MX</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR1</fullName>
+        <default>false</default>
+        <label>ZAR1	Overseas delivery 1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR2</fullName>
+        <default>false</default>
+        <label>ZAR2	Returns Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR6</fullName>
+        <default>false</default>
+        <label>ZAR6	Overseas delivery 1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR7</fullName>
+        <default>false</default>
+        <label>ZAR7	Delivery w/o Ref.</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARA</fullName>
+        <default>false</default>
+        <label>ZARA	Returns Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARB</fullName>
+        <default>false</default>
+        <label>ZARB	Outbound Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARE</fullName>
+        <default>false</default>
+        <label>ZARE	Outbound Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>ZARF</fullName>
+        <default>false</default>
+        <label>ZARF	Overseas delivery 1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLF1</fullName>
+        <default>false</default>
+        <label>ZLF1_出库交货1</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLF2</fullName>
+        <default>false</default>
+        <label>ZLF2_出库交货2</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLF3</fullName>
+        <default>false</default>
+        <label>ZLF3_出库交货3</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLF4</fullName>
+        <default>false</default>
+        <label>ZLF4_出库交货4</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLF5</fullName>
+        <default>false</default>
+        <label>ZLF5_出库交货5</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLFI</fullName>
+        <default>false</default>
+        <label>ZLFI</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLO</fullName>
+        <default>false</default>
+        <label>ZLO_短驳交货</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLO1</fullName>
+        <default>false</default>
+        <label>ZLO1_短驳交货-领料</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLO2</fullName>
+        <default>false</default>
+        <label>ZLO2_短驳交货-移库</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLO3</fullName>
+        <default>false</default>
+        <label>ZLO3_其它调拨</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLRI</fullName>
+        <default>false</default>
+        <label>ZLRI</label>
+    </customValue>
+    <customValue>
+        <fullName>ZAR8</fullName>
+        <default>false</default>
+        <label>ZAR8</label>
+    </customValue>
+    <customValue>
+        <fullName>LR</fullName>
+        <default>false</default>
+        <label>LR</label>
+    </customValue>
+    <masterLabel>Delivery Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

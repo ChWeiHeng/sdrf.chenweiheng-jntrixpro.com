@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Not_Change_Reference_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Reference_Order__c) , Order_Item_Number__c &gt;0)</errorConditionFormula>
+    <errorDisplayField>Reference_Order__c</errorDisplayField>
+    <errorMessage>Can&apos;t change reference order , please remove order item</errorMessage>
+</ValidationRule>

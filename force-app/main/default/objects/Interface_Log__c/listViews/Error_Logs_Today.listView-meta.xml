@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Error_Logs_Today</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Request_System__c</columns>
+    <columns>Destination_System__c</columns>
+    <columns>Interact_Time__c</columns>
+    <columns>Is_Success__c</columns>
+    <columns>Exception_Message__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>recordID__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Is_Success__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Interact_Time__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>今日报错日志</label>
+</ListView>

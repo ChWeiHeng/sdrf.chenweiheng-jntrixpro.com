@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Model_C_Customer</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Business_Model__c</columns>
+    <columns>Customer_Approval_Status__c</columns>
+    <columns>Customer_Short_Name__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>MDG_Customer_Code__c</columns>
+    <columns>Country__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>Sync_Status__c</columns>
+    <columns>Tax_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Business_Model__c</field>
+        <operation>includes</operation>
+        <value>C0</value>
+    </filters>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>Argentina</value>
+    </filters>
+    <label>AR Model C Customer</label>
+    <sharedTo>
+        <group>X5030</group>
+        <role>Argentina_Agroterrum_General_Manager</role>
+        <role>Argentina_Area_Head</role>
+        <role>HQ_Commercial</role>
+        <role>HQ_President</role>
+    </sharedTo>
+</ListView>

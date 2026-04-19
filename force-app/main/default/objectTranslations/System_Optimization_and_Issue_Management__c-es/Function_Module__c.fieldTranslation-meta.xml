@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Function Module --></label>
+    <name>Function_Module__c</name>
+    <picklistValues>
+        <masterLabel>Customer Management</masterLabel>
+        <translation><!-- Customer Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order Management</masterLabel>
+        <translation><!-- Order Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Management</masterLabel>
+        <translation><!-- Product Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Forecast Management</masterLabel>
+        <translation><!-- Sales Forecast Management --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Esc_Purpose_Vertify</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Other_Purpose__c),INCLUDES(Visit_Purpose__c,&apos;Others&apos;))</errorConditionFormula>
+    <errorDisplayField>Other_Purpose__c</errorDisplayField>
+    <errorMessage>Please input Other Purpose Specifications.</errorMessage>
+</ValidationRule>

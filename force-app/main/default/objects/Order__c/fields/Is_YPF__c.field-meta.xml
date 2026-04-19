@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_YPF__c</fullName>
+    <formula>AND(Text(Customer_Sales_Info__r.Payment_method__c) == &apos;YPF&apos;,Text(Sales_Org__c) == &apos;5070&apos;, RecordType.DeveloperName == &apos;Model_C&apos;)</formula>
+    <label>Is YPF</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

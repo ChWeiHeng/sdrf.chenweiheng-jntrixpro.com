@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>ButtonBar</field>
+        <field>Customer__c</field>
+        <field>Overdue__c</field>
+        <field>Max_Overdue_Days__c</field>
+        <field>Ultra_Credit__c</field>
+        <field>SAP_Credit_Limit__c</field>
+        <field>Owner</field>
+        <field>Total_Amount__c</field>
+        <field>Order_Amount_Guide__c</field>
+        <field>Amount_Difference__c</field>
+        <field>Amount_Rate__c</field>
+        <field>Margin_Rate__c</field>
+        <field>Total_Margin__c</field>
+        <field>Order_type__c</field>
+        <field>Currency__c</field>
+        <field>Terms_Of_Payment__c</field>
+        <field>Commission_Percentage__c</field>
+        <field>Commission_Amount_New__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>juan.fernandez@agroterrum.com.ar</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>There is commission</description>
+        <entryCriteria>
+            <formula>Commission_Amount_New__c !=0</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Marketing Manager</label>
+        <name>Marketing_Juan</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Submit_Manager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Normal</description>
+        <entryCriteria>
+            <formula>CONTAINS(Submit_Profile_Name__c, &apos;Rep&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Sales Leader</label>
+        <name>Sales_Leader</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>bernardo.jacquelin@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(Payment_Term_Longer__c,Ultra_Credit__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Credit Control</label>
+        <name>Credit_Bernardo</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>pablo.torasso@agroterrum.com.ar</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(Commission_Amount_New__c !=0,Max_Price_Rate__c*100 &gt;=2, Lower_Min_Price_Number__c &gt;0,Margin_Rate__c*100&lt;10,Max_Overdue_Days__c&gt;0,Free_Item_Count__c&gt;0)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>General Manager</label>
+        <name>GM_Pablo</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>eric_wang@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(Commission_Percentage__c*100&gt;3,Lower_Min_Price_Number__c &gt;0,Margin_Rate__c*100&lt;0,Max_Overdue_Days__c&gt;15,Payment_Term_Longer__c,Over_Credit_Line_Percent__c*100&gt;10,OR(Max_Price_Rate__c*100 &gt;=5,Lower_Min_Price_Number__c &gt;0,Margin_Rate__c*100&lt;5))</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Area Head</label>
+        <name>Eric</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>doris_li@rainbowagro.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>OR(Payment_Term_Longer__c,Max_Overdue_Days__c&gt;30,Over_Credit_Line_Percent__c*100&gt;10)</formula>
+        </entryCriteria>
+        <label>HQ Committee</label>
+        <name>HQ_Doris</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>最新</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+    OR(
+        TEXT(Status__c)= &apos;Draft&apos;,
+        TEXT(Status__c)= &apos;Rejected&apos;
+    ), 
+    OR(
+        TEXT(Order_type__c)=&apos;ZAR1&apos;
+    ),  
+    RecordType.Name =&apos;Model C&apos;, 
+    OR(Commission_Amount_New__c !=0,OR(Payment_Term_Longer__c,Ultra_Credit__c),OR(Commission_Amount_New__c !=0,Max_Price_Rate__c*100 &gt;=2, Lower_Min_Price_Number__c &gt;0,Margin_Rate__c*100&lt;10,Max_Overdue_Days__c&gt;0,Free_Item_Count__c&gt;0),OR(Commission_Percentage__c*100&gt;3,Lower_Min_Price_Number__c &gt;0,Margin_Rate__c*100&lt;0,Max_Overdue_Days__c&gt;15,Payment_Term_Longer__c,Over_Credit_Line_Percent__c*100&gt;10,OR(Max_Price_Rate__c*100 &gt;=5,Lower_Min_Price_Number__c &gt;0,Margin_Rate__c*100&lt;5)),OR(Payment_Term_Longer__c,Max_Overdue_Days__c&gt;30,Over_Credit_Line_Percent__c*100&gt;10))
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>OrderApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>OrderApproveFailed</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>OrderApproving</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Standrad Order AR C5</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>17</processOrder>
+    <recallActions>
+        <action>
+            <name>OrderDraft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

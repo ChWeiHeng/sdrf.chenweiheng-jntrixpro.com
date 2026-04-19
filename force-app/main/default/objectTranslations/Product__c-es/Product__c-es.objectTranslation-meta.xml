@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Master Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel><!-- Product Code --></nameFieldLabel>
+    <recordTypes>
+        <label><!-- Product --></label>
+        <name>Product</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Product Combo --></label>
+        <name>ProductCombo</name>
+    </recordTypes>
+</CustomObjectTranslation>

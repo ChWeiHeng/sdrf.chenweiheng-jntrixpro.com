@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Restrictions --></label>
+    <name>Restrictions__c</name>
+    <picklistValues>
+        <masterLabel>Import license</masterLabel>
+        <translation><!-- Import license --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mark not confirmed</masterLabel>
+        <translation><!-- Mark not confirmed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Over limit</masterLabel>
+        <translation><!-- Over limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overdue</masterLabel>
+        <translation><!-- Overdue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for LCL order</masterLabel>
+        <translation><!-- Waiting for LCL order --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

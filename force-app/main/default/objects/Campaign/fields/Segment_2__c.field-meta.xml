@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_2__c</fullName>
+    <label>Segment 2</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Segment_1__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alternaria</fullName>
+                <default>false</default>
+                <label>Alternaria</label>
+            </value>
+            <value>
+                <fullName>Anthracnose, early blight</fullName>
+                <default>false</default>
+                <label>Anthracnose, early blight</label>
+            </value>
+            <value>
+                <fullName>Black sigatoka</fullName>
+                <default>false</default>
+                <label>Black sigatoka</label>
+            </value>
+            <value>
+                <fullName>Blight</fullName>
+                <default>false</default>
+                <label>Blight</label>
+            </value>
+            <value>
+                <fullName>Botrytis</fullName>
+                <default>false</default>
+                <label>Botrytis</label>
+            </value>
+            <value>
+                <fullName>Damping off</fullName>
+                <default>false</default>
+                <label>Damping off</label>
+            </value>
+            <value>
+                <fullName>End of Cycle Diseases</fullName>
+                <default>false</default>
+                <label>End of Cycle Diseases</label>
+            </value>
+            <value>
+                <fullName>Fusarium</fullName>
+                <default>false</default>
+                <label>Fusarium</label>
+            </value>
+            <value>
+                <fullName>Mildiu/Late Blight</fullName>
+                <default>false</default>
+                <label>Mildiu/Late Blight</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>powdery mildew</fullName>
+                <default>false</default>
+                <label>powdery mildew</label>
+            </value>
+            <value>
+                <fullName>Rhizhocthonia</fullName>
+                <default>false</default>
+                <label>Rhizhocthonia</label>
+            </value>
+            <value>
+                <fullName>Rust</fullName>
+                <default>false</default>
+                <label>Rust</label>
+            </value>
+            <value>
+                <fullName>Sclerotinia</fullName>
+                <default>false</default>
+                <label>Sclerotinia</label>
+            </value>
+            <value>
+                <fullName>Spongospora</fullName>
+                <default>false</default>
+                <label>Spongospora</label>
+            </value>
+            <value>
+                <fullName>Growth regulator</fullName>
+                <default>false</default>
+                <label>Growth regulator</label>
+            </value>
+            <value>
+                <fullName>Broad Leaves Post-emergent</fullName>
+                <default>false</default>
+                <label>Broad Leaves Post-emergent</label>
+            </value>
+            <value>
+                <fullName>Broad Leaves Pre-emergent</fullName>
+                <default>false</default>
+                <label>Broad Leaves Pre-emergent</label>
+            </value>
+            <value>
+                <fullName>Grass Post-emergent</fullName>
+                <default>false</default>
+                <label>Grass Post-emergent</label>
+            </value>
+            <value>
+                <fullName>Grass Pre-emergent</fullName>
+                <default>false</default>
+                <label>Grass Pre-emergent</label>
+            </value>
+            <value>
+                <fullName>Burndown</fullName>
+                <default>false</default>
+                <label>Burndown</label>
+            </value>
+            <value>
+                <fullName>Chemical Fallow</fullName>
+                <default>false</default>
+                <label>Chemical Fallow</label>
+            </value>
+            <value>
+                <fullName>Post-emergent</fullName>
+                <default>false</default>
+                <label>Post-emergent</label>
+            </value>
+            <value>
+                <fullName>Pre-emergent</fullName>
+                <default>false</default>
+                <label>Pre-emergent</label>
+            </value>
+            <value>
+                <fullName>Seed Fungicide</fullName>
+                <default>false</default>
+                <label>Seed Fungicide</label>
+            </value>
+            <value>
+                <fullName>Seeds Insecticide</fullName>
+                <default>false</default>
+                <label>Seeds Insecticide</label>
+            </value>
+            <value>
+                <fullName>Seeds Other</fullName>
+                <default>false</default>
+                <label>Seeds Other</label>
+            </value>
+            <value>
+                <fullName>Acaricide</fullName>
+                <default>false</default>
+                <label>Acaricide</label>
+            </value>
+            <value>
+                <fullName>Bugs/Sucking</fullName>
+                <default>false</default>
+                <label>Bugs/Sucking</label>
+            </value>
+            <value>
+                <fullName>Chewing/sucking pest</fullName>
+                <default>false</default>
+                <label>Chewing/sucking pest</label>
+            </value>
+            <value>
+                <fullName>Diptera/Flies</fullName>
+                <default>false</default>
+                <label>Diptera/Flies</label>
+            </value>
+            <value>
+                <fullName>Hoppers</fullName>
+                <default>false</default>
+                <label>Hoppers</label>
+            </value>
+            <value>
+                <fullName>Lepidoptera/ Chewing</fullName>
+                <default>false</default>
+                <label>Lepidoptera/ Chewing</label>
+            </value>
+            <value>
+                <fullName>Mosquitoes</fullName>
+                <default>false</default>
+                <label>Mosquitoes</label>
+            </value>
+            <value>
+                <fullName>Soil pest</fullName>
+                <default>false</default>
+                <label>Soil pest</label>
+            </value>
+            <value>
+                <fullName>Sucking pest/Mites</fullName>
+                <default>false</default>
+                <label>Sucking pest/Mites</label>
+            </value>
+            <value>
+                <fullName>Thrips &amp; Mites</fullName>
+                <default>false</default>
+                <label>Thrips &amp; Mites</label>
+            </value>
+            <value>
+                <fullName>Nematicide</fullName>
+                <default>false</default>
+                <label>Nematicide</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Alternaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Anthracnose, early blight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Black sigatoka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Blight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Botrytis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Damping off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>End of Cycle Diseases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Fusarium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Mildiu/Late Blight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>powdery mildew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Rhizhocthonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Rust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Sclerotinia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fungicide</controllingFieldValue>
+            <valueName>Spongospora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Growth Regulator</controllingFieldValue>
+            <valueName>Growth regulator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Selective Herbicide</controllingFieldValue>
+            <valueName>Broad Leaves Post-emergent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Selective Herbicide</controllingFieldValue>
+            <valueName>Broad Leaves Pre-emergent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Selective Herbicide</controllingFieldValue>
+            <valueName>Grass Post-emergent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Selective Herbicide</controllingFieldValue>
+            <valueName>Grass Pre-emergent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non  Selective Herbicide</controllingFieldValue>
+            <valueName>Burndown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non  Selective Herbicide</controllingFieldValue>
+            <valueName>Chemical Fallow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non  Selective Herbicide</controllingFieldValue>
+            <valueName>Post-emergent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non  Selective Herbicide</controllingFieldValue>
+            <valueName>Pre-emergent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seed Treatment</controllingFieldValue>
+            <valueName>Seed Fungicide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seed Treatment</controllingFieldValue>
+            <valueName>Seeds Insecticide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seed Treatment</controllingFieldValue>
+            <valueName>Seeds Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Acaricide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Bugs/Sucking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Chewing/sucking pest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Diptera/Flies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Hoppers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Lepidoptera/ Chewing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Mosquitoes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Soil pest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Sucking pest/Mites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insecticide</controllingFieldValue>
+            <valueName>Thrips &amp; Mites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nematicide</controllingFieldValue>
+            <valueName>Nematicide</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

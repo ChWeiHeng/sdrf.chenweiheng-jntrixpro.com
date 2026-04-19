@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mark_Type__c</fullName>
+    <label>Mark Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Metoo唛头</fullName>
+                <default>false</default>
+                <label>Metoo mark</label>
+            </value>
+            <value>
+                <fullName>定型方案</fullName>
+                <default>false</default>
+                <label>finalized plan</label>
+            </value>
+            <value>
+                <fullName>新包装</fullName>
+                <default>false</default>
+                <label>new packaging</label>
+            </value>
+            <value>
+                <fullName>定型方案-仅标签变更（商品名不变）</fullName>
+                <default>false</default>
+                <label>finalized plan - only label changes (product name remains unchanged)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

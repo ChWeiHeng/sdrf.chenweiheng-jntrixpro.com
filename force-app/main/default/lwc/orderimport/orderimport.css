@@ -1,0 +1,58 @@
+/* 页面容器：限制宽度、居中、加阴影 */
+    .order-import-container {
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+/* 表格表头：加粗、背景色优化 */
+    .slds-table thead tr {
+        background-color: #f3f3f3;
+    }
+    .slds-table th {
+        font-weight: bold;
+    }
+
+/* 表格行 hover 效果 */
+    .slds-table tbody tr:hover {
+        background-color: #fafafa;
+    }
+
+/* 子项行背景色增强 */
+    .slds-theme_shade {
+        background-color: #f9f9f9 !important;
+    }
+
+/* 文件上传按钮样式优化（覆盖默认） */
+    .slds-file-selector__text {
+        color: #0070d2;
+        cursor: pointer;
+    }
+    .slds-file-selector__or {
+        color: #6a6a6a;
+        margin: 0 8px;
+    }
+
+/* 按钮间距 */
+    lightning-button {
+        margin-right: 8px;
+    }
+
+/* 标题加粗（覆盖 slds-text-heading--bold 兼容性写法） */
+    .slds-text-heading--bold {
+        font-weight: 700;
+    }
+/* 下载按钮与上传区域的间距 */
+    .download-button {
+        margin-right: 100px !important; /* 间隔100px */
+    }
+
+    .custom-datatable .slds-table thead th:nth-child(1) {
+    width: 300px;  /* 设置第一列宽度 */
+}
+
+.order-datatable{
+    height:22rem;
+}

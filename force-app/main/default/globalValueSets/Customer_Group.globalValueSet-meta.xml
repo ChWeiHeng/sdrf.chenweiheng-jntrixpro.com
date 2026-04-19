@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>YPF</fullName>
+        <default>false</default>
+        <label>YPF</label>
+    </customValue>
+    <customValue>
+        <fullName>Z1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Z1 Special VAT Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Z2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Z2 General VAT Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Z3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Z3  Electronic General VAT Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Z4</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Z4 Electronic Special VAT Invoice</label>
+    </customValue>
+    <masterLabel>Customer Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

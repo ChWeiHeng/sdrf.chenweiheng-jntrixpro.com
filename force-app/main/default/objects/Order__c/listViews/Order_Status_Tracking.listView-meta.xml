@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Status_Tracking</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Order_type__c</columns>
+    <columns>Total_Margin_Level__c</columns>
+    <columns>Total_Amount__c</columns>
+    <columns>Delivery_Amount__c</columns>
+    <columns>Invoice_Amount__c</columns>
+    <columns>Amount_of_refund__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Total_Amount_Tax__c</columns>
+    <columns>Currency__c</columns>
+    <columns>Status__c</columns>
+    <columns>Approve_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Customer__c</field>
+        <operation>equals</operation>
+        <value>MIRU AGROPECUARIA SRL</value>
+    </filters>
+    <filters>
+        <field>Order_type__c</field>
+        <operation>equals</operation>
+        <value>ZARB,ZARE,ZAR1,ZARA,ZAR2,ZARF</value>
+    </filters>
+    <filters>
+        <field>Order_Closed_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved,Close,Approving</value>
+    </filters>
+    <label>Delivery &amp; Invoice Status Tracking</label>
+</ListView>

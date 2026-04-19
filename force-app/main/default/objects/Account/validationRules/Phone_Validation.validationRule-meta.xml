@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(CONTAINS(Telephone__c, &apos;+&apos;),CONTAINS(Telephone__c, &apos;.&apos;))</errorConditionFormula>
+    <errorDisplayField>Telephone__c</errorDisplayField>
+    <errorMessage>please remove &apos;+&apos;</errorMessage>
+</ValidationRule>

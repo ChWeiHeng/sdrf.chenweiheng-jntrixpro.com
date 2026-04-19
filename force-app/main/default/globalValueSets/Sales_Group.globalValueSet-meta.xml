@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AG1</fullName>
+        <default>false</default>
+        <label>AG1 AgroT Sales group 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Z01</fullName>
+        <default>false</default>
+        <label>Z01 南美1商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z02</fullName>
+        <default>false</default>
+        <label>Z02 南美2商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z03</fullName>
+        <default>false</default>
+        <label>Z03 北美商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z04</fullName>
+        <default>false</default>
+        <label>Z04 中美商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z05</fullName>
+        <default>false</default>
+        <label>Z05 巴西商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z06</fullName>
+        <default>false</default>
+        <label>Z06 非洲商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z07</fullName>
+        <default>false</default>
+        <label>Z07 澳洲商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z08</fullName>
+        <default>false</default>
+        <label>Z08 亚洲商务小组</label>
+    </customValue>
+    <customValue>
+        <fullName>Z09</fullName>
+        <default>false</default>
+        <label>Z09 CIS商务小组</label>
+    </customValue>
+    <description>销售组</description>
+    <masterLabel>Sales Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

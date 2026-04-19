@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Province_State__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Province/State</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Country_Province_Master_Data__c.Country__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Country__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Country_Province_Master_Data__c</referenceTo>
+    <relationshipLabel>Customers (Province/State)</relationshipLabel>
+    <relationshipName>Accounts_Province</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>
