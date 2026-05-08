@@ -61,7 +61,7 @@
                     TEXT(Order_type__c)!=&apos;ZMX2&apos;,
                     TEXT(Order_type__c)!=&apos;ZAR2&apos;,
 					TEXT(Order_type__c)!=&apos;ZMX4&apos;,
-                    TEXT(Order_type__c)!=&apos;ZFD&apos;
+                    TEXT(Order_type__c)!=&apos;ZARL&apos;
                 )
             )
         )

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>AR_Model_B_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Model B Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_Model_B_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX Model B Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sharing_William_Wang</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sharing  William Wang</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_B_Sales_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Mexico_Rainbow_Agro_Logistics</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

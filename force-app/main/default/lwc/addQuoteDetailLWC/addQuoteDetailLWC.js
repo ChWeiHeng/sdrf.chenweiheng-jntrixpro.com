@@ -2,8 +2,8 @@
  * @description       : 
  * @author            : Gerry
  * @group             : 
- * @last modified on  : 04-07-2026
- * @last modified by  : Gerry 
+ * @last modified on  : 04-22-2026
+ * @last modified by  : Gerry
  * Modifications Log
  * Ver   Date         Author   Modification
  * 1.0   04-07-2026   Gerry   Initial Version
@@ -301,6 +301,9 @@ export default class AddQuoteDetailLWC extends LightningElement {
         let quoteDetail = {};
         quoteDetail.quoteDetailData = item;
         quoteDetail.isNotEdit=false;
+        if(this.isMXDAPORDDP){
+            item.Clearance_Cost_Percentage__c = 3.5;
+        }
         console.log('quoteDetail:'+JSON.stringify(quoteDetail));
         this.quoteDetailList.push(quoteDetail);
         this.dispatchEvent(new ShowToastEvent({

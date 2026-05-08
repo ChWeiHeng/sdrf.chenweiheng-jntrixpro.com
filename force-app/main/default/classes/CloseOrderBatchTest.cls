@@ -2,7 +2,7 @@
  * @description       : Test class for CloseOrderBatch
  * @author            : Agentforce
  * @group             : 
- * @last modified on  : 04-13-2026
+ * @last modified on  : 04-22-2026
  * @last modified by  : Gerry
  * Modifications Log
  * Ver   Date         Author       Modification
@@ -361,11 +361,20 @@ public class CloseOrderBatchTest {
         CloseOrderBatch batch = new CloseOrderBatch(orderItemNumbers);
         Database.executeBatch(batch, 10);
         Test.stopTest();
+
+
         
         // Verify split handles spaces correctly
         System.assertEquals(2, batch.orderItemNumberList.size(), 'Should have two items');
     }
-    
+     @isTest
+    static void testBatchWithMultipleOrderNumbersWithSpaces1() {
+        
+        Test.startTest();
+        CloseOrderBatch batch = new CloseOrderBatch('SELECT Id, Name FROM Order_Item__c',1);
+        Database.executeBatch(batch, 10);
+        Test.stopTest();
+    }
     /**
      * @description Test batch constructor initialization
      */

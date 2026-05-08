@@ -26,7 +26,7 @@ public without sharing class SubmitOrderController {
         //ZARF数量校验----end
 
         //ZFD提交校验----start
-        if (order.Order_type__c == 'ZFD' && order.Order_Item__r.size()>0) {
+        if (order.Order_type__c == 'ZARL' && order.Order_Item__r.size()>0) {
             Output out = new Output();
             out.isSucess = false;
             out.errorMsg = System.label.ZDFSubmitValidation;

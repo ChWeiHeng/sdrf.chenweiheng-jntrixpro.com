@@ -702,7 +702,7 @@
                     <criteria>
                         <leftValue>{!Record.Order_type__c}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>ZFD</rightValue>
+                        <rightValue>ZARL</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -804,7 +804,7 @@
                     <criteria>
                         <leftValue>{!Record.Order_type__c}</leftValue>
                         <operator>NE</operator>
-                        <rightValue>ZFD</rightValue>
+                        <rightValue>ZARL</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -1055,6 +1055,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Interest_Rate__c</fieldItem>
                 <identifier>RecordInterest_Rate_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1065,6 +1072,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Payment_Term_Longer__c</fieldItem>
                 <identifier>RecordPayment_Term_Longer_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1075,6 +1089,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Is_Meet_the_inventory__c</fieldItem>
                 <identifier>RecordIs_Meet_the_inventory_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1108,6 +1129,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.DN_Post_Date__c</fieldItem>
                 <identifier>RecordDN_Post_Date_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1165,7 +1193,7 @@
                 <fieldItem>Record.Goods_Return_Requested__c</fieldItem>
                 <identifier>RecordGoods_Return_Requested_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Sales_Org__c}</leftValue>
                         <operator>EQUAL</operator>
@@ -1176,6 +1204,11 @@
                         <operator>EQUAL</operator>
                         <rightValue>5070</rightValue>
                     </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
                 </visibilityRule>
             </fieldInstance>
         </itemInstances>
@@ -1183,21 +1216,15 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Campaign__c</fieldItem>
-                <identifier>RecordCampaign__cField</identifier>
+                <fieldItem>Record.Reference_Order_Margin_Rate__c</fieldItem>
+                <identifier>RecordReference_Order_Margin_Rate_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
-                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>ZFD</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Deliver_Plant__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>5130</rightValue>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -1254,6 +1281,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Total_Margin_Level__c</fieldItem>
                 <identifier>RecordTotal_Margin_Level_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1265,7 +1299,7 @@
                 <fieldItem>Record.Stock_Aging_Limit__c</fieldItem>
                 <identifier>RecordStock_Aging_Limit_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Sales_Org__c}</leftValue>
                         <operator>EQUAL</operator>
@@ -1275,6 +1309,11 @@
                         <leftValue>{!Record.Sales_Org__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>5070</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -1391,16 +1430,6 @@
                         <rightValue>ZMX2</rightValue>
                     </criteria>
                 </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Reference_Order_Margin_Rate__c</fieldItem>
-                <identifier>RecordReference_Order_Margin_Rate_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-aed17e2f-8ac3-463c-a7ed-8308a8f080fd</name>
@@ -2001,6 +2030,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Amount_Difference__c</fieldItem>
                 <identifier>RecordAmount_Difference_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2011,6 +2047,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Total_Cost__c</fieldItem>
                 <identifier>RecordTotal_Cost_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2021,6 +2064,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Total_Estimate_Cost__c</fieldItem>
                 <identifier>RecordTotal_Estimate_Cost_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2065,6 +2115,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Order_Amount_Guide__c</fieldItem>
                 <identifier>RecordOrder_Amount_Guide_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2075,6 +2132,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Amount_Rate__c</fieldItem>
                 <identifier>RecordAmount_Rate_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2085,6 +2149,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Margin_Rate__c</fieldItem>
                 <identifier>RecordMargin_Rate_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2095,6 +2166,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Total_Margin_Estimate_Rate__c</fieldItem>
                 <identifier>RecordTotal_Margin_Estimate_Rate_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2153,6 +2231,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.SAP_Credit_Limit__c</fieldItem>
                 <identifier>RecordSAP_Credit_Limit_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2163,6 +2248,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Actual_available_Credit_Limit__c</fieldItem>
                 <identifier>RecordActual_available_Credit_Limit_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2173,6 +2265,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Ultra_Credit__c</fieldItem>
                 <identifier>RecordUltra_Credit_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2183,6 +2282,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Exceeded_Credit_Limit_USD__c</fieldItem>
                 <identifier>RecordExceeded_Credit_Limit_USD_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2193,6 +2299,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Payment_Terms_Over_180__c</fieldItem>
                 <identifier>RecordPayment_Terms_Over_180_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2203,6 +2316,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Distrubutor_Exchange_Rate__c</fieldItem>
                 <identifier>RecordDistrubutor_Exchange_Rate_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-dd56d2f9-cb32-4d80-8000-676cc2da74ae</name>
@@ -2217,6 +2337,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.CRM_Approving_Credit__c</fieldItem>
                 <identifier>RecordCRM_Approving_Credit_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2237,6 +2364,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Overdue__c</fieldItem>
                 <identifier>RecordOverdue_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2247,6 +2381,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Max_Overdue_Days__c</fieldItem>
                 <identifier>RecordMax_Overdue_Days_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2257,6 +2398,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Rate__c</fieldItem>
                 <identifier>RecordRate_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2560,6 +2708,13 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection6</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -2897,6 +3052,67 @@
                 <identifier>RecordProfit_Center_cField2</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Arrival_Date__c</fieldItem>
+                <identifier>RecordArrival_Date_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Clearance_Days__c</fieldItem>
+                <identifier>RecordClearance_Days_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Payment_Method__c</fieldItem>
+                <identifier>RecordPayment_Method_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Percentage_Of_The_Original_Order__c</fieldItem>
+                <identifier>RecordPercentage_Of_The_Original_Order_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-cf4305ad-e4a2-4cac-8c32-b3c26d882b18</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -2909,6 +3125,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Customer__c</fieldItem>
                 <identifier>RecordCustomer_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.MDG_Customer_Code__c</fieldItem>
+                <identifier>RecordMDG_Customer_Code_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2965,6 +3191,30 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Currency__c</fieldItem>
                 <identifier>RecordCurrency_cField2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Currency__c</fieldItem>
+                <identifier>RecordCurrency_cField4</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -3001,6 +3251,23 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Clearance_Date__c</fieldItem>
+                <identifier>RecordClearance_Date_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.E_Document_MX__c</fieldItem>
@@ -3011,10 +3278,17 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Payment_Method__c</fieldItem>
-                <identifier>RecordPayment_Method_cField2</identifier>
+                <fieldItem>Record.Reference_Order__c</fieldItem>
+                <identifier>RecordReference_Order_cField3</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order_type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>ZMX8</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-610c2978-176c-4a2e-b2f0-a093172736eb</name>

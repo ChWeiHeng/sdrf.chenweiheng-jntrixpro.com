@@ -13,7 +13,19 @@ public without sharing class AddQuoteDetailController {
     public static Output initData(String quoteRecordId) {
         try {
             system.debug('quoteRecordId:'+quoteRecordId);
-            Quote__c quote = [SELECT Name,Id,Quotation_Type__c,Exchange__c,Is_Retrograde__c,Payment_Term_Cost_Rate__c,Incoterms__c,Sales_Org__c  FROM Quote__c WHERE Id=:quoteRecordId];
+            // Defensive: if no Id provided, return an empty successful Output to avoid query exceptions
+            if (String.isBlank(quoteRecordId)) {
+                Output emptyOut = new Output();
+                emptyOut.isSucess = true;
+                emptyOut.quoteDetailList = new List<QuoteDetail>();
+                emptyOut.priceListList = new List<PriceList>();
+                emptyOut.productNameList = new List<String>();
+                emptyOut.errorMsg = '';
+                emptyOut.isHQSubClient = false;
+                emptyOut.isMXDAPORDDP = false;
+                return emptyOut;
+            }
+            Quote__c quote = [SELECT Name,Id,Quotation_Type__c,Exchange__c,Is_Retrograde__c,Payment_Term_Cost_Rate__c,Incoterms__c,Sales_Org__c  FROM Quote__c WHERE Id=:quoteRecordId LIMIT 1];
             Output out = new Output();
             out.isSucess = true;
             out.quoteDetailList = new List<QuoteDetail>();

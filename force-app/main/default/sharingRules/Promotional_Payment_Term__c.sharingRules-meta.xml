@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>AU_Share_Promotional</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AU Share Promotional</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Australia_Area_Head</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Australia_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

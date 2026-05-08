@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Account_ReceivableShareReportUser_8_12</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Account ReceivableShareReportUser_8_12</label>
+        <sharedTo>
+            <group>X5130_Report_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Company_Code__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Receivable_8_11</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Account Receivable_8_11</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_B_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Amount_in_Trans_Crcy__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Receivable_8_12</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Account Receivable_8_12</label>
+        <sharedTo>
+            <role>Argentina_Rainbow_Agro_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Company_Code__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Receivable_8_12_2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Account Receivable_8_12</label>
+        <sharedTo>
+            <group>X5130_Report_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5070 RAAR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5130and5070</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5130and5070</label>
+        <sharedTo>
+            <group>X5070_5130</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5070 RAAR,5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>AR_FIN_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR FIN Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_CFO</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Rainbow_ITBP_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mexico Rainbow ITBP Sharing</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Logistics</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -5,7 +5,7 @@
 OR(TEXT(Deliver_Plant__c)=&apos;3011&apos;,TEXT(Deliver_Plant__c)=&apos;3020&apos;),
 (Total_Margin__c / Total_Cash_Price__c ),
 				IF(
-								TEXT(Order_type__c)=&apos;ZFD&apos;,
+								TEXT(Order_type__c)=&apos;ZARL&apos;,
 								0,
 								(Total_Margin__c / Total_Price__c )
 								

@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Gerry
  * @group             : 
- * @last modified on  : 01-22-2026
+ * @last modified on  : 04-30-2026
  * @last modified by  : Gerry
  * Modifications Log
  * Ver   Date         Author   Modification
@@ -152,6 +152,7 @@ export default class EditContractsOrderDetailLWC extends LightningElement {
     @track isCreateOrderItem;
     @track isMX = false;
     @track toxicityList = [];
+    @track isServiceOrder = false;
     shooMoreMe(event) {
         let index = event.target.name;
         console.log('index',index);
@@ -206,6 +207,7 @@ export default class EditContractsOrderDetailLWC extends LightningElement {
             type  : this.label
         }).then(result => {
             if (result.isSucess) {
+                this.isServiceOrder = result.isServiceOrder;
                 console.log('result=====>',JSON.stringify(result));
             	this.quoteDetailList = result.orderDetailList;
             	console.log('quoteDetailList=====>',JSON.stringify(this.quoteDetailList));

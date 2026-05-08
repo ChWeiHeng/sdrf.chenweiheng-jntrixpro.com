@@ -101,9 +101,9 @@
         <label>ZDR_借项销售订单</label>
     </customValue>
     <customValue>
-        <fullName>ZFD</fullName>
+        <fullName>ZARL</fullName>
         <default>false</default>
-        <label>ZFD_Free Order</label>
+        <label>ZARL_Free Order</label>
     </customValue>
     <customValue>
         <fullName>ZIRE</fullName>

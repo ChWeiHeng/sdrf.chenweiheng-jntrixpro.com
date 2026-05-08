@@ -30,12 +30,12 @@ public without sharing class AddOrderItemController {
                 out.isFROMInvoice = false;
             }
             //credit note debit note是否来源于发票-----end
-            if (order.Order_type__c == 'ZFD') {
+            if (order.Order_type__c == 'ZARL') {
                 out.isZFD = true;
             }else{
                 out.isZFD = false;
             }
-            if (order.Order_type__c == 'ZFD' && order.Campaign__c != null) {
+            if (order.Order_type__c == 'ZARL' && order.Campaign__c != null) {
                 out.isNotShowSearch = true;
             }else{
                 out.isNotShowSearch = false;
@@ -1320,11 +1320,11 @@ public without sharing class AddOrderItemController {
                     oi.orderItemData.Sales_Unit_Text__c = unitMap.get(oi.orderItemData.Sales_Unit__c).Product_Sales_Unit__c;
                     oi.orderItemData.Amount_per_item__c = (oi.orderItemData.Price__c*oi.orderItemData.Quantity__c).setScale(2);
 
-                    if(oi.orderItemData.Product_Type__c=='Free Product' && order.Order_type__c != 'ZFD'){
+                    if(oi.orderItemData.Product_Type__c=='Free Product' && order.Order_type__c != 'ZARL'){
                         oi.orderItemData.Price__c=0.01;
                         
                     }
-                    if(order.Order_type__c == 'ZFD'){
+                    if(order.Order_type__c == 'ZARL'){
                         oi.orderItemData.Price__c=0;
                         oi.orderItemData.Amount_per_item__c = 0;
                     }

@@ -69,7 +69,7 @@
         <name>CheckPriceBook</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Can only create return order --></errorMessage>
+        <errorMessage><!-- Can only create return order/service order --></errorMessage>
         <name>Create_Retrun_Order</name>
     </validationRules>
     <validationRules>

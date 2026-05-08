@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AU_Operating_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AU Operating Share</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Australia_Operating_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>2100</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AU_Share_Product_Info</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AU Share Product Info</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Australia_Area_Head</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>2100</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_SHARE_Marvin</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX SHARE Marvin</label>
+        <sharedTo>
+            <group>X3010302</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Organization__c</field>
+            <operation>equals</operation>
+            <value>3010 RAMX,3020 AGT MX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RAMX_LOG_Share_30103020</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RAMX LOG Share 30103020</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Logistics</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+,&quot;3010 RAINBOW AGRO SCIENCES,S.A.DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_To_AR_Credit_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share To AR Credit Manager</label>
+        <sharedTo>
+            <role>Argentina_Credit_Control_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>5070 Rainbow Argentina Gualeguaychu,5130 AGROTERRUM S.A.</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3010</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>3010</label>
+        <sharedTo>
+            <group>X3010</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>&quot;3010 RAINBOW AGRO SCIENCES,S.A.DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3010_Share_3011</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3010 Share 3011</label>
+        <sharedTo>
+            <group>X3010</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3011</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>3011</label>
+        <sharedTo>
+            <group>X3011</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3020</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>3020</label>
+        <sharedTo>
+            <group>X3020</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>&quot;3020 AGROTERRUM MEXICO, S.A. DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5030</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>5030</label>
+        <sharedTo>
+            <group>X5030</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>5130 AGROTERRUM S.A.</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5070</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5070</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>5070 Rainbow Argentina Gualeguaychu</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>YPF_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>YPF Edit</label>
+        <sharedTo>
+            <group>YPF_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Factory__c</field>
+            <operation>equals</operation>
+            <value>5070 Rainbow Argentina Gualeguaychu</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

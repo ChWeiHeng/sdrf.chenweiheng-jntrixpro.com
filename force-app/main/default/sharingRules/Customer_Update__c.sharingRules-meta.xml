@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>X3020</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3020</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Finance_Controller</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

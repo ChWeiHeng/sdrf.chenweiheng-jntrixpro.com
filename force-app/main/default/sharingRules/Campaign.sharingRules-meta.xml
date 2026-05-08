@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>AR_Fin_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Fin Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_Financial_Administration_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_Fin_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX Fin Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Finance_Controller</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_Marketing_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MX Marketing Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

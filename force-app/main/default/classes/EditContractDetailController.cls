@@ -235,13 +235,27 @@ public without sharing class EditContractDetailController {
             Output out = new Output();
             out.errorMsg = '';
             out.isSucess = true;
-            if(order.Order_type__c=='ZMX2' || order.Order_type__c=='ZAR2' || (order.Quotes__c != null && order.Quotes__r.Quotation_Type__c=='Tolling'))
-            {
+            if(
+                order.Order_type__c=='ZMX2' || 
+                order.Order_type__c=='ZAR2' || 
+                (
+                    order.Quotes__c != null && 
+                    order.Quotes__r.Quotation_Type__c=='Tolling'
+                ) ||
+                order.Order_type__c=='ZMX8'
+            ){
                 out.isCreateOrderItem=true;
             }
             else
             {
                 out.isCreateOrderItem=false;
+            }
+
+            //是否为zmx8
+            if (order.Order_type__c=='ZMX8') {
+                out.isServiceOrder = true;
+            }else{
+                out.isServiceOrder = false;
             }
             //是否为ZAR2订单
             if (order.Order_type__c=='ZAR2') {
@@ -1029,6 +1043,9 @@ public without sharing class EditContractDetailController {
 
         @AuraEnabled
         public Boolean isCreateOrderItem {get;set;}
+
+        @AuraEnabled
+        public Boolean isServiceOrder {get;set;}
 
         @AuraEnabled
         public List<Option> toxicityList {get;set;}

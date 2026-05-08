@@ -3,8 +3,7 @@
     <fullName>Reference_Order_Validation</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-    ISNULL(Reference_Order__c),
-    ISBLANK(Reference_Order__c),
+    NOT(ISBLANK(Reference_Order__c)),
     OR(     
         Reference_Order__r.Customer__c &lt;&gt; Customer__c, 
         TEXT(Reference_Order__r.Status__c)!=&apos;Approved&apos;, 
@@ -12,8 +11,12 @@
             TEXT(Order_type__c)=&apos;ZMX3&apos;,
             TEXT(Reference_Order__r.Order_type__c)!=&apos;ZMX1&apos;
         ),
-                    AND(
+        AND(
             TEXT(Order_type__c)=&apos;ZMX2&apos;,
+            TEXT(Reference_Order__r.Order_type__c)!=&apos;ZMX1&apos;
+        ),
+        AND(
+            TEXT(Order_type__c)=&apos;ZMX8&apos;,
             TEXT(Reference_Order__r.Order_type__c)!=&apos;ZMX1&apos;
         )
     ) 

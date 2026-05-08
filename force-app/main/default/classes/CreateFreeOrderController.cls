@@ -2,7 +2,7 @@
  * @description       : 创建free Order控制类
  * @author            : Gerry
  * @group             : 
- * @last modified on  : 04-16-2026
+ * @last modified on  : 04-21-2026
  * @last modified by  : Gerry
  * Modifications Log
  * Ver   Date         Author   Modification
@@ -30,7 +30,7 @@ public without sharing class CreateFreeOrderController {
             order.RecordTypeId = Schema.SObjectType.Order__c.getRecordTypeInfosByDeveloperName().get('Model_C').getRecordTypeId();
             order.Campaign__c = recordId;
             order.Status__c = 'Draft';
-            order.Order_type__c = 'ZFD';
+            order.Order_type__c = 'ZARL';
             order.Customer__c = ca.Customer_Lookup__c;
             order.Currency__c = 'USD';
             order.Distr_Channel__c = ca.Distribution_Channel__c;

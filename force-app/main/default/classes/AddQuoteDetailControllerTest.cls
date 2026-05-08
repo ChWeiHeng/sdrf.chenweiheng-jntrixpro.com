@@ -1,3 +1,13 @@
+/**
+ * @description       : 
+ * @author            : Gerry
+ * @group             : 
+ * @last modified on  : 04-20-2026
+ * @last modified by  : Gerry
+ * Modifications Log
+ * Ver   Date         Author   Modification
+ * 1.0   04-20-2026   Gerry   Initial Version
+**/
 @isTest
 private class AddQuoteDetailControllerTest {
     static testMethod void testMethod1() {
@@ -43,7 +53,7 @@ private class AddQuoteDetailControllerTest {
         // csi.Sales_Office__c = 'AGR1';
         // csi.Sales_Group__c = 'AG1';
         csi.Price_Group__c = '02';
-        csi.Payment_method__c = 'Z1';
+        // csi.Payment_method__c = 'Z1';
         csi.Business_Model__c = 'C0';
         csi.Incoterms__c = '';
         insert csi;
@@ -51,6 +61,8 @@ private class AddQuoteDetailControllerTest {
         Quote__c quote = new Quote__c();
         //quote.Name = '报价测试';
         quote.Quotation_Type__c = 'HQ_Purchase';
+        quote.Sales_Org__c = '3010';
+        quote.Distr_Channel__c = '10';
         insert quote;
 
         
@@ -58,6 +70,8 @@ private class AddQuoteDetailControllerTest {
         Quote__c quote1 = new Quote__c();
         //quote1.Name = '报价测试';
         quote1.Quotation_Type__c = 'HQ_Purchase';
+        quote1.Sales_Org__c = '3010';
+        quote1.Distr_Channel__c = '10';
         insert quote1;
 
         Quote_Detail__c quoteDetail=new Quote_Detail__c();

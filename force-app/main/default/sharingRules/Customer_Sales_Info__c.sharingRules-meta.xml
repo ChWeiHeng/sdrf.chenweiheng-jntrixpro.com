@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AGT_FIN_Share_FIN</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AGT FIN Share FIN</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Finance_Controller</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>3020 AGT MX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AR_CFO</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR CFO</label>
+        <sharedTo>
+            <role>Argentina_CFO</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AR_Finance_share_with_sales_forecast</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Finance share with sales forecast</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Financial_Analyst</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AR_Rep_Review_5130</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AR Rep Review 5130</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_Regional_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AR_Supply_Logistic_Share_with_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR SupplyLogistic Share with Rep</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Supply_Logitics</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Argentina_Agroterrum_MKT_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Argentina Agroterrum MKT Sharing</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Marketing_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_SHARE_Marvin</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX SHARE Marvin</label>
+        <sharedTo>
+            <group>X3010302</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>3010 RAMX,3020 AGT MX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RAAR_Fin_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RAAR Fin Sharing</label>
+        <sharedTo>
+            <role>Argentina_Rainbow_Agro_Finance</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5070 RAAR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RAMX_FIN_Share_30103020</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RAMX FIN Share 30103020</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Overseas_Finance</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>3010 RAMX,3020 AGT MX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RAMX_Sales_Manager_share_3011</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RAMX Sales Manager share 3011</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_C_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivering_Plant__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3011_Logis_Share</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3011 Logis Share</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Logistics</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivering_Plant__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>camila</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>camila/5070</label>
+        <sharedTo>
+            <group>Camila5070</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5070 RAAR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>AR_CFO</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR CFO</label>
+        <sharedTo>
+            <role>Argentina_CFO</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Credit_Control_Manager_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Credit Control Manager Sharing</label>
+        <sharedTo>
+            <role>Argentina_Credit_Control_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Model_B_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Model B Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AR Sharing</label>
+        <sharedTo>
+            <group>AR_Create_Account_Group</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AU_Share_Fin</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AU Share Fin</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Australia_Fin</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Australia_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AU_Share_Marketing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AU Share Marketing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Australia_Operating_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Australia_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_Model_B_Sales_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX Model B Sales Rep</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Rainbow_Agro_Overseas_Finance</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Mexico Rainbow Agro Overseas Finance</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_C_Sales_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Mexico_Rainbow_Agro_Overseas_Finance</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>YPF_Sales_Info_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>YPF Sales Info Sharing</label>
+        <sharedTo>
+            <group>YPF_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>YPF_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

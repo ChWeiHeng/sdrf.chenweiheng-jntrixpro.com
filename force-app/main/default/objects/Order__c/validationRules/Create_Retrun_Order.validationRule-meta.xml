@@ -2,7 +2,20 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Create_Retrun_Order</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(ISBLANK(Quotes__c) , TEXT(Order_type__c)!=&apos;ZAR2&apos;,TEXT(Order_type__c)!=&apos;ZMX2&apos;,RecordType.Name=&apos;Model B&apos;,NOT(SAP_Order__c)  )</errorConditionFormula>
+    <errorConditionFormula>OR(
+    AND(
+        ISBLANK(Quotes__c),
+        TEXT(Order_type__c) != &apos;ZAR2&apos;,
+        TEXT(Order_type__c) != &apos;ZMX2&apos;,
+        TEXT(Order_type__c) != &apos;ZMX8&apos;,
+        TEXT(Order_type__c) != &apos;ZMX1&apos;,
+        RecordType.Name = &apos;Model B&apos;,
+        NOT(SAP_Order__c)
+    ),
+    AND(
+        TEXT(Order_type__c) = &apos;ZMX8&apos;,$Profile.Name != &apos;Mexico Rainbow Agro Logistics&apos;
+    )
+)</errorConditionFormula>
     <errorDisplayField>Order_type__c</errorDisplayField>
-    <errorMessage>Can only create return order</errorMessage>
+    <errorMessage>Can only create return order/service order</errorMessage>
 </ValidationRule>

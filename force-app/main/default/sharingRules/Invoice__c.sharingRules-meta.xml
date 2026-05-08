@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AR_Invoice_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Invoice Sharing</label>
+        <sharedTo>
+            <group>AR_FIN_MKT_SUPPLY_RM</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>InvoiceShareReportUser_8_12</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>InvoiceShareReportUser_8_12</label>
+        <sharedTo>
+            <group>X5130_Report_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Invoice_Status__c</field>
+            <operation>equals</operation>
+            <value>C Journal entry has been created</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>InvoiceShare_8_12</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>InvoiceShare_8_12</label>
+        <sharedTo>
+            <role>Argentina_Rainbow_Agro_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Invoice_Status__c</field>
+            <operation>equals</operation>
+            <value>C Journal entry has been created</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Invoice_8_11</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Invoice_8_11</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_B_Sales_Manager</role>
+        </sharedTo>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>3010 RAMX</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Invoice_Status__c</field>
+            <operation>equals</operation>
+            <value>C Journal entry has been created</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5130and5070</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5130and5070</label>
+        <sharedTo>
+            <group>X5070_5130</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5070 RAAR,5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>AR_Argo_Fin_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Argo Fin Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_Financial_Administration_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Argo_MKT_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Argo MKT Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Model_B_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Model B Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Rainbow_Finance</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Rainbow Finance</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Finance</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Rainbow_Marketing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Rainbow Marketing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Marketing</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Argentina_Agroterrum_LOG_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Argentina Agroterrum LOG Sharing</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Supply_Logitics</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Argentina_Agroterrum_RM_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Argentina Agroterrum RM Sharing</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Regional_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_Model_B_Sales_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX Model B Sales Rep</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Agroterrum_Finance_Controller</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mexico Agroterrum Finance Controller</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Finance_Controller</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Agroterrum_Marketing_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mexico Agroterrum Marketing Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Rainbow_Agro_Logistics</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mexico Rainbow Agro Logistics</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Logistics</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Rainbow_Argo_Overseas_Finance</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Rainbow Argo Overseas Finance</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Overseas_Finance</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>X3010302</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3010302</label>
+        <sharedTo>
+            <group>X3010302</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

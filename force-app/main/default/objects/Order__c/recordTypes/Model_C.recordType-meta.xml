@@ -38,6 +38,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Clearance_Included__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Close_Re__c</picklist>
         <values>
             <fullName>00</fullName>
@@ -1296,11 +1307,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>ZARM</fullName>
+            <fullName>ZARL</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>ZFD</fullName>
+            <fullName>ZARM</fullName>
             <default>false</default>
         </values>
         <values>

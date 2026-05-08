@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>MX_3020</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MX_3020</label>
+        <sharedTo>
+            <role>Mexico_Agroterrum_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>&quot;3020 AGROTERRUM MEXICO, S.A. DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SalesForecastShare_8_11_2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SalesForecastShare_8_11</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_B_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>3020 AGT MX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sales_Forecast_8_12_2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales Forecast_8_12</label>
+        <sharedTo>
+            <group>X5130_Report_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Org__c</field>
+            <operation>equals</operation>
+            <value>5130 AGT AR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_To_AR_Credit_Control_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share To AR Credit Control Manager</label>
+        <sharedTo>
+            <role>Argentina_Credit_Control_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>5130 AGROTERRUM S.A.</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3010</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3010</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>&quot;3010 RAINBOW AGRO SCIENCES,S.A.DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3011</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3011</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_C_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5070</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5070</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>5070 Rainbow Argentina Gualeguaychu</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5130</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5130</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Delivery_Plant__c</field>
+            <operation>equals</operation>
+            <value>5130 AGROTERRUM S.A.</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Manager1</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Manager1</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>X3020_AGROTERRUM_MEXICO</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3020 AGROTERRUM MEXICO</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Logistics</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Country_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>X3010</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3010</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Plant__c</field>
+            <operation>equals</operation>
+            <value>&quot;3010 RAINBOW AGRO SCIENCES,S.A.DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3011</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3011</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_C_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Plant__c</field>
+            <operation>equals</operation>
+            <value>3011 Rainbow Mexico Model C+</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X3020</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>3020</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Plant__c</field>
+            <operation>equals</operation>
+            <value>&quot;3020 AGROTERRUM MEXICO, S.A. DE C.V.&quot;</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5070</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5070</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Plant__c</field>
+            <operation>equals</operation>
+            <value>5070 Rainbow Argentina Gualeguaychu</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>X5130</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>5130</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Plant__c</field>
+            <operation>equals</operation>
+            <value>5130 AGROTERRUM S.A.</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

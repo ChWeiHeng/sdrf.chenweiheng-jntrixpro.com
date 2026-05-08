@@ -2,7 +2,7 @@
   @description       : 
   @author            : Gerry
   @group             : 
-  @last modified on  : 01-22-2026
+  @last modified on  : 04-30-2026
   @last modified by  : Gerry
   Modifications Log
   Ver   Date         Author   Modification
@@ -120,14 +120,16 @@
                       <span style="color: red;">*</span>{customLabel.Product_Name}
                     </div>
                   </th>
-
-                  <template if:false={isOrderChange}>
-                    <th scope="col" >
-                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Quote_Price}>
-                        {customLabel.Quote_Price}
-                      </div>
-                    </th>
+                  <template if:false={isServiceOrder}>
+                    <template if:false={isOrderChange}>
+                      <th scope="col" >
+                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Quote_Price}>
+                          {customLabel.Quote_Price}
+                        </div>
+                      </th>
+                    </template>
                   </template>
+                  
 
                   <th scope="col" >
                     <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Price}>
@@ -157,62 +159,65 @@
                     </th>
                   </template>
 
-                  <th scope="col" >
-                    <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Amount_per_item}>
-                      {customLabel.Amount_per_item}
-                    </div>
-                  </th>
-
-                  <template if:true={isOrderChange}>
+                  <template if:false={isServiceOrder}>
                     <th scope="col" >
-                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.New_Amount_per_item}>
-                        {customLabel.New_Amount_per_item}
-                      </div>
-                    </th>
-                  </template>
-
-                  <template if:false={isOrderChange}>
-                    <th scope="col" >
-                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Sales_Unit}>
-                        <span style="color: red;">*</span>{customLabel.Sales_Unit}
+                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Amount_per_item}>
+                        {customLabel.Amount_per_item}
                       </div>
                     </th>
 
-                    <template if:true={isMX}>
+                    <template if:true={isOrderChange}>
                       <th scope="col" >
-                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Toxicity_Classification}>
-                          {customLabel.Toxicity_Classification}
+                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.New_Amount_per_item}>
+                          {customLabel.New_Amount_per_item}
+                        </div>
+                      </th>
+                    </template>
+
+                    <template if:false={isOrderChange}>
+                      <th scope="col" >
+                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Sales_Unit}>
+                          <span style="color: red;">*</span>{customLabel.Sales_Unit}
+                        </div>
+                      </th>
+
+                      <template if:true={isMX}>
+                        <th scope="col" >
+                          <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Toxicity_Classification}>
+                            {customLabel.Toxicity_Classification}
+                          </div>
+                        </th>
+                      </template>
+                    </template>
+
+                    <th scope="col" >
+                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Delivery_Date}>
+                        <span style="color: red;">*</span>{customLabel.Delivery_Date}
+                      </div>
+                    </th>
+
+                    <template if:true={isOrderChange}>
+                      <th scope="col" >
+                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.New_Delivery_Date}>
+                          {customLabel.New_Delivery_Date}
+                        </div>
+                      </th>
+                    </template>
+
+                    <template if:true={isProductUsage}>
+                      <th scope="col" >
+                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Product_Usage}>
+                          <span style="color: red;">*</span>{customLabel.Product_Usage}
+                        </div>
+                      </th>
+                      <th scope="col" >
+                        <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Estimated_delivery_date}>
+                          <span style="color: red;">*</span>{customLabel.Estimated_delivery_date}
                         </div>
                       </th>
                     </template>
                   </template>
-
-                  <th scope="col" >
-                    <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Delivery_Date}>
-                      <span style="color: red;">*</span>{customLabel.Delivery_Date}
-                    </div>
-                  </th>
-
-                  <template if:true={isOrderChange}>
-                    <th scope="col" >
-                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.New_Delivery_Date}>
-                        {customLabel.New_Delivery_Date}
-                      </div>
-                    </th>
-                  </template>
-
-                  <template if:true={isProductUsage}>
-                    <th scope="col" >
-                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Product_Usage}>
-                        <span style="color: red;">*</span>{customLabel.Product_Usage}
-                      </div>
-                    </th>
-                    <th scope="col" >
-                      <div class="slds-truncate" style={lengthData.mediumSmall} title={customLabel.Estimated_delivery_date}>
-                        <span style="color: red;">*</span>{customLabel.Estimated_delivery_date}
-                      </div>
-                    </th>
-                  </template>
+                  
                 </tr>
               </thead>
 
@@ -302,14 +307,17 @@
                     </td>
 
                     <template if:false={isOrderChange}>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <lightning-input-field data-record={index} field-name="Quote_Price__c"
-                          variant="label-hidden" name="Quote_Price__c" value={cmqp.ordDetailData.Quote_Price__c}
-                          onchange={productChange} disabled></lightning-input-field>
-                        </div>
-                        
-                      </td>
+                      <template if:false={isServiceOrder}>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <lightning-input-field data-record={index} field-name="Quote_Price__c"
+                            variant="label-hidden" name="Quote_Price__c" value={cmqp.ordDetailData.Quote_Price__c}
+                            onchange={productChange} disabled></lightning-input-field>
+                          </div>
+                          
+                        </td>
+                      </template>
+                      
                       <td>
                         <div class="slds-truncate slds-cell-wrap">
                           <lightning-input-field data-record={index} field-name="Price__c" variant="label-hidden"
@@ -369,95 +377,97 @@
                         
                       </td>
                     </template>
-
-                    <td>
-                      <div class="slds-truncate slds-cell-wrap">
-                        <lightning-input-field data-record={index} variant="label-hidden"
-                        field-name="Amount_per_item__c" name="Amount_per_item__c"
-                        value={cmqp.ordDetailData.Amount_per_item__c} onchange={productChange}
-                        disabled></lightning-input-field>
-                      </div>
-                      
-                    </td>
-
-                    <template if:true={isOrderChange}>
+                    <template if:false={isServiceOrder}>
                       <td>
                         <div class="slds-truncate slds-cell-wrap">
-                          <lightning-input-field data-record={index} variant="label-hidden" field-name="New_Amount__c"
-                          name="New_Amount__c" value={cmqp.ordDetailData.New_Amount__c} onchange={productChange}
+                          <lightning-input-field data-record={index} variant="label-hidden"
+                          field-name="Amount_per_item__c" name="Amount_per_item__c"
+                          value={cmqp.ordDetailData.Amount_per_item__c} onchange={productChange}
                           disabled></lightning-input-field>
                         </div>
                         
                       </td>
-                    </template>
 
-                    <template if:false={isOrderChange}>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <lightning-select value={cmqp.ordDetailData.Sales_Unit_Text__c} options={cmqp.proUnitList}
-                          variant="label-hidden" required onchange={mapProductChange} data-record={index}
-                          name="Sales_Unit_Text__c"></lightning-select>
-                        </div>
-                        
-                      </td>
-
-                      <template if:true={isMX}>
+                      <template if:true={isOrderChange}>
                         <td>
                           <div class="slds-truncate slds-cell-wrap">
-                            <lightning-select value={cmqp.ordDetailData.Toxicity_Classification__c}
-                            options={toxicityList} variant="label-hidden" onchange={mapProductChange}
-                            data-record={index} name="Toxicity_Classification__c"></lightning-select>
+                            <lightning-input-field data-record={index} variant="label-hidden" field-name="New_Amount__c"
+                            name="New_Amount__c" value={cmqp.ordDetailData.New_Amount__c} onchange={productChange}
+                            disabled></lightning-input-field>
+                          </div>
+                          
+                        </td>
+                      </template>
+
+                      <template if:false={isOrderChange}>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <lightning-select value={cmqp.ordDetailData.Sales_Unit_Text__c} options={cmqp.proUnitList}
+                            variant="label-hidden" required onchange={mapProductChange} data-record={index}
+                            name="Sales_Unit_Text__c"></lightning-select>
+                          </div>
+                          
+                        </td>
+
+                        <template if:true={isMX}>
+                          <td>
+                            <div class="slds-truncate slds-cell-wrap">
+                              <lightning-select value={cmqp.ordDetailData.Toxicity_Classification__c}
+                              options={toxicityList} variant="label-hidden" onchange={mapProductChange}
+                              data-record={index} name="Toxicity_Classification__c"></lightning-select>
+                            </div>
+                            
+                          </td>
+                        </template>
+                      </template>
+
+                      <template if:false={isOrderChange}>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <input type="date" name="Delivery_Date__c" value={cmqp.ordDetailData.Delivery_Date__c}
+                            data-record={index} onchange={productChange} required />
+                          </div>
+                          
+                        </td>
+                      </template>
+
+                      <template if:true={isOrderChange}>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <input type="date" name="Delivery_Date__c" value={cmqp.ordDetailData.Delivery_Date__c}
+                            data-record={index} onchange={productChange} disabled />
+                          </div>
+                          
+                        </td>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <input type="date" name="New_Delivery_Date__c"
+                            value={cmqp.ordDetailData.New_Delivery_Date__c} data-record={index}
+                            onchange={productChange} />
+                          </div>
+                          
+                        </td>
+                      </template>
+
+                      <template if:true={isProductUsage}>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <lightning-select value={cmqp.ordDetailData.Product_Usage__c} options={productUsageOption}
+                            variant="label-hidden" required onchange={productChange} data-record={index}
+                            name="Product_Usage__c"></lightning-select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="slds-truncate slds-cell-wrap">
+                            <lightning-input-field data-record={index} variant="label-hidden" field-name="ETA__c"
+                            name="ETA__c" value={cmqp.ordDetailData.ETA__c} onchange={productChange}
+                            required></lightning-input-field>
                           </div>
                           
                         </td>
                       </template>
                     </template>
-
-                    <template if:false={isOrderChange}>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <input type="date" name="Delivery_Date__c" value={cmqp.ordDetailData.Delivery_Date__c}
-                          data-record={index} onchange={productChange} required />
-                        </div>
-                        
-                      </td>
-                    </template>
-
-                    <template if:true={isOrderChange}>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <input type="date" name="Delivery_Date__c" value={cmqp.ordDetailData.Delivery_Date__c}
-                          data-record={index} onchange={productChange} disabled />
-                        </div>
-                        
-                      </td>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <input type="date" name="New_Delivery_Date__c"
-                          value={cmqp.ordDetailData.New_Delivery_Date__c} data-record={index}
-                          onchange={productChange} />
-                        </div>
-                        
-                      </td>
-                    </template>
-
-                    <template if:true={isProductUsage}>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <lightning-select value={cmqp.ordDetailData.Product_Usage__c} options={productUsageOption}
-                          variant="label-hidden" required onchange={productChange} data-record={index}
-                          name="Product_Usage__c"></lightning-select>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="slds-truncate slds-cell-wrap">
-                          <lightning-input-field data-record={index} variant="label-hidden" field-name="ETA__c"
-                          name="ETA__c" value={cmqp.ordDetailData.ETA__c} onchange={productChange}
-                          required></lightning-input-field>
-                        </div>
-                        
-                      </td>
-                    </template>
+                    
                   </tr>
                 </template>
               </tbody>
@@ -553,11 +563,14 @@
                     </div>
 
                     <template if:false={isOrderChange}>
-                      <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
-                        <lightning-input-field data-record={index} field-name="Quote_Price__c" name="Quote_Price__c"
-                          value={info.ordDetailData.Quote_Price__c} onchange={productChange}
-                          disabled></lightning-input-field>
-                      </div>
+                      <template if:false={isServiceOrder}>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                          <lightning-input-field data-record={index} field-name="Quote_Price__c" name="Quote_Price__c"
+                            value={info.ordDetailData.Quote_Price__c} onchange={productChange}
+                            disabled></lightning-input-field>
+                        </div>
+                      </template>
+                      
                     </template>
 
                     <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
@@ -613,94 +626,96 @@
                         </div>
                       </template>
                     </div>
-
-                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
-                      <div>
-                        {customLabel.Amount_per_item}
-                        <lightning-input-field data-record={index} field-name="Amount_per_item__c"
-                          name="Amount_per_item__c" variant="label-hidden" value={info.ordDetailData.Amount_per_item__c}
-                          onchange={productChange} disabled></lightning-input-field>
-                      </div>
-                    </div>
-
-                    <template if:true={isOrderChange}>
+                    <template if:false={isServiceOrder}>
                       <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
                         <div>
-                          {customLabel.New_Amount_per_item}
-                          <lightning-input-field data-record={index} field-name="New_Amount__c" name="New_Amount__c"
-                            variant="label-hidden" value={info.ordDetailData.New_Amount__c} onchange={productChange}
-                            disabled></lightning-input-field>
+                          {customLabel.Amount_per_item}
+                          <lightning-input-field data-record={index} field-name="Amount_per_item__c"
+                            name="Amount_per_item__c" variant="label-hidden" value={info.ordDetailData.Amount_per_item__c}
+                            onchange={productChange} disabled></lightning-input-field>
                         </div>
                       </div>
-                    </template>
 
-                    <template if:false={isOrderChange}>
-                      <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
-                        <div>
-                          <span style="color: red;">*</span>{customLabel.Sales_Unit}
-                          <lightning-select value={info.ordDetailData.Sales_Unit_Text__c} options={info.proUnitList}
-                            variant="label-hidden" required onchange={mapProductChange} data-record={index}
-                            name="Sales_Unit_Text__c"></lightning-select>
-                        </div>
-                      </div>
-                      <template if:true={isMX}>
+                      <template if:true={isOrderChange}>
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
                           <div>
-                            {customLabel.Toxicity_Classification}
-                            <lightning-select value={info.ordDetailData.Toxicity_Classification__c}
-                              options={toxicityList} variant="label-hidden" onchange={mapProductChange}
-                              data-record={index} name="Toxicity_Classification__c"></lightning-select>
+                            {customLabel.New_Amount_per_item}
+                            <lightning-input-field data-record={index} field-name="New_Amount__c" name="New_Amount__c"
+                              variant="label-hidden" value={info.ordDetailData.New_Amount__c} onchange={productChange}
+                              disabled></lightning-input-field>
                           </div>
                         </div>
                       </template>
 
-                    </template>
-
-                    <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
-                      <span style="color: red;">*</span>{customLabel.Delivery_Date}
-                      <div>
-                        <template if:false={isOrderChange}>
-                          <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c"
-                            variant="label-hidden" value={info.ordDetailData.Delivery_Date__c} required
-                            onchange={productChange} />
+                      <template if:false={isOrderChange}>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
+                          <div>
+                            <span style="color: red;">*</span>{customLabel.Sales_Unit}
+                            <lightning-select value={info.ordDetailData.Sales_Unit_Text__c} options={info.proUnitList}
+                              variant="label-hidden" required onchange={mapProductChange} data-record={index}
+                              name="Sales_Unit_Text__c"></lightning-select>
+                          </div>
+                        </div>
+                        <template if:true={isMX}>
+                          <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
+                            <div>
+                              {customLabel.Toxicity_Classification}
+                              <lightning-select value={info.ordDetailData.Toxicity_Classification__c}
+                                options={toxicityList} variant="label-hidden" onchange={mapProductChange}
+                                data-record={index} name="Toxicity_Classification__c"></lightning-select>
+                            </div>
+                          </div>
                         </template>
-                        <template if:true={isOrderChange}>
-                          <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c"
-                            variant="label-hidden" value={info.ordDetailData.Delivery_Date__c} disabled
-                            onchange={productChange} />
-                        </template>
-                      </div>
-                    </div>
 
-                    <template if:true={isOrderChange}>
+                      </template>
+
                       <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
-                        {customLabel.New_Delivery_Date}
+                        <span style="color: red;">*</span>{customLabel.Delivery_Date}
                         <div>
-                          <input type="date" style="width: 100%;" data-record={index} name="New_Delivery_Date__c"
-                            value={info.ordDetailData.New_Delivery_Date__c} onchange={productChange} />
+                          <template if:false={isOrderChange}>
+                            <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c"
+                              variant="label-hidden" value={info.ordDetailData.Delivery_Date__c} required
+                              onchange={productChange} />
+                          </template>
+                          <template if:true={isOrderChange}>
+                            <input type="date" style="width: 100%;" data-record={index} name="Delivery_Date__c"
+                              variant="label-hidden" value={info.ordDetailData.Delivery_Date__c} disabled
+                              onchange={productChange} />
+                          </template>
                         </div>
                       </div>
+
+                      <template if:true={isOrderChange}>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
+                          {customLabel.New_Delivery_Date}
+                          <div>
+                            <input type="date" style="width: 100%;" data-record={index} name="New_Delivery_Date__c"
+                              value={info.ordDetailData.New_Delivery_Date__c} onchange={productChange} />
+                          </div>
+                        </div>
+                      </template>
+
+                      <template if:true={isProductUsage}>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
+                          <div>
+                            <span style="color: red;">*</span>{customLabel.Product_Usage}
+                            <lightning-input-field data-record={index} field-name="Product_Usage__c"
+                              name="Product_Usage__c" variant="label-hidden" value={info.ordDetailData.Product_Usage__c}
+                              onchange={productChange} required></lightning-input-field>
+                          </div>
+                        </div>
+
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
+                          <div>
+                            <span style="color: red;">*</span>{customLabel.Estimated_delivery_date}
+                            <lightning-input-field data-record={index} field-name="ETA__c" name="ETA__c"
+                              variant="label-hidden" value={info.ordDetailData.ETA__c} onchange={productChange}
+                              required></lightning-input-field>
+                          </div>
+                        </div>
+                      </template>
                     </template>
-
-                    <template if:true={isProductUsage}>
-                      <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
-                        <div>
-                          <span style="color: red;">*</span>{customLabel.Product_Usage}
-                          <lightning-input-field data-record={index} field-name="Product_Usage__c"
-                            name="Product_Usage__c" variant="label-hidden" value={info.ordDetailData.Product_Usage__c}
-                            onchange={productChange} required></lightning-input-field>
-                        </div>
-                      </div>
-
-                      <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small" style="margin-left: 5px;">
-                        <div>
-                          <span style="color: red;">*</span>{customLabel.Estimated_delivery_date}
-                          <lightning-input-field data-record={index} field-name="ETA__c" name="ETA__c"
-                            variant="label-hidden" value={info.ordDetailData.ETA__c} onchange={productChange}
-                            required></lightning-input-field>
-                        </div>
-                      </div>
-                    </template>
+                    
                   </div>
                 </lightning-record-edit-form>
               </template>

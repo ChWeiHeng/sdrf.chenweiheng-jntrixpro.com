@@ -11,6 +11,7 @@
 public without sharing class AccountTeamTriggerHandler  implements Triggers.Handler{
     public static void handle() {
         if (Trigger.isbefore && Trigger.isUpdate) {
+            
             User u = [SELECT Id,Profile.Name,Delivery_Plant__c,Country__c FROM User WHERE Id=:System.UserInfo.getUserId()];
             // 判断当前用户是否在某个权限集下
             List<PermissionSetAssignment> psaList = [SELECT Id FROM PermissionSetAssignment WHERE AssigneeId = :UserInfo.getUserId() AND PermissionSet.Name = 'Country_Admin'];

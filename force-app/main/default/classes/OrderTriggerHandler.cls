@@ -2,15 +2,13 @@
  * @description       : 
  * @author            : Gerry
  * @group             : 
- * @last modified on  : 04-16-2026
+ * @last modified on  : 05-08-2026
  * @last modified by  : Gerry
  * Modifications Log
  * Ver   Date         Author   Modification
  * 1.0   06-11-2025   Gerry   Initial Version
 **/
 public without sharing class OrderTriggerHandler implements Triggers.Handler{
-
-    
     public void handle() {
         //删除逻辑判断----start
         if (Trigger.isBefore && Trigger.isdelete) {
@@ -50,7 +48,27 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
             Set<String> needCalculateZMX1RateSet = new Set<String>();
             User laryUser = [SELECT Id FROM User WHERE Name='Lary Fan' limit 1];
             for (Order__c order : (List<Order__c>)Trigger.new) {
-
+                //mx model C+总部审批通知marvin-----start
+                if (
+                    order.Deliver_Plant__c == '3011' && 
+                    order.Status__c == 'Approving' && oldMap.get(order.Id).Status__c != order.Status__c &&
+                    (
+                        (order.Over_Credit_Line_Percent__c > 0 && order.Terms_Of_Payment__c != 'G001') ||
+                        order.Max_Overdue_Days__c > 60
+                    )
+                ) {
+                    Set<String> noticeUserSet = new Set<String>();
+                    noticeUserSet.add(System.Label.MX_Logistics);
+                    CustomNotificationType notificationType = [SELECT Id,DeveloperName FROM CustomNotificationType WHERE DeveloperName ='Notification'];
+                    CustomNotificationFromApex.notifyUsers(
+                        notificationType, 
+                        noticeUserSet, //发送通知给谁
+                        order.Id, //通知点击后跳转到什么数据上
+                        order.Name+' Orders require headquarters approval.', //标题
+                        'Click to view details'//内容
+                    );
+                }
+                //mx model C+总部审批通知marvin-----end
                 //Order Return Reason 101时，Logistics必须填写bpm单号-----start
                 if (order.Logistics_Approved__c && order.BPM_Damage_Assessment_Number__c == null) {
                     order.addError('Please fill up the BPM Damage Assessment Number');
@@ -58,15 +76,7 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
                 //Order Return Reason 101时，Logistics必须填写bpm单号-----end
 
 
-                //墨西哥逆向单据触发正常单据毛利计算逻辑sap创建的订单不去计算---start
-                if (
-                    !order.SAP_Order__c &&
-                    (order.Order_Type__c == 'ZMX2' || order.Order_Type__c == 'ZMX3' || order.Order_Type__c == 'ZMX4') &&
-                    order.Status__c != oldMap.get(order.Id).Status__c
-                ) {
-                    needCalculateZMX1RateSet.add(order.Id);
-                }
-                //墨西哥逆向单据触发正常单据毛利计算逻辑sap创建的订单不去计算---end
+                
 
                 if (
                     order.Order_type__c == 'ZARF' &&
@@ -178,14 +188,7 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
                             }
                         }
                     }
-                    //credit note、debit note如果没有lary审批 审批通过后通知 ------start
-                    if (
-                        (order.Deliver_Plant__c == '3011' && order.Reference_Order_Margin_Rate__c >= 25) ||
-                        (order.Deliver_Plant__c == '3020' && order.Reference_Order_Margin_Rate__c >= 20)
-                    ) {
-                        uSet.add(laryUser.Id);
-                    }
-                    //credit note、debit note如果没有lary审批 审批通过后通知 ------end
+                    
                     Utility.notificationUserTitle(uSet,order.Id,System.Label.Order_Approved_Title,System.Label.Order_Approved_Title+order.Name);
                     // 发送邮件到客户
                     if(order.RecordType_Name__c != 'Model_B')
@@ -236,16 +239,6 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
                         
                     }
                 }
-
-                if (
-                    !order.SAP_Order__c && 
-                    order.Status__c=='Approved' && 
-                    oldMap.get(order.Id).OwnerId!=order.OwnerId &&
-                    order.SAP_Order_Code__c!=null
-                    // order.RecordType_Name__c == 'Model_C' 
-                ) {//修改owner时同步至sap
-                    ChangeOrderSalesReqToSAP.syncReqToSAP(order.Id);
-                }
                 
 
                 if (!order.SAP_Order__c && (order.Status__c == 'Draft' || order.Status__c == 'Rejected')) {
@@ -289,12 +282,6 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
                     //     email.setOrgWideEmailAddressId(owea.get(0).Id);
                     // }
                     if(!Test.isRunningTest())Messaging.sendEmail(new List<Messaging.SingleEmailMessage>{email});
-                }
-            }
-
-            if (needCalculateZMX1RateSet.size() > 0) {
-                for (String orderId : needCalculateZMX1RateSet) {//该处不会有批量的情况，只是为了做批量
-                    SubmitOrderController.calculateZMX1Rate(orderId, false);
                 }
             }
             //【add by zach 2025/8/6 批量同步订单，防止future超限 -start】
@@ -691,7 +678,7 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
                 
                 
                 if (csiMap.get(order.Customer__c+'-'+order.Sales_Org__c+'-'+order.Distr_Channel__c) == null ) {
-                    if (!order.SAP_Order__c && !Test.isRunningTest() && u.Profile.Name != 'Interface Profile' && u.Profile.Name != 'System Administrator') {//sap 订单不提醒
+                    if (!order.SAP_Order__c && !Test.isRunningTest() && u.Profile.Name != 'Interface Profile' && u.Profile.Name != 'System Administrator' ) {//sap 订单不提醒
                         order.addError(System.Label.NOSalesInfo);
                     }
                 }else{
@@ -783,10 +770,8 @@ public without sharing class OrderTriggerHandler implements Triggers.Handler{
                 daysMap.put(pr.Name,pr.Days__c);
             }
             System.debug('daysMap=>'+daysMap);
-            
             for (Order__c order : (List<Order__c>)Trigger.new) {
                 Customer_Sales_Info__c csi=csiMap.get(order.Customer__c+'-'+order.Sales_Org__c+'-'+order.Distr_Channel__c);
-                
                 if (
                     order.Status__c != 'Approved' &&
                     adminPro.size()==0 && 

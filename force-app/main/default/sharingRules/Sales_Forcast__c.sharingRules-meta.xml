@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>AGT_Share_FIN</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AGT Share FIN</label>
+        <sharedTo>
+            <role>Mexico_Agroterrum_Finance_Controller</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Finance_share_with_sales_forecast</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Finance share with sales forecast</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Financial_Analyst</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Model_B_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Model B Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_Rainbow_General_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR Rainbow General Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AR_SALES_FOROAT</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AR SALES FOROAT</label>
+        <sharedTo>
+            <group>X5130_Report_User</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Argentina_Agroterrum_LOG_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Argentina Agroterrum LOG Sharing</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Supply_Logitics</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Argentina_Agroterrum_MKT_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Argentina Agroterrum MKT Sharing</label>
+        <sharedTo>
+            <role>Argentina_Agroterrum_Marketing_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Agroterrum_Marketing_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mexico Agroterrum Marketing Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Agroterrum_Marketing_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Rainbow_Agro_Logistics</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share Mexico Rainbow Agro Sales Forecast Details with Mexico Agro logistics</description>
+        <label>Mexico Rainbow Agro Logistics</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Logistics</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Mexico_Rainbow_Agro_Model_B_Sales_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mexico Rainbow Agro Model B Sales Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Rainbow_Agro_Model_B_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Forecast_Detail_8_11</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales Forecast Detail_8_11</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Model_B_Sales_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Area_Head</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Forecast_Detail_8_12</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales Forecast Detail_8_12</label>
+        <sharedTo>
+            <group>X5130_Report_User</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>Argentina_Rainbow_Agro_Sales_Manager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_To_AR_Credit_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share To AR Credit Manager</label>
+        <sharedTo>
+            <role>Argentina_Credit_Control_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Argentina_Agroterrum_General_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_Mexico_Rainbow_Agro_Logistics</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share with Mexico Rainbow Agro Logistics</description>
+        <label>Share with Mexico Rainbow Agro Logistics</label>
+        <sharedTo>
+            <role>Mexico_Rainbow_Agro_Logistics</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Mexico_Country_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>
