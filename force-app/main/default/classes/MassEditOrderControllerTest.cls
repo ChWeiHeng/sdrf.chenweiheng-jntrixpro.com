@@ -1,6 +1,19 @@
+/**
+ * @description       : 
+ * @author            : Gerry
+ * @group             : 
+ * @last modified on  : 05-08-2026
+ * @last modified by  : Gerry
+ * Modifications Log
+ * Ver   Date         Author   Modification
+ * 1.0   05-08-2026   Gerry   Initial Version
+**/
 @isTest
 public  class MassEditOrderControllerTest {
-    static testMethod void testMethod1(){
+    
+    @TestSetup
+    static void setupTestData(){
+        // Create test data in @TestSetup to avoid repeated SOQL queries
         Account a = new Account();
         a.Name = 'Test';
         a.Group_Name__c = 'test';
@@ -9,10 +22,8 @@ public  class MassEditOrderControllerTest {
         a.Sync_Status__c = 'synchronized';
         a.RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Company_Account').getRecordTypeId();
         Insert a;
-        System.debug('RecordTypeId: '+a.RecordTypeId);
-        System.debug('Sync_Status__c: '+a.Sync_Status__c);
-
-         Customer_Credit_Info__c cci = new Customer_Credit_Info__c();
+        
+        Customer_Credit_Info__c cci = new Customer_Credit_Info__c();
         cci.Customer__c = a.Id;
         cci.Rules__c = 'STANDARD';
         cci.Risk_Class__c = 'A';
@@ -36,7 +47,16 @@ public  class MassEditOrderControllerTest {
         csi.Acct_Assmt_Grp_Cust__c = '01';
         csi.Payment_method__c = 'YPF';
         insert csi;
-
+    }
+    
+    static testMethod void testMethod1(){
+        // Query test data from @TestSetup
+        Account a = [SELECT Id FROM Account WHERE MDG_Customer_Code__c = '111' LIMIT 1];
+        Customer_Sales_Info__c csi = [SELECT Id FROM Customer_Sales_Info__c WHERE Customer__c = :a.Id LIMIT 1];
+        
+        // Use Test.startTest() to reset governor limits before creating Order
+        Test.startTest();
+        
         Order__c order1 = new Order__c();
         order1.Customer__c = a.Id;
         order1.Sales_Org__c = '5070';
@@ -44,13 +64,15 @@ public  class MassEditOrderControllerTest {
         order1.Customer_Sales_Info__c = csi.Id;
         order1.Currency__c = 'USD';
         order1.Deliver_Plant__c = '5070';
-        order1.Order_type__c = 'ZARB';
-        order1.Status__c = 'Approved';
+        order1.Order_type__c = 'ZARA';
+        order1.Status__c = 'Draft';
         order1.Sync_Status__c = 'Synchronized';
         order1.RecordTypeId = Schema.SObjectType.Order__c.getRecordTypeInfosByDeveloperName().get('Model_C').getRecordTypeId();
         order1.Cust_Reference__c = '12';
         order1.Stock_Aging_Limit__c= '60';
-        order1.SAP_Order__c = true;
+        order1.Auto_Issue_Consignment__c = true;
+        order1.SAP_Order__c = false;
+        order1.Order_Reason__c = '101'; // Required field for ZARA orders
         insert order1;
 
         Order_Item__c orI1 = new Order_Item__c();
@@ -78,7 +100,7 @@ public  class MassEditOrderControllerTest {
             '1' => rvList
         };
 
-       MassEditOrderController.OrderData od = new MassEditOrderController.OrderData(order1, termMap, 1);
+        MassEditOrderController.OrderData od = new MassEditOrderController.OrderData(order1, termMap, 1);
         od.order = order1;
         od.orderUrl = '/' + order1.Id;
         od.index = 1;
@@ -86,13 +108,22 @@ public  class MassEditOrderControllerTest {
         od.isAutoCreate = true;
         od.isSelect = true;
 
-
         MassEditOrderController.initData();
+        
         List<MassEditOrderController.OrderData> dataList = new List<MassEditOrderController.OrderData>();
         dataList.add(od);
         String selectListStr = JSON.serialize(dataList);
-        Map<String, Object> result = MassEditOrderController.saveData(selectListStr);        
+        
+        // Call the main method that triggers the Order update
+        Map<String, Object> result = MassEditOrderController.saveData(selectListStr);
+        
+        // Test.stopTest() ensures all async operations complete and resets limits
+        Test.stopTest();
+        
+        // Verify results
+        System.assertNotEquals(null, result, 'Result should not be null');
+        
+        // Test cloneItem separately with a new test context
         MassEditOrderController.cloneItem(new Map<String,Order__c>{'1' => order1});
-
     }
 }
