@@ -13,13 +13,19 @@ public without sharing class AddOrderItemController {
     public static Output initData(String orderRecordId) {
         try {
             Output out = new Output();
-            Order__c order = [SELECT Order_Reason__c,Campaign__c,Sales_Org__c,is_YPF__c,Interest_Rate__c,Contract__c,Deliver_Plant__c,Id,Currency__c,Order_type__c,Price_Book__r.Status__c,Customer_Sales_Info__r.Payment_method__c,Auto_Issue_Consignment__c FROM Order__c WHERE Id=:orderRecordId];
+            Order__c order = [SELECT Not_Show_Margin__c,Order_Reason__c,Campaign__c,Sales_Org__c,is_YPF__c,Interest_Rate__c,Contract__c,Deliver_Plant__c,Id,Currency__c,Order_type__c,Price_Book__r.Status__c,Customer_Sales_Info__r.Payment_method__c,Auto_Issue_Consignment__c FROM Order__c WHERE Id=:orderRecordId];
             // if(order.Price_Book__r.Status__c != 'Approved') {
             //     Output out = new Output();
             //     out.isSucess = false;
             //     out.errorMsg = 'Price book is not Approved';
             //     return out;
             // }
+
+            if (order.Not_Show_Margin__c) {
+                out.isReturnOrder = true;
+            }else{
+                out.isReturnOrder = false;
+            }
             //credit note debit note是否来源于发票-----start
             if (
                 (order.Order_type__c == 'ZMX3' || order.Order_type__c == 'ZMX4') &&
@@ -1519,6 +1525,9 @@ public without sharing class AddOrderItemController {
 
         @AuraEnabled
         public Boolean isNotShowSearch {get;set;}//是否不显示搜索
+
+        @AuraEnabled
+        public Boolean isReturnOrder {get;set;}//是否是退货订单
     }
 
     public class OrderItem {

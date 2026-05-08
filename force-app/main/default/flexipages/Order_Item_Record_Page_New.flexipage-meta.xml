@@ -190,10 +190,16 @@
                 <fieldItem>Record.Margin_Level__c</fieldItem>
                 <identifier>RecordMargin_Level_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -227,10 +233,16 @@
                 <fieldItem>Record.Margin__c</fieldItem>
                 <identifier>RecordMargin_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -244,10 +256,16 @@
                 <fieldItem>Record.Margin_Rate__c</fieldItem>
                 <identifier>RecordMargin_Rate_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -261,10 +279,16 @@
                 <fieldItem>Record.Commission_Calculation_Method__c</fieldItem>
                 <identifier>RecordCommission_Calculation_Method_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -278,10 +302,16 @@
                 <fieldItem>Record.Commission_Rate__c</fieldItem>
                 <identifier>RecordCommission_Rate_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -304,6 +334,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Commission_Amount__c</fieldItem>
                 <identifier>RecordCommission_Amount_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -438,10 +475,16 @@
                 <fieldItem>Record.Delivery_Unit_Cost__c</fieldItem>
                 <identifier>RecordDelivery_Unit_Cost_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -455,10 +498,16 @@
                 <fieldItem>Record.Actual_Margin_Rate__c</fieldItem>
                 <identifier>RecordActual_Margin_Rate__cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -472,10 +521,16 @@
                 <fieldItem>Record.Actual_Margin__c</fieldItem>
                 <identifier>RecordActual_Margin_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -564,10 +619,16 @@
                 <fieldItem>Record.Guide_Price__c</fieldItem>
                 <identifier>RecordGuide_Price_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -581,10 +642,16 @@
                 <fieldItem>Record.Cash_Price__c</fieldItem>
                 <identifier>RecordCash_Price_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -598,10 +665,16 @@
                 <fieldItem>Record.Min_Sales_Price__c</fieldItem>
                 <identifier>RecordMin_Sales_Price_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -672,10 +745,16 @@
                 <fieldItem>Record.New_Quantity__c</fieldItem>
                 <identifier>RecordNew_Quantity_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Record_Type__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Model B</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -688,6 +767,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Product_Cost__c</fieldItem>
                 <identifier>RecordProduct_Cost_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -699,7 +785,7 @@
                 <fieldItem>Record.Unit_Estimate_Cost__c</fieldItem>
                 <identifier>RecordUnit_Estimate_Cost_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Delivery_Plant__c}</leftValue>
                         <operator>EQUAL</operator>
@@ -709,6 +795,11 @@
                         <leftValue>{!Record.Delivery_Plant__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>5130</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -722,7 +813,7 @@
                 <fieldItem>Record.Unit_Estimate_Margin__c</fieldItem>
                 <identifier>RecordUnit_Estimate_Margin_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Delivery_Plant__c}</leftValue>
                         <operator>EQUAL</operator>
@@ -732,6 +823,11 @@
                         <leftValue>{!Record.Delivery_Plant__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>5070</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -745,7 +841,7 @@
                 <fieldItem>Record.Unit_Estimate_Margin_Rate__c</fieldItem>
                 <identifier>RecordUnit_Estimate_Margin_Rate_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Delivery_Plant__c}</leftValue>
                         <operator>EQUAL</operator>
@@ -755,6 +851,11 @@
                         <leftValue>{!Record.Delivery_Plant__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>5070</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -785,10 +886,16 @@
                 <fieldItem>Record.Order_Item_Amount_Guide__c</fieldItem>
                 <identifier>RecordOrder_Item_Amount_Guide_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -819,10 +926,16 @@
                 <fieldItem>Record.Price_Rate_User__c</fieldItem>
                 <identifier>RecordPrice_Rate_User_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -873,10 +986,16 @@
                 <fieldItem>Record.Inventory_Margin__c</fieldItem>
                 <identifier>RecordInventory_Margin_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -945,10 +1064,16 @@
                 <fieldItem>Record.Delivery_Total_Cost__c</fieldItem>
                 <identifier>RecordDelivery_Total_Cost_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Order_Type__c}</leftValue>
                         <operator>NE</operator>
                         <rightValue>ZFD</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Order__r.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>

@@ -2,7 +2,7 @@
   @description       : 
   @author            : Gerry
   @group             : 
-  @last modified on  : 03-13-2026
+  @last modified on  : 05-08-2026
   @last modified by  : Gerry
   Modifications Log
   Ver   Date         Author   Modification
@@ -642,10 +642,18 @@
                                                                     </template>
 
                                                                     <template if:false={isFROMInvoice}>
-                                                                        <div class="slds-truncate">
-                                                                            <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" required="true"> 
-                                                                            </lightning-input-field> 
-                                                                        </div>
+                                                                        <template if:false={isReturnOrder}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" required="true"> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
+                                                                        <template if:true={isReturnOrder}>
+                                                                            <div class="slds-truncate">
+                                                                                <lightning-input-field data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} variant="label-hidden" disabled> 
+                                                                                </lightning-input-field> 
+                                                                            </div>
+                                                                        </template>
                                                                     </template>
                                                                     
                                                                 </template>
@@ -1150,8 +1158,14 @@
                                                             </template>
 
                                                             <template if:false={isFROMInvoice}>
-                                                                <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} required="true"> 
-                                                                </lightning-input-field>
+                                                                <template if:false={isReturnOrder}>
+                                                                    <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} required="true"> 
+                                                                    </lightning-input-field>
+                                                                </template>
+                                                                <template if:true={isReturnOrder}>
+                                                                    <lightning-input-field variant="label-hidden" data-record={index} field-name="Price__c" name="Price__c"  value={info.orderItemData.Price__c} onchange={productChange} disabled> 
+                                                                    </lightning-input-field>
+                                                                </template>
                                                             </template>
                                                              
                                                         </template>

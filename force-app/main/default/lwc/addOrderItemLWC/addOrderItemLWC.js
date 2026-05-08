@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Gerry
  * @group             : 
- * @last modified on  : 03-12-2026
+ * @last modified on  : 05-08-2026
  * @last modified by  : Gerry
  * Modifications Log
  * Ver   Date         Author   Modification
@@ -147,6 +147,7 @@ export default class AddOrderItemLWC extends LightningElement {
     @track isZFD = false;
     @track isNotShowSearch = false;
     @track isFROMInvoice = false;
+    @track isReturnOrder = false;
     @track orderItemList = [{
         Commodity__c: "a0QD600000DmGI9MAN",
         Quantity__c: "1",
@@ -315,6 +316,7 @@ export default class AddOrderItemLWC extends LightningElement {
             orderRecordId : this.recordId
         }).then(result => {
             if (result.isSucess) {
+                this.isReturnOrder = result.isReturnOrder;
                 this.isFROMInvoice = result.isFROMInvoice;
                 this.isNotShowSearch = result.isNotShowSearch;
                 this.isZFD = result.isZFD;

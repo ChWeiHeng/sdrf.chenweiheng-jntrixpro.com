@@ -1322,7 +1322,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Auto_Issue_Consignment__c</fieldItem>
                 <identifier>RecordAuto_Issue_Consignment_cField</identifier>
@@ -2354,6 +2354,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Order_Amount_USD__c</fieldItem>
                 <identifier>RecordOrder_Amount_USD_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -2411,12 +2418,12 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Overdue_Amount__c</fieldItem>
                 <identifier>RecordOverdue_Amount_cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Sales_Org__c}</leftValue>
                         <operator>EQUAL</operator>
@@ -2426,6 +2433,11 @@
                         <leftValue>{!Record.Sales_Org__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>5070</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -2682,7 +2694,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>horizontalAlignment</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2690,6 +2702,13 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection5</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Not_Show_Margin__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>false</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>

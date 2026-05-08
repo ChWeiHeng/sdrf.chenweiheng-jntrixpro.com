@@ -116,12 +116,46 @@ public without sharing class MassEditOrderController {
     public static void cloneItem(Map<String,Order__c> newOrderMap){
         Set<String> orderIdSet = newOrderMap.keySet();
         String orderItemSoql = Utility.getAllFieldSoql('Order_Item__c') + ' WHERE Order__c IN :orderIdSet';
+        List<Order_Item__c> itemList = (List<Order_Item__c>)Database.query(orderItemSoql);
+
+        Set<String> productId = new Set<String>();
+        Set<String> unitId = new Set<String>();
+        for (Order_Item__c oi : itemList) {
+            productId.add(oi.Commodity__c);
+            unitId.add(oi.Sales_Unit__c);
+        }
+        Map<String,Product_Name__c> marCodeMap = new Map<String,Product_Name__c>();
+        for (Product_Name__c pn : [SELECT Product_Sales_Info__r.Cost_Local__c,Product_Sales_Info__r.Cost_USD__c,Id,Name,Product__r.Name,Product__r.Description_User__c,Product_Sales_Info__r.Product_Unit__r.Conversion_Coefficient__c FROM Product_Name__c WHERE Id IN:productId]) {
+            marCodeMap.put(pn.Id, pn);
+        }
+
+        Map<String,Product_Unit__c> unitMap = new Map<String,Product_Unit__c>();
+        for (Product_Unit__c pn : [SELECT Product_Sales_Unit__c,Id,Conversion_Coefficient__c FROM Product_Unit__c WHERE Id IN:unitId]) {
+            unitMap.put(pn.Id, pn);
+        }
+
+        Map<Id,Order__c> orderMap = new Map<Id,Order__c>([SELECT Id,Currency__c,Interest_Rate__c,Sales_Org__c FROM Order__c WHERE Id IN:orderIdSet]);
+        
         List<Order_Item__c> zar1ItemList = new List<Order_Item__c>();
-        for(Order_Item__c item : (List<Order_Item__c>)Database.query(orderItemSoql)){
+        for(Order_Item__c item : itemList){
             Order_Item__c zar1Item = item.clone(FALSE,TRUE,FALSE,FALSE);
             zar1Item.Order__c = newOrderMap.get(item.Order__c)?.Id;
             zar1Item.Depend_On_Item__c = item.Id;
             zar1Item.IsCreate__c = TRUE;
+            zar1Item.Price__c = item.Guide_Price__c;
+            if (orderMap.get(item.Order__c).Currency__c == 'USD') {
+                zar1Item.Original_Product_Cost__c = marCodeMap.get(zar1Item.Commodity__c).Product_Sales_Info__r.Cost_USD__c;
+            }else{
+                zar1Item.Original_Product_Cost__c = marCodeMap.get(zar1Item.Commodity__c).Product_Sales_Info__r.Cost_Local__c;
+            }
+            if(zar1Item.Original_Product_Cost__c!=null && unitMap.get(zar1Item.Sales_Unit__c) != null && unitMap.get(zar1Item.Sales_Unit__c).Conversion_Coefficient__c != null) {
+                zar1Item.Product_Cost__c = (zar1Item.Original_Product_Cost__c * unitMap.get(zar1Item.Sales_Unit__c).Conversion_Coefficient__c).setScale(2);
+            }else if(zar1Item.Product_Cost__c!=null){
+                zar1Item.Product_Cost__c=zar1Item.Product_Cost__c.setScale(2);
+            }
+            if (orderMap.get(item.Order__c).Interest_Rate__c != null && (orderMap.get(item.Order__c).Sales_Org__c == '5130' || orderMap.get(item.Order__c).Sales_Org__c =='5070') && zar1Item.Product_Cost__c <> null) {//AR、ypf Guide Price增加账期成本
+                zar1Item.Product_Cost__c *= orderMap.get(item.Order__c).Interest_Rate__c;
+            }
             zar1ItemList.add(zar1Item);
         }
         insert zar1ItemList;        
